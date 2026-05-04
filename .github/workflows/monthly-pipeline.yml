@@ -1,0 +1,59 @@
+name: SHEtoken Monthly Data Refresh
+
+on:
+  schedule:
+    - cron: '0 4 1 * *'   # 1st of every month at 4am UTC
+  workflow_dispatch:        # Manual trigger from GitHub UI
+
+jobs:
+  refresh-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install pipeline dependencies
+        run: pip install -r pipeline/requirements.txt || pip install requests pandas numpy python-dotenv
+
+      - name: Run data pipeline
+        run: |
+          cd pipeline
+          python run_pipeline.py --fallback --year 2025
+
+      - name: Run all index generators
+        run: |
+          cd pipeline/data
+          python generate_baseline.py --year 2025
+          python generate_india_states.py --year 2025
+          python generate_usa_states.py --year 2025
+          python generate_city_scores.py --year 2025
+          python generate_gender_poverty_index.py --year 2025
+          python generate_sexual_violence_index.py --year 2025
+          python generate_widow_elderly_index.py --year 2025
+          python generate_ai_displacement_index.py --year 2025
+          python generate_womens_vital_stats.py --year 2025
+          python generate_rape_counts.py --year 2025
+          python generate_school_dropout_data.py --year 2025
+          python generate_policy_recommendations.py --year 2025
+          python generate_corporate_compliance_score.py --year 2025
+          python generate_partner_directory.py --year 2025
+          python generate_microfinance_bond_basket.py --year 2025
+          python generate_prediction_markets.py
+          python generate_enhanced_tokenomics.py
+          python generate_savings_product.py
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name  "SHEtoken Pipeline"
+          git config user.email "pipeline@shetoken.org"
+          git add data/output/
+          git diff --staged --quiet || git commit -m "Monthly data refresh $(date -u +%Y-%m)"
+          git push

@@ -1,0 +1,18 @@
+# Railway auto-deploys when you push to GitHub.
+# This workflow is intentionally disabled.
+# No Railway token needed — Railway detects pushes automatically.
+#
+# To trigger a deploy: just git push
+# Railway watches your repo and redeploys within 2 minutes.
+
+name: Deploy API (handled by Railway automatically)
+
+on:
+  workflow_dispatch:    # Only runs if you manually click Run
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Info
+        run: echo "Railway auto-deploys on every git push. No action needed here."

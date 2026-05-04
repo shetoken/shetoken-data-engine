@@ -1,0 +1,54 @@
+name: SHEtoken Weekly WEI Agent
+
+on:
+  schedule:
+    - cron: '0 6 * * 0'   # Every Sunday 6am UTC
+  workflow_dispatch:        # Manual trigger from GitHub UI
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r agent/requirements.txt
+
+      - name: Install Ollama
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh
+          ollama serve &
+          sleep 10
+          ollama pull phi3.5
+          ollama pull qwen2.5:3b
+
+      - name: Run WEI agent
+        env:
+          GMAIL_USER:           ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD:   ${{ secrets.GMAIL_APP_PASSWORD }}
+          REPORT_TO_EMAIL:      ${{ secrets.REPORT_TO_EMAIL }}
+          YOUTUBE_API_KEY:      ${{ secrets.YOUTUBE_API_KEY }}
+          GOOGLE_SHEET_ID:      ${{ secrets.GOOGLE_SHEET_ID }}
+          NEWSLETTER_SUBSCRIBERS: ${{ secrets.NEWSLETTER_SUBSCRIBERS }}
+          OLLAMA_HOST:          http://localhost:11434
+          ANALYTICS_BACKEND:    memory
+        run: |
+          cd agent
+          python run_agent.py
+
+      - name: Commit updated live scores
+        run: |
+          git config user.name  "SHEtoken Agent"
+          git config user.email "agent@shetoken.org"
+          git add agent/output/live/ || true
+          git diff --staged --quiet || git commit -m "Weekly WEI live scores update $(date -u +%Y-W%V)"
+          git push || true

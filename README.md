@@ -257,3 +257,53 @@ Full Lovable build prompt: `docs/INDEXES_AND_API_SUMMARY.md`
 *© 2026 SHE Foundation. MIT License.*
 *shetoken.org · github.com/shetoken · @ShetokenDAO*
 **SHE GOES UP.**
+
+---
+
+## Cloud Setup (No Local Machine Needed)
+
+### GitHub Actions Workflows
+
+Three automated workflows in `.github/workflows/`:
+
+| Workflow | Schedule | What it does |
+|---|---|---|
+| `weekly-agent.yml` | Every Sunday 6am UTC | Scans 139+ sources, updates WEI, sends newsletter |
+| `monthly-pipeline.yml` | 1st of every month | Regenerates all CSVs, commits to repo |
+| `deploy-api.yml` | On every push | Auto-deploys API to Railway |
+
+### One-Time Setup
+
+**1. Add GitHub Secrets**
+Repo → Settings → Secrets and variables → Actions → New secret:
+```
+GMAIL_USER
+GMAIL_APP_PASSWORD
+REPORT_TO_EMAIL
+YOUTUBE_API_KEY
+GOOGLE_SHEET_ID
+RAILWAY_TOKEN        ← from Railway dashboard → Account → Tokens
+NEWSLETTER_SUBSCRIBERS
+```
+
+**2. Get Railway Token**
+Railway dashboard → Account Settings → Tokens → Create token
+Add as `RAILWAY_TOKEN` in GitHub Secrets
+
+**3. Run monthly pipeline manually first**
+GitHub → Actions tab → Monthly Data Refresh → Run workflow
+This generates all CSVs before the API needs them.
+
+**4. Trigger weekly agent manually to test**
+GitHub → Actions tab → Weekly WEI Agent → Run workflow
+Check your Gmail for the newsletter.
+
+### After That — Everything is Automatic
+
+```
+Sunday 6am UTC    → agent runs, newsletter sent, scores updated
+1st of month      → data refreshed, repo updated, API redeployed
+Every push        → API auto-deploys to Railway
+```
+
+You only touch the repo when you want to add features.
