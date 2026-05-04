@@ -25,41 +25,24 @@ jobs:
         run: |
           pip install requests pandas numpy python-dotenv openpyxl gspread google-auth
 
-      - name: Check structure
-        run: |
-          echo "=== Repo root ==="
-          ls -la
-          echo "=== pipeline/data ==="
-          ls pipeline/data/ | head -20
-          echo "=== data/output ==="
-          ls data/output/ 2>/dev/null || echo "data/output does not exist yet"
-
       - name: Create output directories
         run: |
-          mkdir -p data/output/historical
           mkdir -p pipeline/data/output/historical
+          mkdir -p data/output/historical
 
-      - name: Create config_v3.py if missing
-        run: |
-          cat > pipeline/data/config_v3.py << 'PYEOF'
-          from pathlib import Path
-          OUTPUT_DIR  = Path(__file__).parent.parent / "data" / "output"
-          OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-          BASELINE_YEAR = 2025
-          PYEOF
-          # Also create in pipeline/data for relative imports
-          echo "config_v3.py created"
-          cat pipeline/data/config_v3.py
-
-      - name: Run core generators
+      - name: Step 1 — Core baselines (other generators depend on these)
         run: |
           cd pipeline/data
           python generate_baseline.py --year 2025
           python generate_india_states.py --year 2025
           python generate_usa_states.py --year 2025
+          python generate_brazil_states.py --year 2025
+          python generate_nigeria_states.py --year 2025
+          python generate_mexico_states.py --year 2025
+          python generate_pakistan_provinces.py --year 2025
           python generate_city_scores.py --year 2025
 
-      - name: Run index generators
+      - name: Step 2 — Other indexes (depend on baseline)
         run: |
           cd pipeline/data
           python generate_gender_poverty_index.py --year 2025
@@ -70,18 +53,19 @@ jobs:
           python generate_rape_counts.py --year 2025
           python generate_school_dropout_data.py --year 2025
 
-      - name: Run policy and compliance generators
+      - name: Step 3 — Policy and compliance (depend on all indexes)
         run: |
           cd pipeline/data
           python generate_policy_recommendations.py --year 2025
           python generate_corporate_compliance_score.py --year 2025
+          python generate_usa_trade_exposure.py --year 2025
           python generate_partner_directory.py --year 2025
           python generate_microfinance_bond_basket.py --year 2025
           python generate_prediction_markets.py
           python generate_enhanced_tokenomics.py
           python generate_savings_product.py
 
-      - name: Run historical generators
+      - name: Step 4 — Historical (depends on baseline existing)
         run: |
           cd pipeline/data
           python generate_historical_data.py --from-year 2015 --to-year 2024
@@ -93,15 +77,16 @@ jobs:
 
       - name: Copy output to data/output
         run: |
-          cp -r pipeline/data/output/. data/output/ 2>/dev/null || true
-          echo "=== Files in data/output ==="
-          ls data/output/
+          cp -r pipeline/data/output/. data/output/
+          echo "Files in data/output:"
+          ls data/output/ | head -20
+          echo "Files in data/output/historical:"
+          ls data/output/historical/ | head -20
 
       - name: Commit data files
         run: |
           git config user.name "SHEtoken Pipeline"
           git config user.email "pipeline@shetoken.org"
           git add data/output/
-          git status
           git diff --staged --quiet || git commit -m "Monthly data refresh $(date -u +%Y-%m)"
           git push
