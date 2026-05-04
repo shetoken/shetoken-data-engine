@@ -346,5 +346,5 @@ if __name__ == "__main__":
     import argparse
     p = argparse.ArgumentParser()
     p.add_argument("--year", type=int, default=BASELINE_YEAR)
-    p.add_argument("--fallback", action="store_true", help="Use hardcoded estimates (no API calls)")
+    parser.add_argument("--fallback", action="store_true", help="Use hardcoded estimates (no API calls)")
     generate(p.parse_args().year)

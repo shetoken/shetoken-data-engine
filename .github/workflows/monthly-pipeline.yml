@@ -2,8 +2,8 @@ name: SHEtoken Monthly Data Refresh
 
 on:
   schedule:
-    - cron: '0 4 1 * *'   # 1st of every month at 4am UTC
-  workflow_dispatch:        # Manual trigger from GitHub UI
+    - cron: '0 4 1 * *'
+  workflow_dispatch:
 
 jobs:
   refresh-data:
@@ -13,28 +13,55 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
 
-      - name: Install pipeline dependencies
-        run: pip install -r pipeline/requirements.txt || pip install requests pandas numpy python-dotenv
-
-      - name: Run data pipeline
+      - name: Install dependencies
         run: |
-          cd pipeline
-          python run_pipeline.py --fallback --year 2025
+          pip install requests pandas numpy python-dotenv openpyxl gspread google-auth
 
-      - name: Run all index generators
+      - name: Check structure
+        run: |
+          echo "=== Repo root ==="
+          ls -la
+          echo "=== pipeline/data ==="
+          ls pipeline/data/ | head -20
+          echo "=== data/output ==="
+          ls data/output/ 2>/dev/null || echo "data/output does not exist yet"
+
+      - name: Create output directories
+        run: |
+          mkdir -p data/output/historical
+          mkdir -p pipeline/data/output/historical
+
+      - name: Create config_v3.py if missing
+        run: |
+          cat > pipeline/data/config_v3.py << 'PYEOF'
+          from pathlib import Path
+          OUTPUT_DIR  = Path(__file__).parent.parent / "data" / "output"
+          OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+          BASELINE_YEAR = 2025
+          PYEOF
+          # Also create in pipeline/data for relative imports
+          echo "config_v3.py created"
+          cat pipeline/data/config_v3.py
+
+      - name: Run core generators
         run: |
           cd pipeline/data
           python generate_baseline.py --year 2025
           python generate_india_states.py --year 2025
           python generate_usa_states.py --year 2025
           python generate_city_scores.py --year 2025
+
+      - name: Run index generators
+        run: |
+          cd pipeline/data
           python generate_gender_poverty_index.py --year 2025
           python generate_sexual_violence_index.py --year 2025
           python generate_widow_elderly_index.py --year 2025
@@ -42,6 +69,10 @@ jobs:
           python generate_womens_vital_stats.py --year 2025
           python generate_rape_counts.py --year 2025
           python generate_school_dropout_data.py --year 2025
+
+      - name: Run policy and compliance generators
+        run: |
+          cd pipeline/data
           python generate_policy_recommendations.py --year 2025
           python generate_corporate_compliance_score.py --year 2025
           python generate_partner_directory.py --year 2025
@@ -50,10 +81,27 @@ jobs:
           python generate_enhanced_tokenomics.py
           python generate_savings_product.py
 
-      - name: Commit refreshed data
+      - name: Run historical generators
         run: |
-          git config user.name  "SHEtoken Pipeline"
+          cd pipeline/data
+          python generate_historical_data.py --from-year 2015 --to-year 2024
+          python generate_historical_india_states.py --from-year 2015 --to-year 2024
+          python generate_historical_usa_states.py --from-year 2015 --to-year 2024
+          python generate_historical_gpi.py --from-year 2015 --to-year 2024
+          python generate_historical_svi.py --from-year 2015 --to-year 2024
+          python generate_historical_cities.py --from-year 2015 --to-year 2024
+
+      - name: Copy output to data/output
+        run: |
+          cp -r pipeline/data/output/. data/output/ 2>/dev/null || true
+          echo "=== Files in data/output ==="
+          ls data/output/
+
+      - name: Commit data files
+        run: |
+          git config user.name "SHEtoken Pipeline"
           git config user.email "pipeline@shetoken.org"
           git add data/output/
+          git status
           git diff --staged --quiet || git commit -m "Monthly data refresh $(date -u +%Y-%m)"
           git push

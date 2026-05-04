@@ -377,6 +377,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--from-year", type=int, default=2015)
     parser.add_argument("--to-year",   type=int, default=2024)
-    p.add_argument("--fallback", action="store_true", help="Use hardcoded estimates (no API calls)")
+    parser.add_argument("--fallback", action="store_true", help="Use hardcoded estimates (no API calls)")
     args = parser.parse_args()
     main(args.from_year, args.to_year)
