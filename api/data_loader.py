@@ -563,3 +563,56 @@ def get_usa_compliance(state_code: str = None) -> list[dict]:
     if state_code:
         rows = [r for r in rows if r["state_code"].upper()==state_code.upper()]
     return rows
+
+
+def get_partner_countries(sector: str = None, region: str = None) -> list[dict]:
+    def _load():
+        path = DATA_DIR / "partner-directory-countries-2025.csv"
+        if not path.exists(): return []
+        rows = load_csv(path)
+        return [{"country":r.get("country",""),"iso":r.get("iso",""),
+                 "region":r.get("region",""),"wei_score":safe_float(r.get("wei_score")),
+                 "strength_sectors":r.get("strength_sectors","").split(" | "),
+                 "flagship_programs":r.get("flagship_programs","").split(" | "),
+                 "best_for":r.get("best_for",""),
+                 "contact_entry_points":r.get("contact_entry_points","").split(" | "),
+                 "language":r.get("language",""),
+                 "notes":r.get("notes",""),
+                } for r in rows]
+    rows = cached("partner_countries", _load)
+    if sector:
+        rows = [r for r in rows if any(
+            sector.lower() in s.lower() for s in r["strength_sectors"])]
+    if region:
+        rows = [r for r in rows if region.lower() in r["region"].lower()]
+    return rows
+
+
+def get_partner_programs(sector: str = None, pillar: str = None,
+                          iso: str = None) -> list[dict]:
+    def _load():
+        path = DATA_DIR / "partner-directory-programs-2025.csv"
+        if not path.exists(): return []
+        rows = load_csv(path)
+        return [{"name":r.get("name",""),"country":r.get("country",""),
+                 "iso":r.get("iso",""),"sector":r.get("sector",""),
+                 "pillar":r.get("pillar",""),"scale":r.get("scale",""),
+                 "proven_outcome":r.get("proven_outcome",""),
+                 "contact":r.get("contact",""),"website":r.get("website",""),
+                 "replicable":r.get("replicable","")=="True",
+                 "notes":r.get("notes",""),
+                } for r in rows]
+    rows = cached("partner_programs", _load)
+    if sector: rows=[r for r in rows if sector.lower() in r["sector"].lower()]
+    if pillar: rows=[r for r in rows if r["pillar"]==pillar]
+    if iso:    rows=[r for r in rows if r["iso"].upper()==iso.upper()]
+    return rows
+
+
+def get_partner_companies() -> dict:
+    def _load():
+        import json as _json
+        path = DATA_DIR / "partner-directory-companies-2025.json"
+        if not path.exists(): return {}
+        with open(path,"r",encoding="utf-8") as f: return _json.load(f)
+    return cached("partner_companies", _load)

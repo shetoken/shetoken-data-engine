@@ -37,16 +37,17 @@ city level.
 8. The Policy Recommendation Engine
 9. Corporate Women's Rights Compliance Score (WRBCS)
 10. US Trade Exposure Analysis
-11. Historical Data (2015–2024)
-12. The Weekly News Agent
-13. Geographic Coverage
-14. How to Invest
-15. Tokenomics
-16. Token Mechanics
-17. Technology & Blockchain
-18. Governance
-19. Roadmap
-20. Legal Disclaimer
+11. Women's Rights Partner Directory
+12. Historical Data (2015–2024)
+13. The Weekly News Agent
+14. Geographic Coverage
+15. How to Invest
+16. Tokenomics
+17. Token Mechanics
+18. Technology & Blockchain
+19. Governance
+20. Roadmap
+21. Legal Disclaimer
 
 ---
 
@@ -88,6 +89,7 @@ SHEtoken v3.0 introduces six interlocking indexes:
 | **WEVI** | Widow & Elderly Vulnerability Index | 35 countries + India states | Signal |
 | **WADI** | Women's AI Displacement Index | 28 countries | Signal |
 | **WRBCS** | Corporate Women's Rights Compliance Score | 30 countries + 36 US states | Due diligence |
+| **Partner Directory** | Country, program + company finder for women's work | 15 countries, 14 programs, 6 registries | Discovery tool |
 
 **The WEI drives the token.** The other five indexes provide intelligence,
 policy recommendations, and corporate due diligence data.
@@ -261,6 +263,15 @@ This is not a solution. It is a wage trap.
 Every country receives ranked, evidence-based policy recommendations
 derived from all index scores combined — each citing a proven real-world program.
 
+### Two-Section Output
+
+Every country now has two separate recommendation sections:
+
+**Section 1 — Government Policy Actions** — what governments must do to improve scores.
+
+**Section 2 — Corporate Actions** — what companies sourcing from this country must do.
+Driven by WRBCS rating: CAUTION → audit + NGO fund. AVOID → Supply Chain Accord. EMBARGO → exit plan.
+
 ### Sample Output — India Top Priorities
 
 | Priority | Pillar | Intervention | Proven Example | Impact |
@@ -360,7 +371,56 @@ procurement: $500B+/year. Model: California SB 657 supply chain law.
 
 ---
 
-## 11. Historical Data (2015–2024)
+
+## 11. Women's Rights Partner Directory
+
+The compliance score tells you where **not** to operate.
+The partner directory tells you who to work **with**.
+
+Three search tools:
+
+### Country Partners
+Which countries have the strongest ecosystems for women-focused work?
+
+| Country | Best for | Flagship program |
+|---|---|---|
+| Kerala, India | SHG microfinance, elder care, health | Kudumbashree — 4.6M members |
+| West Bengal, India | Girls education, cash transfer | Kanyashree — 10M girls |
+| Gujarat, India | Labour rights, cooperatives | SEWA — 3.78M members |
+| Rwanda | Women in governance, ICT | 61% women in parliament |
+| Iceland | Equal pay law, corporate governance | Equal Pay Certification |
+| Kenya | Mobile financial inclusion, tech | M-Pesa women agents |
+| Colombia | Post-conflict rights, reproductive | Peace Agreement gender chapter |
+| Uruguay | Care economy, reproductive rights | National Care System |
+
+### Program Partners
+Proven interventions available for funding, replication, or partnership.
+Every program listed has verified outcome data.
+
+| Program | Country | Sector | Scale | Cost per beneficiary |
+|---|---|---|---|---|
+| Kanyashree | India/WB | Girls education | 10M girls | ~$20/girl/year |
+| Educate Girls | India/RJ | Girls education | 6.7M | Verified DI Bond |
+| Kudumbashree | India/KL | Women's SHG | 4.6M members | Low |
+| SEWA | India/GJ | Labour rights | 3.78M | Self-sustaining |
+| Iceland Equal Pay | Iceland | Corporate pay | National | Law change only |
+| NZ Pay Equity Act | NZ | Care economy | 55,000 workers | +15-49% wages |
+| Ethiopia Land Cert | Ethiopia | Land rights | 6M women | DV fell 33% |
+| Tostan FGM | Senegal | Bodily autonomy | 6,000+ communities | Community-led |
+
+### Company Partners
+Rather than naming specific companies — which creates legal risk if their
+status changes — the directory points to six independently maintained
+public registries:
+
+- **EPIC** — Equal Pay International Coalition certified employers
+- **ILO Better Work** — Garment sector buyer partners (publicly listed)
+- **B Corp directory** — Gender lens filter, 6,000+ certified companies
+- **2X Challenge** — Gender lens investor portfolio
+- **UN WEPs** — Women's Empowerment Principles signatories (3,000+ companies)
+- **GenderSmart** — Impact investors funding women's initiatives
+
+## 12. Historical Data (2015–2024)
 
 All major indexes include historical data using the event-reversal model:
 start from 2025 verified baseline, reverse known events going backwards.
@@ -393,7 +453,7 @@ start from 2025 verified baseline, reverse known events going backwards.
 
 ---
 
-## 12. The Weekly News Agent
+## 13. The Weekly News Agent
 
 Every Sunday at 6am UTC, the agent automatically:
 
@@ -422,7 +482,7 @@ If any country's crime index rises >15% in one year:
 
 ---
 
-## 13. Geographic Coverage
+## 14. Geographic Coverage
 
 | Level | Count | Indexes |
 |---|---|---|
@@ -437,7 +497,7 @@ If any country's crime index rises >15% in one year:
 
 ---
 
-## 14. How to Invest
+## 15. How to Invest
 
 ### Step-by-Step
 
@@ -468,7 +528,7 @@ tokens. Rewards long-term holders over short-term speculators.
 
 ---
 
-## 15. Tokenomics
+## 16. Tokenomics
 
 | Parameter | Value |
 |---|---|
@@ -493,7 +553,7 @@ tokens. Rewards long-term holders over short-term speculators.
 
 ---
 
-## 16. Token Mechanics
+## 17. Token Mechanics
 
 | Event | Token mechanism |
 |---|---|
@@ -506,7 +566,7 @@ tokens. Rewards long-term holders over short-term speculators.
 
 ---
 
-## 17. Technology & Blockchain
+## 18. Technology & Blockchain
 
 | Layer | Technology |
 |---|---|
@@ -522,7 +582,7 @@ tokens. Rewards long-term holders over short-term speculators.
 
 ---
 
-## 18. Governance
+## 19. Governance
 
 | Decision | Threshold |
 |---|---|
@@ -541,7 +601,7 @@ blockchain security experts.
 
 ---
 
-## 19. Roadmap
+## 20. Roadmap
 
 | Phase | Timeline | Milestones |
 |---|---|---|
@@ -555,7 +615,7 @@ blockchain security experts.
 
 ---
 
-## 20. Legal Disclaimer
+## 21. Legal Disclaimer
 
 This whitepaper is for informational purposes only and does not constitute
 financial, legal, or investment advice. SHE is a utility token and is not

@@ -21,6 +21,7 @@ import logging
 
 from analytics import AnalyticsMiddleware, get_stats
 from data_loader import (
+    get_partner_countries, get_partner_programs, get_partner_companies,
     get_compliance, get_usa_compliance,
     get_global_scores, get_states, get_cities,
     get_latest_signals, get_summary,
@@ -825,3 +826,84 @@ def compliance_usa_state(state_code: str):
     rows = get_usa_compliance(state_code=state_code.upper())
     if not rows: raise HTTPException(404, f"No data for state {state_code}")
     return rows[0]
+
+
+# ── Partner Directory ─────────────────────────────────────────────────────────
+
+@app.get("/v1/partners/countries", tags=["Partner Directory"],
+         summary="Find countries to partner with for women-focused work")
+def partner_countries(
+    sector: Optional[str] = Query(None,
+        description="Filter by sector e.g. 'education', 'microfinance', 'GBV', 'digital'"),
+    region: Optional[str] = Query(None,
+        description="Filter by region e.g. 'South Asia', 'Africa', 'Europe'"),
+):
+    """
+    Positive discovery tool: which countries have the strongest ecosystems
+    for women-focused partnership work?
+
+    Returns country profiles with:
+    - Strength sectors (what they are genuinely good at)
+    - Flagship programs (proven programs you can partner with)
+    - Who benefits most from partnering here
+    - Entry point contacts
+
+    Examples:
+    - /v1/partners/countries?sector=microfinance → India Kerala, Bangladesh
+    - /v1/partners/countries?sector=education → West Bengal, Rajasthan
+    - /v1/partners/countries?region=Africa → Kenya, Rwanda, Ethiopia
+    - /v1/partners/countries?sector=equal+pay → Iceland, Sweden, NZ
+    """
+    rows = get_partner_countries(sector=sector, region=region)
+    if not rows: raise HTTPException(404, "No matching partners found")
+    return {"count": len(rows), "data": rows}
+
+
+@app.get("/v1/partners/programs", tags=["Partner Directory"],
+         summary="Find proven programs to fund, replicate, or partner with")
+def partner_programs(
+    sector: Optional[str] = Query(None,
+        description="e.g. 'education', 'microfinance', 'GBV', 'land rights', 'digital'"),
+    pillar: Optional[str] = Query(None,
+        description="WEI pillar: education, economic, bodily_autonomy, safety_justice, etc."),
+    country: Optional[str] = Query(None, description="ISO code e.g. IND"),
+):
+    """
+    Returns proven women's rights programs available for:
+    - Direct funding
+    - Replication in other countries
+    - Research partnership
+    - Co-branding
+
+    Every program listed has verified outcome data and a replicable model.
+
+    Examples:
+    - /v1/partners/programs?sector=education → Kanyashree, Educate Girls
+    - /v1/partners/programs?pillar=economic → Kudumbashree, SEWA, Iceland Equal Pay
+    - /v1/partners/programs?country=IND → all India programs
+    """
+    rows = get_partner_programs(sector=sector, pillar=pillar, iso=country)
+    if not rows: raise HTTPException(404, "No matching programs found")
+    return {"count": len(rows), "data": rows}
+
+
+@app.get("/v1/partners/companies", tags=["Partner Directory"],
+         summary="Find companies with genuine women's rights commitments")
+def partner_companies():
+    """
+    Directs to verified public registries of companies with women's rights
+    commitments — rather than naming specific companies directly.
+
+    Registries covered:
+    - Equal Pay International Coalition (EPIC) certified employers
+    - ILO Better Work buyer partners (garment sector)
+    - B Corp directory with gender lens filter
+    - 2X Challenge portfolio (gender lens investing)
+    - UN Women's Empowerment Principles signatories (3,000+ companies)
+    - GenderSmart investing directory
+
+    Each registry is independently maintained and publicly verified.
+    """
+    data = get_partner_companies()
+    if not data: raise HTTPException(503, "Data unavailable")
+    return data

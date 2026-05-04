@@ -18,13 +18,13 @@
 8. [Widow & Elderly Index (WEVI)](#8-widow--elderly-index)
 9. [Women's AI Displacement Index (WADI)](#9-womens-ai-displacement-index)
 10. [Corporate Compliance Score (WRBCS)](#10-corporate-compliance-score)
-11. [Historical Model](#11-historical-model)
-12. [Weekly Signal Mechanics](#12-weekly-signal-mechanics)
-13. [Crisis Triggers](#13-crisis-triggers)
-14. [Data Sources](#14-data-sources)
-15. [Audit & Challenge Process](#15-audit--challenge-process)
-16. [Worked Example — West Bengal](#16-worked-example--west-bengal)
-17. [Changelog](#17-changelog)
+12. [Historical Model](#11-historical-model)
+13. [Weekly Signal Mechanics](#12-weekly-signal-mechanics)
+14. [Crisis Triggers](#13-crisis-triggers)
+15. [Data Sources](#14-data-sources)
+16. [Audit & Challenge Process](#15-audit--challenge-process)
+17. [Worked Example — West Bengal](#16-worked-example--west-bengal)
+18. [Changelog](#17-changelog)
 
 ---
 
@@ -355,7 +355,67 @@ WRBCS = WEI(40%) + SVI(25%) + GPI(20%) + (100−WADI)(15%)
 
 ---
 
-## 11. Historical Model
+
+## 11. Partner Directory Methodology
+
+The partner directory uses a different approach from the indexes —
+it is a curated, qualitative database rather than a scored index.
+
+### Country Partner Selection Criteria
+
+A country is included in the partner directory if:
+```
+✓ WEI score ≥ 35 (some functioning women's rights infrastructure)
+✓ At least one internationally recognised program operating
+✓ Entry point contacts publicly available
+✓ Sector strength is verifiable from published sources
+```
+
+### Program Inclusion Criteria
+
+A program is included if:
+```
+✓ Operating for ≥ 5 years
+✓ Scale ≥ 10,000 beneficiaries
+✓ Proven outcomes published (impact evaluation or third-party audit)
+✓ Replicable model documented
+✓ Contact/website publicly available
+```
+
+### Company Registry Approach
+
+Rather than maintaining our own company list (which creates legal risk
+and maintenance burden), the directory points to six independently
+maintained public registries. This ensures:
+- Legal safety: we make no claims about specific companies
+- Accuracy: registries self-update as company status changes
+- Credibility: each registry has its own vetting process
+- Coverage: 3,000+ companies across all sectors via UN WEPs alone
+
+### Policy Engine — Two-Section Output
+
+As of v3.0, the policy recommendation engine produces two sections
+per country:
+
+**Section 1 — Government Policy Actions**
+Ranked by weakest WEI/GPI/SVI pillar. Up to 8 recommendations.
+Each cites a proven program with cost, time, and impact estimate.
+
+**Section 2 — Corporate Actions**
+Triggered by WRBCS rating (CAUTION / AVOID / EMBARGO).
+Specific obligations for companies sourcing from this country.
+
+```
+CAUTION  → mandatory gender audit + NGO funding + disclosure
+AVOID    → supply chain accord + just transition fund + tariff
+EMBARGO  → mandatory exit plan + UNGP Article 19 reporting
+```
+
+Legal basis: UN Guiding Principles on Business and Human Rights,
+EU Corporate Sustainability Due Diligence Directive (CS3D),
+UK Modern Slavery Act, US Trafficking Victims Protection Act.
+
+## 12. Historical Model
 
 ### Methodology
 
@@ -389,7 +449,7 @@ Going backwards = subtract these rates × years_back.
 
 ---
 
-## 12. Weekly Signal Mechanics
+## 13. Weekly Signal Mechanics
 
 The weekly news agent provides **leading indicators** between annual
 official data publications.
@@ -422,7 +482,7 @@ delta = max(-2.0, min(2.0, delta))
 
 ---
 
-## 13. Crisis Triggers
+## 14. Crisis Triggers
 
 Automatically flagged when any country's Crime Index rises >15% year-over-year.
 
@@ -439,7 +499,7 @@ Step 4: Execute on-chain within 24 hours of vote
 
 ---
 
-## 14. Data Sources
+## 15. Data Sources
 
 | Index | Primary Sources |
 |---|---|
@@ -471,7 +531,7 @@ Step 4: Execute on-chain within 24 hours of vote
 
 ---
 
-## 15. Audit & Challenge Process
+## 16. Audit & Challenge Process
 
 Anyone — researcher, government, NGO, or token holder — can challenge a
 published WEI score by opening a GitHub Issue with label `wei-challenge`.
@@ -488,7 +548,7 @@ published WEI score by opening a GitHub Issue with label `wei-challenge`.
 
 ---
 
-## 16. Worked Example — West Bengal
+## 17. Worked Example — West Bengal
 
 ### 2025 Baseline
 
@@ -525,12 +585,13 @@ West Bengal WEI timeline:
 
 ---
 
-## 17. Changelog
+## 18. Changelog
 
 | Version | Date | Changes |
 |---|---|---|
 | v1.0 | Jan 2026 | Initial 5-pillar WEI |
 | v2.0 | Mar 2026 | Added India state scoring, underreporting adjustment, crisis triggers |
+| v3.1 | May 2026 | Added Partner Directory, corporate actions in policy engine, company registry approach |
 | v3.0 | May 2026 | Added Bodily Autonomy pillar (was missing post-Roe), GPI, SVI, WEVI, WADI, WRBCS, historical model 2015–2024, weekly signal mechanics, corporate compliance, US trade exposure |
 
 ---
