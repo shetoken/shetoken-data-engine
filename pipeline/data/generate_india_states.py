@@ -530,6 +530,7 @@ if __name__ == "__main__":
     )
     parser.add_argument("--year", type=int, default=BASELINE_YEAR)
     parser.add_argument("--output", type=str, default=None)
+    parser.add_argument("--fallback", action="store_true", help="Use hardcoded estimates")
     args = parser.parse_args()
 
     generate_india_states(

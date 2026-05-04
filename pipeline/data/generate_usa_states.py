@@ -172,5 +172,6 @@ def generate_usa_states(output_path=None, year=BASELINE_YEAR):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--year", type=int, default=BASELINE_YEAR)
+    p.add_argument("--fallback", action="store_true", help="Use hardcoded estimates (no API calls)")
     args = parser.parse_args()
     generate_usa_states(year=args.year)
