@@ -25,12 +25,13 @@ jobs:
         run: |
           pip install requests pandas numpy python-dotenv openpyxl gspread google-auth
 
-      - name: Create output directories
+      - name: Create all output directories
         run: |
+          mkdir -p pipeline/output/historical
           mkdir -p pipeline/data/output/historical
           mkdir -p data/output/historical
 
-      - name: Step 1 — Core baselines (other generators depend on these)
+      - name: Step 1 — Core baselines
         run: |
           cd pipeline/data
           python generate_baseline.py --year 2025
@@ -42,7 +43,13 @@ jobs:
           python generate_pakistan_provinces.py --year 2025
           python generate_city_scores.py --year 2025
 
-      - name: Step 2 — Other indexes (depend on baseline)
+      - name: Sync outputs to pipeline/data/output
+        run: |
+          cp -r pipeline/output/. pipeline/data/output/ 2>/dev/null || true
+          echo "Files available for next steps:"
+          ls pipeline/data/output/
+
+      - name: Step 2 — Other indexes
         run: |
           cd pipeline/data
           python generate_gender_poverty_index.py --year 2025
@@ -53,7 +60,7 @@ jobs:
           python generate_rape_counts.py --year 2025
           python generate_school_dropout_data.py --year 2025
 
-      - name: Step 3 — Policy and compliance (depend on all indexes)
+      - name: Step 3 — Policy and compliance
         run: |
           cd pipeline/data
           python generate_policy_recommendations.py --year 2025
@@ -65,7 +72,7 @@ jobs:
           python generate_enhanced_tokenomics.py
           python generate_savings_product.py
 
-      - name: Step 4 — Historical (depends on baseline existing)
+      - name: Step 4 — Historical generators
         run: |
           cd pipeline/data
           python generate_historical_data.py --from-year 2015 --to-year 2024
@@ -75,13 +82,12 @@ jobs:
           python generate_historical_svi.py --from-year 2015 --to-year 2024
           python generate_historical_cities.py --from-year 2015 --to-year 2024
 
-      - name: Copy output to data/output
+      - name: Collect all output to data/output
         run: |
-          cp -r pipeline/data/output/. data/output/
-          echo "Files in data/output:"
-          ls data/output/ | head -20
-          echo "Files in data/output/historical:"
-          ls data/output/historical/ | head -20
+          cp -r pipeline/output/. data/output/ 2>/dev/null || true
+          cp -r pipeline/data/output/. data/output/ 2>/dev/null || true
+          echo "Final data/output:"
+          ls data/output/
 
       - name: Commit data files
         run: |
