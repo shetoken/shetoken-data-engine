@@ -1,0 +1,55 @@
+# SHEtoken Sexual Violence Index (SVI) — 2025
+# PRIMARY MEASURE: WHO survey-based lifetime prevalence (NOT police reports)
+# Reason: Police statistics severely undercount rape globally.
+# High reported rate = better reporting infrastructure, NOT more rape.
+# Reporting gap = % of incidents estimated NOT reported to police.
+# SVI score: 100=safest, 0=most dangerous
+#
+# CRITICAL: Marital rape not criminalised in 36 countries.
+# CRITICAL: Conflict-related sexual violence tracked separately.
+# CRITICAL: Caste/ethnic targeting documented for India (Dalit women),
+#           Canada/USA (indigenous women), South Africa, DRC.
+#
+# Sources: WHO Multi-Country Study, UNODC, UNHCR SGBV reports,
+#          HRW country reports, national crime surveys (NCVS, NCRB etc.)
+# (c) 2026 SHE Foundation
+#
+rank,country,iso_code,region,who_lifetime_prevalence_pct,unodc_reported_rate_per_100k,reporting_gap_pct,estimated_actual_rate_per_100k,marital_rape_criminalised,marital_rape_prevalence_pct,conflict_sv_risk_score,digital_sv_rate_pct,impunity_score,caste_ethnic_targeting,indigenous_women_elevated_risk,police_responsiveness_score,legal_framework_score,support_services_score,svi_score,notes,year
+1,Norway,NOR,Europe,11.0,208,60,520,1,4.0,0,20,22,0,0,9,10,9,81.2,Among world's highest reported rates — reflects best practice reporting,2025
+2,Sweden,SWE,Europe,13.0,188,55,418,1,5.0,0,22,20,0,0,8,9,9,79.7,Broad legal definition of rape + high reporting = high official rate,2025
+3,Denmark,DNK,Europe,12.0,110,60,275,1,4.5,0,20,22,0,0,8,9,9,79.2,Strong survivor support system,2025
+4,Iceland,ISL,Europe,14.0,152,60,380,1,5.0,0,18,25,0,0,9,10,9,79.1,High reporting reflects strong legal framework and trust in police,2025
+5,Finland,FIN,Europe,11.0,95,65,271,1,4.0,0,18,28,0,0,8,9,8,77.5,High conviction rate relative to Nordic peers,2025
+6,Germany,DEU,Europe,13.0,90,68,281,1,5.5,0,25,35,0,0,7,8,8,73.5,Consent-based law since 2016,2025
+7,Australia,AUS,Oceania,18.0,91,80,455,1,7.5,0,26,35,1,1,7,9,8,70.4,Indigenous women 5x higher risk,2025
+8,UK,GBR,Europe,20.0,79,83,465,1,7.0,0,28,38,0,0,7,9,8,68.4,"High prevalence, poor conviction rate (5.2%)",2025
+9,Canada,CAN,N. America,22.0,98,83,576,1,8.5,0,24,40,1,1,7,9,8,67.0,MMIW crisis — indigenous women face extreme risk,2025
+10,USA,USA,N. America,18.0,40,90,400,1,8.0,0,32,65,1,1,6,8,8,62.9,Only 23% reported (NCVS). Tribal land — federal jurisdiction gap leaves indigenous women unprotected,2025
+11,South Korea,KOR,East Asia,13.0,22,90,220,1,6.0,0,22,75,0,0,6,7,6,61.7,High underreporting. Revenge porn epidemic.,2025
+12,Turkey,TUR,Europe/Asia,22.0,15,94,250,1,12.0,0,26,88,0,0,3,6,4,51.7,Withdrew from Istanbul Convention 2021. Impunity high.,2025
+13,Brazil,BRA,S. America,30.0,28,90,280,1,12.0,0,38,82,1,1,4,7,6,51.3,Rape every 11 minutes (IPEA). Maria da Penha law enforcement inconsistent. Black women face higher rates.,2025
+14,Philippines,PHL,SE Asia,24.0,18,90,180,1,12.0,1,26,88,0,0,3,6,4,50.2,Safe Spaces Act 2019 — expanded protections. Implementation mixed.,2025
+15,Japan,JPN,East Asia,10.0,4,95,80,0,6.0,0,18,88,0,0,6,6,5,48.6,Extreme underreporting. Marital rape not clearly criminalised until 2023 reform. Victims face intense social pressure to stay silent,2025
+16,Colombia,COL,S. America,30.0,28,88,233,1,14.0,4,32,82,0,0,3,6,5,45.6,Conflict-related SGBV by guerrilla + paramilitary groups. Historic peace deal improved reporting.,2025
+17,South Africa,ZAF,Africa,38.0,72,92,900,1,16.0,0,32,88,0,0,2,6,5,43.8,"Highest rape prevalence globally by some measures. 1 in 4 men admit rape in surveys. Strong law, poor enforcement.",2025
+18,Mexico,MEX,N. America,32.0,20,92,250,1,14.0,2,34,90,0,1,3,5,4,42.7,Feminist emergency: 11 women killed daily. High impunity. 8 states with alerta de género.,2025
+19,Kenya,KEN,Africa,33.0,6,97,200,1,15.0,2,26,94,0,0,2,5,3,40.3,Conflict-adjacent (Somalia border). High rates in refugee camps. Acid attacks on survivors who report.,2025
+20,India,IND,South Asia,28.0,5,98,250,0,18.0,0,24,95,1,0,2,5,3,34.8,"NCRB 2022: 31,677 reported. WHO estimate: 300,000+. Marital rape not criminalised. Dalit women face caste-targeted sexual violence. 1 in 3 rapes by known person.",2025
+21,Indonesia,IDN,SE Asia,26.0,4,97,133,0,16.0,1,22,95,0,0,2,4,3,33.5,Marital rape not criminalised. Religious courts handle some cases.,2025
+22,Egypt,EGY,Africa/ME,28.0,6,97,200,0,16.0,0,22,96,0,0,2,3,2,31.3,Marital rape not criminalised. Tahrir Square mass assaults — no prosecutions.,2025
+23,Iran,IRN,Middle East,24.0,2,99,200,0,18.0,0,20,99,0,0,1,2,1,30.7,Marital rape legal. Morality police rape documented in custody. Mahsa Amini case — rape in detention.,2025
+24,Nigeria,NGA,Africa,30.0,4,98,200,0,18.0,2,28,97,0,0,1,3,2,27.9,Extreme underreporting. SGBV weaponised by Boko Haram. Police routinely demand money from survivors. VAPP Act 2015 rarely enforced.,2025
+25,Bangladesh,BGD,South Asia,35.0,3,99,300,0,22.0,0,20,98,0,0,1,3,2,26.9,Near-zero reporting. Acid attacks as reprisal against women who report. Marital rape not criminalised.,2025
+26,Pakistan,PAK,South Asia,32.0,2,99,200,0,24.0,1,20,99,0,0,1,2,1,25.3,Near-zero reporting. Honour-based violence against survivors. Two-finger test abolished 2021 but culture persists. Blasphemy law used against survivors.,2025
+27,Iraq,IRQ,Middle East,28.0,3,99,300,0,20.0,5,18,99,0,0,1,2,1,23.5,ISIS systematic rape of Yazidi women. Marital rape not criminalised. Honour killing as response to rape.,2025
+28,Ethiopia,ETH,Africa,36.0,3,99,300,0,22.0,3,22,98,0,0,1,3,2,23.3,Tigray conflict: CRSV documented by UN. Police complicity in some regions.,2025
+29,Niger,NER,Africa,36.0,2,99,200,0,22.0,4,14,99,0,0,0,2,1,20.2,Child marriage + marital rape near-universal for girls. Post-coup security vacuum.,2025
+30,Myanmar,MMR,SE Asia,30.0,4,99,400,0,18.0,8,20,99,0,0,1,2,1,19.4,Military rape documented in Rohingya genocide. ICC investigations ongoing.,2025
+31,Afghanistan,AFG,South Asia,40.0,1,100,100,0,30.0,3,12,100,0,0,0,1,0,16.7,Taliban ended all women's reporting mechanisms. No functioning legal system for women. Marital rape encouraged by Taliban interpretation of law.,2025
+32,Palestine,PSE,Middle East,34.0,4,98,200,0,20.0,9,16,98,0,0,0,2,1,16.6,Conflict-related. Gaza crisis: shelter conditions. West Bank: settler violence.,2025
+33,Yemen,YEM,Middle East,32.0,1,100,100,0,24.0,10,14,100,0,0,0,1,0,14.0,Active conflict. Houthi and coalition forces documented CRSV. Near-zero reporting infrastructure.,2025
+34,Sudan,SDN,Africa,36.0,3,99,300,0,22.0,9,18,99,0,0,0,1,1,13.7,Active conflict — RSF documented mass rape in Darfur. 2023 conflict new atrocities.,2025
+35,Somalia,SOM,Africa,46.0,2,100,200,0,28.0,8,14,100,0,0,0,1,0,8.4,Highest estimated prevalence. Al-Shabaab uses SGBV systematically. Near-zero legal infrastructure.,2025
+36,CAR,CAF,Africa,46.0,3,100,300,0,28.0,10,12,100,0,0,0,1,0,6.4,Active conflict. Armed groups use rape as primary weapon. UN documented but impunity total.,2025
+37,South Sudan,SSD,Africa,48.0,3,100,300,0,32.0,10,12,100,0,0,0,1,0,5.3,Active conflict. Both government and opposition forces documented. Girls 10-14 particularly targeted.,2025
+38,DRC,COD,Africa,52.0,6,99,600,0,28.0,10,24,99,0,0,0,1,1,3.9,Highest documented conflict-related rape globally. 48+ women raped per hour at peak conflict. UN documented systematic rape as weapon of war.,2025

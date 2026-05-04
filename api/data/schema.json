@@ -1,0 +1,42 @@
+{
+  "version": "3.0",
+  "description": "SHEtoken WEI Baseline Data Schema",
+  "fields": [
+    {"name": "rank",                   "type": "integer",  "description": "WEI rank (1 = highest)"},
+    {"name": "country",                "type": "string",   "description": "Country name"},
+    {"name": "iso_code",               "type": "string",   "description": "ISO 3166-1 alpha-3 code"},
+    {"name": "region",                 "type": "string",   "description": "Geographic region"},
+    {"name": "tier",                   "type": "integer",  "description": "WEI tier (1-4)"},
+    {"name": "population_millions",    "type": "float",    "description": "Population in millions"},
+    {"name": "empowerment_score",      "type": "float",    "description": "Pillar 1: Political empowerment (0-100)"},
+    {"name": "education_score",        "type": "float",    "description": "Pillar 2: Education & literacy (0-100)"},
+    {"name": "economic_score",         "type": "float",    "description": "Pillar 3: Economic inclusion (0-100)"},
+    {"name": "health_score",           "type": "float",    "description": "Pillar 4: Health & survival (0-100)"},
+    {"name": "bodily_autonomy_score",  "type": "float",    "description": "Pillar 5: Bodily autonomy — period poverty, FGM, child marriage, reproductive rights (0-100)"},
+    {"name": "safety_justice_score",   "type": "float",    "description": "Pillar 6: Safety & justice — DV, honour violence, legal aid (0-100)"},
+    {"name": "dignity_welfare_score",  "type": "float",    "description": "Pillar 7: Dignity & welfare — widow rights, caregiver burden, food insecurity (0-100)"},
+    {"name": "digital_social_score",   "type": "float",    "description": "Pillar 8: Digital & social — online harassment, internet gap (0-100)"},
+    {"name": "violence_penalty_score", "type": "float",    "description": "Violence penalty — subtracted (0-100)"},
+    {"name": "wei_score",              "type": "float",    "description": "Final WEI score (0-100)"},
+    {"name": "population_weight",      "type": "float",    "description": "Tier-based population weight (0.6-1.0)"},
+    {"name": "ticker",                 "type": "string",   "description": "SHEtoken sub-token ticker (e.g. SHE-IND)"},
+    {"name": "year",                   "type": "integer",  "description": "Data year"},
+    {"name": "wei_version",            "type": "string",   "description": "WEI formula version"},
+    {"name": "data_source",            "type": "string",   "description": "pipeline or fallback_estimates"},
+    {"name": "verified",               "type": "string",   "description": "Verification status"},
+    {"name": "notes",                  "type": "string",   "description": "Additional notes"}
+  ],
+  "formula": {
+    "weights": {
+      "empowerment": 0.15,
+      "education": 0.12,
+      "economic": 0.12,
+      "health": 0.12,
+      "bodily_autonomy": 0.15,
+      "safety_justice": 0.14,
+      "dignity_welfare": 0.10,
+      "digital_social": 0.10,
+      "violence_penalty": -0.10
+    }
+  }
+}

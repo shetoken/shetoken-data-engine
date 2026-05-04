@@ -1,0 +1,43 @@
+{
+  "description": "How to find companies with genuine women's rights commitments",
+  "note": "We direct to verified public registries rather than naming specific companies. This ensures accuracy and legal safety.",
+  "categories": {
+    "certified_equal_pay": {
+      "description": "Companies with verified equal pay certification",
+      "how_to_find": "Equal Pay International Coalition (EPIC) employer register: equalpayinternationalcoalition.org/employer-recognition",
+      "examples": "See EPIC registry. Iceland-certified companies listed at jafnlaunavottun.is. UK Gender Pay Gap data: gender-pay-gap.service.gov.uk",
+      "partner_for": "Pay equity benchmarking, policy advocacy, employee recruitment"
+    },
+    "iloBetterWork": {
+      "description": "Companies enrolled in ILO Better Work programme",
+      "how_to_find": "ILO Better Work buyer partners publicly listed: betterwork.org/our-work/buyers",
+      "examples": "Full list at betterwork.org. These companies have committed to factory-level gender audits in garment supply chains.",
+      "partner_for": "Garment sector sourcing, worker welfare programs, supply chain due diligence"
+    },
+    "b_corp_gender_lens": {
+      "description": "B Corp certified companies with gender lens investing focus",
+      "how_to_find": "B Corp directory with gender filter: bcorporation.net/en-us/find-a-b-corp Filter by: Community → Diversity, Equity + Inclusion",
+      "examples": "Search B Corp directory. 6,000+ certified companies globally. Filter by country and sector relevant to your partnership.",
+      "partner_for": "Social enterprise partnerships, impact investing, supply chain partners with verified social standards"
+    },
+    "2x_challenge": {
+      "description": "Companies backed by 2X Challenge gender lens investors",
+      "how_to_find": "2X Collaborative portfolio: 2xcollaborative.org/portfolio",
+      "examples": "Development finance-backed companies with women's ownership/leadership/employment criteria verified.",
+      "partner_for": "Investment partnerships, market access, enterprise development in emerging markets"
+    },
+    "weps_signatories": {
+      "description": "UN Women's Empowerment Principles signatories",
+      "how_to_find": "WEPs signatory database: weps.org/signatories Search by country and sector",
+      "examples": "3,000+ companies have signed the UN Women's Empowerment Principles. Covers: workplace gender equality, community engagement, marketplace transparency.",
+      "partner_for": "Corporate partnership, co-branding, supply chain relationships, investor relations"
+    },
+    "genderSmart_investors": {
+      "description": "Gender-lens investors actively funding women's initiatives",
+      "how_to_find": "GenderSmart database: gendersmartinvesting.org/directory",
+      "examples": "Verified gender-lens investors across asset classes. Useful for: funding women's programs, ESG investment partnerships.",
+      "partner_for": "Funding, ESG alignment, impact measurement partnerships"
+    }
+  },
+  "year": 2025
+}

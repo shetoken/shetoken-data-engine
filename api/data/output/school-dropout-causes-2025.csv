@@ -1,0 +1,33 @@
+# SHEtoken Girls School Dropout Causes — 2025
+# 8 specific causes tracked per country with proven interventions
+# Sources: UNICEF MICS, UNESCO UIS, Plan International, UNGEI
+# Period poverty composite: missing days (35%) + access (30%) + facilities (20%) + stigma (15%)
+# (c) 2026 SHE Foundation
+#
+country,iso_code,dropout_rate_secondary_pct,cause_period_poverty_pct,cause_child_marriage_pct,cause_safety_pct,cause_no_female_teacher_pct,cause_cost_pct,cause_domestic_labour_pct,cause_early_pregnancy_pct,cause_no_school_nearby_pct,period_products_access_pct,school_has_toilet_pct,school_has_changing_room_pct,missing_days_period_per_year,menstrual_stigma_score,proven_intervention,top_cause,top_cause_pct,period_poverty_composite,year
+Afghanistan,AFG,78,16,24,26,38,18,22,4,18,12,18,6,24,9,Taliban ban — no effective program available,no_female_teacher,38,84.3,2025
+Niger,NER,74,24,46,14,20,16,20,6,12,12,18,6,28,9,Nigerienne Breakfast program (limited),child_marriage,46,89.0,2025
+Mali,MLI,72,24,42,14,20,16,18,6,12,12,18,6,28,9,USAID girls education — limited reach,child_marriage,42,89.0,2025
+Yemen,YEM,60,18,28,22,32,16,20,6,14,16,22,8,22,8,UNICEF education in emergencies,no_female_teacher,32,78.5,2025
+Pakistan,PAK,54,18,28,22,28,16,18,8,12,22,36,14,22,8,BISP conditional cash / Ehsaas,child_marriage,28,73.9,2025
+Ethiopia,ETH,52,22,32,16,22,16,24,10,14,18,32,12,28,8,Afar women's education initiative,child_marriage,32,82.9,2025
+Uganda,UGA,48,34,28,14,10,16,24,16,10,20,34,14,28,8,PIASCY / MHM in schools,period_poverty,34,81.9,2025
+Nigeria,NGA,46,28,22,14,18,16,18,12,12,24,38,18,22,7,UNICEF MENISCUS program,period_poverty,28,71.4,2025
+Tanzania,TZA,42,30,24,12,8,14,22,14,12,22,38,16,26,8,MKUKUTA girls retention program,period_poverty,30,78.1,2025
+Ghana,GHA,36,26,18,10,8,14,20,14,10,28,44,20,20,7,School for Life / capitation grant,period_poverty,26,66.6,2025
+Kenya,KEN,34,32,18,12,6,14,16,14,8,34,46,24,24,7,Sanitary towels program (Kenya),period_poverty,32,69.1,2025
+Bangladesh,BGD,28,18,38,8,4,18,14,8,8,48,58,32,14,5,BRAC girls education + stipend,child_marriage,38,47.8,2025
+Brazil,BRA,27,6,8,8,2,12,14,22,18,72,68,44,4,4,Bolsa Familia conditional cash transfer,early_pregnancy,22,25.5,2025
+India,IND,26,23,18,10,8,14,12,8,5,38,52,22,18,6,Kanyashree / Kishori Shakti Yojana,period_poverty,23,58.2,2025
+Mexico,MEX,22,8,12,10,3,14,12,18,13,68,62,40,5,4,PROSPERA scholarship program,early_pregnancy,18,29.0,2025
+Rwanda,RWA,22,18,14,8,4,12,16,12,8,52,62,36,14,5,Agaseke gender program,period_poverty,18,45.8,2025
+Indonesia,IDN,20,12,14,8,4,18,14,12,8,52,64,38,8,5,Program Indonesia Pintar,cost,18,38.4,2025
+South Africa,ZAF,18,10,4,12,2,12,8,18,8,62,72,48,6,4,National school nutrition + menstrual products,early_pregnancy,18,30.0,2025
+Philippines,PHL,14,8,6,8,2,16,10,14,6,68,74,52,6,3,4Ps conditional cash transfer,cost,16,26.3,2025
+Vietnam,VNM,14,8,8,6,2,10,12,8,6,62,74,52,6,3,MOET school quality program,domestic_labour,12,28.1,2025
+USA,USA,3,1,0,1,0,0,0,1,1,100,98,98,1,1,Title IX protections,period_poverty,1,3.1,2025
+UK,GBR,3,1,0,0,0,0,0,1,1,100,98,97,2,1,Period Products Act (Scotland 2021),period_poverty,1,4.2,2025
+Germany,DEU,2,0,0,0,0,1,0,1,1,100,100,99,0,1,Dual education system,cost,1,1.5,2025
+Japan,JPN,2,0,0,0,0,1,0,1,1,100,99,99,1,2,Universal enrollment,cost,1,4.4,2025
+Iceland,ISL,1,0,0,0,0,0,0,0,1,100,100,99,0,0,Universal secondary education,no_school_nearby,1,0.0,2025
+Norway,NOR,1,0,0,0,0,0,0,0,1,100,100,99,0,0,Universal secondary education,no_school_nearby,1,0.0,2025

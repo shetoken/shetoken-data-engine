@@ -1,0 +1,78 @@
+{
+  "description": "Documented widow populations in Indian temple towns",
+  "total_documented": 45000,
+  "note": "True figure likely 200,000+ across all pilgrimage sites. These are only the most documented.",
+  "source": "Loomba Foundation, NHRC, Supreme Court orders, State Women's Commissions",
+  "towns": [
+    {
+      "city": "Vrindavan",
+      "state": "UP",
+      "estimated_widows": 15000,
+      "origin_states": [
+        "West Bengal",
+        "Odisha",
+        "Bihar",
+        "UP"
+      ],
+      "condition": "Abandoned by families. Many beg or sing bhajans for rice. Live in ashrams. Average age 60-80. Many arrived after being 'donated' to temple by families.",
+      "who_documents": "Loomba Foundation, HelpAge India, Guild of Service",
+      "programs": "Ma Dham Ashram, Sulabh International, Guild of Service",
+      "source": "Loomba Foundation 2018, HelpAge India 2019"
+    },
+    {
+      "city": "Varanasi",
+      "state": "UP",
+      "estimated_widows": 12000,
+      "origin_states": [
+        "Bengal",
+        "Bihar",
+        "UP",
+        "MP"
+      ],
+      "condition": "Kashi labh — tradition of dying in Varanasi. Many widows wait to die. Live in dharamshalas, begging at ghats. Moksha Bhavan (liberation house) for dying.",
+      "who_documents": "Jonathan Parry (anthropologist), IGNOU studies",
+      "programs": "Varanasi Municipal Corporation widow hostels (inadequate)",
+      "source": "Academic studies + UNFPA India"
+    },
+    {
+      "city": "Puri",
+      "state": "OD",
+      "estimated_widows": 8000,
+      "origin_states": [
+        "Odisha",
+        "West Bengal"
+      ],
+      "condition": "Jagannath temple widows. Shaved heads, white saris. Many denied entry to temple itself. Live outside temple precincts begging.",
+      "who_documents": "Odisha State Commission for Women",
+      "programs": "Limited state ashram support",
+      "source": "Odisha State Commission for Women 2020"
+    },
+    {
+      "city": "Mathura",
+      "state": "UP",
+      "estimated_widows": 6000,
+      "origin_states": [
+        "UP",
+        "Bengal",
+        "Rajasthan"
+      ],
+      "condition": "Krishna pilgrimage town. Many widows abandoned here. Sing bhajans for 2kg rice/day.",
+      "who_documents": "Supreme Court of India 2018 order on abandoned widows",
+      "programs": "UP government widow homes (capacity inadequate)",
+      "source": "Supreme Court 2018 + NHRC"
+    },
+    {
+      "city": "Tirupati",
+      "state": "AP",
+      "estimated_widows": 4000,
+      "origin_states": [
+        "Andhra Pradesh",
+        "Tamil Nadu"
+      ],
+      "condition": "Wealthiest temple in world (Balaji). Yet widows beg at its gates. Tonsured widows (head-shaving ritual). Criminalised in AP in 2018 but persists.",
+      "who_documents": "Andhra Pradesh Women's Commission",
+      "programs": "AP government hostel (limited)",
+      "source": "AP Women's Commission 2019"
+    }
+  ]
+}

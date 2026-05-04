@@ -1,0 +1,124 @@
+# SHEtoken WEI City Scores v1.0 — 2025
+# 111 world cities scored
+# Simple average WEI across all cities: 61.4
+# Formula: WEI = (Empowerment x 0.15) + (Education x 0.12)
+#         + (Economic x 0.12) + (Health x 0.12)
+#         + (Bodily Autonomy x 0.15) + (Safety & Justice x 0.14)
+#         + (Dignity & Welfare x 0.10) + (Digital & Social x 0.10)
+#         - (Violence Penalty x 0.10)
+# Sources: NCRB, FBI UCR, UN Habitat, SafeCity, CDC PLACES,
+#          Numbeo, Thomson Reuters, Economist Safe Cities Index
+# Generated: May 2026 | shetoken.org
+#
+rank,city,slug,ticker,country_iso,state_code,region,population_millions,empowerment_score,education_score,economic_score,health_score,bodily_autonomy_score,safety_justice_score,dignity_welfare_score,digital_social_score,violence_penalty_score,wei_score,data_quality,year,wei_version,verified,notes
+1,Stockholm,stockholm,SHE-SWE-STOCKH,SWE,,Europe,1.0,92,98,86,96,94,90,90,94,8,91.7,good,2025,1.0,false,World's highest gender equality. Nordic model.
+2,Oslo,oslo,SHE-NOR-OSLO,NOR,,Europe,0.7,92,98,86,96,94,90,90,94,8,91.7,good,2025,1.0,false,Top global city for women's safety and rights.
+3,Helsinki,helsinki,SHE-FIN-HELSIN,FIN,,Europe,0.7,92,98,84,96,94,88,88,92,8,90.8,good,2025,1.0,false,Finland top global performer.
+4,Gothenburg,gothenburg,SHE-SWE-GOTHEN,SWE,,Europe,1.0,90,98,84,96,92,88,88,92,8,90.2,good,2025,1.0,false,Sweden's second city. Same strong national protections.
+5,Copenhagen,copenhagen,SHE-DNK-COPENH,DNK,,Europe,0.8,88,96,84,96,92,88,88,92,8,89.6,good,2025,1.0,false,Denmark capital. Top global safety for women.
+6,Auckland,auckland,SHE-NZL-AUCKLA,NZL,,Oceania,1.7,86,96,80,94,90,86,84,88,14,86.6,good,2025,1.0,false,NZ strong women's rights. First country to give women vote 1893.
+7,Berlin,berlin,SHE-DEU-BERLIN,DEU,,Europe,3.8,84,96,80,94,88,84,84,88,12,86.0,good,2025,1.0,false,Strong gender equality laws. High female political representation.
+8,Munich,munich,SHE-DEU-MUNICH,DEU,,Europe,1.5,82,96,80,94,88,82,82,86,10,85.2,good,2025,1.0,false,High income city. Strong social protections.
+9,Boston,boston,SHE-USA-BOSTON,USA,MA,N. America,0.7,86,96,78,86,88,82,80,90,12,84.6,good,2025,1.0,false,Massachusetts top-tier bodily autonomy. Strong legal framework.
+10,Melbourne,melbourne,SHE-AUS-MELBOU,AUS,,Oceania,5.1,82,96,76,94,88,82,82,88,16,84.3,good,2025,1.0,false,Feminist city policy. Royal Commission into Family Violence 2015.
+11,Sydney,sydney,SHE-AUS-SYDNEY,AUS,,Oceania,5.3,82,96,76,94,88,82,82,88,18,84.1,good,2025,1.0,false,Strong protections. Indigenous women face compounded disadvantage.
+12,Hamburg,hamburg,SHE-DEU-HAMBUR,DEU,,Europe,1.8,80,96,78,92,86,80,80,86,12,83.4,good,2025,1.0,false,Major port city. Strong women's labour rights.
+13,Toronto,toronto,SHE-CAN-TORONT,CAN,,N. America,6.3,82,96,74,92,88,80,78,88,16,83.1,good,2025,1.0,false,Highly diverse. Strong protections. Indigenous women MMIWG crisis.
+14,Vancouver,vancouver,SHE-CAN-VANCOU,CAN,,N. America,2.6,82,96,74,92,88,80,78,88,16,83.1,good,2025,1.0,false,BC strong reproductive rights. High cost of living dignity concern.
+15,New York City,new-york,SHE-USA-NEW-YO,USA,NY,N. America,8.3,82,96,76,84,88,78,76,90,18,81.9,good,2025,1.0,false,Strong reproductive rights laws. High cost of living affects dignity. Good legal aid access.
+16,Edinburgh,edinburgh,SHE-GBR-EDINBU,GBR,,Europe,0.5,80,96,74,88,86,80,78,86,16,81.9,good,2025,1.0,false,Scotland-specific gender legislation. Progressive policy.
+17,Barcelona,barcelona,SHE-ESP-BARCEL,ESP,,Europe,1.6,78,96,72,92,84,80,78,86,14,81.7,good,2025,1.0,false,Progressive city policy. Ada Colau era advances.
+18,Montreal,montreal,SHE-CAN-MONTRE,CAN,,N. America,2.2,80,96,72,90,86,78,76,86,14,81.6,good,2025,1.0,false,Quebec feminist tradition. Strong labour protections.
+19,Paris,paris,SHE-FRA-PARIS,FRA,,Europe,2.2,78,96,76,92,84,78,78,86,18,81.5,good,2025,1.0,false,Strong feminist movement. High street harassment (existing research).
+20,Seattle,seattle,SHE-USA-SEATTL,USA,WA,N. America,0.7,80,94,76,84,88,78,76,88,16,81.4,good,2025,1.0,false,Washington strong reproductive rights. Tech industry gender gap.
+21,London,london,SHE-GBR-LONDON,GBR,,Europe,9.5,78,96,74,88,84,78,76,88,20,80.6,good,2025,1.0,false,Strong legal framework. High cost of living. Good reproductive rights.
+22,Madrid,madrid,SHE-ESP-MADRID,ESP,,Europe,3.4,76,96,72,92,82,78,76,84,16,80.2,good,2025,1.0,false,Spain strong feminist legislation. Vox backlash creating tensions.
+23,Tokyo,tokyo,SHE-JPN-TOKYO,JPN,,East Asia,13.9,68,98,68,96,78,76,80,86,8,79.8,good,2025,1.0,false,Very low crime. High education. Low political representation limits empowerment score.
+24,Lyon,lyon,SHE-FRA-LYON,FRA,,Europe,0.5,76,94,72,90,82,76,76,82,16,79.3,good,2025,1.0,false,Progressive city policy.
+25,Tel Aviv,tel-aviv,SHE-ISR-TEL-AV,ISR,,Middle East,0.5,74,96,72,94,76,74,74,84,16,78.5,good,2025,1.0,false,Most progressive Israeli city. Strong women's professional sector.
+26,Osaka,osaka,SHE-JPN-OSAKA,JPN,,East Asia,2.7,66,98,66,96,76,74,78,84,8,78.3,good,2025,1.0,false,Kansai region. Similar to Tokyo profile.
+27,Minneapolis,minneapolis,SHE-USA-MINNEA,USA,MN,N. America,0.4,78,94,72,84,80,76,74,82,18,78.1,good,2025,1.0,false,Minnesota protected reproductive rights by state Supreme Court.
+28,Denver,denver,SHE-USA-DENVER,USA,CO,N. America,0.7,76,94,72,82,84,76,72,80,20,77.6,good,2025,1.0,false,Colorado strong reproductive rights post-Roe.
+29,Seoul,seoul,SHE-KOR-SEOUL,KOR,,East Asia,10.0,64,98,66,96,76,74,78,82,12,77.4,good,2025,1.0,false,"High education, high digital. Metoo movement strong. Low birth rate linked to gender inequality."
+30,Los Angeles,los-angeles,SHE-USA-LOS-AN,USA,CA,N. America,4.0,78,92,70,80,86,72,68,86,26,76.5,good,2025,1.0,false,California reproductive rights. High homelessness affects dignity score.
+31,Manchester,manchester,SHE-GBR-MANCHE,GBR,,Europe,2.8,72,92,68,84,82,74,70,82,20,75.9,good,2025,1.0,false,Strong DV services. Northern Powerhouse women's enterprise.
+32,Montevideo,montevideo,SHE-URY-MONTEV,URY,,S. America,1.4,70,94,66,92,76,70,72,74,26,73.9,good,2025,1.0,false,Uruguay most progressive Latin American country. Abortion legalised 2012.
+33,Kochi,kochi,SHE-IND-KOCHI,IND,KL,South Asia,2.2,72,92,60,86,76,72,74,72,18,73.6,good,2025,1.0,false,Kerala model. Kudumbashree strong. Highest female empowerment among Indian cities.
+34,Thiruvananthapuram,thiruvananthapuram,SHE-IND-THIRUV,IND,KL,South Asia,1.1,72,92,58,86,76,72,74,70,16,73.4,good,2025,1.0,false,Kerala capital. Strong female political participation.
+35,Chicago,chicago,SHE-USA-CHICAG,USA,IL,N. America,2.7,74,92,68,78,80,64,64,82,34,71.8,good,2025,1.0,false,South side gun violence affects women. Strong north side protections.
+36,Birmingham,birmingham,SHE-GBR-BIRMIN,GBR,,Europe,2.6,68,88,62,80,78,68,66,76,22,71.0,good,2025,1.0,false,Diverse population. Strong community women's organisations.
+37,Philadelphia,philadelphia,SHE-USA-PHILAD,USA,PA,N. America,1.6,72,90,64,76,74,66,62,78,28,69.9,good,2025,1.0,false,Strong DV legal framework. High poverty affects dignity score.
+38,Buenos Aires,buenos-aires,SHE-ARG-BUENOS,ARG,,S. America,3.1,66,92,60,84,72,62,64,70,34,67.7,good,2025,1.0,false,Ni Una Menos movement origin. Strong feminist legal reforms. Abortion legalised 2020.
+39,Shanghai,shanghai,SHE-CHN-SHANGH,CHN,,East Asia,26.3,60,94,66,88,60,60,62,70,20,67.4,moderate,2025,1.0,false,Most global Chinese city. High female professional workforce.
+40,Havana,havana,SHE-CUB-HAVANA,CUB,,Caribbean,2.1,68,94,54,86,66,62,62,62,22,67.1,moderate,2025,1.0,false,Universal healthcare and education. Economic crisis impacts dignity. High female professional class.
+41,Beijing,beijing,SHE-CHN-BEIJIN,CHN,,East Asia,21.9,62,94,64,88,60,60,62,68,22,67.0,moderate,2025,1.0,false,High female education. Political restrictions limit empowerment measurement.
+42,Shenzhen,shenzhen,SHE-CHN-SHENZH,CHN,,East Asia,17.6,58,92,64,86,58,58,60,68,20,65.4,moderate,2025,1.0,false,Tech hub. High female tech workforce relative to global norms.
+43,Mexico City,mexico-city,SHE-MEX-MEXICO,MEX,CDMX,C. America,9.2,66,88,62,78,70,58,60,74,40,65.3,good,2025,1.0,false,Feminist emergency declared 2019. Large anti-femicide protests. Abortion legalised here 2007.
+44,Guangzhou,guangzhou,SHE-CHN-GUANGZ,CHN,,East Asia,18.7,58,92,62,86,58,58,60,66,22,64.7,moderate,2025,1.0,false,Pearl River Delta. Manufacturing female workforce.
+45,Brasilia,brasilia,SHE-BRA-BRASIL,BRA,DF,S. America,3.0,64,88,62,80,66,58,60,68,36,64.4,good,2025,1.0,false,Federal capital. Better services and legal framework.
+46,Bengaluru,bengaluru,SHE-IND-BENGAL,IND,KA,South Asia,12.3,62,88,62,78,62,56,60,76,38,63.6,good,2025,1.0,false,Tech hub. Higher female IT employment. SafeCity data. Better safety than Delhi/Mumbai.
+47,Chennai,chennai,SHE-IND-CHENNA,IND,TN,South Asia,10.9,60,86,58,78,64,58,60,70,30,63.4,good,2025,1.0,false,Strong female literacy. Lower crime rates than north India. SafeCity data.
+48,Phoenix,phoenix,SHE-USA-PHOENI,USA,AZ,N. America,1.6,64,86,62,74,56,60,58,70,30,62.8,good,2025,1.0,false,Arizona partial abortion restrictions.
+49,Hanoi,hanoi,SHE-VNM-HANOI,VNM,,SE Asia,8.1,60,88,56,86,54,58,56,60,18,62.6,good,2025,1.0,false,Capital. Strong female education and political representation.
+50,Ho Chi Minh City,ho-chi-minh,SHE-VNM-HO-CHI,VNM,,SE Asia,9.3,58,88,58,86,54,56,56,60,20,62.1,good,2025,1.0,false,Economic hub. High female workforce in manufacturing. Gender wage gap shrinking.
+51,Chandigarh,chandigarh,SHE-IND-CHANDI,IND,PB,North India,1.2,62,86,56,78,56,58,60,66,28,62.0,good,2025,1.0,false,UT capital. Higher female literacy and employment than state avg.
+52,Pune,pune,SHE-IND-PUNE,IND,MH,South Asia,7.4,60,86,58,76,60,56,60,70,34,61.8,good,2025,1.0,false,Educational hub. Strong female college enrollment. Mann Deshi Bank nearby.
+53,Sao Paulo,sao-paulo,SHE-BRA-SAO-PA,BRA,SP,S. America,12.3,60,86,62,78,66,54,58,68,44,61.8,good,2025,1.0,false,Brazil's largest city. Strong women's legal aid network. High DV calls.
+54,Mumbai,mumbai,SHE-IND-MUMBAI,IND,MH,South Asia,20.7,62,88,58,78,60,54,60,72,42,61.7,good,2025,1.0,false,Financial capital. High female workforce but high cost-of-living DV. SafeCity data.
+55,Monterrey,monterrey,SHE-MEX-MONTER,MEX,NL,C. America,5.3,60,86,62,76,60,56,58,68,36,61.7,good,2025,1.0,false,Industrial city. Higher female employment in manufacturing.
+56,Miami,miami,SHE-USA-MIAMI,USA,FL,N. America,0.5,64,86,60,72,52,58,56,70,28,61.5,good,2025,1.0,false,Florida 6-week abortion ban affects score.
+57,Porto Alegre,porto-alegre,SHE-BRA-PORTO-,BRA,RS,S. America,1.5,60,86,58,76,64,56,58,64,38,61.2,good,2025,1.0,false,South Brazil better safety record. Flooding 2024 affected women disproportionately.
+58,Bangkok,bangkok,SHE-THA-BANGKO,THA,,SE Asia,10.7,56,88,58,86,56,54,56,62,28,61.2,good,2025,1.0,false,High female tourism industry employment. 2022 abortion reform positive.
+59,Manila,manila,SHE-PHL-MANILA,PHL,,SE Asia,13.9,62,90,56,78,58,54,56,60,34,60.6,good,2025,1.0,false,Philippines strong female political tradition. Dutertre era increased violence.
+60,Colombo,colombo,SHE-LKA-COLOMB,LKA,,South Asia,0.8,56,90,52,82,56,52,54,60,26,59.8,good,2025,1.0,false,Post-war recovery. Strong female education. Tea industry women's wages improving.
+61,Bogota,bogota,SHE-COL-BOGOTA,COL,,S. America,7.2,60,88,58,76,60,52,54,66,42,59.7,good,2025,1.0,false,Colombia constitutional protection for women. Post-conflict women's rights challenges.
+62,Hyderabad,hyderabad,SHE-IND-HYDERA,IND,TS,South Asia,10.5,58,82,56,74,58,54,56,68,36,59.2,good,2025,1.0,false,Growing IT sector. Stree Nidhi microfinance active. Moderate crime rates.
+63,Cebu,cebu,SHE-PHL-CEBU,PHL,,SE Asia,0.9,60,88,54,76,56,52,54,58,32,58.8,good,2025,1.0,false,Visayas region. Strong women's enterprise.
+64,Guadalajara,guadalajara,SHE-MEX-GUADAL,MEX,JA,C. America,5.3,58,84,58,74,58,52,54,64,42,58.2,good,2025,1.0,false,Second largest city. Feminist groups active.
+65,Ahmedabad,ahmedabad,SHE-IND-AHMEDA,IND,GJ,South Asia,8.4,56,80,54,72,56,52,54,64,28,57.8,good,2025,1.0,false,SEWA founded here. Strong women's cooperative sector.
+66,Atlanta,atlanta,SHE-USA-ATLANT,USA,GA,N. America,0.5,62,86,60,70,32,56,54,68,30,57.1,good,2025,1.0,false,Georgia abortion ban (6-week ban). High Black maternal mortality in Georgia.
+67,Belo Horizonte,belo-horizonte,SHE-BRA-BELO-H,BRA,MG,S. America,2.7,56,82,54,74,60,52,54,60,44,56.9,good,2025,1.0,false,Better safety record than Rio. Growing women's enterprise.
+68,Medellin,medellin,SHE-COL-MEDELL,COL,,S. America,2.6,56,86,54,74,58,48,50,62,46,56.1,good,2025,1.0,false,Transformation city. Women's enterprise growing. Gang-related DV persists.
+69,Dubai,dubai,SHE-ARE-DUBAI,ARE,,Middle East,3.6,42,88,56,86,44,44,50,62,18,56.1,moderate,2025,1.0,false,UAE not Saudi. Higher expat female workforce. Strong safety record for women.
+70,Lagos,lagos,SHE-NGA-LAGOS,NGA,LA,Africa,15.4,56,76,58,66,64,50,52,64,46,56.0,moderate,2025,1.0,false,Nigeria's most progressive city. Women in commerce. High urbanisation.
+71,Kolkata,kolkata,SHE-IND-KOLKAT,IND,WB,South Asia,14.9,56,82,48,72,52,52,54,62,38,55.5,good,2025,1.0,false,Kanyashree awareness high. Cultural barriers to women's economic participation.
+72,Houston,houston,SHE-USA-HOUSTO,USA,TX,N. America,2.3,62,86,60,72,22,54,54,68,32,55.3,good,2025,1.0,false,Texas abortion ban severely impacts bodily autonomy score.
+73,Kigali,kigali,SHE-RWA-KIGALI,RWA,,Africa,1.4,64,84,48,70,50,52,50,50,34,55.2,moderate,2025,1.0,false,61% women in parliament (national). Fast-growing city. Still high DV rates.
+74,Rio de Janeiro,rio,SHE-BRA-RIO,BRA,RJ,S. America,6.7,56,84,54,74,60,44,52,64,58,54.8,good,2025,1.0,false,High femicide rate. Favela women face compounded risks.
+75,Surat,surat,SHE-IND-SURAT,IND,GJ,South Asia,7.2,52,78,52,70,52,48,50,60,26,54.7,moderate,2025,1.0,false,Textile industry female workers. Growing economic participation.
+76,Jakarta,jakarta,SHE-IDN-JAKART,IDN,,SE Asia,10.7,46,84,50,76,50,48,50,56,30,53.9,moderate,2025,1.0,false,Capital. Women's enterprise growing. Religious conservatism in outer areas.
+77,Cape Town,cape-town,SHE-ZAF-CAPE-T,ZAF,,Africa,4.6,62,86,58,72,56,42,52,62,72,53.7,good,2025,1.0,false,High femicide. Better economic opportunities for women.
+78,Delhi,delhi,SHE-IND-DELHI,IND,DL,South Asia,32.9,58,84,52,74,52,44,52,74,72,53.3,good,2025,1.0,false,Highest rape reporting rate among Indian cities (NCRB). High digital harassment. One-Stop Centres active.
+79,San Antonio,san-antonio,SHE-USA-SAN-AN,USA,TX,N. America,1.4,60,84,56,70,22,52,50,64,30,53.2,good,2025,1.0,false,Texas abortion ban. Large Hispanic community affected.
+80,Jeddah,jeddah,SHE-SAU-JEDDAH,SAU,,Middle East,4.7,38,84,52,84,42,40,46,58,20,52.4,moderate,2025,1.0,false,More liberal than Riyadh. Mixed-gender workplaces expanding.
+81,Nairobi,nairobi,SHE-KEN-NAIROB,KEN,,Africa,4.9,54,80,52,62,50,48,48,60,44,52.0,moderate,2025,1.0,false,East Africa hub. Strong women's NGO sector. High urban poverty affects score.
+82,Abuja,abuja,SHE-NGA-ABUJA,NGA,FC,Africa,3.6,54,74,52,64,50,48,50,58,40,51.9,moderate,2025,1.0,false,Federal capital. Better services. Diplomatic community influence.
+83,Surabaya,surabaya,SHE-IDN-SURABA,IDN,,SE Asia,2.9,44,82,48,74,48,46,48,52,28,51.9,moderate,2025,1.0,false,East Java. Industrial female employment.
+84,Riyadh,riyadh,SHE-SAU-RIYADH,SAU,,Middle East,7.7,38,84,50,84,40,38,46,56,22,51.2,moderate,2025,1.0,false,"Vision 2030 rapidly changing. Women now drive, work, travel. Guardianship still applies."
+85,Johannesburg,johannesburg,SHE-ZAF-JOHANN,ZAF,,Africa,5.8,60,84,56,70,54,38,50,60,78,50.8,good,2025,1.0,false,Economic hub. World's highest femicide rate pulls score down severely.
+86,Jaipur,jaipur,SHE-IND-JAIPUR,IND,RJ,South Asia,3.9,48,72,44,68,42,46,46,58,38,48.6,moderate,2025,1.0,false,Educate Girls active in surrounding area. Tourism sector female employment growing.
+87,Durban,durban,SHE-ZAF-DURBAN,ZAF,,Africa,3.7,56,82,52,68,52,36,46,56,74,48.3,good,2025,1.0,false,KwaZulu-Natal. High gender violence. Women's networks active.
+88,Tijuana,tijuana,SHE-MEX-TIJUAN,MEX,BC,C. America,2.0,50,78,46,68,50,38,44,56,60,47.4,moderate,2025,1.0,false,Border city. High femicide rate. Trafficking risk.
+89,Fortaleza,fortaleza,SHE-BRA-FORTAL,BRA,CE,S. America,2.7,50,74,44,68,46,42,44,50,54,46.6,moderate,2025,1.0,false,High violent crime. Women's health programs active.
+90,Recife,recife,SHE-BRA-RECIFE,BRA,PE,S. America,1.7,48,74,42,66,46,40,42,48,56,44.9,moderate,2025,1.0,false,High DV. Maria da Penha law origin city.
+91,New Orleans,new-orleans,SHE-USA-NEW-OR,USA,LA,N. America,0.4,50,80,46,62,20,40,44,56,46,44.1,moderate,2025,1.0,false,Louisiana total abortion ban. High femicide rate. High poverty.
+92,Ibadan,ibadan,SHE-NGA-IBADAN,NGA,OY,Africa,3.6,44,68,42,60,46,40,40,44,48,43.1,moderate,2025,1.0,false,Oyo state. University city. Better female education.
+93,Manaus,manaus,SHE-BRA-MANAUS,BRA,AM,S. America,2.2,46,72,40,66,44,38,40,44,56,43.0,moderate,2025,1.0,false,Amazon region. High DV. Limited legal aid access.
+94,Mombasa,mombasa,SHE-KEN-MOMBAS,KEN,,Africa,1.2,42,72,40,58,44,40,40,46,48,42.7,moderate,2025,1.0,false,Coastal city. Tourism industry. High DV rates.
+95,Port Harcourt,port-harcourt,SHE-NGA-PORT-H,NGA,RI,Africa,3.2,46,68,44,58,46,38,40,44,54,42.5,moderate,2025,1.0,false,Oil city. Women's enterprise in trade.
+96,Bhopal,bhopal,SHE-IND-BHOPAL,IND,MP,South Asia,2.4,44,70,38,62,34,40,40,46,50,41.3,moderate,2025,1.0,false,High crime rate state. Bhopal gas tragedy long-term health impacts.
+97,Addis Ababa,addis-ababa,SHE-ETH-ADDIS-,ETH,,Africa,5.0,44,66,40,56,36,36,36,42,38,40.5,moderate,2025,1.0,false,Capital city. Better access than rural areas. Ethiopian women in government growing.
+98,Jackson MS,jackson-ms,SHE-USA-JACKSO,USA,MS,N. America,0.2,48,78,40,56,18,38,38,50,48,40.1,moderate,2025,1.0,false,"Mississippi lowest WEI state. High maternal mortality, total abortion ban."
+99,Lucknow,lucknow,SHE-IND-LUCKNO,IND,UP,South Asia,3.7,42,70,38,64,28,38,40,50,58,39.7,moderate,2025,1.0,false,State capital but UP challenges persist. High crime rate.
+100,Islamabad,islamabad,SHE-PAK-ISLAMA,PAK,ICT,South Asia,1.2,38,70,38,70,28,28,30,40,28,39.4,moderate,2025,1.0,false,Capital city. Better access and legal services.
+101,Dhaka,dhaka,SHE-BGD-DHAKA,BGD,,South Asia,22.4,38,70,38,66,30,34,30,36,40,38.4,moderate,2025,1.0,false,Garment industry employs millions of women. Child marriage high in surrounding areas.
+102,Acapulco,acapulco,SHE-MEX-ACAPUL,MEX,GR,C. America,0.8,38,68,36,60,38,26,34,42,72,35.1,moderate,2025,1.0,false,Guerrero state — highest femicide rate in Mexico.
+103,Chittagong,chittagong,SHE-BGD-CHITTA,BGD,,South Asia,5.1,34,66,34,62,28,30,28,32,40,34.9,moderate,2025,1.0,false,Port city. Industrial female employment.
+104,Cairo,cairo,SHE-EGY-CAIRO,EGY,,Middle East,21.3,26,72,30,74,24,26,26,32,34,34.7,moderate,2025,1.0,false,Massive city. High street harassment (HarassMap data). Female mobility restricted.
+105,Patna,patna,SHE-IND-PATNA,IND,BR,South Asia,2.5,36,60,28,56,22,36,34,38,40,34.2,moderate,2025,1.0,false,JEEViKA active. Low female LFPR. High poverty.
+106,Tehran,tehran,SHE-IRN-TEHRAN,IRN,,Middle East,15.8,22,78,30,78,18,22,22,28,34,33.0,limited,2025,1.0,false,Mahsa Amini protests origin. Hijab enforcement. Women high in universities but restricted professionally.
+107,Alexandria,alexandria,SHE-EGY-ALEXAN,EGY,,Middle East,5.4,24,70,28,72,22,24,24,30,32,32.9,moderate,2025,1.0,false,Egypt's second city. Similar challenges to Cairo.
+108,Karachi,karachi,SHE-PAK-KARACH,PAK,SI,South Asia,16.1,28,54,28,60,16,20,18,22,44,26.0,moderate,2025,1.0,false,Pakistan's largest city. Honour killings. Acid attacks historically high.
+109,Lahore,lahore,SHE-PAK-LAHORE,PAK,PJ,South Asia,13.1,26,52,26,62,16,20,16,22,42,25.5,moderate,2025,1.0,false,Cultural capital. Women's activism growing. Aurat March origin.
+110,Kano,kano,SHE-NGA-KANO,NGA,KN,Africa,13.1,22,44,24,42,12,18,14,18,58,18.2,limited,2025,1.0,false,Sharia law. Child marriage high. Women's movement heavily restricted.
+111,Peshawar,peshawar,SHE-PAK-PESHAW,PAK,KP,South Asia,2.3,16,40,20,54,10,14,12,14,44,17.7,limited,2025,1.0,false,KPK province. Conservative. Women's movement heavily restricted.

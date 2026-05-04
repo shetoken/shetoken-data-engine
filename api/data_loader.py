@@ -12,11 +12,34 @@ from typing import Optional
 logger = logging.getLogger(__name__)
 
 # Resolve data paths relative to this file
+# Works both locally (api/ is subfolder) and on Railway (api/ is root)
 API_DIR   = Path(__file__).parent
+
+# Try repo root first (local), then look in parent dirs, then same dir
+def _find_data_dir() -> Path:
+    candidates = [
+        API_DIR.parent / "data" / "output",   # local: repo_root/data/output
+        API_DIR / "data" / "output",           # Railway: api/data/output
+        Path("/app") / "data" / "output",      # Docker: /app/data/output
+        Path.home() / "data" / "output",       # fallback
+    ]
+    for c in candidates:
+        if c.exists() and any(c.glob("*.csv")):
+            return c
+    # Return first existing dir even if empty
+    for c in candidates:
+        if c.exists():
+            return c
+    # Default to repo root style
+    return API_DIR.parent / "data" / "output"
+
 REPO_ROOT = API_DIR.parent
-DATA_DIR  = REPO_ROOT / "data" / "output"
+DATA_DIR  = _find_data_dir()
 LIVE_DIR  = REPO_ROOT / "agent" / "output" / "live"
 SIG_DIR   = REPO_ROOT / "agent" / "output" / "signals"
+
+import logging as _logging
+_logging.getLogger(__name__).info(f"DATA_DIR resolved to: {DATA_DIR}")
 
 
 def load_csv(path: Path) -> list[dict]:

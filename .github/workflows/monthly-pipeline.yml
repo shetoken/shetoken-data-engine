@@ -43,10 +43,10 @@ jobs:
           python generate_pakistan_provinces.py --year 2025
           python generate_city_scores.py --year 2025
 
-      - name: Sync outputs to pipeline/data/output
+      - name: Sync outputs — copy pipeline/output to pipeline/data/output
         run: |
           cp -r pipeline/output/. pipeline/data/output/ 2>/dev/null || true
-          echo "Files available for next steps:"
+          echo "=== pipeline/data/output contents ==="
           ls pipeline/data/output/
 
       - name: Step 2 — Other indexes
@@ -86,8 +86,19 @@ jobs:
         run: |
           cp -r pipeline/output/. data/output/ 2>/dev/null || true
           cp -r pipeline/data/output/. data/output/ 2>/dev/null || true
-          echo "Final data/output:"
+          echo "=== Final data/output ==="
           ls data/output/
+          echo "=== Historical files ==="
+          ls data/output/historical/ 2>/dev/null || echo "No historical files"
+
+      - name: Copy data into api/data for Railway
+        run: |
+          mkdir -p api/data/output/historical
+          cp -r pipeline/output/. api/data/output/ 2>/dev/null || true
+          cp -r pipeline/data/output/. api/data/output/ 2>/dev/null || true
+          cp -r data/output/. api/data/output/ 2>/dev/null || true
+          echo "Files in api/data/output:"
+          ls api/data/output/ | head -10
 
       - name: Commit data files
         run: |

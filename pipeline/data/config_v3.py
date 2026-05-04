@@ -4,8 +4,10 @@ Shared config imported by all data generators.
 """
 from pathlib import Path
 
-# Output directory — relative to this file's location
-OUTPUT_DIR   = Path(__file__).parent.parent / "data" / "output"
+# All generators run from pipeline/data/
+# So __file__ = pipeline/data/config_v3.py
+# Output goes to pipeline/data/output/
+OUTPUT_DIR    = Path(__file__).parent / "output"
 BASELINE_YEAR = 2025
 
 # Ensure output directories exist
