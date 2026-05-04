@@ -2,13 +2,13 @@
 # (c) 2026 SHE Foundation
 #
 year,global_wei,countries,tier1,tier2,tier3,tier4,top_country,top_score,bottom_country,bottom_score
-2015,53.9,83,23,28,22,10,Iceland,92.2,Somalia,4.3
-2016,54.1,83,23,28,22,10,Iceland,92.4,Somalia,4.4
-2017,54.3,83,23,28,22,10,Iceland,92.5,Somalia,4.5
-2018,54.6,83,23,28,22,10,Iceland,92.9,Somalia,4.7
-2019,55.0,83,23,28,22,10,Iceland,92.9,Somalia,4.9
-2020,53.0,83,23,28,22,10,Iceland,90.8,Somalia,2.7
-2021,55.1,83,23,28,22,10,Iceland,92.9,Afghanistan,-3.0
-2022,55.0,83,23,28,22,10,Iceland,92.9,Somalia,4.8
-2023,55.4,83,23,28,22,10,Iceland,93.0,Somalia,4.8
-2024,55.9,83,23,28,22,10,Iceland,93.2,Somalia,5.1
+2015,53.2,105,30,37,28,10,Iceland,92.2,Somalia,4.3
+2016,53.5,105,30,37,28,10,Iceland,92.4,Somalia,4.4
+2017,53.7,105,30,37,28,10,Iceland,92.5,Somalia,4.5
+2018,54.0,105,30,37,28,10,Iceland,92.9,Somalia,4.7
+2019,54.4,105,30,37,28,10,Iceland,92.9,Somalia,4.9
+2020,52.4,105,30,37,28,10,Iceland,90.8,Somalia,2.7
+2021,54.5,105,30,37,28,10,Iceland,92.9,Afghanistan,-3.0
+2022,54.4,105,30,37,28,10,Iceland,92.9,Somalia,4.8
+2023,54.8,105,30,37,28,10,Iceland,93.0,Somalia,4.8
+2024,55.3,105,30,37,28,10,Iceland,93.2,Somalia,5.1
