@@ -20,6 +20,7 @@ from typing import Optional
 import logging
 
 from analytics import AnalyticsMiddleware, get_stats
+from rate_limiter import rate_limit_middleware
 from data_loader import (
     get_mfi_basket, get_prediction_markets, get_enhanced_tokenomics,
     get_savings_product, get_etf_spec,
@@ -54,6 +55,9 @@ app = FastAPI(
 
 # ── Analytics middleware
 app.add_middleware(AnalyticsMiddleware)
+
+# ── Rate limiting middleware
+app.middleware("http")(rate_limit_middleware)
 
 # ── CORS — allow Lovable and any browser to call this API ─────────────────────
 app.add_middleware(
