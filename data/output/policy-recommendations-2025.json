@@ -581,6 +581,103 @@
     ],
     "corporate_actions": []
   },
+  "LUX": {
+    "country": "Luxembourg",
+    "iso_code": "LUX",
+    "tier": "1",
+    "wei_score": "87.8",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "economic",
+        "pillar_score": 82.0,
+        "intervention": "Women's Self Help Group Network",
+        "description": "Microfinance SHGs with business training and collective bargaining",
+        "impact": "WEI Economic +3.0, GPI Wage +1.5",
+        "cost": "low",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Kudumbashree Kerala — 46 lakh members, half of all Kerala families"
+      },
+      {
+        "priority": 2,
+        "pillar": "economic",
+        "pillar_score": 82.0,
+        "intervention": "Direct Cash Transfer to Women",
+        "description": "Unconditional monthly cash directly to women's bank accounts",
+        "impact": "WEI Economic +2.5, GPI Income Poverty +3.0",
+        "cost": "medium",
+        "time_to_impact": "immediate",
+        "proven_example": "Lakshmi Bhandar WB — 24.1M women, ₹1500/month, direct autonomy"
+      },
+      {
+        "priority": 3,
+        "pillar": "economic",
+        "pillar_score": 82.0,
+        "intervention": "Equal Pay Legislation + Mandatory Reporting",
+        "description": "Require employers to publish gender pay gap + enforce penalties",
+        "impact": "WEI Economic +2.5, GPI Wage +3.0",
+        "cost": "low (law)",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Iceland Equal Pay Certification 2018 — first country to mandate it"
+      },
+      {
+        "priority": 4,
+        "pillar": "economic",
+        "pillar_score": 82.0,
+        "intervention": "Maternity + Shared Parental Leave",
+        "description": "Generous shared parental leave — incentivise men to take it",
+        "impact": "WEI Economic +1.5, GPI Time Poverty +2.0",
+        "cost": "medium",
+        "time_to_impact": "immediate (law) + culture shift 3-5 yrs",
+        "proven_example": "Sweden 16-month shared leave — men now take 30% of leave days"
+      },
+      {
+        "priority": 5,
+        "pillar": "economic",
+        "pillar_score": 82.0,
+        "intervention": "Women's Digital Financial Inclusion",
+        "description": "Mobile banking + digital literacy for unbanked women",
+        "impact": "WEI Economic +2.0, GPI Financial Inclusion +3.0",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "M-Pesa Kenya women agents — transformed rural financial access"
+      },
+      {
+        "priority": 6,
+        "pillar": "empowerment",
+        "pillar_score": 84.0,
+        "intervention": "Gender Quota in Parliament + Local Government",
+        "description": "Reserved seats or candidate quotas for women in all legislative bodies",
+        "impact": "WEI Empowerment +4.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 1 election cycle",
+        "proven_example": "Rwanda 61% women parliament via quota — highest globally"
+      },
+      {
+        "priority": 7,
+        "pillar": "empowerment",
+        "pillar_score": 84.0,
+        "intervention": "Women's Political Leadership Pipeline",
+        "description": "Mentorship, training, networking for women entering public life",
+        "impact": "WEI Empowerment +1.5",
+        "cost": "low",
+        "time_to_impact": "3-5 years",
+        "proven_example": "UN Women leadership programs — 50+ countries active"
+      },
+      {
+        "priority": 8,
+        "pillar": "safety_justice",
+        "pillar_score": 86.0,
+        "intervention": "Domestic Violence Law + One-Stop Centres",
+        "description": "Criminalise DV + integrated centres with legal aid, shelter, counselling",
+        "impact": "WEI Safety +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "1-3 years",
+        "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
+      }
+    ],
+    "corporate_actions": []
+  },
   "NLD": {
     "country": "Netherlands",
     "iso_code": "NLD",
@@ -1260,6 +1357,103 @@
     ],
     "corporate_actions": []
   },
+  "SVN": {
+    "country": "Slovenia",
+    "iso_code": "SVN",
+    "tier": "1",
+    "wei_score": "84.8",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "economic",
+        "pillar_score": 76.0,
+        "intervention": "Women's Self Help Group Network",
+        "description": "Microfinance SHGs with business training and collective bargaining",
+        "impact": "WEI Economic +3.0, GPI Wage +1.5",
+        "cost": "low",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Kudumbashree Kerala — 46 lakh members, half of all Kerala families"
+      },
+      {
+        "priority": 2,
+        "pillar": "economic",
+        "pillar_score": 76.0,
+        "intervention": "Direct Cash Transfer to Women",
+        "description": "Unconditional monthly cash directly to women's bank accounts",
+        "impact": "WEI Economic +2.5, GPI Income Poverty +3.0",
+        "cost": "medium",
+        "time_to_impact": "immediate",
+        "proven_example": "Lakshmi Bhandar WB — 24.1M women, ₹1500/month, direct autonomy"
+      },
+      {
+        "priority": 3,
+        "pillar": "economic",
+        "pillar_score": 76.0,
+        "intervention": "Equal Pay Legislation + Mandatory Reporting",
+        "description": "Require employers to publish gender pay gap + enforce penalties",
+        "impact": "WEI Economic +2.5, GPI Wage +3.0",
+        "cost": "low (law)",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Iceland Equal Pay Certification 2018 — first country to mandate it"
+      },
+      {
+        "priority": 4,
+        "pillar": "economic",
+        "pillar_score": 76.0,
+        "intervention": "Maternity + Shared Parental Leave",
+        "description": "Generous shared parental leave — incentivise men to take it",
+        "impact": "WEI Economic +1.5, GPI Time Poverty +2.0",
+        "cost": "medium",
+        "time_to_impact": "immediate (law) + culture shift 3-5 yrs",
+        "proven_example": "Sweden 16-month shared leave — men now take 30% of leave days"
+      },
+      {
+        "priority": 5,
+        "pillar": "economic",
+        "pillar_score": 76.0,
+        "intervention": "Women's Digital Financial Inclusion",
+        "description": "Mobile banking + digital literacy for unbanked women",
+        "impact": "WEI Economic +2.0, GPI Financial Inclusion +3.0",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "M-Pesa Kenya women agents — transformed rural financial access"
+      },
+      {
+        "priority": 6,
+        "pillar": "empowerment",
+        "pillar_score": 80.0,
+        "intervention": "Gender Quota in Parliament + Local Government",
+        "description": "Reserved seats or candidate quotas for women in all legislative bodies",
+        "impact": "WEI Empowerment +4.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 1 election cycle",
+        "proven_example": "Rwanda 61% women parliament via quota — highest globally"
+      },
+      {
+        "priority": 7,
+        "pillar": "empowerment",
+        "pillar_score": 80.0,
+        "intervention": "Women's Political Leadership Pipeline",
+        "description": "Mentorship, training, networking for women entering public life",
+        "impact": "WEI Empowerment +1.5",
+        "cost": "low",
+        "time_to_impact": "3-5 years",
+        "proven_example": "UN Women leadership programs — 50+ countries active"
+      },
+      {
+        "priority": 8,
+        "pillar": "safety_justice",
+        "pillar_score": 84.0,
+        "intervention": "Domestic Violence Law + One-Stop Centres",
+        "description": "Criminalise DV + integrated centres with legal aid, shelter, counselling",
+        "impact": "WEI Safety +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "1-3 years",
+        "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
+      }
+    ],
+    "corporate_actions": []
+  },
   "AUT": {
     "country": "Austria",
     "iso_code": "AUT",
@@ -1433,6 +1627,103 @@
         "priority": 7,
         "pillar": "empowerment",
         "pillar_score": 79.0,
+        "intervention": "Women's Political Leadership Pipeline",
+        "description": "Mentorship, training, networking for women entering public life",
+        "impact": "WEI Empowerment +1.5",
+        "cost": "low",
+        "time_to_impact": "3-5 years",
+        "proven_example": "UN Women leadership programs — 50+ countries active"
+      },
+      {
+        "priority": 8,
+        "pillar": "safety_justice",
+        "pillar_score": 82.0,
+        "intervention": "Domestic Violence Law + One-Stop Centres",
+        "description": "Criminalise DV + integrated centres with legal aid, shelter, counselling",
+        "impact": "WEI Safety +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "1-3 years",
+        "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
+      }
+    ],
+    "corporate_actions": []
+  },
+  "LTU": {
+    "country": "Lithuania",
+    "iso_code": "LTU",
+    "tier": "1",
+    "wei_score": "83.8",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "economic",
+        "pillar_score": 76.0,
+        "intervention": "Women's Self Help Group Network",
+        "description": "Microfinance SHGs with business training and collective bargaining",
+        "impact": "WEI Economic +3.0, GPI Wage +1.5",
+        "cost": "low",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Kudumbashree Kerala — 46 lakh members, half of all Kerala families"
+      },
+      {
+        "priority": 2,
+        "pillar": "economic",
+        "pillar_score": 76.0,
+        "intervention": "Direct Cash Transfer to Women",
+        "description": "Unconditional monthly cash directly to women's bank accounts",
+        "impact": "WEI Economic +2.5, GPI Income Poverty +3.0",
+        "cost": "medium",
+        "time_to_impact": "immediate",
+        "proven_example": "Lakshmi Bhandar WB — 24.1M women, ₹1500/month, direct autonomy"
+      },
+      {
+        "priority": 3,
+        "pillar": "economic",
+        "pillar_score": 76.0,
+        "intervention": "Equal Pay Legislation + Mandatory Reporting",
+        "description": "Require employers to publish gender pay gap + enforce penalties",
+        "impact": "WEI Economic +2.5, GPI Wage +3.0",
+        "cost": "low (law)",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Iceland Equal Pay Certification 2018 — first country to mandate it"
+      },
+      {
+        "priority": 4,
+        "pillar": "economic",
+        "pillar_score": 76.0,
+        "intervention": "Maternity + Shared Parental Leave",
+        "description": "Generous shared parental leave — incentivise men to take it",
+        "impact": "WEI Economic +1.5, GPI Time Poverty +2.0",
+        "cost": "medium",
+        "time_to_impact": "immediate (law) + culture shift 3-5 yrs",
+        "proven_example": "Sweden 16-month shared leave — men now take 30% of leave days"
+      },
+      {
+        "priority": 5,
+        "pillar": "economic",
+        "pillar_score": 76.0,
+        "intervention": "Women's Digital Financial Inclusion",
+        "description": "Mobile banking + digital literacy for unbanked women",
+        "impact": "WEI Economic +2.0, GPI Financial Inclusion +3.0",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "M-Pesa Kenya women agents — transformed rural financial access"
+      },
+      {
+        "priority": 6,
+        "pillar": "empowerment",
+        "pillar_score": 78.0,
+        "intervention": "Gender Quota in Parliament + Local Government",
+        "description": "Reserved seats or candidate quotas for women in all legislative bodies",
+        "impact": "WEI Empowerment +4.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 1 election cycle",
+        "proven_example": "Rwanda 61% women parliament via quota — highest globally"
+      },
+      {
+        "priority": 7,
+        "pillar": "empowerment",
+        "pillar_score": 78.0,
         "intervention": "Women's Political Leadership Pipeline",
         "description": "Mentorship, training, networking for women entering public life",
         "impact": "WEI Empowerment +1.5",
@@ -1638,6 +1929,200 @@
         "priority": 8,
         "pillar": "safety_justice",
         "pillar_score": 81.0,
+        "intervention": "Domestic Violence Law + One-Stop Centres",
+        "description": "Criminalise DV + integrated centres with legal aid, shelter, counselling",
+        "impact": "WEI Safety +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "1-3 years",
+        "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
+      }
+    ],
+    "corporate_actions": []
+  },
+  "CZE": {
+    "country": "Czech Republic",
+    "iso_code": "CZE",
+    "tier": "1",
+    "wei_score": "82.4",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "economic",
+        "pillar_score": 74.0,
+        "intervention": "Women's Self Help Group Network",
+        "description": "Microfinance SHGs with business training and collective bargaining",
+        "impact": "WEI Economic +3.0, GPI Wage +1.5",
+        "cost": "low",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Kudumbashree Kerala — 46 lakh members, half of all Kerala families"
+      },
+      {
+        "priority": 2,
+        "pillar": "economic",
+        "pillar_score": 74.0,
+        "intervention": "Direct Cash Transfer to Women",
+        "description": "Unconditional monthly cash directly to women's bank accounts",
+        "impact": "WEI Economic +2.5, GPI Income Poverty +3.0",
+        "cost": "medium",
+        "time_to_impact": "immediate",
+        "proven_example": "Lakshmi Bhandar WB — 24.1M women, ₹1500/month, direct autonomy"
+      },
+      {
+        "priority": 3,
+        "pillar": "economic",
+        "pillar_score": 74.0,
+        "intervention": "Equal Pay Legislation + Mandatory Reporting",
+        "description": "Require employers to publish gender pay gap + enforce penalties",
+        "impact": "WEI Economic +2.5, GPI Wage +3.0",
+        "cost": "low (law)",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Iceland Equal Pay Certification 2018 — first country to mandate it"
+      },
+      {
+        "priority": 4,
+        "pillar": "economic",
+        "pillar_score": 74.0,
+        "intervention": "Maternity + Shared Parental Leave",
+        "description": "Generous shared parental leave — incentivise men to take it",
+        "impact": "WEI Economic +1.5, GPI Time Poverty +2.0",
+        "cost": "medium",
+        "time_to_impact": "immediate (law) + culture shift 3-5 yrs",
+        "proven_example": "Sweden 16-month shared leave — men now take 30% of leave days"
+      },
+      {
+        "priority": 5,
+        "pillar": "economic",
+        "pillar_score": 74.0,
+        "intervention": "Women's Digital Financial Inclusion",
+        "description": "Mobile banking + digital literacy for unbanked women",
+        "impact": "WEI Economic +2.0, GPI Financial Inclusion +3.0",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "M-Pesa Kenya women agents — transformed rural financial access"
+      },
+      {
+        "priority": 6,
+        "pillar": "empowerment",
+        "pillar_score": 76.0,
+        "intervention": "Gender Quota in Parliament + Local Government",
+        "description": "Reserved seats or candidate quotas for women in all legislative bodies",
+        "impact": "WEI Empowerment +4.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 1 election cycle",
+        "proven_example": "Rwanda 61% women parliament via quota — highest globally"
+      },
+      {
+        "priority": 7,
+        "pillar": "empowerment",
+        "pillar_score": 76.0,
+        "intervention": "Women's Political Leadership Pipeline",
+        "description": "Mentorship, training, networking for women entering public life",
+        "impact": "WEI Empowerment +1.5",
+        "cost": "low",
+        "time_to_impact": "3-5 years",
+        "proven_example": "UN Women leadership programs — 50+ countries active"
+      },
+      {
+        "priority": 8,
+        "pillar": "safety_justice",
+        "pillar_score": 80.0,
+        "intervention": "Domestic Violence Law + One-Stop Centres",
+        "description": "Criminalise DV + integrated centres with legal aid, shelter, counselling",
+        "impact": "WEI Safety +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "1-3 years",
+        "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
+      }
+    ],
+    "corporate_actions": []
+  },
+  "LVA": {
+    "country": "Latvia",
+    "iso_code": "LVA",
+    "tier": "1",
+    "wei_score": "82.1",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "economic",
+        "pillar_score": 74.0,
+        "intervention": "Women's Self Help Group Network",
+        "description": "Microfinance SHGs with business training and collective bargaining",
+        "impact": "WEI Economic +3.0, GPI Wage +1.5",
+        "cost": "low",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Kudumbashree Kerala — 46 lakh members, half of all Kerala families"
+      },
+      {
+        "priority": 2,
+        "pillar": "economic",
+        "pillar_score": 74.0,
+        "intervention": "Direct Cash Transfer to Women",
+        "description": "Unconditional monthly cash directly to women's bank accounts",
+        "impact": "WEI Economic +2.5, GPI Income Poverty +3.0",
+        "cost": "medium",
+        "time_to_impact": "immediate",
+        "proven_example": "Lakshmi Bhandar WB — 24.1M women, ₹1500/month, direct autonomy"
+      },
+      {
+        "priority": 3,
+        "pillar": "economic",
+        "pillar_score": 74.0,
+        "intervention": "Equal Pay Legislation + Mandatory Reporting",
+        "description": "Require employers to publish gender pay gap + enforce penalties",
+        "impact": "WEI Economic +2.5, GPI Wage +3.0",
+        "cost": "low (law)",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Iceland Equal Pay Certification 2018 — first country to mandate it"
+      },
+      {
+        "priority": 4,
+        "pillar": "economic",
+        "pillar_score": 74.0,
+        "intervention": "Maternity + Shared Parental Leave",
+        "description": "Generous shared parental leave — incentivise men to take it",
+        "impact": "WEI Economic +1.5, GPI Time Poverty +2.0",
+        "cost": "medium",
+        "time_to_impact": "immediate (law) + culture shift 3-5 yrs",
+        "proven_example": "Sweden 16-month shared leave — men now take 30% of leave days"
+      },
+      {
+        "priority": 5,
+        "pillar": "economic",
+        "pillar_score": 74.0,
+        "intervention": "Women's Digital Financial Inclusion",
+        "description": "Mobile banking + digital literacy for unbanked women",
+        "impact": "WEI Economic +2.0, GPI Financial Inclusion +3.0",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "M-Pesa Kenya women agents — transformed rural financial access"
+      },
+      {
+        "priority": 6,
+        "pillar": "empowerment",
+        "pillar_score": 76.0,
+        "intervention": "Gender Quota in Parliament + Local Government",
+        "description": "Reserved seats or candidate quotas for women in all legislative bodies",
+        "impact": "WEI Empowerment +4.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 1 election cycle",
+        "proven_example": "Rwanda 61% women parliament via quota — highest globally"
+      },
+      {
+        "priority": 7,
+        "pillar": "empowerment",
+        "pillar_score": 76.0,
+        "intervention": "Women's Political Leadership Pipeline",
+        "description": "Mentorship, training, networking for women entering public life",
+        "impact": "WEI Empowerment +1.5",
+        "cost": "low",
+        "time_to_impact": "3-5 years",
+        "proven_example": "UN Women leadership programs — 50+ countries active"
+      },
+      {
+        "priority": 8,
+        "pillar": "safety_justice",
+        "pillar_score": 80.0,
         "intervention": "Domestic Violence Law + One-Stop Centres",
         "description": "Criminalise DV + integrated centres with legal aid, shelter, counselling",
         "impact": "WEI Safety +3.0",
@@ -2201,6 +2686,103 @@
       }
     ]
   },
+  "BRB": {
+    "country": "Barbados",
+    "iso_code": "BRB",
+    "tier": "1",
+    "wei_score": "77.7",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "economic",
+        "pillar_score": 70.0,
+        "intervention": "Women's Self Help Group Network",
+        "description": "Microfinance SHGs with business training and collective bargaining",
+        "impact": "WEI Economic +3.0, GPI Wage +1.5",
+        "cost": "low",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Kudumbashree Kerala — 46 lakh members, half of all Kerala families"
+      },
+      {
+        "priority": 2,
+        "pillar": "economic",
+        "pillar_score": 70.0,
+        "intervention": "Direct Cash Transfer to Women",
+        "description": "Unconditional monthly cash directly to women's bank accounts",
+        "impact": "WEI Economic +2.5, GPI Income Poverty +3.0",
+        "cost": "medium",
+        "time_to_impact": "immediate",
+        "proven_example": "Lakshmi Bhandar WB — 24.1M women, ₹1500/month, direct autonomy"
+      },
+      {
+        "priority": 3,
+        "pillar": "economic",
+        "pillar_score": 70.0,
+        "intervention": "Equal Pay Legislation + Mandatory Reporting",
+        "description": "Require employers to publish gender pay gap + enforce penalties",
+        "impact": "WEI Economic +2.5, GPI Wage +3.0",
+        "cost": "low (law)",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Iceland Equal Pay Certification 2018 — first country to mandate it"
+      },
+      {
+        "priority": 4,
+        "pillar": "economic",
+        "pillar_score": 70.0,
+        "intervention": "Maternity + Shared Parental Leave",
+        "description": "Generous shared parental leave — incentivise men to take it",
+        "impact": "WEI Economic +1.5, GPI Time Poverty +2.0",
+        "cost": "medium",
+        "time_to_impact": "immediate (law) + culture shift 3-5 yrs",
+        "proven_example": "Sweden 16-month shared leave — men now take 30% of leave days"
+      },
+      {
+        "priority": 5,
+        "pillar": "economic",
+        "pillar_score": 70.0,
+        "intervention": "Women's Digital Financial Inclusion",
+        "description": "Mobile banking + digital literacy for unbanked women",
+        "impact": "WEI Economic +2.0, GPI Financial Inclusion +3.0",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "M-Pesa Kenya women agents — transformed rural financial access"
+      },
+      {
+        "priority": 6,
+        "pillar": "empowerment",
+        "pillar_score": 74.0,
+        "intervention": "Gender Quota in Parliament + Local Government",
+        "description": "Reserved seats or candidate quotas for women in all legislative bodies",
+        "impact": "WEI Empowerment +4.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 1 election cycle",
+        "proven_example": "Rwanda 61% women parliament via quota — highest globally"
+      },
+      {
+        "priority": 7,
+        "pillar": "empowerment",
+        "pillar_score": 74.0,
+        "intervention": "Women's Political Leadership Pipeline",
+        "description": "Mentorship, training, networking for women entering public life",
+        "impact": "WEI Empowerment +1.5",
+        "cost": "low",
+        "time_to_impact": "3-5 years",
+        "proven_example": "UN Women leadership programs — 50+ countries active"
+      },
+      {
+        "priority": 8,
+        "pillar": "safety_justice",
+        "pillar_score": 74.0,
+        "intervention": "Domestic Violence Law + One-Stop Centres",
+        "description": "Criminalise DV + integrated centres with legal aid, shelter, counselling",
+        "impact": "WEI Safety +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "1-3 years",
+        "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
+      }
+    ],
+    "corporate_actions": []
+  },
   "URY": {
     "country": "Uruguay",
     "iso_code": "URY",
@@ -2294,6 +2876,200 @@
         "cost": "low-medium",
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
+      }
+    ],
+    "corporate_actions": []
+  },
+  "CRI": {
+    "country": "Costa Rica",
+    "iso_code": "CRI",
+    "tier": "1",
+    "wei_score": "75.3",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "economic",
+        "pillar_score": 66.0,
+        "intervention": "Women's Self Help Group Network",
+        "description": "Microfinance SHGs with business training and collective bargaining",
+        "impact": "WEI Economic +3.0, GPI Wage +1.5",
+        "cost": "low",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Kudumbashree Kerala — 46 lakh members, half of all Kerala families"
+      },
+      {
+        "priority": 2,
+        "pillar": "economic",
+        "pillar_score": 66.0,
+        "intervention": "Direct Cash Transfer to Women",
+        "description": "Unconditional monthly cash directly to women's bank accounts",
+        "impact": "WEI Economic +2.5, GPI Income Poverty +3.0",
+        "cost": "medium",
+        "time_to_impact": "immediate",
+        "proven_example": "Lakshmi Bhandar WB — 24.1M women, ₹1500/month, direct autonomy"
+      },
+      {
+        "priority": 3,
+        "pillar": "economic",
+        "pillar_score": 66.0,
+        "intervention": "Equal Pay Legislation + Mandatory Reporting",
+        "description": "Require employers to publish gender pay gap + enforce penalties",
+        "impact": "WEI Economic +2.5, GPI Wage +3.0",
+        "cost": "low (law)",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Iceland Equal Pay Certification 2018 — first country to mandate it"
+      },
+      {
+        "priority": 4,
+        "pillar": "economic",
+        "pillar_score": 66.0,
+        "intervention": "Maternity + Shared Parental Leave",
+        "description": "Generous shared parental leave — incentivise men to take it",
+        "impact": "WEI Economic +1.5, GPI Time Poverty +2.0",
+        "cost": "medium",
+        "time_to_impact": "immediate (law) + culture shift 3-5 yrs",
+        "proven_example": "Sweden 16-month shared leave — men now take 30% of leave days"
+      },
+      {
+        "priority": 5,
+        "pillar": "economic",
+        "pillar_score": 66.0,
+        "intervention": "Women's Digital Financial Inclusion",
+        "description": "Mobile banking + digital literacy for unbanked women",
+        "impact": "WEI Economic +2.0, GPI Financial Inclusion +3.0",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "M-Pesa Kenya women agents — transformed rural financial access"
+      },
+      {
+        "priority": 6,
+        "pillar": "empowerment",
+        "pillar_score": 72.0,
+        "intervention": "Gender Quota in Parliament + Local Government",
+        "description": "Reserved seats or candidate quotas for women in all legislative bodies",
+        "impact": "WEI Empowerment +4.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 1 election cycle",
+        "proven_example": "Rwanda 61% women parliament via quota — highest globally"
+      },
+      {
+        "priority": 7,
+        "pillar": "empowerment",
+        "pillar_score": 72.0,
+        "intervention": "Women's Political Leadership Pipeline",
+        "description": "Mentorship, training, networking for women entering public life",
+        "impact": "WEI Empowerment +1.5",
+        "cost": "low",
+        "time_to_impact": "3-5 years",
+        "proven_example": "UN Women leadership programs — 50+ countries active"
+      },
+      {
+        "priority": 8,
+        "pillar": "safety_justice",
+        "pillar_score": 72.0,
+        "intervention": "Domestic Violence Law + One-Stop Centres",
+        "description": "Criminalise DV + integrated centres with legal aid, shelter, counselling",
+        "impact": "WEI Safety +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "1-3 years",
+        "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
+      }
+    ],
+    "corporate_actions": []
+  },
+  "CUB": {
+    "country": "Cuba",
+    "iso_code": "CUB",
+    "tier": "2",
+    "wei_score": "69.2",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "economic",
+        "pillar_score": 56.0,
+        "intervention": "Women's Self Help Group Network",
+        "description": "Microfinance SHGs with business training and collective bargaining",
+        "impact": "WEI Economic +3.0, GPI Wage +1.5",
+        "cost": "low",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Kudumbashree Kerala — 46 lakh members, half of all Kerala families"
+      },
+      {
+        "priority": 2,
+        "pillar": "economic",
+        "pillar_score": 56.0,
+        "intervention": "Direct Cash Transfer to Women",
+        "description": "Unconditional monthly cash directly to women's bank accounts",
+        "impact": "WEI Economic +2.5, GPI Income Poverty +3.0",
+        "cost": "medium",
+        "time_to_impact": "immediate",
+        "proven_example": "Lakshmi Bhandar WB — 24.1M women, ₹1500/month, direct autonomy"
+      },
+      {
+        "priority": 3,
+        "pillar": "economic",
+        "pillar_score": 56.0,
+        "intervention": "Equal Pay Legislation + Mandatory Reporting",
+        "description": "Require employers to publish gender pay gap + enforce penalties",
+        "impact": "WEI Economic +2.5, GPI Wage +3.0",
+        "cost": "low (law)",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Iceland Equal Pay Certification 2018 — first country to mandate it"
+      },
+      {
+        "priority": 4,
+        "pillar": "economic",
+        "pillar_score": 56.0,
+        "intervention": "Maternity + Shared Parental Leave",
+        "description": "Generous shared parental leave — incentivise men to take it",
+        "impact": "WEI Economic +1.5, GPI Time Poverty +2.0",
+        "cost": "medium",
+        "time_to_impact": "immediate (law) + culture shift 3-5 yrs",
+        "proven_example": "Sweden 16-month shared leave — men now take 30% of leave days"
+      },
+      {
+        "priority": 5,
+        "pillar": "economic",
+        "pillar_score": 56.0,
+        "intervention": "Women's Digital Financial Inclusion",
+        "description": "Mobile banking + digital literacy for unbanked women",
+        "impact": "WEI Economic +2.0, GPI Financial Inclusion +3.0",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "M-Pesa Kenya women agents — transformed rural financial access"
+      },
+      {
+        "priority": 6,
+        "pillar": "safety_justice",
+        "pillar_score": 64.0,
+        "intervention": "Domestic Violence Law + One-Stop Centres",
+        "description": "Criminalise DV + integrated centres with legal aid, shelter, counselling",
+        "impact": "WEI Safety +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "1-3 years",
+        "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
+      },
+      {
+        "priority": 7,
+        "pillar": "safety_justice",
+        "pillar_score": 64.0,
+        "intervention": "Female Police Officers + Gender Training",
+        "description": "30% female police target + mandatory DV/SGBV training + women's desks",
+        "impact": "WEI Safety +2.0, SVI reporting gap -5%",
+        "cost": "low",
+        "time_to_impact": "2-3 years",
+        "proven_example": "Rwanda 43% female police — highest reporting rates in Africa"
+      },
+      {
+        "priority": 8,
+        "pillar": "safety_justice",
+        "pillar_score": 64.0,
+        "intervention": "Free Legal Aid for Women's Cases",
+        "description": "Free legal representation for DV, divorce, custody, property disputes",
+        "impact": "WEI Safety +2.5",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "SEWA Legal Services Gujarat — 50,000+ cases supported"
       }
     ],
     "corporate_actions": []
@@ -4801,6 +5577,103 @@
       }
     ]
   },
+  "SAU": {
+    "country": "Saudi Arabia",
+    "iso_code": "SAU",
+    "tier": "2",
+    "wei_score": "51.8",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "empowerment",
+        "pillar_score": 38.0,
+        "intervention": "Gender Quota in Parliament + Local Government",
+        "description": "Reserved seats or candidate quotas for women in all legislative bodies",
+        "impact": "WEI Empowerment +4.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 1 election cycle",
+        "proven_example": "Rwanda 61% women parliament via quota — highest globally"
+      },
+      {
+        "priority": 2,
+        "pillar": "empowerment",
+        "pillar_score": 38.0,
+        "intervention": "Women's Political Leadership Pipeline",
+        "description": "Mentorship, training, networking for women entering public life",
+        "impact": "WEI Empowerment +1.5",
+        "cost": "low",
+        "time_to_impact": "3-5 years",
+        "proven_example": "UN Women leadership programs — 50+ countries active"
+      },
+      {
+        "priority": 3,
+        "pillar": "safety_justice",
+        "pillar_score": 40.0,
+        "intervention": "Domestic Violence Law + One-Stop Centres",
+        "description": "Criminalise DV + integrated centres with legal aid, shelter, counselling",
+        "impact": "WEI Safety +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "1-3 years",
+        "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
+      },
+      {
+        "priority": 4,
+        "pillar": "safety_justice",
+        "pillar_score": 40.0,
+        "intervention": "Female Police Officers + Gender Training",
+        "description": "30% female police target + mandatory DV/SGBV training + women's desks",
+        "impact": "WEI Safety +2.0, SVI reporting gap -5%",
+        "cost": "low",
+        "time_to_impact": "2-3 years",
+        "proven_example": "Rwanda 43% female police — highest reporting rates in Africa"
+      },
+      {
+        "priority": 5,
+        "pillar": "safety_justice",
+        "pillar_score": 40.0,
+        "intervention": "Free Legal Aid for Women's Cases",
+        "description": "Free legal representation for DV, divorce, custody, property disputes",
+        "impact": "WEI Safety +2.5",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "SEWA Legal Services Gujarat — 50,000+ cases supported"
+      },
+      {
+        "priority": 6,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 42.0,
+        "intervention": "Child Marriage Prevention — Legal + Community",
+        "description": "Enforce minimum age 18, community awareness, girls' empowerment clubs",
+        "impact": "WEI Bodily Autonomy +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "3-5 years",
+        "proven_example": "Kanyashree WB — child marriage fell 40% in 5 years"
+      },
+      {
+        "priority": 7,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 42.0,
+        "intervention": "Period Poverty Elimination Program",
+        "description": "Free products + menstrual health education + school WASH + stigma reduction",
+        "impact": "WEI Bodily Autonomy +2.0, Dignity +2.5",
+        "cost": "low",
+        "time_to_impact": "6-12 months",
+        "proven_example": "Plan International — 20+ countries. Kenya government free pads 2017"
+      },
+      {
+        "priority": 8,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 42.0,
+        "intervention": "Criminalise Marital Rape",
+        "description": "Legal reform to remove marital exemption from rape law + enforcement",
+        "impact": "WEI Bodily Autonomy +3.5, SVI +8.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 3-5 years (enforcement)",
+        "proven_example": "UK criminalised 1991. Nepal 2006. Turkey 2005. Still legal in India, Bangladesh, Pakistan"
+      }
+    ],
+    "corporate_actions": []
+  },
   "HND": {
     "country": "Honduras",
     "iso_code": "HND",
@@ -5353,6 +6226,394 @@
         "proven_example": "UK Gender Pay Gap Reporting 2017 — 10,000+ companies publishing. Australia Workplace Gender Equality Act reporting."
       }
     ]
+  },
+  "SLV": {
+    "country": "El Salvador",
+    "iso_code": "SLV",
+    "tier": "2",
+    "wei_score": "45.6",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 36.0,
+        "intervention": "Child Marriage Prevention — Legal + Community",
+        "description": "Enforce minimum age 18, community awareness, girls' empowerment clubs",
+        "impact": "WEI Bodily Autonomy +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "3-5 years",
+        "proven_example": "Kanyashree WB — child marriage fell 40% in 5 years"
+      },
+      {
+        "priority": 2,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 36.0,
+        "intervention": "Period Poverty Elimination Program",
+        "description": "Free products + menstrual health education + school WASH + stigma reduction",
+        "impact": "WEI Bodily Autonomy +2.0, Dignity +2.5",
+        "cost": "low",
+        "time_to_impact": "6-12 months",
+        "proven_example": "Plan International — 20+ countries. Kenya government free pads 2017"
+      },
+      {
+        "priority": 3,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 36.0,
+        "intervention": "Criminalise Marital Rape",
+        "description": "Legal reform to remove marital exemption from rape law + enforcement",
+        "impact": "WEI Bodily Autonomy +3.5, SVI +8.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 3-5 years (enforcement)",
+        "proven_example": "UK criminalised 1991. Nepal 2006. Turkey 2005. Still legal in India, Bangladesh, Pakistan"
+      },
+      {
+        "priority": 4,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 36.0,
+        "intervention": "Reproductive Health Community Workers",
+        "description": "Trained community health workers providing contraception + reproductive info",
+        "impact": "WEI Bodily Autonomy +2.0, Health +1.5",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "Ethiopia Health Extension Workers — 38,000 deployed, MMR halved"
+      },
+      {
+        "priority": 5,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 36.0,
+        "intervention": "FGM Community Abandonment Program",
+        "description": "Community-led abandonment with alternative rites of passage",
+        "impact": "WEI Bodily Autonomy +3.5",
+        "cost": "low",
+        "time_to_impact": "3-7 years",
+        "proven_example": "Tostan Senegal — 6,000+ communities abandoned FGM voluntarily"
+      },
+      {
+        "priority": 6,
+        "pillar": "safety_justice",
+        "pillar_score": 40.0,
+        "intervention": "Domestic Violence Law + One-Stop Centres",
+        "description": "Criminalise DV + integrated centres with legal aid, shelter, counselling",
+        "impact": "WEI Safety +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "1-3 years",
+        "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
+      },
+      {
+        "priority": 7,
+        "pillar": "safety_justice",
+        "pillar_score": 40.0,
+        "intervention": "Female Police Officers + Gender Training",
+        "description": "30% female police target + mandatory DV/SGBV training + women's desks",
+        "impact": "WEI Safety +2.0, SVI reporting gap -5%",
+        "cost": "low",
+        "time_to_impact": "2-3 years",
+        "proven_example": "Rwanda 43% female police — highest reporting rates in Africa"
+      },
+      {
+        "priority": 8,
+        "pillar": "safety_justice",
+        "pillar_score": 40.0,
+        "intervention": "Free Legal Aid for Women's Cases",
+        "description": "Free legal representation for DV, divorce, custody, property disputes",
+        "impact": "WEI Safety +2.5",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "SEWA Legal Services Gujarat — 50,000+ cases supported"
+      }
+    ],
+    "corporate_actions": []
+  },
+  "VEN": {
+    "country": "Venezuela",
+    "iso_code": "VEN",
+    "tier": "2",
+    "wei_score": "45.4",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "economic",
+        "pillar_score": 30.0,
+        "intervention": "Women's Self Help Group Network",
+        "description": "Microfinance SHGs with business training and collective bargaining",
+        "impact": "WEI Economic +3.0, GPI Wage +1.5",
+        "cost": "low",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Kudumbashree Kerala — 46 lakh members, half of all Kerala families"
+      },
+      {
+        "priority": 2,
+        "pillar": "economic",
+        "pillar_score": 30.0,
+        "intervention": "Direct Cash Transfer to Women",
+        "description": "Unconditional monthly cash directly to women's bank accounts",
+        "impact": "WEI Economic +2.5, GPI Income Poverty +3.0",
+        "cost": "medium",
+        "time_to_impact": "immediate",
+        "proven_example": "Lakshmi Bhandar WB — 24.1M women, ₹1500/month, direct autonomy"
+      },
+      {
+        "priority": 3,
+        "pillar": "economic",
+        "pillar_score": 30.0,
+        "intervention": "Equal Pay Legislation + Mandatory Reporting",
+        "description": "Require employers to publish gender pay gap + enforce penalties",
+        "impact": "WEI Economic +2.5, GPI Wage +3.0",
+        "cost": "low (law)",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Iceland Equal Pay Certification 2018 — first country to mandate it"
+      },
+      {
+        "priority": 4,
+        "pillar": "economic",
+        "pillar_score": 30.0,
+        "intervention": "Maternity + Shared Parental Leave",
+        "description": "Generous shared parental leave — incentivise men to take it",
+        "impact": "WEI Economic +1.5, GPI Time Poverty +2.0",
+        "cost": "medium",
+        "time_to_impact": "immediate (law) + culture shift 3-5 yrs",
+        "proven_example": "Sweden 16-month shared leave — men now take 30% of leave days"
+      },
+      {
+        "priority": 5,
+        "pillar": "economic",
+        "pillar_score": 30.0,
+        "intervention": "Women's Digital Financial Inclusion",
+        "description": "Mobile banking + digital literacy for unbanked women",
+        "impact": "WEI Economic +2.0, GPI Financial Inclusion +3.0",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "M-Pesa Kenya women agents — transformed rural financial access"
+      },
+      {
+        "priority": 6,
+        "pillar": "safety_justice",
+        "pillar_score": 40.0,
+        "intervention": "Domestic Violence Law + One-Stop Centres",
+        "description": "Criminalise DV + integrated centres with legal aid, shelter, counselling",
+        "impact": "WEI Safety +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "1-3 years",
+        "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
+      },
+      {
+        "priority": 7,
+        "pillar": "safety_justice",
+        "pillar_score": 40.0,
+        "intervention": "Female Police Officers + Gender Training",
+        "description": "30% female police target + mandatory DV/SGBV training + women's desks",
+        "impact": "WEI Safety +2.0, SVI reporting gap -5%",
+        "cost": "low",
+        "time_to_impact": "2-3 years",
+        "proven_example": "Rwanda 43% female police — highest reporting rates in Africa"
+      },
+      {
+        "priority": 8,
+        "pillar": "safety_justice",
+        "pillar_score": 40.0,
+        "intervention": "Free Legal Aid for Women's Cases",
+        "description": "Free legal representation for DV, divorce, custody, property disputes",
+        "impact": "WEI Safety +2.5",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "SEWA Legal Services Gujarat — 50,000+ cases supported"
+      }
+    ],
+    "corporate_actions": []
+  },
+  "SEN": {
+    "country": "Senegal",
+    "iso_code": "SEN",
+    "tier": "2",
+    "wei_score": "42.3",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 34.0,
+        "intervention": "Child Marriage Prevention — Legal + Community",
+        "description": "Enforce minimum age 18, community awareness, girls' empowerment clubs",
+        "impact": "WEI Bodily Autonomy +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "3-5 years",
+        "proven_example": "Kanyashree WB — child marriage fell 40% in 5 years"
+      },
+      {
+        "priority": 2,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 34.0,
+        "intervention": "Period Poverty Elimination Program",
+        "description": "Free products + menstrual health education + school WASH + stigma reduction",
+        "impact": "WEI Bodily Autonomy +2.0, Dignity +2.5",
+        "cost": "low",
+        "time_to_impact": "6-12 months",
+        "proven_example": "Plan International — 20+ countries. Kenya government free pads 2017"
+      },
+      {
+        "priority": 3,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 34.0,
+        "intervention": "Criminalise Marital Rape",
+        "description": "Legal reform to remove marital exemption from rape law + enforcement",
+        "impact": "WEI Bodily Autonomy +3.5, SVI +8.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 3-5 years (enforcement)",
+        "proven_example": "UK criminalised 1991. Nepal 2006. Turkey 2005. Still legal in India, Bangladesh, Pakistan"
+      },
+      {
+        "priority": 4,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 34.0,
+        "intervention": "Reproductive Health Community Workers",
+        "description": "Trained community health workers providing contraception + reproductive info",
+        "impact": "WEI Bodily Autonomy +2.0, Health +1.5",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "Ethiopia Health Extension Workers — 38,000 deployed, MMR halved"
+      },
+      {
+        "priority": 5,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 34.0,
+        "intervention": "FGM Community Abandonment Program",
+        "description": "Community-led abandonment with alternative rites of passage",
+        "impact": "WEI Bodily Autonomy +3.5",
+        "cost": "low",
+        "time_to_impact": "3-7 years",
+        "proven_example": "Tostan Senegal — 6,000+ communities abandoned FGM voluntarily"
+      },
+      {
+        "priority": 6,
+        "pillar": "dignity_welfare",
+        "pillar_score": 38.0,
+        "intervention": "Widow Property Rights Enforcement",
+        "description": "Legal aid + community paralegal network to prevent property stripping",
+        "impact": "WEI Dignity +3.0, WEVI -8 pts vulnerability",
+        "cost": "low",
+        "time_to_impact": "2-5 years",
+        "proven_example": "Kenya Succession Act enforcement campaign — 10,000 widows assisted"
+      },
+      {
+        "priority": 7,
+        "pillar": "dignity_welfare",
+        "pillar_score": 38.0,
+        "intervention": "Widow Pension and Social Support",
+        "description": "Meaningful widow pension (not symbolic ₹500/month) + social reintegration",
+        "impact": "WEI Dignity +2.5, WEVI -10 pts",
+        "cost": "medium",
+        "time_to_impact": "immediate (law) + 1-2 years rollout",
+        "proven_example": "Kerala widow pension ₹1,400/month + Kudumbashree inclusion — WEVI 28 vs India avg 69"
+      },
+      {
+        "priority": 8,
+        "pillar": "dignity_welfare",
+        "pillar_score": 38.0,
+        "intervention": "Temple Town Widow Rehabilitation",
+        "description": "Repatriation support + skill training + income + family mediation for abandoned widows",
+        "impact": "WEI Dignity +1.5 (India states)",
+        "cost": "low",
+        "time_to_impact": "1-3 years",
+        "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
+      }
+    ],
+    "corporate_actions": []
+  },
+  "TLS": {
+    "country": "Timor-Leste",
+    "iso_code": "TLS",
+    "tier": "2",
+    "wei_score": "41.1",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "economic",
+        "pillar_score": 34.0,
+        "intervention": "Women's Self Help Group Network",
+        "description": "Microfinance SHGs with business training and collective bargaining",
+        "impact": "WEI Economic +3.0, GPI Wage +1.5",
+        "cost": "low",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Kudumbashree Kerala — 46 lakh members, half of all Kerala families"
+      },
+      {
+        "priority": 2,
+        "pillar": "economic",
+        "pillar_score": 34.0,
+        "intervention": "Direct Cash Transfer to Women",
+        "description": "Unconditional monthly cash directly to women's bank accounts",
+        "impact": "WEI Economic +2.5, GPI Income Poverty +3.0",
+        "cost": "medium",
+        "time_to_impact": "immediate",
+        "proven_example": "Lakshmi Bhandar WB — 24.1M women, ₹1500/month, direct autonomy"
+      },
+      {
+        "priority": 3,
+        "pillar": "economic",
+        "pillar_score": 34.0,
+        "intervention": "Equal Pay Legislation + Mandatory Reporting",
+        "description": "Require employers to publish gender pay gap + enforce penalties",
+        "impact": "WEI Economic +2.5, GPI Wage +3.0",
+        "cost": "low (law)",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Iceland Equal Pay Certification 2018 — first country to mandate it"
+      },
+      {
+        "priority": 4,
+        "pillar": "economic",
+        "pillar_score": 34.0,
+        "intervention": "Maternity + Shared Parental Leave",
+        "description": "Generous shared parental leave — incentivise men to take it",
+        "impact": "WEI Economic +1.5, GPI Time Poverty +2.0",
+        "cost": "medium",
+        "time_to_impact": "immediate (law) + culture shift 3-5 yrs",
+        "proven_example": "Sweden 16-month shared leave — men now take 30% of leave days"
+      },
+      {
+        "priority": 5,
+        "pillar": "economic",
+        "pillar_score": 34.0,
+        "intervention": "Women's Digital Financial Inclusion",
+        "description": "Mobile banking + digital literacy for unbanked women",
+        "impact": "WEI Economic +2.0, GPI Financial Inclusion +3.0",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "M-Pesa Kenya women agents — transformed rural financial access"
+      },
+      {
+        "priority": 6,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 36.0,
+        "intervention": "Child Marriage Prevention — Legal + Community",
+        "description": "Enforce minimum age 18, community awareness, girls' empowerment clubs",
+        "impact": "WEI Bodily Autonomy +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "3-5 years",
+        "proven_example": "Kanyashree WB — child marriage fell 40% in 5 years"
+      },
+      {
+        "priority": 7,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 36.0,
+        "intervention": "Period Poverty Elimination Program",
+        "description": "Free products + menstrual health education + school WASH + stigma reduction",
+        "impact": "WEI Bodily Autonomy +2.0, Dignity +2.5",
+        "cost": "low",
+        "time_to_impact": "6-12 months",
+        "proven_example": "Plan International — 20+ countries. Kenya government free pads 2017"
+      },
+      {
+        "priority": 8,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 36.0,
+        "intervention": "Criminalise Marital Rape",
+        "description": "Legal reform to remove marital exemption from rape law + enforcement",
+        "impact": "WEI Bodily Autonomy +3.5, SVI +8.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 3-5 years (enforcement)",
+        "proven_example": "UK criminalised 1991. Nepal 2006. Turkey 2005. Still legal in India, Bangladesh, Pakistan"
+      }
+    ],
+    "corporate_actions": []
   },
   "KHM": {
     "country": "Cambodia",
@@ -6168,6 +7429,200 @@
     ],
     "corporate_actions": []
   },
+  "MWI": {
+    "country": "Malawi",
+    "iso_code": "MWI",
+    "tier": "2",
+    "wei_score": "36.8",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 28.0,
+        "intervention": "Child Marriage Prevention — Legal + Community",
+        "description": "Enforce minimum age 18, community awareness, girls' empowerment clubs",
+        "impact": "WEI Bodily Autonomy +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "3-5 years",
+        "proven_example": "Kanyashree WB — child marriage fell 40% in 5 years"
+      },
+      {
+        "priority": 2,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 28.0,
+        "intervention": "Period Poverty Elimination Program",
+        "description": "Free products + menstrual health education + school WASH + stigma reduction",
+        "impact": "WEI Bodily Autonomy +2.0, Dignity +2.5",
+        "cost": "low",
+        "time_to_impact": "6-12 months",
+        "proven_example": "Plan International — 20+ countries. Kenya government free pads 2017"
+      },
+      {
+        "priority": 3,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 28.0,
+        "intervention": "Criminalise Marital Rape",
+        "description": "Legal reform to remove marital exemption from rape law + enforcement",
+        "impact": "WEI Bodily Autonomy +3.5, SVI +8.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 3-5 years (enforcement)",
+        "proven_example": "UK criminalised 1991. Nepal 2006. Turkey 2005. Still legal in India, Bangladesh, Pakistan"
+      },
+      {
+        "priority": 4,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 28.0,
+        "intervention": "Reproductive Health Community Workers",
+        "description": "Trained community health workers providing contraception + reproductive info",
+        "impact": "WEI Bodily Autonomy +2.0, Health +1.5",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "Ethiopia Health Extension Workers — 38,000 deployed, MMR halved"
+      },
+      {
+        "priority": 5,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 28.0,
+        "intervention": "FGM Community Abandonment Program",
+        "description": "Community-led abandonment with alternative rites of passage",
+        "impact": "WEI Bodily Autonomy +3.5",
+        "cost": "low",
+        "time_to_impact": "3-7 years",
+        "proven_example": "Tostan Senegal — 6,000+ communities abandoned FGM voluntarily"
+      },
+      {
+        "priority": 6,
+        "pillar": "digital_social",
+        "pillar_score": 28.0,
+        "intervention": "Digital Literacy for Women + AI Skills",
+        "description": "Community digital training including AI tools, not just basic internet",
+        "impact": "WEI Digital +2.5, WADI Digital Gap -8 pts",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "Digital Sakhi India — 150,000 women digital champions in rural areas"
+      },
+      {
+        "priority": 7,
+        "pillar": "digital_social",
+        "pillar_score": 28.0,
+        "intervention": "Criminalise Image-Based Sexual Abuse",
+        "description": "Law against non-consensual intimate images, deepfakes, sextortion",
+        "impact": "WEI Digital +1.5, SVI Digital +2.0",
+        "cost": "very low (law)",
+        "time_to_impact": "immediate (law)",
+        "proven_example": "UK Online Safety Act 2023 — intimate image abuse criminalised with up to 2yr sentence"
+      },
+      {
+        "priority": 8,
+        "pillar": "digital_social",
+        "pillar_score": 28.0,
+        "intervention": "Affordable Mobile Internet for Women",
+        "description": "Subsidised data + handsets targeted at women in low-income areas",
+        "impact": "WEI Digital +2.0",
+        "cost": "low-medium",
+        "time_to_impact": "1-2 years",
+        "proven_example": "GSMA Connected Women — 30+ operators with women-specific programs"
+      }
+    ],
+    "corporate_actions": []
+  },
+  "LBR": {
+    "country": "Liberia",
+    "iso_code": "LBR",
+    "tier": "2",
+    "wei_score": "35.0",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 26.0,
+        "intervention": "Child Marriage Prevention — Legal + Community",
+        "description": "Enforce minimum age 18, community awareness, girls' empowerment clubs",
+        "impact": "WEI Bodily Autonomy +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "3-5 years",
+        "proven_example": "Kanyashree WB — child marriage fell 40% in 5 years"
+      },
+      {
+        "priority": 2,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 26.0,
+        "intervention": "Period Poverty Elimination Program",
+        "description": "Free products + menstrual health education + school WASH + stigma reduction",
+        "impact": "WEI Bodily Autonomy +2.0, Dignity +2.5",
+        "cost": "low",
+        "time_to_impact": "6-12 months",
+        "proven_example": "Plan International — 20+ countries. Kenya government free pads 2017"
+      },
+      {
+        "priority": 3,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 26.0,
+        "intervention": "Criminalise Marital Rape",
+        "description": "Legal reform to remove marital exemption from rape law + enforcement",
+        "impact": "WEI Bodily Autonomy +3.5, SVI +8.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 3-5 years (enforcement)",
+        "proven_example": "UK criminalised 1991. Nepal 2006. Turkey 2005. Still legal in India, Bangladesh, Pakistan"
+      },
+      {
+        "priority": 4,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 26.0,
+        "intervention": "Reproductive Health Community Workers",
+        "description": "Trained community health workers providing contraception + reproductive info",
+        "impact": "WEI Bodily Autonomy +2.0, Health +1.5",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "Ethiopia Health Extension Workers — 38,000 deployed, MMR halved"
+      },
+      {
+        "priority": 5,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 26.0,
+        "intervention": "FGM Community Abandonment Program",
+        "description": "Community-led abandonment with alternative rites of passage",
+        "impact": "WEI Bodily Autonomy +3.5",
+        "cost": "low",
+        "time_to_impact": "3-7 years",
+        "proven_example": "Tostan Senegal — 6,000+ communities abandoned FGM voluntarily"
+      },
+      {
+        "priority": 6,
+        "pillar": "dignity_welfare",
+        "pillar_score": 28.0,
+        "intervention": "Widow Property Rights Enforcement",
+        "description": "Legal aid + community paralegal network to prevent property stripping",
+        "impact": "WEI Dignity +3.0, WEVI -8 pts vulnerability",
+        "cost": "low",
+        "time_to_impact": "2-5 years",
+        "proven_example": "Kenya Succession Act enforcement campaign — 10,000 widows assisted"
+      },
+      {
+        "priority": 7,
+        "pillar": "dignity_welfare",
+        "pillar_score": 28.0,
+        "intervention": "Widow Pension and Social Support",
+        "description": "Meaningful widow pension (not symbolic ₹500/month) + social reintegration",
+        "impact": "WEI Dignity +2.5, WEVI -10 pts",
+        "cost": "medium",
+        "time_to_impact": "immediate (law) + 1-2 years rollout",
+        "proven_example": "Kerala widow pension ₹1,400/month + Kudumbashree inclusion — WEVI 28 vs India avg 69"
+      },
+      {
+        "priority": 8,
+        "pillar": "dignity_welfare",
+        "pillar_score": 28.0,
+        "intervention": "Temple Town Widow Rehabilitation",
+        "description": "Repatriation support + skill training + income + family mediation for abandoned widows",
+        "impact": "WEI Dignity +1.5 (India states)",
+        "cost": "low",
+        "time_to_impact": "1-3 years",
+        "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
+      }
+    ],
+    "corporate_actions": []
+  },
   "EGY": {
     "country": "Egypt",
     "iso_code": "EGY",
@@ -6265,6 +7720,103 @@
     ],
     "corporate_actions": []
   },
+  "IRN": {
+    "country": "Iran",
+    "iso_code": "IRN",
+    "tier": "2",
+    "wei_score": "33.8",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 18.0,
+        "intervention": "Child Marriage Prevention — Legal + Community",
+        "description": "Enforce minimum age 18, community awareness, girls' empowerment clubs",
+        "impact": "WEI Bodily Autonomy +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "3-5 years",
+        "proven_example": "Kanyashree WB — child marriage fell 40% in 5 years"
+      },
+      {
+        "priority": 2,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 18.0,
+        "intervention": "Period Poverty Elimination Program",
+        "description": "Free products + menstrual health education + school WASH + stigma reduction",
+        "impact": "WEI Bodily Autonomy +2.0, Dignity +2.5",
+        "cost": "low",
+        "time_to_impact": "6-12 months",
+        "proven_example": "Plan International — 20+ countries. Kenya government free pads 2017"
+      },
+      {
+        "priority": 3,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 18.0,
+        "intervention": "Criminalise Marital Rape",
+        "description": "Legal reform to remove marital exemption from rape law + enforcement",
+        "impact": "WEI Bodily Autonomy +3.5, SVI +8.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 3-5 years (enforcement)",
+        "proven_example": "UK criminalised 1991. Nepal 2006. Turkey 2005. Still legal in India, Bangladesh, Pakistan"
+      },
+      {
+        "priority": 4,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 18.0,
+        "intervention": "Reproductive Health Community Workers",
+        "description": "Trained community health workers providing contraception + reproductive info",
+        "impact": "WEI Bodily Autonomy +2.0, Health +1.5",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "Ethiopia Health Extension Workers — 38,000 deployed, MMR halved"
+      },
+      {
+        "priority": 5,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 18.0,
+        "intervention": "FGM Community Abandonment Program",
+        "description": "Community-led abandonment with alternative rites of passage",
+        "impact": "WEI Bodily Autonomy +3.5",
+        "cost": "low",
+        "time_to_impact": "3-7 years",
+        "proven_example": "Tostan Senegal — 6,000+ communities abandoned FGM voluntarily"
+      },
+      {
+        "priority": 6,
+        "pillar": "empowerment",
+        "pillar_score": 22.0,
+        "intervention": "Gender Quota in Parliament + Local Government",
+        "description": "Reserved seats or candidate quotas for women in all legislative bodies",
+        "impact": "WEI Empowerment +4.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 1 election cycle",
+        "proven_example": "Rwanda 61% women parliament via quota — highest globally"
+      },
+      {
+        "priority": 7,
+        "pillar": "empowerment",
+        "pillar_score": 22.0,
+        "intervention": "Women's Political Leadership Pipeline",
+        "description": "Mentorship, training, networking for women entering public life",
+        "impact": "WEI Empowerment +1.5",
+        "cost": "low",
+        "time_to_impact": "3-5 years",
+        "proven_example": "UN Women leadership programs — 50+ countries active"
+      },
+      {
+        "priority": 8,
+        "pillar": "safety_justice",
+        "pillar_score": 22.0,
+        "intervention": "Domestic Violence Law + One-Stop Centres",
+        "description": "Criminalise DV + integrated centres with legal aid, shelter, counselling",
+        "impact": "WEI Safety +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "1-3 years",
+        "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
+      }
+    ],
+    "corporate_actions": []
+  },
   "ZWE": {
     "country": "Zimbabwe",
     "iso_code": "ZWE",
@@ -6358,6 +7910,103 @@
         "cost": "low",
         "time_to_impact": "1-3 years",
         "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
+      }
+    ],
+    "corporate_actions": []
+  },
+  "PSE": {
+    "country": "Palestine",
+    "iso_code": "PSE",
+    "tier": "3",
+    "wei_score": "31.4",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "conflict",
+        "pillar_score": 10.0,
+        "intervention": "Deploy UN SGBV Response Teams",
+        "description": "UNHCR-standard sexual and gender-based violence response in all active conflict zones",
+        "impact": "SVI conflict risk -3.0",
+        "cost": "high",
+        "time_to_impact": "immediate",
+        "proven_example": "IRC emergency SGBV programs — DRC, South Sudan, Syria. MSF safe spaces."
+      },
+      {
+        "priority": 2,
+        "pillar": "conflict",
+        "pillar_score": 10.0,
+        "intervention": "ICC Prosecution of Conflict SGBV",
+        "description": "Pursue International Criminal Court prosecution of CRSV as war crime",
+        "impact": "SVI impunity -5.0 (signal effect)",
+        "cost": "medium",
+        "time_to_impact": "3-10 years (legal process)",
+        "proven_example": "ICC Ntaganda conviction 2019 (DRC) — first ICC SGBV conviction."
+      },
+      {
+        "priority": 3,
+        "pillar": "svi",
+        "pillar_score": 16.6,
+        "intervention": "Marital Rape Criminalisation",
+        "description": "Remove marital exemption from rape law — most overdue legal reform globally",
+        "impact": "SVI +8.0, WEI Bodily Autonomy +3.5",
+        "cost": "very low (law)",
+        "time_to_impact": "immediate (law) + enforcement culture 5-10 yrs",
+        "proven_example": "Still legal in India, Bangladesh, Pakistan, Indonesia, Egypt, Iran + 16 others. UK criminalised 1991."
+      },
+      {
+        "priority": 4,
+        "pillar": "svi",
+        "pillar_score": 16.6,
+        "intervention": "Reduce Reporting Gap — Anonymous Reporting",
+        "description": "Anonymous online/app reporting + guaranteed no police referral option",
+        "impact": "SVI reporting gap -10%, WEI Safety +1.5",
+        "cost": "very low",
+        "time_to_impact": "6-12 months",
+        "proven_example": "SHEtoken grievance app (shetoken.org/signal) — zero PII, immediate resources"
+      },
+      {
+        "priority": 5,
+        "pillar": "svi",
+        "pillar_score": 16.6,
+        "intervention": "Rape Kit Processing + Forensic Capacity",
+        "description": "Clear rape kit backlog + fund forensic labs + victim-friendly examination",
+        "impact": "SVI impunity -10%, WEI Safety +2.0",
+        "cost": "medium",
+        "time_to_impact": "1-2 years",
+        "proven_example": "End the Backlog USA campaign — 200,000 untested rape kits processed"
+      },
+      {
+        "priority": 6,
+        "pillar": "svi",
+        "pillar_score": 16.6,
+        "intervention": "Consent-Based Rape Law Reform",
+        "description": "Replace 'force-based' rape law with 'absence of consent' standard",
+        "impact": "SVI legal framework +2.0",
+        "cost": "very low (law)",
+        "time_to_impact": "immediate",
+        "proven_example": "Japan 2023 — consent law passed after decades of campaigning. Sweden 2018."
+      },
+      {
+        "priority": 7,
+        "pillar": "svi",
+        "pillar_score": 16.6,
+        "intervention": "Conflict SGBV Response Protocol",
+        "description": "UNHCR-standard SGBV response teams in all conflict zones + mobile courts",
+        "impact": "SVI conflict score -3.0",
+        "cost": "high",
+        "time_to_impact": "immediate deployment",
+        "proven_example": "UN MONUSCO DRC — SGBV mobile courts. IRC emergency response DRC/Sudan."
+      },
+      {
+        "priority": 8,
+        "pillar": "svi",
+        "pillar_score": 16.6,
+        "intervention": "Caste-Targeted Sexual Violence Law",
+        "description": "Specific legal framework and fast-track courts for caste-based SGBV",
+        "impact": "SVI impunity -5% (India/similar), WEI Safety +1.5",
+        "cost": "low (law + courts)",
+        "time_to_impact": "1-3 years",
+        "proven_example": "India SC/ST Prevention of Atrocities Act — needs stronger enforcement"
       }
     ],
     "corporate_actions": []
@@ -7325,6 +8974,103 @@
       }
     ]
   },
+  "LBY": {
+    "country": "Libya",
+    "iso_code": "LBY",
+    "tier": "3",
+    "wei_score": "26.7",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "empowerment",
+        "pillar_score": 18.0,
+        "intervention": "Gender Quota in Parliament + Local Government",
+        "description": "Reserved seats or candidate quotas for women in all legislative bodies",
+        "impact": "WEI Empowerment +4.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 1 election cycle",
+        "proven_example": "Rwanda 61% women parliament via quota — highest globally"
+      },
+      {
+        "priority": 2,
+        "pillar": "empowerment",
+        "pillar_score": 18.0,
+        "intervention": "Women's Political Leadership Pipeline",
+        "description": "Mentorship, training, networking for women entering public life",
+        "impact": "WEI Empowerment +1.5",
+        "cost": "low",
+        "time_to_impact": "3-5 years",
+        "proven_example": "UN Women leadership programs — 50+ countries active"
+      },
+      {
+        "priority": 3,
+        "pillar": "safety_justice",
+        "pillar_score": 18.0,
+        "intervention": "Domestic Violence Law + One-Stop Centres",
+        "description": "Criminalise DV + integrated centres with legal aid, shelter, counselling",
+        "impact": "WEI Safety +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "1-3 years",
+        "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
+      },
+      {
+        "priority": 4,
+        "pillar": "safety_justice",
+        "pillar_score": 18.0,
+        "intervention": "Female Police Officers + Gender Training",
+        "description": "30% female police target + mandatory DV/SGBV training + women's desks",
+        "impact": "WEI Safety +2.0, SVI reporting gap -5%",
+        "cost": "low",
+        "time_to_impact": "2-3 years",
+        "proven_example": "Rwanda 43% female police — highest reporting rates in Africa"
+      },
+      {
+        "priority": 5,
+        "pillar": "safety_justice",
+        "pillar_score": 18.0,
+        "intervention": "Free Legal Aid for Women's Cases",
+        "description": "Free legal representation for DV, divorce, custody, property disputes",
+        "impact": "WEI Safety +2.5",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "SEWA Legal Services Gujarat — 50,000+ cases supported"
+      },
+      {
+        "priority": 6,
+        "pillar": "dignity_welfare",
+        "pillar_score": 18.0,
+        "intervention": "Widow Property Rights Enforcement",
+        "description": "Legal aid + community paralegal network to prevent property stripping",
+        "impact": "WEI Dignity +3.0, WEVI -8 pts vulnerability",
+        "cost": "low",
+        "time_to_impact": "2-5 years",
+        "proven_example": "Kenya Succession Act enforcement campaign — 10,000 widows assisted"
+      },
+      {
+        "priority": 7,
+        "pillar": "dignity_welfare",
+        "pillar_score": 18.0,
+        "intervention": "Widow Pension and Social Support",
+        "description": "Meaningful widow pension (not symbolic ₹500/month) + social reintegration",
+        "impact": "WEI Dignity +2.5, WEVI -10 pts",
+        "cost": "medium",
+        "time_to_impact": "immediate (law) + 1-2 years rollout",
+        "proven_example": "Kerala widow pension ₹1,400/month + Kudumbashree inclusion — WEVI 28 vs India avg 69"
+      },
+      {
+        "priority": 8,
+        "pillar": "dignity_welfare",
+        "pillar_score": 18.0,
+        "intervention": "Temple Town Widow Rehabilitation",
+        "description": "Repatriation support + skill training + income + family mediation for abandoned widows",
+        "impact": "WEI Dignity +1.5 (India states)",
+        "cost": "low",
+        "time_to_impact": "1-3 years",
+        "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
+      }
+    ],
+    "corporate_actions": []
+  },
   "PAK": {
     "country": "Pakistan",
     "iso_code": "PAK",
@@ -7661,6 +9407,103 @@
     ],
     "corporate_actions": []
   },
+  "SLE": {
+    "country": "Sierra Leone",
+    "iso_code": "SLE",
+    "tier": "3",
+    "wei_score": "22.1",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 12.0,
+        "intervention": "Child Marriage Prevention — Legal + Community",
+        "description": "Enforce minimum age 18, community awareness, girls' empowerment clubs",
+        "impact": "WEI Bodily Autonomy +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "3-5 years",
+        "proven_example": "Kanyashree WB — child marriage fell 40% in 5 years"
+      },
+      {
+        "priority": 2,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 12.0,
+        "intervention": "Period Poverty Elimination Program",
+        "description": "Free products + menstrual health education + school WASH + stigma reduction",
+        "impact": "WEI Bodily Autonomy +2.0, Dignity +2.5",
+        "cost": "low",
+        "time_to_impact": "6-12 months",
+        "proven_example": "Plan International — 20+ countries. Kenya government free pads 2017"
+      },
+      {
+        "priority": 3,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 12.0,
+        "intervention": "Criminalise Marital Rape",
+        "description": "Legal reform to remove marital exemption from rape law + enforcement",
+        "impact": "WEI Bodily Autonomy +3.5, SVI +8.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 3-5 years (enforcement)",
+        "proven_example": "UK criminalised 1991. Nepal 2006. Turkey 2005. Still legal in India, Bangladesh, Pakistan"
+      },
+      {
+        "priority": 4,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 12.0,
+        "intervention": "Reproductive Health Community Workers",
+        "description": "Trained community health workers providing contraception + reproductive info",
+        "impact": "WEI Bodily Autonomy +2.0, Health +1.5",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "Ethiopia Health Extension Workers — 38,000 deployed, MMR halved"
+      },
+      {
+        "priority": 5,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 12.0,
+        "intervention": "FGM Community Abandonment Program",
+        "description": "Community-led abandonment with alternative rites of passage",
+        "impact": "WEI Bodily Autonomy +3.5",
+        "cost": "low",
+        "time_to_impact": "3-7 years",
+        "proven_example": "Tostan Senegal — 6,000+ communities abandoned FGM voluntarily"
+      },
+      {
+        "priority": 6,
+        "pillar": "dignity_welfare",
+        "pillar_score": 16.0,
+        "intervention": "Widow Property Rights Enforcement",
+        "description": "Legal aid + community paralegal network to prevent property stripping",
+        "impact": "WEI Dignity +3.0, WEVI -8 pts vulnerability",
+        "cost": "low",
+        "time_to_impact": "2-5 years",
+        "proven_example": "Kenya Succession Act enforcement campaign — 10,000 widows assisted"
+      },
+      {
+        "priority": 7,
+        "pillar": "dignity_welfare",
+        "pillar_score": 16.0,
+        "intervention": "Widow Pension and Social Support",
+        "description": "Meaningful widow pension (not symbolic ₹500/month) + social reintegration",
+        "impact": "WEI Dignity +2.5, WEVI -10 pts",
+        "cost": "medium",
+        "time_to_impact": "immediate (law) + 1-2 years rollout",
+        "proven_example": "Kerala widow pension ₹1,400/month + Kudumbashree inclusion — WEVI 28 vs India avg 69"
+      },
+      {
+        "priority": 8,
+        "pillar": "dignity_welfare",
+        "pillar_score": 16.0,
+        "intervention": "Temple Town Widow Rehabilitation",
+        "description": "Repatriation support + skill training + income + family mediation for abandoned widows",
+        "impact": "WEI Dignity +1.5 (India states)",
+        "cost": "low",
+        "time_to_impact": "1-3 years",
+        "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
+      }
+    ],
+    "corporate_actions": []
+  },
   "SDN": {
     "country": "Sudan",
     "iso_code": "SDN",
@@ -7803,6 +9646,200 @@
       }
     ]
   },
+  "GIN": {
+    "country": "Guinea",
+    "iso_code": "GIN",
+    "tier": "3",
+    "wei_score": "19.1",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 8.0,
+        "intervention": "Child Marriage Prevention — Legal + Community",
+        "description": "Enforce minimum age 18, community awareness, girls' empowerment clubs",
+        "impact": "WEI Bodily Autonomy +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "3-5 years",
+        "proven_example": "Kanyashree WB — child marriage fell 40% in 5 years"
+      },
+      {
+        "priority": 2,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 8.0,
+        "intervention": "Period Poverty Elimination Program",
+        "description": "Free products + menstrual health education + school WASH + stigma reduction",
+        "impact": "WEI Bodily Autonomy +2.0, Dignity +2.5",
+        "cost": "low",
+        "time_to_impact": "6-12 months",
+        "proven_example": "Plan International — 20+ countries. Kenya government free pads 2017"
+      },
+      {
+        "priority": 3,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 8.0,
+        "intervention": "Criminalise Marital Rape",
+        "description": "Legal reform to remove marital exemption from rape law + enforcement",
+        "impact": "WEI Bodily Autonomy +3.5, SVI +8.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 3-5 years (enforcement)",
+        "proven_example": "UK criminalised 1991. Nepal 2006. Turkey 2005. Still legal in India, Bangladesh, Pakistan"
+      },
+      {
+        "priority": 4,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 8.0,
+        "intervention": "Reproductive Health Community Workers",
+        "description": "Trained community health workers providing contraception + reproductive info",
+        "impact": "WEI Bodily Autonomy +2.0, Health +1.5",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "Ethiopia Health Extension Workers — 38,000 deployed, MMR halved"
+      },
+      {
+        "priority": 5,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 8.0,
+        "intervention": "FGM Community Abandonment Program",
+        "description": "Community-led abandonment with alternative rites of passage",
+        "impact": "WEI Bodily Autonomy +3.5",
+        "cost": "low",
+        "time_to_impact": "3-7 years",
+        "proven_example": "Tostan Senegal — 6,000+ communities abandoned FGM voluntarily"
+      },
+      {
+        "priority": 6,
+        "pillar": "dignity_welfare",
+        "pillar_score": 14.0,
+        "intervention": "Widow Property Rights Enforcement",
+        "description": "Legal aid + community paralegal network to prevent property stripping",
+        "impact": "WEI Dignity +3.0, WEVI -8 pts vulnerability",
+        "cost": "low",
+        "time_to_impact": "2-5 years",
+        "proven_example": "Kenya Succession Act enforcement campaign — 10,000 widows assisted"
+      },
+      {
+        "priority": 7,
+        "pillar": "dignity_welfare",
+        "pillar_score": 14.0,
+        "intervention": "Widow Pension and Social Support",
+        "description": "Meaningful widow pension (not symbolic ₹500/month) + social reintegration",
+        "impact": "WEI Dignity +2.5, WEVI -10 pts",
+        "cost": "medium",
+        "time_to_impact": "immediate (law) + 1-2 years rollout",
+        "proven_example": "Kerala widow pension ₹1,400/month + Kudumbashree inclusion — WEVI 28 vs India avg 69"
+      },
+      {
+        "priority": 8,
+        "pillar": "dignity_welfare",
+        "pillar_score": 14.0,
+        "intervention": "Temple Town Widow Rehabilitation",
+        "description": "Repatriation support + skill training + income + family mediation for abandoned widows",
+        "impact": "WEI Dignity +1.5 (India states)",
+        "cost": "low",
+        "time_to_impact": "1-3 years",
+        "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
+      }
+    ],
+    "corporate_actions": []
+  },
+  "BFA": {
+    "country": "Burkina Faso",
+    "iso_code": "BFA",
+    "tier": "3",
+    "wei_score": "18.3",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "dignity_welfare",
+        "pillar_score": 12.0,
+        "intervention": "Widow Property Rights Enforcement",
+        "description": "Legal aid + community paralegal network to prevent property stripping",
+        "impact": "WEI Dignity +3.0, WEVI -8 pts vulnerability",
+        "cost": "low",
+        "time_to_impact": "2-5 years",
+        "proven_example": "Kenya Succession Act enforcement campaign — 10,000 widows assisted"
+      },
+      {
+        "priority": 2,
+        "pillar": "dignity_welfare",
+        "pillar_score": 12.0,
+        "intervention": "Widow Pension and Social Support",
+        "description": "Meaningful widow pension (not symbolic ₹500/month) + social reintegration",
+        "impact": "WEI Dignity +2.5, WEVI -10 pts",
+        "cost": "medium",
+        "time_to_impact": "immediate (law) + 1-2 years rollout",
+        "proven_example": "Kerala widow pension ₹1,400/month + Kudumbashree inclusion — WEVI 28 vs India avg 69"
+      },
+      {
+        "priority": 3,
+        "pillar": "dignity_welfare",
+        "pillar_score": 12.0,
+        "intervention": "Temple Town Widow Rehabilitation",
+        "description": "Repatriation support + skill training + income + family mediation for abandoned widows",
+        "impact": "WEI Dignity +1.5 (India states)",
+        "cost": "low",
+        "time_to_impact": "1-3 years",
+        "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
+      },
+      {
+        "priority": 4,
+        "pillar": "dignity_welfare",
+        "pillar_score": 12.0,
+        "intervention": "Subsidised Childcare",
+        "description": "State-funded childcare enabling women to work and reducing care burden",
+        "impact": "WEI Dignity +2.0, GPI Time Poverty +3.0, Economic +1.5",
+        "cost": "high",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Quebec $10/day childcare — female LFPR increased 12 percentage points"
+      },
+      {
+        "priority": 5,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 14.0,
+        "intervention": "Child Marriage Prevention — Legal + Community",
+        "description": "Enforce minimum age 18, community awareness, girls' empowerment clubs",
+        "impact": "WEI Bodily Autonomy +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "3-5 years",
+        "proven_example": "Kanyashree WB — child marriage fell 40% in 5 years"
+      },
+      {
+        "priority": 6,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 14.0,
+        "intervention": "Period Poverty Elimination Program",
+        "description": "Free products + menstrual health education + school WASH + stigma reduction",
+        "impact": "WEI Bodily Autonomy +2.0, Dignity +2.5",
+        "cost": "low",
+        "time_to_impact": "6-12 months",
+        "proven_example": "Plan International — 20+ countries. Kenya government free pads 2017"
+      },
+      {
+        "priority": 7,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 14.0,
+        "intervention": "Criminalise Marital Rape",
+        "description": "Legal reform to remove marital exemption from rape law + enforcement",
+        "impact": "WEI Bodily Autonomy +3.5, SVI +8.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 3-5 years (enforcement)",
+        "proven_example": "UK criminalised 1991. Nepal 2006. Turkey 2005. Still legal in India, Bangladesh, Pakistan"
+      },
+      {
+        "priority": 8,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 14.0,
+        "intervention": "Reproductive Health Community Workers",
+        "description": "Trained community health workers providing contraception + reproductive info",
+        "impact": "WEI Bodily Autonomy +2.0, Health +1.5",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "Ethiopia Health Extension Workers — 38,000 deployed, MMR halved"
+      }
+    ],
+    "corporate_actions": []
+  },
   "SYR": {
     "country": "Syria",
     "iso_code": "SYR",
@@ -7890,6 +9927,103 @@
         "priority": 8,
         "pillar": "bodily_autonomy",
         "pillar_score": 12.0,
+        "intervention": "Reproductive Health Community Workers",
+        "description": "Trained community health workers providing contraception + reproductive info",
+        "impact": "WEI Bodily Autonomy +2.0, Health +1.5",
+        "cost": "low",
+        "time_to_impact": "1-2 years",
+        "proven_example": "Ethiopia Health Extension Workers — 38,000 deployed, MMR halved"
+      }
+    ],
+    "corporate_actions": []
+  },
+  "ERI": {
+    "country": "Eritrea",
+    "iso_code": "ERI",
+    "tier": "3",
+    "wei_score": "15.5",
+    "recommendations": [
+      {
+        "priority": 1,
+        "pillar": "dignity_welfare",
+        "pillar_score": 8.0,
+        "intervention": "Widow Property Rights Enforcement",
+        "description": "Legal aid + community paralegal network to prevent property stripping",
+        "impact": "WEI Dignity +3.0, WEVI -8 pts vulnerability",
+        "cost": "low",
+        "time_to_impact": "2-5 years",
+        "proven_example": "Kenya Succession Act enforcement campaign — 10,000 widows assisted"
+      },
+      {
+        "priority": 2,
+        "pillar": "dignity_welfare",
+        "pillar_score": 8.0,
+        "intervention": "Widow Pension and Social Support",
+        "description": "Meaningful widow pension (not symbolic ₹500/month) + social reintegration",
+        "impact": "WEI Dignity +2.5, WEVI -10 pts",
+        "cost": "medium",
+        "time_to_impact": "immediate (law) + 1-2 years rollout",
+        "proven_example": "Kerala widow pension ₹1,400/month + Kudumbashree inclusion — WEVI 28 vs India avg 69"
+      },
+      {
+        "priority": 3,
+        "pillar": "dignity_welfare",
+        "pillar_score": 8.0,
+        "intervention": "Temple Town Widow Rehabilitation",
+        "description": "Repatriation support + skill training + income + family mediation for abandoned widows",
+        "impact": "WEI Dignity +1.5 (India states)",
+        "cost": "low",
+        "time_to_impact": "1-3 years",
+        "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
+      },
+      {
+        "priority": 4,
+        "pillar": "dignity_welfare",
+        "pillar_score": 8.0,
+        "intervention": "Subsidised Childcare",
+        "description": "State-funded childcare enabling women to work and reducing care burden",
+        "impact": "WEI Dignity +2.0, GPI Time Poverty +3.0, Economic +1.5",
+        "cost": "high",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Quebec $10/day childcare — female LFPR increased 12 percentage points"
+      },
+      {
+        "priority": 5,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 10.0,
+        "intervention": "Child Marriage Prevention — Legal + Community",
+        "description": "Enforce minimum age 18, community awareness, girls' empowerment clubs",
+        "impact": "WEI Bodily Autonomy +3.0",
+        "cost": "low-medium",
+        "time_to_impact": "3-5 years",
+        "proven_example": "Kanyashree WB — child marriage fell 40% in 5 years"
+      },
+      {
+        "priority": 6,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 10.0,
+        "intervention": "Period Poverty Elimination Program",
+        "description": "Free products + menstrual health education + school WASH + stigma reduction",
+        "impact": "WEI Bodily Autonomy +2.0, Dignity +2.5",
+        "cost": "low",
+        "time_to_impact": "6-12 months",
+        "proven_example": "Plan International — 20+ countries. Kenya government free pads 2017"
+      },
+      {
+        "priority": 7,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 10.0,
+        "intervention": "Criminalise Marital Rape",
+        "description": "Legal reform to remove marital exemption from rape law + enforcement",
+        "impact": "WEI Bodily Autonomy +3.5, SVI +8.0",
+        "cost": "very low (law change)",
+        "time_to_impact": "immediate (law) + 3-5 years (enforcement)",
+        "proven_example": "UK criminalised 1991. Nepal 2006. Turkey 2005. Still legal in India, Bangladesh, Pakistan"
+      },
+      {
+        "priority": 8,
+        "pillar": "bodily_autonomy",
+        "pillar_score": 10.0,
         "intervention": "Reproductive Health Community Workers",
         "description": "Trained community health workers providing contraception + reproductive info",
         "impact": "WEI Bodily Autonomy +2.0, Health +1.5",
