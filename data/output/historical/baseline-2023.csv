@@ -1,0 +1,88 @@
+# SHEtoken WEI Historical — 2023 | Global WEI: 55.4
+# Event-reversal model from 2025 baseline
+# (c) 2026 SHE Foundation
+#
+rank,country,iso_code,region,tier,population_millions,empowerment_score,education_score,economic_score,health_score,bodily_autonomy_score,safety_justice_score,dignity_welfare_score,digital_social_score,violence_penalty_score,wei_score,population_weight,ticker,year,wei_version,data_source,verified,notes,data_source
+1,Iceland,ISL,Europe,1,0.4,94.6,97.7,87.7,96.8,95.7,91.8,91.7,93.7,8.1,93.0,1.0,SHE-ISL,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+2,Norway,NOR,Europe,1,5.4,92.6,96.7,85.7,97.8,94.7,90.8,90.7,92.7,8.1,92.0,1.0,SHE-NOR,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+3,Finland,FIN,Europe,1,5.5,91.6,97.7,84.7,96.8,93.7,89.8,89.7,91.7,8.1,91.2,1.0,SHE-FIN,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+4,Sweden,SWE,Europe,1,10.4,90.6,96.7,86.7,96.8,94.7,88.8,90.7,92.7,10.1,91.2,1.0,SHE-SWE,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+5,Denmark,DNK,Europe,1,5.9,88.6,95.7,84.7,95.8,92.7,87.8,89.7,90.7,9.1,89.8,1.0,SHE-DNK,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+6,New Zealand,NZL,Oceania,1,5.1,87.6,96.7,82.7,95.8,91.7,86.8,87.7,88.7,13.1,88.4,1.0,SHE-NZL,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+7,Netherlands,NLD,Europe,1,17.5,83.6,95.7,81.7,96.8,89.7,84.8,87.7,88.7,12.1,87.2,1.0,SHE-NLD,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+8,Switzerland,CHE,Europe,1,8.7,82.6,95.7,81.7,96.8,88.7,83.8,87.7,86.7,10.1,86.8,1.0,SHE-CHE,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+9,Canada,CAN,N. America,1,38.2,84.6,96.7,79.7,95.8,90.7,83.8,86.7,88.7,14.1,86.8,1.0,SHE-CAN,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+10,Germany,DEU,Europe,1,83.2,83.6,94.7,80.7,94.8,89.7,84.8,86.7,87.7,12.1,86.5,1.0,SHE-DEU,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+11,Ireland,IRL,Europe,1,5.1,81.6,96.7,79.7,96.8,87.7,83.8,86.7,86.7,11.1,86.1,1.0,SHE-IRL,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+12,Australia,AUS,Oceania,1,25.9,81.6,95.7,78.7,95.8,89.7,82.8,85.7,86.7,16.1,85.3,1.0,SHE-AUS,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+13,Belgium,BEL,Europe,1,11.5,79.6,95.7,79.7,95.8,87.7,82.8,85.7,85.7,13.1,85.1,1.0,SHE-BEL,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+14,Austria,AUT,Europe,1,9.0,78.6,94.7,78.7,95.8,86.7,81.8,84.7,84.7,12.1,84.3,1.0,SHE-AUT,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+15,United Kingdom,GBR,Europe,1,67.0,78.6,95.7,77.7,94.8,86.7,81.8,83.7,85.7,16.1,83.8,1.0,SHE-GBR,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+16,France,FRA,Europe,1,67.4,77.6,94.7,77.7,94.8,85.7,80.8,83.7,84.7,15.1,83.2,1.0,SHE-FRA,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+17,Spain,ESP,Europe,1,47.4,75.6,95.7,75.7,94.8,84.7,80.8,82.7,83.7,14.1,82.5,1.0,SHE-ESP,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+18,Portugal,PRT,Europe,1,10.3,73.6,94.7,73.7,93.8,83.7,79.8,81.7,81.7,13.1,81.3,1.0,SHE-PRT,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+19,Japan,JPN,Asia,1,125.7,67.6,96.7,70.7,97.8,79.7,77.8,81.7,83.7,7.1,80.6,1.0,SHE-JPN,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+20,United States,USA,N. America,1,331.0,76.6,95.7,72.7,92.8,79.7,77.8,81.7,84.7,20.1,80.3,1.0,SHE-USA,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+21,Israel,ISR,Middle East,1,9.3,71.6,95.7,73.7,94.8,77.7,75.8,77.7,80.7,15.1,79.0,1.0,SHE-ISR,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+22,South Korea,KOR,Asia,1,51.7,64.6,96.7,67.7,96.8,77.7,75.8,79.7,80.7,11.1,78.2,1.0,SHE-KOR,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+23,Uruguay,URY,S. America,1,3.5,71.6,94.7,67.7,92.8,77.7,73.8,75.7,76.7,26.1,76.0,1.0,SHE-URY,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+24,China,CHN,Asia,2,1412.0,61.4,92.2,63.5,89.3,61.6,61.7,63.5,66.3,22.2,67.2,1.0,SHE-CHN,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+25,Argentina,ARG,S. America,2,45.4,59.4,92.2,57.5,90.3,69.6,61.7,65.5,68.3,36.2,66.5,1.0,SHE-ARG,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+26,Ukraine,UKR,Europe,2,43.5,57.4,92.2,61.5,89.3,65.6,59.7,63.5,66.3,28.2,66.1,1.0,SHE-UKR,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+27,Chile,CHL,S. America,2,19.1,57.4,91.2,56.5,89.3,67.6,59.7,63.5,66.3,34.2,65.1,1.0,SHE-CHL,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+28,Russia,RUS,Europe,2,144.1,55.4,91.2,59.5,87.3,61.6,55.7,59.5,62.3,26.2,63.5,1.0,SHE-RUS,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+29,Kazakhstan,KAZ,Central Asia,2,19.1,53.4,91.2,59.5,87.3,59.6,57.7,59.5,60.3,26.2,62.9,1.0,SHE-KAZ,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+30,Philippines,PHL,Asia,2,111.0,64.4,90.2,57.5,81.3,59.6,55.7,57.5,60.3,32.2,62.4,1.0,SHE-PHL,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+31,Vietnam,VNM,Asia,2,97.3,57.4,89.2,55.5,87.3,55.6,57.7,57.5,58.3,20.2,62.4,1.0,SHE-VNM,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+32,Thailand,THA,Asia,2,71.6,56.4,87.2,57.5,87.3,57.6,55.7,57.5,60.3,26.2,61.9,1.0,SHE-THA,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+33,Sri Lanka,LKA,Asia,2,22.2,55.4,91.2,51.5,84.3,57.6,53.7,55.5,56.3,26.2,60.3,1.0,SHE-LKA,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+34,Brazil,BRA,S. America,2,213.0,54.4,89.2,53.5,87.3,63.6,53.7,57.5,60.3,44.2,60.2,1.0,SHE-BRA,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+35,Colombia,COL,S. America,2,51.0,51.4,89.2,49.5,86.3,59.6,53.7,57.5,60.3,42.2,58.7,1.0,SHE-COL,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+36,Mongolia,MNG,Asia,2,3.3,54.4,90.2,51.5,83.3,53.6,51.7,53.5,56.3,36.2,57.8,1.0,SHE-MNG,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+37,Mexico,MEX,N. America,2,128.9,46.4,87.2,47.5,84.3,57.6,49.7,55.5,58.3,46.2,55.6,1.0,SHE-MEX,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+38,Rwanda,RWA,Africa,2,13.5,63.4,83.2,47.5,71.3,51.6,53.7,51.5,48.3,34.2,55.6,1.0,SHE-RWA,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+39,Turkey,TUR,Europe/Asia,2,84.3,47.4,81.2,51.5,85.3,51.6,49.7,53.5,56.3,34.2,55.5,1.0,SHE-TUR,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+40,Bolivia,BOL,S. America,2,11.8,51.4,87.2,47.5,81.3,51.6,49.7,51.5,52.3,40.2,54.7,1.0,SHE-BOL,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+41,Tunisia,TUN,Africa,2,12.0,45.4,84.2,47.5,81.3,49.6,49.7,51.5,54.3,28.2,54.5,1.0,SHE-TUN,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+42,Namibia,NAM,Africa,2,2.6,54.4,87.2,49.5,75.3,51.6,51.7,51.5,54.3,50.2,54.1,1.0,SHE-NAM,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+43,Botswana,BWA,Africa,2,2.6,55.4,86.2,51.5,73.3,51.6,49.7,51.5,52.3,46.2,54.1,1.0,SHE-BWA,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+44,Peru,PER,S. America,2,32.9,49.4,87.2,47.5,81.3,49.6,49.7,51.5,52.3,40.2,54.1,1.0,SHE-PER,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+45,Indonesia,IDN,Asia,2,273.5,43.4,81.2,47.5,77.3,49.6,47.7,49.5,52.3,30.2,52.5,1.0,SHE-IDN,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+46,South Africa,ZAF,Africa,2,60.0,55.4,84.2,49.5,77.3,53.6,45.7,51.5,54.3,70.2,51.6,1.0,SHE-ZAF,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+47,Honduras,HND,C. America,2,10.3,47.4,84.2,45.5,79.3,47.6,45.7,47.5,48.3,54.2,49.9,1.0,SHE-HND,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+48,Morocco,MAR,Africa,2,37.1,39.4,75.2,41.5,79.3,43.6,45.7,45.5,46.3,26.2,48.9,1.0,SHE-MAR,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+49,Kenya,KEN,Africa,2,54.0,47.4,79.2,43.5,67.3,43.6,43.7,43.5,44.3,40.2,47.3,1.0,SHE-KEN,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+50,Ghana,GHA,Africa,2,32.4,44.4,81.2,41.5,69.3,41.6,43.7,43.5,44.3,36.2,47.2,1.0,SHE-GHA,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+51,India,IND,Asia,2,1408.0,45.9,73.2,42.0,67.3,41.6,47.7,43.5,48.3,38.2,47.1,1.0,SHE-IND,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+52,Cambodia,KHM,Asia,3,16.7,31.3,73.0,37.6,71.1,33.5,33.7,33.6,34.4,32.1,39.8,0.8,SHE-KHM,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+53,Bangladesh,BGD,Asia,3,166.3,38.8,69.0,35.6,67.1,31.5,35.7,33.6,36.4,38.1,39.3,0.8,SHE-BGD,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+54,Laos,LAO,Asia,3,7.3,31.3,71.0,35.6,69.1,29.5,31.7,31.6,32.4,28.1,38.2,0.8,SHE-LAO,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+55,Myanmar,MMR,Asia,3,54.4,33.3,71.0,37.6,69.1,31.5,31.7,33.6,34.4,42.1,38.1,0.8,SHE-MMR,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+56,Jordan,JOR,Middle East,3,10.2,23.3,79.0,29.6,79.1,27.5,29.7,29.6,34.4,26.1,38.1,0.8,SHE-JOR,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+57,Nepal,NPL,Asia,3,29.7,35.3,67.0,33.6,65.1,29.5,33.7,31.6,34.4,34.1,37.5,0.8,SHE-NPL,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+58,Guatemala,GTM,C. America,3,17.1,33.3,69.0,35.6,73.1,29.5,29.7,29.6,32.4,50.1,36.1,0.8,SHE-GTM,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+59,Egypt,EGY,Middle East,3,102.3,23.3,69.0,31.6,73.1,21.5,27.7,27.6,30.4,30.1,34.2,0.8,SHE-EGY,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+60,Zimbabwe,ZWE,Africa,3,15.1,31.3,71.0,29.6,57.1,23.5,27.7,23.6,26.4,48.1,31.2,0.8,SHE-ZWE,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+61,Uganda,UGA,Africa,3,47.1,33.3,65.0,29.6,55.1,23.5,27.7,23.6,26.4,50.1,30.4,0.8,SHE-UGA,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+62,Tanzania,TZA,Africa,3,61.5,29.3,63.0,31.6,57.1,21.5,25.7,21.6,24.4,44.1,29.6,0.8,SHE-TZA,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+63,Zambia,ZMB,Africa,3,18.9,29.3,63.0,31.6,55.1,21.5,25.7,21.6,24.4,46.1,29.2,0.8,SHE-ZMB,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+64,Nigeria,NGA,Africa,3,213.4,27.3,59.0,29.6,51.1,19.5,23.7,21.6,24.4,46.1,27.1,0.8,SHE-NGA,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+65,Papua New Guinea,PNG,Oceania,3,9.1,25.3,59.0,27.6,57.1,21.5,23.7,23.6,26.4,58.1,26.8,0.8,SHE-PNG,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+66,Cameroon,CMR,Africa,3,27.2,27.3,59.0,27.6,51.1,17.5,23.7,19.6,22.4,42.1,26.6,0.8,SHE-CMR,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+67,Iraq,IRQ,Middle East,3,40.2,17.3,57.0,21.6,69.1,17.5,21.7,19.6,20.4,34.1,26.6,0.8,SHE-IRQ,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+68,Mozambique,MOZ,Africa,3,32.2,27.3,57.0,27.6,51.1,19.5,23.7,19.6,22.4,44.1,26.4,0.8,SHE-MOZ,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+69,Ethiopia,ETH,Africa,3,117.9,25.3,54.0,27.6,51.1,17.5,23.7,19.6,22.4,36.1,26.3,0.8,SHE-ETH,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+70,Pakistan,PAK,Asia,3,225.2,23.3,49.0,27.6,61.1,17.5,21.7,19.6,22.4,42.1,25.7,0.8,SHE-PAK,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+71,Ivory Coast,CIV,Africa,3,26.4,25.3,57.0,27.6,49.1,15.5,21.7,19.6,20.4,38.1,25.4,0.8,SHE-CIV,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+72,Haiti,HTI,Caribbean,3,11.4,23.3,55.0,25.6,45.1,19.5,21.7,19.6,20.4,46.1,23.9,0.8,SHE-HTI,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+73,Sudan,SDN,Africa,3,44.9,15.3,41.0,19.6,47.1,11.5,15.7,14.6,16.4,34.1,18.8,0.8,SHE-SDN,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+74,Syria,SYR,Middle East,4,21.3,15.8,43.5,15.8,45.4,11.8,11.9,9.8,12.9,50.0,15.6,0.6,SHE-SYR,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+75,Mali,MLI,Africa,4,22.4,11.8,35.5,15.8,37.4,7.8,9.9,7.8,10.9,38.0,13.0,0.6,SHE-MLI,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+76,DRC,COD,Africa,4,95.9,13.8,37.5,13.8,35.4,9.8,11.9,7.8,12.9,60.0,11.7,0.6,SHE-COD,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+77,Chad,TCD,Africa,4,16.9,11.8,27.5,13.8,31.4,5.8,7.9,5.8,8.9,40.0,9.9,0.6,SHE-TCD,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+78,Yemen,YEM,Middle East,4,33.7,9.8,27.5,11.8,37.4,7.8,9.9,7.8,8.9,54.0,9.5,0.6,SHE-YEM,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+79,South Sudan,SSD,Africa,4,11.2,13.8,27.5,13.8,29.4,7.8,7.9,5.8,8.9,52.0,9.1,0.6,SHE-SSD,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+80,Central African Republic,CAF,Africa,4,4.8,11.8,29.5,13.8,31.4,7.8,7.9,5.8,8.9,54.0,9.1,0.6,SHE-CAF,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+81,Niger,NER,Africa,4,25.1,5.8,23.5,11.8,29.4,4.8,4.9,5.8,8.9,34.0,8.1,0.6,SHE-NER,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+82,Afghanistan,AFG,Asia,4,40.1,5.8,17.5,7.8,31.4,3.8,7.9,5.8,3.9,46.0,5.7,0.6,SHE-AFG,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model
+83,Somalia,SOM,Africa,4,17.1,7.8,19.5,9.8,27.4,3.8,5.9,3.8,6.9,56.0,4.8,0.6,SHE-SOM,2023,3.0,historical_model,false,Baseline estimate — run pipeline for verified scores,historical_model

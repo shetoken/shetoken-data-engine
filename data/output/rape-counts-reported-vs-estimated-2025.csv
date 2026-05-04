@@ -1,0 +1,58 @@
+# SHEtoken Rape Counts: Reported vs Estimated — 2025
+# REPORTED = UNODC official police statistics
+# ESTIMATED = WHO lifetime prevalence survey ÷ 35-year window
+#
+# Global annual REPORTED:  362,844
+# Global annual ESTIMATED: 20,486,743
+# Global annual UNREPORTED:20,123,899
+#
+# Countries covered: 40
+# Countries where marital rape NOT criminalised: 19
+#
+# CRITICAL NOTE: 'Estimated' figures are CONSERVATIVE.
+# WHO surveys themselves undercount due to shame, denial, and
+# fear. True figures may be significantly higher.
+# Sources: UNODC, WHO, national crime surveys (NCVS, NCRB etc)
+# (c) 2026 SHE Foundation
+#
+rank_estimated,country,iso_code,region,female_population_millions,unodc_reported_per_100k,who_lifetime_prevalence_pct,reporting_gap_pct,marital_rape_criminalised,reported_annual,estimated_annual,unreported_annual,reported_weekly,estimated_weekly,unreported_weekly,reported_daily,estimated_daily,estimation_multiplier,source_note,year
+1,India,IND,South Asia,706.0,5,28,98,0,35300,5648000,5612700,679,108615,107937,96.7,15474.0,160.0,"NCRB 2022: 31,677 reported. WHO: 300K+ estimated",2025
+2,China,CHN,East Asia,706.0,2,12,97,1,14120,2420571,2406451,272,46549,46278,38.7,6631.7,171.4,MPS China + limited WHO data,2025
+3,Pakistan,PAK,South Asia,112.6,2,32,99,0,2252,1029486,1027234,43,19798,19754,6.2,2820.5,457.1,PBS + HRCP Annual Report,2025
+4,Indonesia,IDN,SE Asia,136.75,4,26,97,0,5470,1015857,1010387,105,19536,19431,15.0,2783.2,185.7,KPPPA + UNFPA Indonesia,2025
+5,Nigeria,NGA,Africa,106.7,4,30,98,0,4268,914571,910303,82,17588,17506,11.7,2505.7,214.3,NDHS + HRW reports,2025
+6,Brazil,BRA,S. America,106.5,28,30,90,1,29820,912857,883037,573,17555,16981,81.7,2501.0,30.6,IPEA 2019 + FBSP Atlas da Violencia,2025
+7,USA,USA,N. America,165.5,40,18,90,1,66200,851143,784943,1273,16368,15095,181.4,2331.9,12.9,FBI UCR + NCVS (only 23% reported),2025
+8,Bangladesh,BGD,South Asia,83.15,3,35,99,0,2494,831500,829006,48,15990,15942,6.8,2278.1,333.4,BBS SVAW Survey + BLAST,2025
+9,DRC,COD,Africa,47.95,6,52,99,0,2877,712400,709523,55,13700,13645,7.9,1951.8,247.6,UN MONUSCO + IRC: 48+ women/hr at peak conflict,2025
+10,Ethiopia,ETH,Africa,58.95,3,36,99,0,1768,606343,604575,34,11660,11626,4.8,1661.2,343.0,CSA DHS + UNFPA Ethiopia,2025
+11,Mexico,MEX,N. America,64.45,20,32,92,1,12890,589257,576367,248,11332,11084,35.3,1614.4,45.7,INEGI ENVIPE 2022 — 8 in 10 unreported,2025
+12,Egypt,EGY,Africa/ME,51.15,6,28,97,0,3069,409200,406131,59,7869,7810,8.4,1121.1,133.3,UNFPA Egypt + HarassMap,2025
+13,Philippines,PHL,SE Asia,55.5,18,24,90,1,9990,380571,370581,192,7319,7127,27.4,1042.7,38.1,PSA NDHS + PNP,2025
+14,Vietnam,VNM,SE Asia,48.65,6,26,92,1,2919,361400,358481,56,6950,6894,8.0,990.1,123.8,GSO NCVAW Survey,2025
+15,South Africa,ZAF,Africa,30.0,72,38,92,1,21600,325714,304114,415,6264,5848,59.2,892.4,15.1,SAPS 2022/23 + MRC survey,2025
+16,Iran,IRN,Middle East,43.95,2,24,99,0,879,301371,300492,17,5796,5779,2.4,825.7,342.9,Limited data — UNFPA estimates,2025
+17,Turkey,TUR,Europe/Asia,42.15,15,22,94,1,6322,264943,258621,122,5095,4973,17.3,725.9,41.9,TUIK + UN Women Turkey,2025
+18,Kenya,KEN,Africa,27.0,6,33,97,1,1620,254571,252951,31,4896,4864,4.4,697.5,157.1,KNBS KDHS + UN Women,2025
+19,Myanmar,MMR,SE Asia,27.2,4,30,99,0,1088,233143,232055,21,4484,4463,3.0,638.7,214.3,UN OHCHR + Fortify Rights,2025
+20,Sudan,SDN,Africa,22.45,3,36,99,0,674,230914,230240,13,4441,4428,1.8,632.6,342.6,UNHCR SGBV reports + UNFPA,2025
+21,Afghanistan,AFG,South Asia,20.05,1,40,100,0,200,229143,228943,4,4407,4403,0.5,627.8,1145.7,UNAMA + WHO — no functioning reporting system,2025
+22,Thailand,THA,SE Asia,35.8,12,22,90,1,4296,225029,220733,83,4327,4245,11.8,616.5,52.4,NSO Crime Survey + UNODC,2025
+23,Colombia,COL,S. America,25.5,28,30,88,1,7140,218571,211431,137,4203,4066,19.6,598.8,30.6,DANE ECV + Fiscalia,2025
+24,UK,GBR,Europe,33.5,79,20,83,1,26465,191429,164964,509,3681,3172,72.5,524.5,7.2,ONS Crime Survey England+Wales,2025
+25,Japan,JPN,East Asia,62.85,4,10,95,0,2514,179571,177057,48,3453,3405,6.9,492.0,71.4,NPA Japan + Cabinet Office DV Survey,2025
+26,Iraq,IRQ,Middle East,20.1,3,28,99,0,603,160800,160197,12,3092,3081,1.7,440.5,266.7,UNFPA Iraq + UN SGBV,2025
+27,Germany,DEU,Europe,41.6,90,13,68,1,37440,154514,117074,720,2971,2251,102.6,423.3,4.1,BKA Germany 2022 + WHO,2025
+28,Yemen,YEM,Middle East,16.85,1,32,100,0,168,154057,153889,3,2963,2959,0.5,422.1,917.0,UNFPA Yemen emergency + OCHA,2025
+29,Niger,NER,Africa,12.55,2,36,99,0,251,129086,128835,5,2482,2478,0.7,353.7,514.3,UNFPA Niger + UNICEF MICS,2025
+30,Canada,CAN,N. America,19.1,98,22,83,1,18718,120057,101339,360,2309,1949,51.3,328.9,6.4,StatsCan 2021 + Brennan Centre,2025
+31,Somalia,SOM,Africa,8.55,2,46,100,0,171,112371,112200,3,2161,2158,0.5,307.9,657.1,UNFPA SBGV Somalia — near-zero reporting infrastructure,2025
+32,South Korea,KOR,East Asia,25.85,22,13,90,1,5687,96014,90327,109,1846,1737,15.6,263.1,16.9,KICVS + UNODC,2025
+33,South Sudan,SSD,Africa,5.6,3,48,100,0,168,76800,76632,3,1477,1474,0.5,210.4,457.1,UNMISS + IRC,2025
+34,Australia,AUS,Oceania,12.95,91,18,80,1,11784,66600,54816,227,1281,1054,32.3,182.5,5.7,BOCSAR + ABS Personal Safety Survey,2025
+35,CAR,CAF,Africa,2.4,3,46,100,0,72,31543,31471,1,607,605,0.2,86.4,438.1,UN MINUSCA + MSF,2025
+36,Sweden,SWE,Europe,5.2,188,13,55,1,9776,19314,9538,188,371,183,26.8,52.9,2.0,BRA Sweden 2022 + WHO survey,2025
+37,Denmark,DNK,Europe,2.94,110,12,60,1,3234,10080,6846,62,194,132,8.9,27.6,3.1,Statistics Denmark + WHO,2025
+38,Finland,FIN,Europe,2.77,95,11,65,1,2632,8706,6074,51,167,117,7.2,23.9,3.3,Statistics Finland + WHO,2025
+39,Norway,NOR,Europe,2.7,208,11,60,1,5616,8486,2870,108,163,55,15.4,23.2,1.5,Norwegian Police 2022 + UNODC,2025
+40,Iceland,ISL,Europe,0.19,152,14,60,1,289,760,471,6,15,9,0.8,2.1,2.6,Statistics Iceland + UNODC 2022,2025

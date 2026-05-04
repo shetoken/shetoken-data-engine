@@ -1,0 +1,18 @@
+# SHEtoken Agent — Cloud Scheduler Job
+# Triggers Cloud Run job every Sunday at 6:00 AM UTC
+#
+# Deploy with:
+#   gcloud scheduler jobs create http shetoken-wei-agent \
+#     --schedule="0 6 * * 0" \
+#     --uri="https://$REGION-run.googleapis.com/apis/run.googleapis.com/v1/namespaces/$PROJECT/jobs/wei-agent:run" \
+#     --message-body="{}" \
+#     --oauth-service-account-email=$SERVICE_ACCOUNT \
+#     --location=$REGION
+
+name: shetoken-wei-agent
+schedule: "0 6 * * 0"    # Every Sunday at 6:00 AM UTC
+timezone: "UTC"
+target:
+  type: cloud_run_job
+  job: wei-agent
+  region: us-central1

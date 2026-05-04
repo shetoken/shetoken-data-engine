@@ -1,0 +1,19 @@
+# SHEtoken India Widow Vulnerability by State — 2025
+# (c) 2026 SHE Foundation
+#
+state,state_code,widow_millions,poverty_pct,property_stripping_common,pension_coverage_pct,temple_town_abandonment,vulnerability_score,note,year
+Bihar,BR,3.8,72,yes,10,no,79.8,Highest widow poverty. Child widows from early marriage. Gaya temples. JEEViKA helps some.,2025
+Jharkhand,JH,0.8,68,yes,10,no,78.2,Deoghar (Baba Dham) temple town. Tribal widow land rights particularly vulnerable.,2025
+Uttar Pradesh,UP,8.2,68,yes,12,yes,77.6,"Vrindavan (15-20K abandoned widows), Varanasi, Mathura. Hindi belt worst for widow abandonment.",2025
+Madhya Pradesh,MP,1.9,62,yes,12,no,75.2,"Ujjain, Chitrakoot temple towns. High poverty.",2025
+Rajasthan,RJ,2.8,62,yes,14,no,74.6,Sati tradition history. Pushkar temple town. Widow remarriage highly stigmatised.,2025
+Odisha,OD,1.4,58,yes,14,yes,73.0,Puri (Jagannath) — widows come to die here. Significant temple town population.,2025
+Assam,AS,0.9,56,yes,14,no,72.2,Kamakhya temple. High widow poverty in tea garden communities.,2025
+West Bengal,WB,4.1,52,yes,18,yes,69.4,"Vrindavan: many Bengali widows. Kalighat, Tarapith temples. Kanyashree helps girls avoid early widowhood.",2025
+Haryana,HR,0.8,44,yes,18,no,66.2,Honour-related widow restrictions. Kurukshetra.,2025
+Andhra Pradesh,AP,2.1,44,yes,22,yes,65.0,Tirupati abandoned widows documented. Srisailam. Telugu widow property cases.,2025
+Karnataka,KA,1.8,38,yes,22,no,62.6,"Dharmasthala, Udupi pilgrim towns. Moderate protection.",2025
+Maharashtra,MH,3.4,38,yes,24,no,62.0,Urban widows better protected. Pandharpur temple. Pandharpur widows documented.,2025
+Gujarat,GJ,1.4,38,no,24,no,44.0,"Dwarka, Somnath temple towns. SEWA includes widows in programs.",2025
+Tamil Nadu,TN,2.2,32,no,28,no,40.4,Better state support. Tiruvannamalai some concentration. Stronger property laws.,2025
+Kerala,KL,1.1,18,no,42,no,30.6,Best widow protection in India. Kudumbashree includes widows. Strong property rights.,2025

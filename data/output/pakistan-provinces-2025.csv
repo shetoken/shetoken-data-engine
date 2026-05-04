@@ -1,0 +1,14 @@
+# SHEtoken WEI Pakistan Provinces v3.0 — 2025
+# 7 provinces | Pakistan avg WEI: 25.7
+# Islamabad vs Balochistan = 25+ point WEI gap
+# Honour killings: 1000+ reported annually (HRCP)
+# Sources: PBS Pakistan, PDHS, HRCP, UNESCO
+#
+rank,province,province_code,ticker,population_millions,empowerment_score,education_score,economic_score,health_score,bodily_autonomy_score,safety_justice_score,dignity_welfare_score,digital_social_score,violence_penalty_score,wei_score,previous_wei_score,change,watch,country,year,wei_version,verified,notes
+1,Islamabad (ICT),ICT,SHE-PK-ICT,2.4,40,72,40,72,32,30,34,46,30,42.1,41.8,0.3,false,Pakistan,2025,3.0,false,"Balochistan: female literacy 20%, honour killings, extreme child marriage"
+2,Punjab,PJ,SHE-PK-PJ,110.0,28,56,30,66,20,24,22,26,42,29.4,29.3,0.1,false,Pakistan,2025,3.0,false,"Balochistan: female literacy 20%, honour killings, extreme child marriage"
+3,Sindh,SI,SHE-PK-SI,55.7,26,52,28,62,16,22,20,22,44,26.2,26.2,0.0,false,Pakistan,2025,3.0,false,"Balochistan: female literacy 20%, honour killings, extreme child marriage"
+4,Azad Kashmir,AK,SHE-PK-AK,4.6,18,52,20,60,14,14,12,14,38,21.4,21.4,0.0,false,Pakistan,2025,3.0,false,"Balochistan: female literacy 20%, honour killings, extreme child marriage"
+5,Khyber Pakhtunkhwa,KP,SHE-PK-KP,40.5,18,44,22,58,12,16,14,14,44,20.0,20.0,0.0,true,Pakistan,2025,3.0,false,"Balochistan: female literacy 20%, honour killings, extreme child marriage"
+6,Gilgit-Baltistan,GB,SHE-PK-GB,2.4,14,46,18,56,10,12,10,10,40,17.7,17.7,0.0,false,Pakistan,2025,3.0,false,"Balochistan: female literacy 20%, honour killings, extreme child marriage"
+7,Balochistan,BL,SHE-PK-BL,14.9,12,30,16,48,8,10,8,8,46,12.7,12.9,-0.2,true,Pakistan,2025,3.0,false,"Balochistan: female literacy 20%, honour killings, extreme child marriage"

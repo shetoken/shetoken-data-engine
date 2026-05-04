@@ -1,0 +1,56 @@
+# SHEtoken WEI Live Scores — Week 2026-W19
+# Generated: 2026-05-04T06:38:29.973086+00:00
+# 90% baseline annual data + 10% weekly news signal adjustment
+# Full methodology: wei-index/methodology.md
+#
+rank,state,state_code,ticker,region,population_millions,empowerment_score,education_score,economic_score,health_score,bodily_autonomy_score,safety_justice_score,dignity_welfare_score,digital_social_score,violence_penalty_score,wei_score,previous_wei_score,change,hot,watch,country,year,wei_version,verified,notes,wei_score_baseline,signal_count_this_week,wei_data_type
+1,Massachusetts,MA,SHE-US-MA,Northeast,7.0,88,96,82,88,88,84,82,90,14,85.9,84.7,1.2,true,false,USA,2025,3.0,false,,85.9,0,baseline
+2,Vermont,VT,SHE-US-VT,Northeast,0.6,86,96,76,86,90,84,82,84,12,84.5,83.1,1.4,true,false,USA,2025,3.0,false,,84.5,0,baseline
+3,Connecticut,CT,SHE-US-CT,Northeast,3.6,84,95,80,86,86,82,80,88,14,83.7,83.6,0.1,false,false,USA,2025,3.0,false,,83.7,0,baseline
+4,New Hampshire,NH,SHE-US-NH,Northeast,1.4,82,96,76,86,86,80,80,84,12,82.6,82.5,0.1,false,false,USA,2025,3.0,false,,82.6,0,baseline
+5,New York,NY,SHE-US-NY,Northeast,19.7,82,94,78,84,86,80,78,88,18,81.9,81.5,0.4,false,false,USA,2025,3.0,false,,81.9,0,baseline
+6,Washington,WA,SHE-US-WA,West,7.8,80,94,78,84,88,80,78,86,18,81.7,81.1,0.6,true,false,USA,2025,3.0,false,,81.7,0,baseline
+7,New Jersey,NJ,SHE-US-NJ,Northeast,9.3,80,94,78,84,84,80,78,86,16,81.3,81.2,0.1,false,false,USA,2025,3.0,false,,81.3,0,baseline
+8,California,CA,SHE-US-CA,West,39.0,82,94,76,82,88,80,78,88,22,81.3,80.2,1.1,false,false,USA,2025,3.0,false,,81.3,0,baseline
+9,Rhode Island,RI,SHE-US-RI,Northeast,1.1,80,94,74,84,86,80,78,84,14,81.1,81.0,0.1,false,false,USA,2025,3.0,false,,81.1,0,baseline
+10,Minnesota,MN,SHE-US-MN,Midwest,5.7,80,94,76,86,80,78,78,84,16,80.2,80.1,0.1,false,false,USA,2025,3.0,false,,80.2,0,baseline
+11,Colorado,CO,SHE-US-CO,West,5.8,78,94,76,84,84,78,76,82,20,79.5,78.6,0.9,true,false,USA,2025,3.0,false,,79.5,0,baseline
+12,Oregon,OR,SHE-US-OR,West,4.3,78,94,72,82,88,78,76,82,20,79.4,78.9,0.5,true,false,USA,2025,3.0,false,,79.4,0,baseline
+13,Maine,ME,SHE-US-ME,Northeast,1.4,80,94,70,84,84,78,76,78,14,79.3,79.2,0.1,false,false,USA,2025,3.0,false,,79.3,0,baseline
+14,Maryland,MD,SHE-US-MD,Northeast,6.2,80,92,76,82,82,78,76,84,20,79.2,79.1,0.1,false,false,USA,2025,3.0,false,,79.2,0,baseline
+15,Hawaii,HI,SHE-US-HI,West,1.4,78,94,70,86,82,76,76,82,18,78.6,78.5,0.1,false,false,USA,2025,3.0,false,,78.6,0,baseline
+16,Pennsylvania,PA,SHE-US-PA,Northeast,13.0,76,92,72,82,74,74,72,82,20,75.8,75.7,0.1,false,false,USA,2025,3.0,false,,75.8,0,baseline
+17,Illinois,IL,SHE-US-IL,Midwest,12.7,76,92,72,80,80,72,72,80,24,75.6,74.8,0.8,false,false,USA,2025,3.0,false,,75.6,0,baseline
+18,Delaware,DE,SHE-US-DE,Northeast,1.0,74,90,70,80,76,72,70,78,20,74.2,74.2,0.0,false,false,USA,2025,3.0,false,,74.2,0,baseline
+19,Virginia,VA,SHE-US-VA,South,8.6,74,92,72,80,72,70,70,78,22,73.6,73.6,0.0,false,false,USA,2025,3.0,false,,73.6,0,baseline
+20,Michigan,MI,SHE-US-MI,Midwest,10.0,72,92,68,78,74,68,68,76,24,72.0,72.0,0.0,false,false,USA,2025,3.0,false,,72.0,0,baseline
+21,Nevada,NV,SHE-US-NV,West,3.1,72,88,68,78,78,68,66,78,28,71.7,71.7,0.0,false,false,USA,2025,3.0,false,,71.7,0,baseline
+22,Wisconsin,WI,SHE-US-WI,Midwest,5.9,72,92,68,82,56,70,70,78,20,70.8,70.8,0.0,false,false,USA,2025,3.0,false,,70.8,0,baseline
+23,Iowa,IA,SHE-US-IA,Midwest,3.2,68,92,68,82,42,68,68,74,18,67.5,67.5,-0.0,false,false,USA,2025,3.0,false,,67.5,0,baseline
+24,Ohio,OH,SHE-US-OH,Midwest,11.8,68,90,64,78,56,66,66,74,24,67.3,67.3,-0.0,false,false,USA,2025,3.0,false,,67.3,0,baseline
+25,New Mexico,NM,SHE-US-NM,West,2.1,68,86,60,76,72,60,62,72,34,66.0,65.6,0.4,false,false,USA,2025,3.0,false,,66.0,0,baseline
+26,Arizona,AZ,SHE-US-AZ,West,7.4,68,88,66,74,56,64,64,74,28,65.9,65.9,-0.0,false,false,USA,2025,3.0,false,,65.9,0,baseline
+27,Florida,FL,SHE-US-FL,South,22.6,68,88,66,76,52,62,64,72,26,65.3,65.3,-0.0,false,false,USA,2025,3.0,false,,65.3,0,baseline
+28,North Carolina,NC,SHE-US-NC,South,10.5,68,90,66,76,48,64,64,72,26,65.2,65.2,-0.0,false,false,USA,2025,3.0,false,,65.2,0,baseline
+29,Alaska,AK,SHE-US-AK,West,0.7,64,88,68,74,72,54,58,72,36,65.0,65.1,-0.1,false,false,USA,2025,3.0,false,,65.0,0,baseline
+30,Montana,MT,SHE-US-MT,West,1.1,64,92,62,78,58,60,60,68,24,64.9,65.0,-0.1,false,false,USA,2025,3.0,false,,64.9,0,baseline
+31,Utah,UT,SHE-US-UT,West,3.3,64,92,64,82,36,62,64,72,18,64.0,64.1,-0.1,false,false,USA,2025,3.0,false,,64.0,0,baseline
+32,Kansas,KS,SHE-US-KS,Midwest,2.9,64,90,62,80,42,62,62,70,22,63.4,63.5,-0.1,false,false,USA,2025,3.0,false,,63.4,0,baseline
+33,Nebraska,NE,SHE-US-NE,Midwest,2.0,64,92,64,82,30,62,62,70,18,62.7,62.8,-0.1,false,false,USA,2025,3.0,false,,62.7,0,baseline
+34,North Dakota,ND,SHE-US-ND,Midwest,0.8,62,92,66,80,24,58,60,68,22,60.2,60.3,-0.1,false,false,USA,2025,3.0,false,,60.2,0,baseline
+35,Idaho,ID,SHE-US-ID,West,1.9,60,90,60,78,28,58,58,66,20,59.1,59.2,-0.1,false,false,USA,2025,3.0,false,,59.1,0,baseline
+36,Georgia,GA,SHE-US-GA,South,10.9,66,88,62,72,32,58,58,68,30,59.1,59.2,-0.1,false,false,USA,2025,3.0,false,,59.1,0,baseline
+37,Missouri,MO,SHE-US-MO,Midwest,6.2,64,88,60,74,32,58,60,68,30,59.0,59.1,-0.1,false,false,USA,2025,3.0,false,,59.0,0,baseline
+38,Indiana,IN,SHE-US-IN,Midwest,6.8,62,88,60,76,28,60,60,68,26,59.0,59.1,-0.1,false,false,USA,2025,3.0,false,,59.0,0,baseline
+39,Wyoming,WY,SHE-US-WY,West,0.6,58,90,62,78,30,54,56,62,22,58.0,58.1,-0.1,false,false,USA,2025,3.0,false,,58.0,0,baseline
+40,South Dakota,SD,SHE-US-SD,Midwest,0.9,60,90,62,78,22,56,56,66,24,57.5,57.6,-0.1,false,false,USA,2025,3.0,false,,57.5,0,baseline
+41,Texas,TX,SHE-US-TX,South,30.0,62,86,60,70,22,54,54,66,30,55.1,57.5,-2.4,false,true,USA,2025,3.0,false,,55.1,0,baseline
+42,Tennessee,TN,SHE-US-TN,South,7.1,58,86,56,68,24,48,50,62,38,51.6,51.8,-0.2,false,false,USA,2025,3.0,false,,51.6,0,baseline
+43,South Carolina,SC,SHE-US-SC,South,5.2,58,84,52,66,28,48,50,60,34,51.5,51.7,-0.2,false,false,USA,2025,3.0,false,,51.5,0,baseline
+44,Kentucky,KY,SHE-US-KY,South,4.5,56,84,52,68,22,48,48,60,34,50.3,51.3,-1.0,false,false,USA,2025,3.0,false,,50.3,0,baseline
+45,Oklahoma,OK,SHE-US-OK,South,4.0,56,84,52,66,22,46,46,58,36,49.2,49.4,-0.2,false,false,USA,2025,3.0,false,,49.2,0,baseline
+46,West Virginia,WV,SHE-US-WV,South,1.8,52,82,44,64,24,44,44,54,34,46.8,47.0,-0.2,false,false,USA,2025,3.0,false,,46.8,0,baseline
+47,Alabama,AL,SHE-US-AL,South,5.0,54,82,48,64,20,44,44,56,38,46.7,48.3,-1.6,false,true,USA,2025,3.0,false,,46.7,0,baseline
+48,Arkansas,AR,SHE-US-AR,South,3.0,52,82,48,64,20,44,44,56,38,46.4,47.6,-1.2,false,true,USA,2025,3.0,false,,46.4,0,baseline
+49,Louisiana,LA,SHE-US-LA,South,4.6,52,80,46,60,20,40,42,54,44,43.9,45.3,-1.4,false,true,USA,2025,3.0,false,,43.9,0,baseline
+50,Mississippi,MS,SHE-US-MS,South,2.9,50,78,42,54,18,38,40,50,46,40.8,42.6,-1.8,false,true,USA,2025,3.0,false,,40.8,0,baseline

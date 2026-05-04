@@ -1,0 +1,30 @@
+# SHEtoken Agent — Cloud Build Configuration
+# Builds and pushes Docker image to Artifact Registry
+# Run: gcloud builds submit --config cloudbuild.yaml
+
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - '$_REGION-docker.pkg.dev/$PROJECT_ID/shetoken/wei-agent:$COMMIT_SHA'
+      - '-t'
+      - '$_REGION-docker.pkg.dev/$PROJECT_ID/shetoken/wei-agent:latest'
+      - '.'
+    dir: 'agent'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - '$_REGION-docker.pkg.dev/$PROJECT_ID/shetoken/wei-agent:$COMMIT_SHA'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - '$_REGION-docker.pkg.dev/$PROJECT_ID/shetoken/wei-agent:latest'
+
+substitutions:
+  _REGION: us-central1
+
+images:
+  - '$_REGION-docker.pkg.dev/$PROJECT_ID/shetoken/wei-agent:latest'

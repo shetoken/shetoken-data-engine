@@ -1,0 +1,437 @@
+{
+  "description": "Global rape incident counts: official reported vs WHO-estimated actual",
+  "data_note": "Estimated figures are conservative lower bounds based on WHO surveys",
+  "year": 2025,
+  "global": {
+    "reported_annual": 362844,
+    "estimated_annual": 20486743,
+    "unreported_annual": 20123899,
+    "reported_weekly": 6978,
+    "estimated_weekly": 393976,
+    "reported_daily": 994,
+    "estimated_daily": 56128,
+    "countries_where_marital_rape_legal": [
+      "India",
+      "Pakistan",
+      "Indonesia",
+      "Nigeria",
+      "Bangladesh",
+      "DRC",
+      "Ethiopia",
+      "Egypt",
+      "Iran",
+      "Myanmar",
+      "Sudan",
+      "Afghanistan",
+      "Japan",
+      "Iraq",
+      "Yemen",
+      "Niger",
+      "Somalia",
+      "South Sudan",
+      "CAR"
+    ]
+  },
+  "by_country": {
+    "IND": {
+      "country": "India",
+      "reported_annual": 35300,
+      "estimated_annual": 5648000,
+      "unreported_annual": 5612700,
+      "reported_weekly": 679,
+      "estimated_weekly": 108615,
+      "reporting_gap_pct": 98,
+      "multiplier": 160.0
+    },
+    "CHN": {
+      "country": "China",
+      "reported_annual": 14120,
+      "estimated_annual": 2420571,
+      "unreported_annual": 2406451,
+      "reported_weekly": 272,
+      "estimated_weekly": 46549,
+      "reporting_gap_pct": 97,
+      "multiplier": 171.4
+    },
+    "PAK": {
+      "country": "Pakistan",
+      "reported_annual": 2252,
+      "estimated_annual": 1029486,
+      "unreported_annual": 1027234,
+      "reported_weekly": 43,
+      "estimated_weekly": 19798,
+      "reporting_gap_pct": 99,
+      "multiplier": 457.1
+    },
+    "IDN": {
+      "country": "Indonesia",
+      "reported_annual": 5470,
+      "estimated_annual": 1015857,
+      "unreported_annual": 1010387,
+      "reported_weekly": 105,
+      "estimated_weekly": 19536,
+      "reporting_gap_pct": 97,
+      "multiplier": 185.7
+    },
+    "NGA": {
+      "country": "Nigeria",
+      "reported_annual": 4268,
+      "estimated_annual": 914571,
+      "unreported_annual": 910303,
+      "reported_weekly": 82,
+      "estimated_weekly": 17588,
+      "reporting_gap_pct": 98,
+      "multiplier": 214.3
+    },
+    "BRA": {
+      "country": "Brazil",
+      "reported_annual": 29820,
+      "estimated_annual": 912857,
+      "unreported_annual": 883037,
+      "reported_weekly": 573,
+      "estimated_weekly": 17555,
+      "reporting_gap_pct": 90,
+      "multiplier": 30.6
+    },
+    "USA": {
+      "country": "USA",
+      "reported_annual": 66200,
+      "estimated_annual": 851143,
+      "unreported_annual": 784943,
+      "reported_weekly": 1273,
+      "estimated_weekly": 16368,
+      "reporting_gap_pct": 90,
+      "multiplier": 12.9
+    },
+    "BGD": {
+      "country": "Bangladesh",
+      "reported_annual": 2494,
+      "estimated_annual": 831500,
+      "unreported_annual": 829006,
+      "reported_weekly": 48,
+      "estimated_weekly": 15990,
+      "reporting_gap_pct": 99,
+      "multiplier": 333.4
+    },
+    "COD": {
+      "country": "DRC",
+      "reported_annual": 2877,
+      "estimated_annual": 712400,
+      "unreported_annual": 709523,
+      "reported_weekly": 55,
+      "estimated_weekly": 13700,
+      "reporting_gap_pct": 99,
+      "multiplier": 247.6
+    },
+    "ETH": {
+      "country": "Ethiopia",
+      "reported_annual": 1768,
+      "estimated_annual": 606343,
+      "unreported_annual": 604575,
+      "reported_weekly": 34,
+      "estimated_weekly": 11660,
+      "reporting_gap_pct": 99,
+      "multiplier": 343.0
+    },
+    "MEX": {
+      "country": "Mexico",
+      "reported_annual": 12890,
+      "estimated_annual": 589257,
+      "unreported_annual": 576367,
+      "reported_weekly": 248,
+      "estimated_weekly": 11332,
+      "reporting_gap_pct": 92,
+      "multiplier": 45.7
+    },
+    "EGY": {
+      "country": "Egypt",
+      "reported_annual": 3069,
+      "estimated_annual": 409200,
+      "unreported_annual": 406131,
+      "reported_weekly": 59,
+      "estimated_weekly": 7869,
+      "reporting_gap_pct": 97,
+      "multiplier": 133.3
+    },
+    "PHL": {
+      "country": "Philippines",
+      "reported_annual": 9990,
+      "estimated_annual": 380571,
+      "unreported_annual": 370581,
+      "reported_weekly": 192,
+      "estimated_weekly": 7319,
+      "reporting_gap_pct": 90,
+      "multiplier": 38.1
+    },
+    "VNM": {
+      "country": "Vietnam",
+      "reported_annual": 2919,
+      "estimated_annual": 361400,
+      "unreported_annual": 358481,
+      "reported_weekly": 56,
+      "estimated_weekly": 6950,
+      "reporting_gap_pct": 92,
+      "multiplier": 123.8
+    },
+    "ZAF": {
+      "country": "South Africa",
+      "reported_annual": 21600,
+      "estimated_annual": 325714,
+      "unreported_annual": 304114,
+      "reported_weekly": 415,
+      "estimated_weekly": 6264,
+      "reporting_gap_pct": 92,
+      "multiplier": 15.1
+    },
+    "IRN": {
+      "country": "Iran",
+      "reported_annual": 879,
+      "estimated_annual": 301371,
+      "unreported_annual": 300492,
+      "reported_weekly": 17,
+      "estimated_weekly": 5796,
+      "reporting_gap_pct": 99,
+      "multiplier": 342.9
+    },
+    "TUR": {
+      "country": "Turkey",
+      "reported_annual": 6322,
+      "estimated_annual": 264943,
+      "unreported_annual": 258621,
+      "reported_weekly": 122,
+      "estimated_weekly": 5095,
+      "reporting_gap_pct": 94,
+      "multiplier": 41.9
+    },
+    "KEN": {
+      "country": "Kenya",
+      "reported_annual": 1620,
+      "estimated_annual": 254571,
+      "unreported_annual": 252951,
+      "reported_weekly": 31,
+      "estimated_weekly": 4896,
+      "reporting_gap_pct": 97,
+      "multiplier": 157.1
+    },
+    "MMR": {
+      "country": "Myanmar",
+      "reported_annual": 1088,
+      "estimated_annual": 233143,
+      "unreported_annual": 232055,
+      "reported_weekly": 21,
+      "estimated_weekly": 4484,
+      "reporting_gap_pct": 99,
+      "multiplier": 214.3
+    },
+    "SDN": {
+      "country": "Sudan",
+      "reported_annual": 674,
+      "estimated_annual": 230914,
+      "unreported_annual": 230240,
+      "reported_weekly": 13,
+      "estimated_weekly": 4441,
+      "reporting_gap_pct": 99,
+      "multiplier": 342.6
+    },
+    "AFG": {
+      "country": "Afghanistan",
+      "reported_annual": 200,
+      "estimated_annual": 229143,
+      "unreported_annual": 228943,
+      "reported_weekly": 4,
+      "estimated_weekly": 4407,
+      "reporting_gap_pct": 100,
+      "multiplier": 1145.7
+    },
+    "THA": {
+      "country": "Thailand",
+      "reported_annual": 4296,
+      "estimated_annual": 225029,
+      "unreported_annual": 220733,
+      "reported_weekly": 83,
+      "estimated_weekly": 4327,
+      "reporting_gap_pct": 90,
+      "multiplier": 52.4
+    },
+    "COL": {
+      "country": "Colombia",
+      "reported_annual": 7140,
+      "estimated_annual": 218571,
+      "unreported_annual": 211431,
+      "reported_weekly": 137,
+      "estimated_weekly": 4203,
+      "reporting_gap_pct": 88,
+      "multiplier": 30.6
+    },
+    "GBR": {
+      "country": "UK",
+      "reported_annual": 26465,
+      "estimated_annual": 191429,
+      "unreported_annual": 164964,
+      "reported_weekly": 509,
+      "estimated_weekly": 3681,
+      "reporting_gap_pct": 83,
+      "multiplier": 7.2
+    },
+    "JPN": {
+      "country": "Japan",
+      "reported_annual": 2514,
+      "estimated_annual": 179571,
+      "unreported_annual": 177057,
+      "reported_weekly": 48,
+      "estimated_weekly": 3453,
+      "reporting_gap_pct": 95,
+      "multiplier": 71.4
+    },
+    "IRQ": {
+      "country": "Iraq",
+      "reported_annual": 603,
+      "estimated_annual": 160800,
+      "unreported_annual": 160197,
+      "reported_weekly": 12,
+      "estimated_weekly": 3092,
+      "reporting_gap_pct": 99,
+      "multiplier": 266.7
+    },
+    "DEU": {
+      "country": "Germany",
+      "reported_annual": 37440,
+      "estimated_annual": 154514,
+      "unreported_annual": 117074,
+      "reported_weekly": 720,
+      "estimated_weekly": 2971,
+      "reporting_gap_pct": 68,
+      "multiplier": 4.1
+    },
+    "YEM": {
+      "country": "Yemen",
+      "reported_annual": 168,
+      "estimated_annual": 154057,
+      "unreported_annual": 153889,
+      "reported_weekly": 3,
+      "estimated_weekly": 2963,
+      "reporting_gap_pct": 100,
+      "multiplier": 917.0
+    },
+    "NER": {
+      "country": "Niger",
+      "reported_annual": 251,
+      "estimated_annual": 129086,
+      "unreported_annual": 128835,
+      "reported_weekly": 5,
+      "estimated_weekly": 2482,
+      "reporting_gap_pct": 99,
+      "multiplier": 514.3
+    },
+    "CAN": {
+      "country": "Canada",
+      "reported_annual": 18718,
+      "estimated_annual": 120057,
+      "unreported_annual": 101339,
+      "reported_weekly": 360,
+      "estimated_weekly": 2309,
+      "reporting_gap_pct": 83,
+      "multiplier": 6.4
+    },
+    "SOM": {
+      "country": "Somalia",
+      "reported_annual": 171,
+      "estimated_annual": 112371,
+      "unreported_annual": 112200,
+      "reported_weekly": 3,
+      "estimated_weekly": 2161,
+      "reporting_gap_pct": 100,
+      "multiplier": 657.1
+    },
+    "KOR": {
+      "country": "South Korea",
+      "reported_annual": 5687,
+      "estimated_annual": 96014,
+      "unreported_annual": 90327,
+      "reported_weekly": 109,
+      "estimated_weekly": 1846,
+      "reporting_gap_pct": 90,
+      "multiplier": 16.9
+    },
+    "SSD": {
+      "country": "South Sudan",
+      "reported_annual": 168,
+      "estimated_annual": 76800,
+      "unreported_annual": 76632,
+      "reported_weekly": 3,
+      "estimated_weekly": 1477,
+      "reporting_gap_pct": 100,
+      "multiplier": 457.1
+    },
+    "AUS": {
+      "country": "Australia",
+      "reported_annual": 11784,
+      "estimated_annual": 66600,
+      "unreported_annual": 54816,
+      "reported_weekly": 227,
+      "estimated_weekly": 1281,
+      "reporting_gap_pct": 80,
+      "multiplier": 5.7
+    },
+    "CAF": {
+      "country": "CAR",
+      "reported_annual": 72,
+      "estimated_annual": 31543,
+      "unreported_annual": 31471,
+      "reported_weekly": 1,
+      "estimated_weekly": 607,
+      "reporting_gap_pct": 100,
+      "multiplier": 438.1
+    },
+    "SWE": {
+      "country": "Sweden",
+      "reported_annual": 9776,
+      "estimated_annual": 19314,
+      "unreported_annual": 9538,
+      "reported_weekly": 188,
+      "estimated_weekly": 371,
+      "reporting_gap_pct": 55,
+      "multiplier": 2.0
+    },
+    "DNK": {
+      "country": "Denmark",
+      "reported_annual": 3234,
+      "estimated_annual": 10080,
+      "unreported_annual": 6846,
+      "reported_weekly": 62,
+      "estimated_weekly": 194,
+      "reporting_gap_pct": 60,
+      "multiplier": 3.1
+    },
+    "FIN": {
+      "country": "Finland",
+      "reported_annual": 2632,
+      "estimated_annual": 8706,
+      "unreported_annual": 6074,
+      "reported_weekly": 51,
+      "estimated_weekly": 167,
+      "reporting_gap_pct": 65,
+      "multiplier": 3.3
+    },
+    "NOR": {
+      "country": "Norway",
+      "reported_annual": 5616,
+      "estimated_annual": 8486,
+      "unreported_annual": 2870,
+      "reported_weekly": 108,
+      "estimated_weekly": 163,
+      "reporting_gap_pct": 60,
+      "multiplier": 1.5
+    },
+    "ISL": {
+      "country": "Iceland",
+      "reported_annual": 289,
+      "estimated_annual": 760,
+      "unreported_annual": 471,
+      "reported_weekly": 6,
+      "estimated_weekly": 15,
+      "reporting_gap_pct": 60,
+      "multiplier": 2.6
+    }
+  }
+}

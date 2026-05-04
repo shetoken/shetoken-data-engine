@@ -1,0 +1,22 @@
+# SHEtoken WEI News Agent — Dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Core ──────────────────────────────────────────────────────────────────────
+feedparser>=6.0.10          # RSS feed parsing
+requests>=2.31.0            # HTTP fetching
+python-dotenv>=1.0.0        # .env loading
+
+# ── SLM Runtime ───────────────────────────────────────────────────────────────
+ollama>=0.1.8               # Local Phi-3.5 + Qwen2.5 via Ollama
+
+# ── Google Integrations ───────────────────────────────────────────────────────
+gspread>=5.12.0             # Google Sheets read/write
+google-auth>=2.23.0         # Google service account auth
+
+# ── Social Media — Data Sources ───────────────────────────────────────────────
+# praw not needed — using Reddit RSS feeds instead
+google-api-python-client>=2.100.0  # YouTube Data API v3 (free)
+
+# ── Social Media — Posting ────────────────────────────────────────────────────
+tweepy>=4.14.0              # Twitter/X API posting
+Pillow>=10.0.0              # Image generation for Instagram posts

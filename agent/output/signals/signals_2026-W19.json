@@ -1,0 +1,689 @@
+{
+  "week": "2026-W19",
+  "generated_at": "2026-05-04T06:38:29.826439+00:00",
+  "total_articles_processed": 18,
+  "total_signals": 18,
+  "crisis_count": 14,
+  "crisis_alerts": [
+    {
+      "title": "US Supreme Court asked to restore abortion pill access",
+      "url": "https://www.bbc.com/news/articles/c2k20z5yj3wo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "language": "en",
+      "published": "2026-05-02T21:06:31+00:00",
+      "pillar": "bodily_autonomy",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": true,
+      "summary_en": "The US Supreme Court is being asked to restore access to the abortion pill mifepristone after a lower court limited its mail-order distribution.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "EU: Parliament Confirms That ‘Only Yes Means Yes’",
+      "url": "https://www.hrw.org/news/2026/04/30/eu-parliament-confirms-that-only-yes-means-yes",
+      "source": "Human Rights Watch",
+      "language": "en",
+      "published": "2026-04-30T04:00:00+00:00",
+      "pillar": "safety_justice",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": true,
+      "summary_en": "The European Parliament in Italy adopts a resolution emphasizing consent as the key factor for rape legislation across EU.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "Abortion Pills Still Widely Available by Mail in the U.S., Despite Fifth Circuit Ruling",
+      "url": "https://msmagazine.com/2026/05/01/abortion-pills-usa-fifth-circuit-mifepristone-fda/",
+      "source": "Ms Magazine",
+      "language": "en",
+      "published": "2026-05-02T02:02:29+00:00",
+      "pillar": "bodily_autonomy",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": true,
+      "summary_en": "The Fifth Circuit Court of Appeals in the United States imposes a nationwide ban on mail-order dispensation of mifepristone for abortion by clinicians after telehealth consultations.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "Trump’s Budget Plunders Birth Control and Reproductive Health Programs—With Open Derision for Americans Who Need Them",
+      "url": "https://msmagazine.com/2026/04/30/trump-fy-2027-budget-fiscal-year-title-x-planned-parenthood-birth-control-contraception-family-planning/",
+      "source": "Ms Magazine",
+      "language": "en",
+      "published": "2026-04-30T19:45:02+00:00",
+      "pillar": "health",
+      "direction": -1,
+      "severity": 1.0,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": true,
+      "summary_en": "President Trump's proposed budget for 2027 threatens to eliminate Title X family planning and reproductive health services nationwide in the United States, using language that openly mocks those who rely on these programs.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "SCOTUS Clears the Way for Anti-Abortion CPCs to Continue Dodging Accountability",
+      "url": "https://www.jezebel.com/scotus-clears-the-way-for-anti-abortion-cpcs-to-continue-dodging-accountability",
+      "source": "Jezebel",
+      "language": "en",
+      "published": "2026-05-01T13:24:26+00:00",
+      "pillar": "health",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": true,
+      "summary_en": "The Supreme Court's decision allows anti-abortion clinics to continue avoiding state oversight and regulation, potentially leading to substandard care.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "MBA student raped by shopkeeper who entered her room to deliver groceries: Police",
+      "url": "https://indianexpress.com/article/india/odisha-khordha-grocery-shop-owner-arrested-mba-student-rape-10658544/",
+      "source": "Indian Express",
+      "language": "en",
+      "published": "2026-04-27T12:29:02+00:00",
+      "pillar": "safety_justice",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": "IND",
+      "state": null,
+      "crisis": true,
+      "summary_en": "An MBA student in an unspecified location was raped by a shopkeeper who entered her room under the pretense of delivering groceries.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "Connecticut lawmakers pass bill to ban female genital mutilation",
+      "url": "https://equalitynow.org/news/press-releases/connecticut-lawmakers-pass-bill-to-ban-female-genital-mutilation/",
+      "source": "Equality Now",
+      "language": "en",
+      "published": "2026-04-29T15:32:28+00:00",
+      "pillar": "bodily_autonomy",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": true,
+      "summary_en": "Connecticut lawmakers have passed a bill to ban female genital mutilation (FGM), marking significant progress in the protection of bodily autonomy and women's rights.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "Q&A with Qamar Naseem from Blue Veins Pakistan on child marriage and the latest bill passed by the Punjab Assembly",
+      "url": "https://equalitynow.org/news/news-and-insights/qa-with-qamar-naseem-from-blue-veins-pakistan-on-child-marriage-and-the-latest-bill-passed-by-the-punjab-assembly/",
+      "source": "Equality Now",
+      "language": "en",
+      "published": "2026-04-29T09:42:29+00:00",
+      "pillar": "bodily_autonomy",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": "IND",
+      "state": "PB",
+      "crisis": true,
+      "summary_en": "The article discusses the issue of child marriage in Pakistan and highlights a recent bill passed by Punjab Assembly aimed at addressing this human rights concern.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "From Colombia to Connecticut: The urgent need to end FGM in the Americas",
+      "url": "https://equalitynow.org/news/news-and-insights/from-colombia-to-connecticut-the-urgent-need-to-end-fgm-in-the-americas/",
+      "source": "Equality Now",
+      "language": "en",
+      "published": "2026-04-28T17:13:23+00:00",
+      "pillar": "bodily_autonomy",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": "COL",
+      "state": null,
+      "crisis": true,
+      "summary_en": "The article highlights the critical need to end Female Genital Mutilation (FGM) in Colombia and Connecticut as a matter of urgency for bodily autonomy.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "El Sinaloa de Rocha Moya tiene el índice más alto de feminicidio a nivel nacional",
+      "url": "https://cimacnoticias.com.mx/2026/04/30/el-sinaloa-de-rocha-moya-tiene-el-indice-mas-alto-de-feminicidio-a-nivel-nacional/",
+      "source": "Cimac Noticias",
+      "language": "es",
+      "published": "2026-04-30T22:47:47+00:00",
+      "pillar": "violence_penalty",
+      "direction": -1,
+      "severity": 0.85,
+      "confidence": 0.9,
+      "country": "MEX",
+      "state": null,
+      "crisis": true,
+      "summary_en": "The article highlights a high rate of femicide in Sinaloa, Mexico, and mentions potential extraditions for officials.",
+      "model_used": "qwen2.5:3b"
+    },
+    {
+      "title": "Rape-murder of 3-year-old: Kin seek death, protest shuts down Pune district",
+      "url": "https://timesofindia.indiatimes.com/india/rape-murder-of-3-year-old-kin-seek-death-protest-shuts-down-pune-district/articleshow/130743653.cms",
+      "source": "Times of India",
+      "language": "en",
+      "published": "2026-05-04T02:31:53+00:00",
+      "pillar": "safety_justice",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": "IND",
+      "state": "MH",
+      "crisis": true,
+      "summary_en": "A three-year-old girl's rape and murder in Pune have led to public outrage, protest shutdown of the district, with demands for justice including a death sentence.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "Abortion pill fight heads to Supreme Court as manufacturer warns of ‘chaos’ after ruling",
+      "url": "https://www.foxnews.com/politics/abortion-pill-fight-heads-supreme-court-manufacturer-warns-chaos-ruling",
+      "source": "Fox News Politics",
+      "language": "en",
+      "published": "2026-05-02T20:44:37+00:00",
+      "pillar": "bodily_autonomy",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": true,
+      "summary_en": "The Supreme Court is set to decide on an emergency request from Danco Laboratories after a ruling blocked mail-order access for abortion pills and reinstated in-person prescription requirements.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "What to know about a mifepristone maker asking the Supreme Court to restore access to the pill by mail",
+      "url": "https://www.pbs.org/newshour/health/what-to-know-about-a-mifepristone-maker-asking-the-supreme-court-to-restore-access-to-the-pill-by-mail",
+      "source": "PBS NewsHour",
+      "language": "en",
+      "published": "2026-05-02T16:14:04+00:00",
+      "pillar": "bodily_autonomy",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": true,
+      "summary_en": "A mifepristone manufacturer seeks Supreme Court intervention to restore mail-order access following an appellate court ruling that restricted this method of obtaining the abortion pill.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "A mob hit in Ireland, a 10-year manhunt and an arrest in Dubai",
+      "url": "https://www.washingtonpost.com/world/2026/05/02/ireland-daniel-kinahan-arrested-dubai/",
+      "source": "Washington Post World",
+      "language": "en",
+      "published": "2026-05-02T09:00:43+00:00",
+      "pillar": "safety_justice",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": true,
+      "summary_en": "Daniel Kinahan's arrest in Dubai marks a significant breakthrough after a decade-long manhunt by Irish authorities.",
+      "model_used": "phi3.5"
+    }
+  ],
+  "global_pillar_summary": {
+    "bodily_autonomy": {
+      "net_signal": -1.0,
+      "total_signals": 8,
+      "positive": 0,
+      "negative": 8
+    },
+    "health": {
+      "net_signal": -0.515,
+      "total_signals": 4,
+      "positive": 1,
+      "negative": 3
+    },
+    "safety_justice": {
+      "net_signal": -1.0,
+      "total_signals": 4,
+      "positive": 0,
+      "negative": 4
+    },
+    "violence_penalty": {
+      "net_signal": -1.0,
+      "total_signals": 2,
+      "positive": 0,
+      "negative": 2
+    }
+  },
+  "top_movers": [
+    {
+      "geo": "UNKNOWN",
+      "activity_score": 2.515,
+      "signals": 11
+    },
+    {
+      "geo": "IND",
+      "activity_score": 1.0,
+      "signals": 1
+    },
+    {
+      "geo": "IND-PB",
+      "activity_score": 1.0,
+      "signals": 1
+    },
+    {
+      "geo": "COL",
+      "activity_score": 1.0,
+      "signals": 1
+    },
+    {
+      "geo": "BRA",
+      "activity_score": 1.0,
+      "signals": 1
+    },
+    {
+      "geo": "MEX",
+      "activity_score": 1.0,
+      "signals": 2
+    },
+    {
+      "geo": "IND-MH",
+      "activity_score": 1.0,
+      "signals": 1
+    }
+  ],
+  "by_geography": {
+    "UNKNOWN": {
+      "bodily_autonomy": {
+        "net_signal": -1.0,
+        "signal_count": 5,
+        "positive": 0,
+        "negative": 5,
+        "top_stories": [
+          "The US Supreme Court is being asked to restore access to the abortion pill mifepristone after a lower court limited its mail-order distribution.",
+          "The Fifth Circuit Court of Appeals in the United States imposes a nationwide ban on mail-order dispensation of mifepristone for abortion by clinicians after telehealth consultations.",
+          "Connecticut lawmakers have passed a bill to ban female genital mutilation (FGM), marking significant progress in the protection of bodily autonomy and women's rights."
+        ]
+      },
+      "health": {
+        "net_signal": -0.515,
+        "signal_count": 4,
+        "positive": 1,
+        "negative": 3,
+        "top_stories": [
+          "President Trump's proposed budget for 2027 threatens to eliminate Title X family planning and reproductive health services nationwide in the United States, using language that openly mocks those who rely on these programs.",
+          "For the first time in Australia, there have been no new cervical cancer diagnoses reported among women under 25 due to successful vaccination programs targeting young men.",
+          "The Supreme Court's decision allows anti-abortion clinics to continue avoiding state oversight and regulation, potentially leading to substandard care."
+        ]
+      },
+      "safety_justice": {
+        "net_signal": -1.0,
+        "signal_count": 2,
+        "positive": 0,
+        "negative": 2,
+        "top_stories": [
+          "The European Parliament in Italy adopts a resolution emphasizing consent as the key factor for rape legislation across EU.",
+          "Daniel Kinahan's arrest in Dubai marks a significant breakthrough after a decade-long manhunt by Irish authorities."
+        ]
+      }
+    },
+    "IND": {
+      "safety_justice": {
+        "net_signal": -1.0,
+        "signal_count": 1,
+        "positive": 0,
+        "negative": 1,
+        "top_stories": [
+          "An MBA student in an unspecified location was raped by a shopkeeper who entered her room under the pretense of delivering groceries."
+        ]
+      }
+    },
+    "IND-PB": {
+      "bodily_autonomy": {
+        "net_signal": -1.0,
+        "signal_count": 1,
+        "positive": 0,
+        "negative": 1,
+        "top_stories": [
+          "The article discusses the issue of child marriage in Pakistan and highlights a recent bill passed by Punjab Assembly aimed at addressing this human rights concern."
+        ]
+      }
+    },
+    "COL": {
+      "bodily_autonomy": {
+        "net_signal": -1.0,
+        "signal_count": 1,
+        "positive": 0,
+        "negative": 1,
+        "top_stories": [
+          "The article highlights the critical need to end Female Genital Mutilation (FGM) in Colombia and Connecticut as a matter of urgency for bodily autonomy."
+        ]
+      }
+    },
+    "BRA": {
+      "bodily_autonomy": {
+        "net_signal": -1.0,
+        "signal_count": 1,
+        "positive": 0,
+        "negative": 1,
+        "top_stories": [
+          "Tatuí, Brazil is hosting a free spaying/neutering event for dogs and cats from May 6-10, offering up to 1,800 slots at a municipal facility."
+        ]
+      }
+    },
+    "MEX": {
+      "violence_penalty": {
+        "net_signal": -1.0,
+        "signal_count": 2,
+        "positive": 0,
+        "negative": 2,
+        "top_stories": [
+          "Article discusses the introduction of femicide legislation in Mexico, highlighting efforts to address violence against women.",
+          "The article highlights a high rate of femicide in Sinaloa, Mexico, and mentions potential extraditions for officials."
+        ]
+      }
+    },
+    "IND-MH": {
+      "safety_justice": {
+        "net_signal": -1.0,
+        "signal_count": 1,
+        "positive": 0,
+        "negative": 1,
+        "top_stories": [
+          "A three-year-old girl's rape and murder in Pune have led to public outrage, protest shutdown of the district, with demands for justice including a death sentence."
+        ]
+      }
+    }
+  },
+  "raw_signals": [
+    {
+      "title": "US Supreme Court asked to restore abortion pill access",
+      "url": "https://www.bbc.com/news/articles/c2k20z5yj3wo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "language": "en",
+      "published": "2026-05-02T21:06:31+00:00",
+      "pillar": "bodily_autonomy",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": true,
+      "summary_en": "The US Supreme Court is being asked to restore access to the abortion pill mifepristone after a lower court limited its mail-order distribution.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "The world wants to eliminate cervical cancer - how Australian scientists led the way",
+      "url": "https://www.bbc.com/news/articles/cd6w15vgp7lo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "language": "en",
+      "published": "2026-05-01T19:30:36+00:00",
+      "pillar": "health",
+      "direction": 1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": false,
+      "summary_en": "For the first time in Australia, there have been no new cervical cancer diagnoses reported among women under 25 due to successful vaccination programs targeting young men.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "EU: Parliament Confirms That ‘Only Yes Means Yes’",
+      "url": "https://www.hrw.org/news/2026/04/30/eu-parliament-confirms-that-only-yes-means-yes",
+      "source": "Human Rights Watch",
+      "language": "en",
+      "published": "2026-04-30T04:00:00+00:00",
+      "pillar": "safety_justice",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": true,
+      "summary_en": "The European Parliament in Italy adopts a resolution emphasizing consent as the key factor for rape legislation across EU.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "Abortion Pills Still Widely Available by Mail in the U.S., Despite Fifth Circuit Ruling",
+      "url": "https://msmagazine.com/2026/05/01/abortion-pills-usa-fifth-circuit-mifepristone-fda/",
+      "source": "Ms Magazine",
+      "language": "en",
+      "published": "2026-05-02T02:02:29+00:00",
+      "pillar": "bodily_autonomy",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": true,
+      "summary_en": "The Fifth Circuit Court of Appeals in the United States imposes a nationwide ban on mail-order dispensation of mifepristone for abortion by clinicians after telehealth consultations.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "Trump’s Budget Plunders Birth Control and Reproductive Health Programs—With Open Derision for Americans Who Need Them",
+      "url": "https://msmagazine.com/2026/04/30/trump-fy-2027-budget-fiscal-year-title-x-planned-parenthood-birth-control-contraception-family-planning/",
+      "source": "Ms Magazine",
+      "language": "en",
+      "published": "2026-04-30T19:45:02+00:00",
+      "pillar": "health",
+      "direction": -1,
+      "severity": 1.0,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": true,
+      "summary_en": "President Trump's proposed budget for 2027 threatens to eliminate Title X family planning and reproductive health services nationwide in the United States, using language that openly mocks those who rely on these programs.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "Abortion Care Out of Reach for Rural Populations",
+      "url": "https://genderpolicyreport.umn.edu/abortion-care-out-of-reach-for-rural-populations/",
+      "source": "Gender Policy Report",
+      "language": "en",
+      "published": "2026-05-01T04:00:25+00:00",
+      "pillar": "health",
+      "direction": -1,
+      "severity": 0.7,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": false,
+      "summary_en": "Rural populations in states with legal abortion access still face significant barriers to obtaining necessary reproductive healthcare.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "SCOTUS Clears the Way for Anti-Abortion CPCs to Continue Dodging Accountability",
+      "url": "https://www.jezebel.com/scotus-clears-the-way-for-anti-abortion-cpcs-to-continue-dodging-accountability",
+      "source": "Jezebel",
+      "language": "en",
+      "published": "2026-05-01T13:24:26+00:00",
+      "pillar": "health",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": true,
+      "summary_en": "The Supreme Court's decision allows anti-abortion clinics to continue avoiding state oversight and regulation, potentially leading to substandard care.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "MBA student raped by shopkeeper who entered her room to deliver groceries: Police",
+      "url": "https://indianexpress.com/article/india/odisha-khordha-grocery-shop-owner-arrested-mba-student-rape-10658544/",
+      "source": "Indian Express",
+      "language": "en",
+      "published": "2026-04-27T12:29:02+00:00",
+      "pillar": "safety_justice",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": "IND",
+      "state": null,
+      "crisis": true,
+      "summary_en": "An MBA student in an unspecified location was raped by a shopkeeper who entered her room under the pretense of delivering groceries.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "Connecticut lawmakers pass bill to ban female genital mutilation",
+      "url": "https://equalitynow.org/news/press-releases/connecticut-lawmakers-pass-bill-to-ban-female-genital-mutilation/",
+      "source": "Equality Now",
+      "language": "en",
+      "published": "2026-04-29T15:32:28+00:00",
+      "pillar": "bodily_autonomy",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": true,
+      "summary_en": "Connecticut lawmakers have passed a bill to ban female genital mutilation (FGM), marking significant progress in the protection of bodily autonomy and women's rights.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "Q&A with Qamar Naseem from Blue Veins Pakistan on child marriage and the latest bill passed by the Punjab Assembly",
+      "url": "https://equalitynow.org/news/news-and-insights/qa-with-qamar-naseem-from-blue-veins-pakistan-on-child-marriage-and-the-latest-bill-passed-by-the-punjab-assembly/",
+      "source": "Equality Now",
+      "language": "en",
+      "published": "2026-04-29T09:42:29+00:00",
+      "pillar": "bodily_autonomy",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": "IND",
+      "state": "PB",
+      "crisis": true,
+      "summary_en": "The article discusses the issue of child marriage in Pakistan and highlights a recent bill passed by Punjab Assembly aimed at addressing this human rights concern.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "From Colombia to Connecticut: The urgent need to end FGM in the Americas",
+      "url": "https://equalitynow.org/news/news-and-insights/from-colombia-to-connecticut-the-urgent-need-to-end-fgm-in-the-americas/",
+      "source": "Equality Now",
+      "language": "en",
+      "published": "2026-04-28T17:13:23+00:00",
+      "pillar": "bodily_autonomy",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": "COL",
+      "state": null,
+      "crisis": true,
+      "summary_en": "The article highlights the critical need to end Female Genital Mutilation (FGM) in Colombia and Connecticut as a matter of urgency for bodily autonomy.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "Tatuí realiza mutirão de castração gratuita para cães e gatos; veja como inscrever seu pet",
+      "url": "https://g1.globo.com/sp/itapetininga-regiao/noticia/2026/05/03/tatui-realiza-mutirao-de-castracao-gratuita-para-caes-e-gatos-veja-como-inscrever-seu-pet.ghtml",
+      "source": "G1 Globo",
+      "language": "pt",
+      "published": "2026-05-03T20:20:07+00:00",
+      "pillar": "bodily_autonomy",
+      "direction": -1,
+      "severity": 0.85,
+      "confidence": 0.9,
+      "country": "BRA",
+      "state": null,
+      "crisis": false,
+      "summary_en": "Tatuí, Brazil is hosting a free spaying/neutering event for dogs and cats from May 6-10, offering up to 1,800 slots at a municipal facility.",
+      "model_used": "qwen2.5:3b"
+    },
+    {
+      "title": "Reforma constitucional y deuda de la justicia",
+      "url": "https://cimacnoticias.com.mx/2026/04/30/reforma-constitucional-y-deuda-de-la-justicia/",
+      "source": "Cimac Noticias",
+      "language": "es",
+      "published": "2026-04-30T23:35:13+00:00",
+      "pillar": "violence_penalty",
+      "direction": -1,
+      "severity": 0.85,
+      "confidence": 0.9,
+      "country": "MEX",
+      "state": null,
+      "crisis": false,
+      "summary_en": "Article discusses the introduction of femicide legislation in Mexico, highlighting efforts to address violence against women.",
+      "model_used": "qwen2.5:3b"
+    },
+    {
+      "title": "El Sinaloa de Rocha Moya tiene el índice más alto de feminicidio a nivel nacional",
+      "url": "https://cimacnoticias.com.mx/2026/04/30/el-sinaloa-de-rocha-moya-tiene-el-indice-mas-alto-de-feminicidio-a-nivel-nacional/",
+      "source": "Cimac Noticias",
+      "language": "es",
+      "published": "2026-04-30T22:47:47+00:00",
+      "pillar": "violence_penalty",
+      "direction": -1,
+      "severity": 0.85,
+      "confidence": 0.9,
+      "country": "MEX",
+      "state": null,
+      "crisis": true,
+      "summary_en": "The article highlights a high rate of femicide in Sinaloa, Mexico, and mentions potential extraditions for officials.",
+      "model_used": "qwen2.5:3b"
+    },
+    {
+      "title": "Rape-murder of 3-year-old: Kin seek death, protest shuts down Pune district",
+      "url": "https://timesofindia.indiatimes.com/india/rape-murder-of-3-year-old-kin-seek-death-protest-shuts-down-pune-district/articleshow/130743653.cms",
+      "source": "Times of India",
+      "language": "en",
+      "published": "2026-05-04T02:31:53+00:00",
+      "pillar": "safety_justice",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": "IND",
+      "state": "MH",
+      "crisis": true,
+      "summary_en": "A three-year-old girl's rape and murder in Pune have led to public outrage, protest shutdown of the district, with demands for justice including a death sentence.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "Abortion pill fight heads to Supreme Court as manufacturer warns of ‘chaos’ after ruling",
+      "url": "https://www.foxnews.com/politics/abortion-pill-fight-heads-supreme-court-manufacturer-warns-chaos-ruling",
+      "source": "Fox News Politics",
+      "language": "en",
+      "published": "2026-05-02T20:44:37+00:00",
+      "pillar": "bodily_autonomy",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": true,
+      "summary_en": "The Supreme Court is set to decide on an emergency request from Danco Laboratories after a ruling blocked mail-order access for abortion pills and reinstated in-person prescription requirements.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "What to know about a mifepristone maker asking the Supreme Court to restore access to the pill by mail",
+      "url": "https://www.pbs.org/newshour/health/what-to-know-about-a-mifepristone-maker-asking-the-supreme-court-to-restore-access-to-the-pill-by-mail",
+      "source": "PBS NewsHour",
+      "language": "en",
+      "published": "2026-05-02T16:14:04+00:00",
+      "pillar": "bodily_autonomy",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": true,
+      "summary_en": "A mifepristone manufacturer seeks Supreme Court intervention to restore mail-order access following an appellate court ruling that restricted this method of obtaining the abortion pill.",
+      "model_used": "phi3.5"
+    },
+    {
+      "title": "A mob hit in Ireland, a 10-year manhunt and an arrest in Dubai",
+      "url": "https://www.washingtonpost.com/world/2026/05/02/ireland-daniel-kinahan-arrested-dubai/",
+      "source": "Washington Post World",
+      "language": "en",
+      "published": "2026-05-02T09:00:43+00:00",
+      "pillar": "safety_justice",
+      "direction": -1,
+      "severity": 0.8,
+      "confidence": 0.95,
+      "country": null,
+      "state": null,
+      "crisis": true,
+      "summary_en": "Daniel Kinahan's arrest in Dubai marks a significant breakthrough after a decade-long manhunt by Irish authorities.",
+      "model_used": "phi3.5"
+    }
+  ]
+}

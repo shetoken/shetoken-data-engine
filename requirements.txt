@@ -1,0 +1,34 @@
+# SHEtoken — Python Dependencies
+# =================================
+# Install everything with:
+#     pip install -r requirements.txt
+#
+# Then run the pipeline with:
+#     python run_pipeline.py --fallback        (no API calls, uses estimates)
+#     python run_pipeline.py                   (pulls from live APIs)
+#     python run_pipeline.py --sheets          (also writes to Google Sheets)
+#
+# See data/README_PIPELINE.md for full setup instructions.
+
+# ── Core data fetching ────────────────────────────────────────────
+requests>=2.31.0          # HTTP requests for all APIs
+pandas>=2.0.0             # Data processing and CSV handling
+numpy>=1.24.0             # Numerical normalisation
+
+# ── PDF parsing ───────────────────────────────────────────────────
+pdfplumber>=0.10.0        # NCRB India PDF crime data extraction
+
+# ── File handling ─────────────────────────────────────────────────
+openpyxl>=3.1.0           # Excel file support
+
+# ── Environment variables ─────────────────────────────────────────
+python-dotenv>=1.0.0      # Load .env (API keys, Sheet ID)
+
+# ── Terminal output ───────────────────────────────────────────────
+tqdm>=4.65.0              # Progress bars
+colorama>=0.4.6           # Coloured terminal output
+
+# ── Google Sheets (required for --sheets flag) ────────────────────
+gspread>=5.12.0                       # Google Sheets API
+google-auth>=2.23.0                   # Service account auth
+google-api-python-client>=2.100.0     # Drive API (public permissions)

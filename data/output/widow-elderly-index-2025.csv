@@ -1,0 +1,52 @@
+# SHEtoken Widow & Elderly Women Vulnerability Index (WEVI) — 2025
+# WEVI: higher score = more vulnerable
+# Global widows: 258 million (UN Women 2021)
+# India: 40-42 million widows (largest widow population globally)
+# 115 million widows globally live in poverty
+#
+# India temple town crisis: 45,000-50,000 abandoned widows documented
+# in Vrindavan, Varanasi, Puri, Mathura, Tirupati alone.
+# True figure likely 200,000+ across all pilgrimage sites.
+#
+# Sources: UN Women, UNFPA, Loomba Foundation, HelpAge India,
+#          NHRC, Supreme Court of India orders, HRW country reports
+# (c) 2026 SHE Foundation
+#
+rank,country,iso_code,region,widow_population_millions,widows_in_poverty_pct,legal_inheritance_rights,inheritance_enforcement,social_restrictions_score,widow_abandonment_rate,elderly_women_homeless_pct,pension_coverage_pct,elder_care_access_score,wevi_score,notes,year
+1,Afghanistan,AFG,South Asia,1.8,85,1,0,10,10,50,2,0,95.3,Taliban: widows banned from going outside without male guardian. Begging only option. No pension. Burqa mandatory.,2025
+2,Somalia,SOM,Africa,0.48,84,1,0,10,10,50,2,0,95.1,No functioning legal system. Widows dependent on clan. Extreme vulnerability.,2025
+3,Yemen,YEM,Middle East,0.9,80,1,0,9,8,46,4,0,89.6,Active conflict: hundreds of thousands of war widows. No support system.,2025
+4,Niger,NER,Africa,0.64,82,1,1,9,8,46,4,0,88.5,Child widows (child marriage + early death). Levirate marriage.,2025
+5,DRC,COD,Africa,2.2,80,2,1,8,7,48,4,0,83.6,War widows. Property stripping. No functioning state protection.,2025
+6,Sudan,SDN,Africa,1.2,78,2,1,8,7,46,4,0,83.2,Conflict widows. Darfur crisis widows. No support.,2025
+7,Pakistan,PAK,South Asia,5.2,72,3,1,9,7,42,10,1,80.4,Islamic law gives 1/8 inheritance but rarely enforced. Extreme social restrictions.,2025
+8,Ethiopia,ETH,Africa,4.1,72,3,2,7,7,44,8,1,76.1,Widow inheritance (Gudifecha). Property stripping. No widow-specific pension.,2025
+9,Nigeria,NGA,Africa,4.2,68,3,2,8,7,42,12,2,75.4,Widow inheritance by in-laws. Forced levirate marriage. Property stripping near-universal.,2025
+10,Tanzania,TZA,Africa,2.2,68,3,2,7,6,40,10,1,73.6,"Widow disinheritance common. Forced shaving, isolation rituals in some regions.",2025
+11,Uganda,UGA,Africa,1.8,66,3,2,7,6,40,10,1,73.2,Property grabbing documented by HRW. Wife inheritance practiced.,2025
+12,Bangladesh,BGD,South Asia,5.8,62,4,2,8,6,40,14,2,71.0,Widow remarriage socially stigmatised. Property stripping common. No widow pension.,2025
+13,India,IND,South Asia,42.4,55,6,3,9,8,38,18,2,69.2,40-42M widows (largest globally). See India detail below.,2025
+14,Iraq,IRQ,Middle East,1.4,52,4,2,7,4,34,18,2,64.1,War widows: 2-3M (Iraq War + ISIS). No functioning widow support system.,2025
+15,Kenya,KEN,Africa,1.6,58,5,4,6,6,38,18,2,62.3,Property grabbing by in-laws common. Wife inheritance practiced in some communities.,2025
+16,Myanmar,MMR,SE Asia,1.2,58,4,3,5,4,36,12,2,61.4,Military widows face particular vulnerability. Conflict displacement.,2025
+17,Egypt,EGY,Africa/ME,2.6,38,5,4,7,3,28,32,3,52.9,Islamic inheritance 1/8 share. Khul divorce makes widows more vulnerable.,2025
+18,Rwanda,RWA,Africa,0.48,42,7,5,4,3,35,28,3,45.1,Post-genocide: 300K+ war widows. Gacaca courts addressed some property cases.,2025
+19,Indonesia,IDN,SE Asia,5.8,38,6,5,4,3,32,42,3,44.4,Islamic inheritance: widows receive 1/8 of estate. Social restrictions in conservative areas.,2025
+20,South Africa,ZAF,Africa,1.8,40,7,5,2,3,35,55,5,37.0,Social grant but property stripping common. Ukungena (levirate marriage) still practiced.,2025
+21,Vietnam,VNM,SE Asia,2.1,25,7,6,3,2,24,56,4,33.4,War widows policy (post-1975). Social support but rural gap.,2025
+22,Colombia,COL,S. America,1.2,34,8,6,2,2,28,52,4,32.6,COLPENSIONES pension. Conflict widows face additional displacement.,2025
+23,Mexico,MEX,N. America,3.8,32,8,6,2,2,30,62,4,31.2,IMSS pension. Indigenous widows face stronger social restrictions.,2025
+24,Philippines,PHL,SE Asia,2.1,30,8,6,2,1,25,52,4,30.3,SSS pension. Strong family support culture but financial dependence.,2025
+25,Turkey,TUR,Europe/Asia,1.9,22,8,7,3,1,22,64,5,26.5,SGK pension. Rural vs urban gap significant.,2025
+26,Brazil,BRA,S. America,5.2,28,9,7,1,1,28,68,5,22.8,INSS pension but many widows informal workers. Urban elderly homelessness rising.,2025
+27,China,CHN,East Asia,35.2,14,8,7,2,1,20,72,6,21.6,Rural/urban divide. Rural elderly women left behind as youth migrate.,2025
+28,South Korea,KOR,East Asia,2.8,9,10,10,2,0,18,86,8,8.2,Strong pension but cultural restrictions remain. Ppal-li ppal-li culture.,2025
+29,USA,USA,N. America,11.6,12,10,10,0,0,18,85,8,5.9,Social Security survivor benefits. 1.4M elderly women in poverty.,2025
+30,Japan,JPN,East Asia,10.2,8,10,10,1,0,16,89,9,5.2,Strong pension. Cultural expectation widows care for in-laws. Low remarriage.,2025
+31,Canada,CAN,N. America,0.9,10,10,10,0,0,14,87,9,4.3,CPP Survivor Benefit. Indigenous widows face different reality.,2025
+32,Australia,AUS,Oceania,0.8,9,10,10,0,0,15,88,9,4.0,Age Pension + superannuation gap (women save less),2025
+33,UK,GBR,Europe,2.8,8,10,10,0,0,14,90,9,3.6,Bereavement Support Payment. Care home gap for women.,2025
+34,Germany,DEU,Europe,3.4,8,10,10,0,0,12,92,9,3.4,Widower's pension + full inheritance rights,2025
+35,Sweden,SWE,Europe,0.22,6,10,10,0,0,10,93,10,1.9,Gender-equal inheritance since 1987,2025
+36,Norway,NOR,Europe,0.11,5,10,10,0,0,10,94,10,1.6,State pension covers all widows,2025
+37,Iceland,ISL,Europe,0.004,5,10,10,0,0,10,95,10,1.5,"Universal pension, full inheritance, no social restrictions",2025

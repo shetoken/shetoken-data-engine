@@ -1,0 +1,49 @@
+{
+  "description": "Global weekly estimates for women's key life statistics",
+  "data_note": "Weekly estimates computed from annual rates. Not real-time.",
+  "week_of": "2026-W18",
+  "global_weekly_estimates": {
+    "girls_born": 1392308,
+    "maternal_deaths": 5519,
+    "women_killed_by_partner": 1712,
+    "girls_entering_primary_school": 1153846,
+    "girls_entering_secondary_school": 1000000,
+    "girls_dropping_out_secondary": 269231,
+    "girls_starting_university": 500000,
+    "girls_married_under_18": 230769,
+    "girls_pregnant_under_18": 403846
+  },
+  "global_annual_estimates": {
+    "girls_born_annually": 72400000,
+    "total_births_annually": 140000000,
+    "women_deaths_annually": 30000000,
+    "maternal_deaths_annually": 287000,
+    "women_killed_by_partner_annually": 89000,
+    "girls_starting_primary_annually": 60000000,
+    "girls_completing_primary_annually": 54000000,
+    "girls_starting_secondary_annually": 52000000,
+    "girls_completing_secondary_annually": 38000000,
+    "women_starting_university_annually": 26000000,
+    "girls_married_under_18_annually": 12000000,
+    "girls_pregnant_under_18_annually": 21000000,
+    "women_in_extreme_poverty": 435000000,
+    "men_in_extreme_poverty": 380000000,
+    "gender_poverty_gap_pct": 14.5,
+    "female_share_of_wealth_pct": 38.0,
+    "male_share_of_wealth_pct": 62.0,
+    "gender_wage_gap_global_pct": 20.0
+  },
+  "per_second": {
+    "girls_born": 2.3,
+    "maternal_deaths": 0.0091,
+    "women_killed_by_partner": 0.0028
+  },
+  "gender_wealth": {
+    "women_share_of_global_wealth_pct": 38.0,
+    "men_share_of_global_wealth_pct": 62.0,
+    "global_gender_wage_gap_pct": 20.0,
+    "women_in_extreme_poverty": 435000000,
+    "men_in_extreme_poverty": 380000000,
+    "gender_poverty_gap_pct": 14.5
+  }
+}

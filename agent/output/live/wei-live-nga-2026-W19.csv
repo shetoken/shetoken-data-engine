@@ -1,0 +1,40 @@
+# SHEtoken WEI Live Scores — Week 2026-W19
+# Generated: 2026-05-04T06:38:29.990270+00:00
+# 90% baseline annual data + 10% weekly news signal adjustment
+# Full methodology: wei-index/methodology.md
+#
+rank,state,state_code,ticker,zone,population_millions,empowerment_score,education_score,economic_score,health_score,bodily_autonomy_score,safety_justice_score,dignity_welfare_score,digital_social_score,violence_penalty_score,wei_score,previous_wei_score,change,hot,watch,country,year,wei_version,verified,notes,wei_score_baseline,signal_count_this_week,wei_data_type
+1,Lagos,LA,SHE-NG-LA,South West,15.4,56,78,60,68,68,54,56,68,44,58.9,58.3,0.6,true,false,Nigeria,2025,3.0,false,,58.9,0,baseline
+2,Ogun,OG,SHE-NG-OG,South West,5.2,50,72,52,64,60,48,50,56,42,52.2,52.2,0.0,true,false,Nigeria,2025,3.0,false,,52.2,0,baseline
+3,Abuja (FCT),FC,SHE-NG-FC,North Central,3.6,54,74,52,64,50,48,50,58,38,52.1,52.1,0.0,false,false,Nigeria,2025,3.0,false,,52.1,0,baseline
+4,Oyo,OY,SHE-NG-OY,South West,7.8,48,70,48,62,58,46,48,54,46,49.5,49.5,0.0,false,false,Nigeria,2025,3.0,false,,49.5,0,baseline
+5,Anambra,AN,SHE-NG-AN,South East,5.1,46,72,46,62,52,44,46,50,44,47.7,47.7,0.0,false,false,Nigeria,2025,3.0,false,,47.7,0,baseline
+6,Edo,ED,SHE-NG-ED,South South,4.7,46,68,46,60,52,44,46,50,48,46.5,46.5,0.0,false,false,Nigeria,2025,3.0,false,,46.5,0,baseline
+7,Ekiti,EK,SHE-NG-EK,South West,3.3,44,70,40,60,50,42,44,46,44,45.0,45.0,0.0,false,false,Nigeria,2025,3.0,false,,45.0,0,baseline
+8,Delta,DE,SHE-NG-DE,South South,5.7,44,68,46,58,50,42,44,48,50,44.8,44.8,0.0,false,false,Nigeria,2025,3.0,false,,44.8,0,baseline
+9,Ondo,ON,SHE-NG-ON,South West,5.1,44,68,42,60,50,42,44,46,48,44.6,44.6,0.0,false,false,Nigeria,2025,3.0,false,,44.6,0,baseline
+10,Enugu,EN,SHE-NG-EN,South East,4.4,44,68,42,60,48,42,44,46,46,44.5,44.5,0.0,false,false,Nigeria,2025,3.0,false,,44.5,0,baseline
+11,Imo,IM,SHE-NG-IM,South East,4.9,44,68,42,60,48,42,44,46,48,44.3,44.3,0.0,false,false,Nigeria,2025,3.0,false,,44.3,0,baseline
+12,Rivers,RI,SHE-NG-RI,South South,7.3,44,68,46,58,50,40,44,48,54,44.1,44.1,0.0,false,false,Nigeria,2025,3.0,false,,44.1,0,baseline
+13,Osun,OS,SHE-NG-OS,South West,4.7,44,68,40,58,48,40,42,44,48,43.1,43.1,0.0,false,false,Nigeria,2025,3.0,false,,43.1,0,baseline
+14,Cross River,CR,SHE-NG-CR,South South,3.9,42,66,40,58,44,40,42,44,52,41.6,41.6,0.0,false,false,Nigeria,2025,3.0,false,,41.6,0,baseline
+15,Akwa Ibom,AK,SHE-NG-AK,South South,5.5,42,66,40,58,44,40,42,44,52,41.6,41.6,0.0,false,false,Nigeria,2025,3.0,false,,41.6,0,baseline
+16,Kwara,KW,SHE-NG-KW,North Central,3.2,38,64,38,56,36,36,36,38,48,37.7,37.7,0.0,false,false,Nigeria,2025,3.0,false,,37.7,0,baseline
+17,Kogi,KO,SHE-NG-KO,North Central,4.5,34,58,32,52,28,32,30,32,52,31.8,31.8,0.0,false,false,Nigeria,2025,3.0,false,,31.8,0,baseline
+18,Benue,BE,SHE-NG-BE,North Central,5.7,34,58,32,52,28,32,30,30,52,31.6,31.6,0.0,false,false,Nigeria,2025,3.0,false,,31.6,0,baseline
+19,Plateau,PL,SHE-NG-PL,North Central,4.2,34,58,32,52,28,32,30,30,54,31.4,31.4,0.0,false,false,Nigeria,2025,3.0,false,,31.4,0,baseline
+20,Niger,NI,SHE-NG-NI,North Central,6.1,32,54,30,50,22,30,28,28,52,28.8,28.8,0.0,false,false,Nigeria,2025,3.0,false,,28.8,0,baseline
+21,Nasarawa,NA,SHE-NG-NA,North Central,2.6,30,52,28,48,22,28,26,26,52,27.1,27.1,0.0,false,false,Nigeria,2025,3.0,false,,27.1,0,baseline
+22,Kaduna,KD,SHE-NG-KD,North West,9.0,28,50,28,46,18,24,20,22,56,23.7,23.7,0.0,false,false,Nigeria,2025,3.0,false,,23.7,0,baseline
+23,Kano,KN,SHE-NG-KN,North West,13.1,24,46,26,44,14,20,16,18,58,20.0,20.2,-0.2,false,false,Nigeria,2025,3.0,false,,20.0,0,baseline
+24,Adamawa,AD,SHE-NG-AD,North East,4.2,22,44,22,44,14,18,16,16,52,19.1,19.1,0.0,false,false,Nigeria,2025,3.0,false,,19.1,0,baseline
+25,Taraba,TA,SHE-NG-TA,North East,3.1,22,44,22,44,14,18,14,14,52,18.7,18.7,0.0,false,false,Nigeria,2025,3.0,false,,18.7,0,baseline
+26,Sokoto,SO,SHE-NG-SO,North West,4.9,20,40,22,42,10,18,14,14,56,16.7,17.0,-0.3,false,false,Nigeria,2025,3.0,false,,16.7,0,baseline
+27,Gombe,GM,SHE-NG-GM,North East,3.3,20,42,20,42,10,16,12,12,54,16.2,16.2,0.0,false,false,Nigeria,2025,3.0,false,,16.2,0,baseline
+28,Katsina,KT,SHE-NG-KT,North West,8.0,18,38,22,40,8,16,14,12,54,15.3,15.3,0.0,false,true,Nigeria,2025,3.0,false,,15.3,0,baseline
+29,Kebbi,KB,SHE-NG-KB,North West,4.4,18,38,20,40,8,16,12,12,54,14.9,14.9,0.0,false,true,Nigeria,2025,3.0,false,,14.9,0,baseline
+30,Jigawa,JI,SHE-NG-JI,North West,5.8,18,38,20,40,8,14,12,10,52,14.6,14.6,0.0,false,false,Nigeria,2025,3.0,false,,14.6,0,baseline
+31,Bauchi,BA,SHE-NG-BA,North East,7.2,18,38,20,40,8,14,12,10,54,14.4,14.4,0.0,false,false,Nigeria,2025,3.0,false,,14.4,0,baseline
+32,Yobe,YO,SHE-NG-YO,North East,3.3,16,34,18,38,6,14,10,10,56,12.5,12.5,0.0,false,true,Nigeria,2025,3.0,false,,12.5,0,baseline
+33,Zamfara,ZM,SHE-NG-ZM,North West,4.5,14,34,18,38,4,14,10,8,56,11.7,12.1,-0.4,false,true,Nigeria,2025,3.0,false,,11.7,0,baseline
+34,Borno,BO,SHE-NG-BO,North East,6.0,14,32,16,36,6,12,8,8,60,10.4,11.0,-0.6,false,true,Nigeria,2025,3.0,false,,10.4,0,baseline

@@ -1,0 +1,183 @@
+02:27:36  INFO      ============================================================
+02:27:36  INFO      SHEtoken WEI Combined Agent v2.0 -- 2026-W19
+02:27:36  INFO      ============================================================
+02:27:36  INFO      
+[1/6] Checking Ollama SLM runtime...
+02:27:36  INFO      HTTP Request: GET http://127.0.0.1:11434/api/tags "HTTP/1.1 200 OK"
+02:27:36  INFO      Ollama models: ['qwen2.5:3b', 'phi3.5:latest']
+02:27:36  INFO      
+[2/6] Fetching news (7 days back)...
+02:27:36  INFO      Fetching 139 sources (7 days back)...
+02:27:37  INFO        UN News Women: 0 relevant articles
+02:27:37  INFO        Al Jazeera: 0 relevant articles
+02:27:37  INFO        BBC World: 2 articles
+02:27:37  INFO        UN News Human Rights: 0 relevant articles
+02:27:37  INFO        The Guardian Women: 0 relevant articles
+02:27:37  INFO        Human Rights Watch: 1 articles
+02:27:37  INFO        The Guardian GD: 0 relevant articles
+02:27:38  INFO        Plan International: 0 articles (empty feed)
+02:27:38  INFO        AWID: 0 relevant articles
+02:27:38  INFO        Ms Magazine: 2 articles
+02:27:38  INFO        Open Democracy 50-50: 0 relevant articles
+02:27:39  INFO        The Hindu: 1 articles
+02:27:39  INFO        IPS News: 0 relevant articles
+02:27:39  INFO        Global Fund Women: 0 relevant articles
+02:27:39  INFO        Gender Policy Report: 1 articles
+02:27:39  INFO        The Wire: 0 articles (empty feed)
+02:27:40  INFO        Jezebel: 1 articles
+02:27:40  INFO        Indian Express: 1 articles
+02:27:40  INFO        Wire Gender: 0 articles (empty feed)
+02:27:40  INFO        NDTV India: 0 relevant articles
+02:27:40  INFO        Equality Now: 4 articles
+02:27:41  INFO        Feminism in India: 1 articles
+02:27:41  INFO        Economic Times: 0 relevant articles
+02:27:41  INFO        Hindustan Times: 0 articles (empty feed)
+02:27:41  INFO        Scroll.in: 0 articles (empty feed)
+02:27:42  INFO        Amar Ujala: 0 relevant articles
+02:27:42  INFO        India Today Women: 0 relevant articles
+02:27:42  INFO        Patrika Hindi: 0 articles (empty feed)
+02:27:43  INFO        The Print: 0 articles (empty feed)
+02:27:43  INFO        Eenadu: 0 articles (empty feed)
+02:27:43  INFO        Dawn: 0 relevant articles
+02:27:44  INFO        Sakshi: 0 articles (empty feed)
+02:27:44  INFO        Sangbad Pratidin: 0 relevant articles
+02:27:44  INFO        The News Pakistan: 0 articles (empty feed)
+02:27:44  INFO        Geo News: 0 articles (empty feed)
+02:27:44  INFO        Jang Urdu: 0 articles (empty feed)
+02:27:44  INFO        Daily Pakistan: 0 relevant articles
+02:27:45  INFO        Prothom Alo: 0 relevant articles
+02:27:45  INFO        Daily FT: 0 articles (empty feed)
+02:27:45  INFO        Daily Mirror SL: 0 articles (empty feed)
+02:27:46  INFO        Bdnews24: 0 articles (empty feed)
+02:27:46  INFO        Daily Star BD: 0 relevant articles
+02:27:46  INFO        Vanguard Nigeria: 0 relevant articles
+02:27:46  INFO        Kathmandu Post: 0 relevant articles
+02:27:46  INFO        Premium Times NG: 0 relevant articles
+02:27:46  INFO        Daily Nation Kenya: 0 relevant articles
+02:27:46  INFO        Punch Nigeria: 0 relevant articles
+02:27:47  INFO        The Standard Kenya: 0 relevant articles
+02:27:47  INFO        This Day Nigeria: 0 relevant articles
+02:27:47  INFO        The Reporter ET: 0 articles (empty feed)
+02:27:48  INFO        AllAfrica Women: 0 relevant articles
+02:27:48  INFO        JoyNews Ghana: 0 relevant articles
+02:27:48  INFO        Mail & Guardian: 0 relevant articles
+02:27:48  INFO        Patricia Galvao: 0 relevant articles
+02:27:49  INFO        Folha SP: 0 relevant articles
+02:27:49  INFO        G1 Globo: 1 articles
+02:27:49  INFO        La Jornada: 0 relevant articles
+02:27:49  INFO        Agencia Publica: 0 relevant articles
+02:27:50  INFO        Cimac Noticias: 2 articles
+02:27:50  INFO        Pie de Pagina: 0 relevant articles
+02:27:50  INFO        Conectas: 0 relevant articles
+02:27:50  INFO        La Silla Vacia: 0 relevant articles
+02:27:50  INFO        La Nacion AR: 0 relevant articles
+02:27:51  INFO        Middle East Eye: 0 relevant articles
+02:27:51  INFO        Al Monitor: 0 relevant articles
+02:27:52  INFO        Rappler Philippines: 0 articles (empty feed)
+02:27:52  INFO        UN Women Watch: 0 articles (empty feed)
+02:27:52  INFO        The Hindu National: 1 articles
+02:27:52  INFO        Brookings Gender: 0 articles (empty feed)
+02:27:52  INFO        Landesa: 0 relevant articles
+02:27:52  INFO        Times of India: 1 articles
+02:27:52  INFO        The Hindu States: 0 relevant articles
+02:27:53  INFO        The Hindu Education: 0 relevant articles
+02:27:53  INFO        TOI India: 0 relevant articles
+02:27:53  INFO        TOI Women: 0 relevant articles
+02:27:53  INFO        TOI World: 0 relevant articles
+02:27:53  INFO        CNN World: 0 relevant articles
+02:27:53  INFO        CNN US: 0 relevant articles
+02:27:53  INFO        Fox News US: 0 relevant articles
+02:27:54  INFO        Fox News World: 0 relevant articles
+02:27:54  INFO        Fox News Politics: 1 articles
+02:27:54  INFO        New York Times World: 1 articles
+02:27:54  INFO        New York Times US: 0 relevant articles
+02:27:54  INFO        NPR News: 0 relevant articles
+02:27:54  INFO        PBS NewsHour: 1 articles
+02:27:54  INFO        Coconuts Media: 0 relevant articles
+02:27:55  INFO        The Independent: 0 relevant articles
+02:27:55  INFO        ABC Australia: 0 relevant articles
+02:27:55  INFO        Sky News World: 0 relevant articles
+02:28:04  INFO        Washington Post World: 1 articles
+02:28:07  WARNING     CBC Canada: HTTPSConnectionPool(host='www.cbc.ca', port=443): Read timed out. (read timeout=12)
+02:28:07  INFO      Fetch complete: 23 relevant articles from 17 sources (0 unreachable)
+02:28:07  INFO        YouTube: skipped (no YOUTUBE_API_KEY in .env)
+02:28:07  INFO        RSS: 23 | YouTube: 0 | Reddit: 0
+02:28:07  INFO        23 relevant articles cached
+02:28:07  INFO      
+[3/6] Classifying 23 articles with SLM...
+02:28:07  INFO      Classifying 23 articles...
+02:28:36  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:29:02  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:29:38  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:30:14  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:30:42  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:31:15  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:31:46  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:32:09  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:32:28  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:32:48  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:33:19  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:33:41  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:34:01  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:34:39  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:35:06  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:35:19  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:35:31  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:36:10  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:36:46  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:37:08  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:37:08  INFO        20/23 classified, 16 signals so far
+02:37:39  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:38:01  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:38:29  INFO      HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+02:38:29  INFO      Classification complete: 18 signals from 23 articles
+02:38:29  INFO        18 signals from 23 articles
+02:38:29  INFO      
+[4/6] Aggregating signals...
+02:38:29  INFO      Saved signal report: C:\Users\17813\Downloads\SHEtoken_GitHub_Repository (5)\shetoken_repo\agent\output\signals\signals_2026-W19.json
+02:38:29  INFO        Total signals: 18
+02:38:29  INFO        Crisis alerts: 14
+02:38:29  INFO        Top mover:     UNKNOWN
+02:38:29  INFO      
+[5/6] Updating WEI scores with signals...
+02:38:29  INFO        Updating global country scores...
+02:38:29  INFO        Baseline: 105 countries
+02:38:29  INFO        Signal deltas computed for 6 geographies
+02:38:29  INFO        4 countries updated by signals
+02:38:29  INFO        Saved live scores: C:\Users\17813\Downloads\SHEtoken_GitHub_Repository (5)\shetoken_repo\agent\output\live\wei-live-global-2026-W19.csv
+02:38:29  INFO        Global: 4 countries moved by signals
+02:38:29  INFO        Updating India state scores...
+02:38:29  INFO        Saved live scores: C:\Users\17813\Downloads\SHEtoken_GitHub_Repository (5)\shetoken_repo\agent\output\live\wei-live-india-2026-W19.csv
+02:38:29  INFO        Updating USA state scores...
+02:38:29  INFO        Saved live scores: C:\Users\17813\Downloads\SHEtoken_GitHub_Repository (5)\shetoken_repo\agent\output\live\wei-live-usa-2026-W19.csv
+02:38:29  INFO        Updating Brazil state scores...
+02:38:29  INFO        Saved live scores: C:\Users\17813\Downloads\SHEtoken_GitHub_Repository (5)\shetoken_repo\agent\output\live\wei-live-bra-2026-W19.csv
+02:38:29  INFO        Updating Nigeria state scores...
+02:38:29  INFO        Saved live scores: C:\Users\17813\Downloads\SHEtoken_GitHub_Repository (5)\shetoken_repo\agent\output\live\wei-live-nga-2026-W19.csv
+02:38:29  INFO        Updating Mexico state scores...
+02:38:30  INFO        Saved live scores: C:\Users\17813\Downloads\SHEtoken_GitHub_Repository (5)\shetoken_repo\agent\output\live\wei-live-mex-2026-W19.csv
+02:38:30  INFO      
+  WEI movers this week (top 10):
+02:38:30  INFO          India                  47.7 -> 47.1  (-0.60)
+02:38:30  INFO          Brazil                 60.9 -> 60.6  (-0.30)
+02:38:30  INFO          Colombia               59.4 -> 59.1  (-0.30)
+02:38:30  INFO          Mexico                 56.9 -> 57.1  (+0.20)
+02:38:30  INFO      
+------------------------------------------------------------
+02:38:30  INFO      WEEK SUMMARY -- 2026-W19
+02:38:30  INFO        Articles scanned:  23
+02:38:30  INFO        Signals detected:  18
+02:38:30  INFO        Crisis alerts:     14
+02:38:30  INFO        WEI datasets updated: 6
+02:38:30  INFO        Top signal region: UNKNOWN
+02:38:30  INFO        bodily_autonomy        v 1.000  (8 signals)
+02:38:30  INFO        safety_justice         v 1.000  (4 signals)
+02:38:30  INFO        violence_penalty       v 1.000  (2 signals)
+02:38:30  INFO        health                 v 0.515  (4 signals)
+02:38:30  INFO      ------------------------------------------------------------
+02:38:30  INFO      
+[6/6] Dry run -- skipping email, Sheets and social
+02:38:30  INFO      
+Agent completed in 654.0s
+02:38:30  INFO      Outputs: agent/output/signals/ and agent/output/live/
+02:38:30  INFO      ============================================================

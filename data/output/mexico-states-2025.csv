@@ -1,0 +1,38 @@
+# SHEtoken WEI Mexico States v3.0 — 2025
+# 31 states | Mexico avg WEI: 50.0
+# 8 states declared Alerta de Genero (Feminist Emergency) for femicide
+# Colima has Mexico's highest femicide rate. Yucatan lowest.
+# Sources: INEGI, SESNSP, Secretaria de Salud, IMSS
+#
+rank,state,state_code,ticker,region,population_millions,empowerment_score,education_score,economic_score,health_score,bodily_autonomy_score,safety_justice_score,dignity_welfare_score,digital_social_score,violence_penalty_score,wei_score,previous_wei_score,change,hot,watch,feminist_emergency,country,year,wei_version,verified,notes
+1,Mexico City,CDMX,SHE-MX-CDMX,Center,9.2,68,88,64,80,72,62,64,76,38,67.7,67.1,0.6,true,false,true,Mexico,2025,3.0,false,
+2,Nuevo Leon,NL,SHE-MX-NL,North,5.8,62,86,64,78,62,58,60,70,36,63.5,63.1,0.4,false,false,false,Mexico,2025,3.0,false,
+3,Jalisco,JA,SHE-MX-JA,West,8.4,58,84,58,76,60,54,58,64,42,59.4,59.4,0.0,false,false,false,Mexico,2025,3.0,false,
+4,Coahuila,CO,SHE-MX-CO,North,3.2,58,84,58,76,58,52,56,62,38,58.8,58.8,0.0,false,false,false,Mexico,2025,3.0,false,
+5,Yucatan,YU,SHE-MX-YU,South,2.3,52,80,52,74,60,56,58,58,28,58.2,57.7,0.5,true,false,false,Mexico,2025,3.0,false,
+6,Sonora,SO,SHE-MX-SO,North,3.1,56,82,56,74,56,50,54,60,40,56.6,56.6,0.0,false,false,false,Mexico,2025,3.0,false,
+7,Queretaro,QT,SHE-MX-QT,Center,2.4,52,82,54,76,54,52,54,60,34,56.6,56.6,0.0,true,false,false,Mexico,2025,3.0,false,
+8,Aguascalientes,AG,SHE-MX-AG,Center,1.4,52,82,52,74,54,50,52,58,36,55.3,55.3,0.0,false,false,false,Mexico,2025,3.0,false,
+9,Baja California,BC,SHE-MX-BC,North,3.8,52,80,54,72,54,48,52,58,42,54.1,54.1,0.0,false,false,false,Mexico,2025,3.0,false,
+10,Chihuahua,CH,SHE-MX-CH,North,3.8,52,80,52,72,52,44,50,56,48,52.0,52.0,0.0,false,true,false,Mexico,2025,3.0,false,
+11,Hidalgo,HI,SHE-MX-HI,Center,3.1,46,76,44,70,54,50,50,50,28,52.0,52.0,0.0,false,false,false,Mexico,2025,3.0,false,
+12,San Luis Potosi,SL,SHE-MX-SL,Center,2.8,48,78,48,72,52,48,50,54,40,51.9,51.9,0.0,false,false,true,Mexico,2025,3.0,false,
+13,Tlaxcala,TL,SHE-MX-TL,Center,1.4,48,78,44,70,52,46,48,50,36,50.7,50.7,0.0,false,false,false,Mexico,2025,3.0,false,
+14,Baja California Sur,BS,SHE-MX-BS,North,0.8,48,78,48,72,52,44,48,54,44,50.7,50.7,0.0,false,false,false,Mexico,2025,3.0,false,
+15,Campeche,CM,SHE-MX-CM,South,1.0,46,76,44,70,50,48,48,50,34,50.3,50.3,0.0,false,false,false,Mexico,2025,3.0,false,
+16,Tabasco,TB,SHE-MX-TB,South,2.4,46,76,42,68,50,44,46,48,42,48.1,48.1,0.0,false,false,false,Mexico,2025,3.0,false,
+17,Quintana Roo,QR,SHE-MX-QR,South,1.9,46,76,46,70,50,40,44,52,48,47.8,47.8,0.0,false,false,false,Mexico,2025,3.0,false,
+18,Puebla,PU,SHE-MX-PU,Center,6.6,44,74,42,68,48,42,44,46,46,46.2,46.2,0.0,false,false,false,Mexico,2025,3.0,false,
+19,Veracruz,VE,SHE-MX-VE,Gulf,8.1,44,74,42,68,48,42,44,46,48,46.0,46.0,0.0,false,false,true,Mexico,2025,3.0,false,
+20,Estado de Mexico,ME,SHE-MX-ME,Center,17.4,44,74,44,68,48,40,44,48,50,45.9,45.9,0.0,false,false,true,Mexico,2025,3.0,false,
+21,Nayarit,NA,SHE-MX-NA,West,1.2,44,74,42,68,46,40,42,44,46,45.2,45.2,0.0,false,false,false,Mexico,2025,3.0,false,
+22,Tamaulipas,TM,SHE-MX-TM,North,3.6,44,74,46,68,46,36,42,46,58,44.1,44.1,0.0,false,true,false,Mexico,2025,3.0,false,
+23,Sinaloa,SI,SHE-MX-SI,North,3.0,44,74,44,68,46,36,40,44,58,43.5,43.5,0.0,false,false,false,Mexico,2025,3.0,false,
+24,Durango,DU,SHE-MX-DU,North,1.8,42,72,40,66,44,38,40,40,50,42.6,42.6,0.0,false,false,false,Mexico,2025,3.0,false,
+25,Michoacan,MI,SHE-MX-MI,West,4.7,42,72,40,66,44,38,40,42,54,42.4,42.4,0.0,false,false,false,Mexico,2025,3.0,false,
+26,Zacatecas,ZA,SHE-MX-ZA,North,1.6,42,72,40,66,44,36,40,40,52,42.1,42.1,0.0,false,false,true,Mexico,2025,3.0,false,
+27,Morelos,MO,SHE-MX-MO,Center,2.0,42,74,42,68,46,32,40,44,64,41.8,42.4,-0.6,false,true,true,Mexico,2025,3.0,false,
+28,Colima,CL,SHE-MX-CL,West,0.8,42,74,44,70,46,30,40,46,70,41.6,42.6,-1.0,false,true,false,Mexico,2025,3.0,false,
+29,Oaxaca,OA,SHE-MX-OA,South,4.1,38,68,34,62,44,38,38,36,46,40.1,40.1,0.0,false,false,false,Mexico,2025,3.0,false,
+30,Chiapas,CS,SHE-MX-CS,South,5.7,34,64,30,60,40,38,36,32,42,37.5,37.5,0.0,false,false,false,Mexico,2025,3.0,false,
+31,Guerrero,GR,SHE-MX-GR,South,3.6,34,64,30,56,36,28,32,30,66,32.0,32.8,-0.8,false,true,true,Mexico,2025,3.0,false,

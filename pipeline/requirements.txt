@@ -1,0 +1,25 @@
+# SHEtoken WEI Data Pipeline — Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Core data fetching ────────────────────────────────────────────
+requests>=2.31.0          # HTTP requests for all APIs
+pandas>=2.0.0             # Data processing and CSV handling
+numpy>=1.24.0             # Numerical operations for normalisation
+
+# ── PDF parsing (NCRB India crime data) ──────────────────────────
+pdfplumber>=0.10.0        # NCRB PDF table extraction
+
+# ── Excel support (some bulk downloads) ──────────────────────────
+openpyxl>=3.1.0           # Read/write Excel files
+
+# ── Environment variables ─────────────────────────────────────────
+python-dotenv>=1.0.0      # Load .env file (API keys, Sheet ID)
+
+# ── Terminal output ───────────────────────────────────────────────
+tqdm>=4.65.0              # Progress bars for long API fetches
+colorama>=0.4.6           # Coloured terminal output
+
+# ── Google Sheets integration ─────────────────────────────────────
+gspread>=5.12.0           # Google Sheets read/write API
+google-auth>=2.23.0       # Google service account authentication
+google-api-python-client>=2.100.0  # Drive API (for public permissions)

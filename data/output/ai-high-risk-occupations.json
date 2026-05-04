@@ -1,0 +1,131 @@
+{
+  "description": "Occupations with high automation risk — female concentration",
+  "sources": "McKinsey 2021, Oxford Martin School, WEF 2023",
+  "high_risk_female_dominated": {
+    "data_entry_clerks": {
+      "automation_risk": 96,
+      "pct_female": 72
+    },
+    "administrative_assistants": {
+      "automation_risk": 96,
+      "pct_female": 90
+    },
+    "bank_tellers": {
+      "automation_risk": 98,
+      "pct_female": 70
+    },
+    "customer_service_reps": {
+      "automation_risk": 79,
+      "pct_female": 65
+    },
+    "garment_textile_workers": {
+      "automation_risk": 83,
+      "pct_female": 80
+    },
+    "cashiers_checkout": {
+      "automation_risk": 97,
+      "pct_female": 73
+    },
+    "payroll_bookkeeping": {
+      "automation_risk": 98,
+      "pct_female": 82
+    },
+    "receptionists": {
+      "automation_risk": 96,
+      "pct_female": 93
+    },
+    "secretaries": {
+      "automation_risk": 96,
+      "pct_female": 94
+    },
+    "food_processing_workers": {
+      "automation_risk": 78,
+      "pct_female": 55
+    },
+    "telemarketers": {
+      "automation_risk": 99,
+      "pct_female": 61
+    },
+    "insurance_claims_handlers": {
+      "automation_risk": 98,
+      "pct_female": 72
+    },
+    "medical_transcriptionists": {
+      "automation_risk": 98,
+      "pct_female": 89
+    },
+    "travel_agents": {
+      "automation_risk": 97,
+      "pct_female": 76
+    },
+    "retail_workers": {
+      "automation_risk": 92,
+      "pct_female": 57
+    }
+  },
+  "low_risk_male_dominated": {
+    "civil_engineers": {
+      "automation_risk": 8,
+      "pct_female": 14
+    },
+    "electricians_plumbers": {
+      "automation_risk": 15,
+      "pct_female": 3
+    },
+    "construction_managers": {
+      "automation_risk": 6,
+      "pct_female": 10
+    },
+    "software_developers": {
+      "automation_risk": 4,
+      "pct_female": 25
+    },
+    "mechanical_engineers": {
+      "automation_risk": 7,
+      "pct_female": 12
+    },
+    "physical_therapists": {
+      "automation_risk": 2,
+      "pct_female": 72
+    },
+    "physicians_doctors": {
+      "automation_risk": 3,
+      "pct_female": 37
+    },
+    "teachers_professors": {
+      "automation_risk": 12,
+      "pct_female": 53
+    }
+  },
+  "care_economy_automation_resistant": {
+    "registered_nurses": {
+      "automation_risk": 1,
+      "pct_female": 88
+    },
+    "home_health_aides": {
+      "automation_risk": 4,
+      "pct_female": 89
+    },
+    "childcare_workers": {
+      "automation_risk": 2,
+      "pct_female": 95
+    },
+    "social_workers": {
+      "automation_risk": 2,
+      "pct_female": 79
+    },
+    "personal_care_aides": {
+      "automation_risk": 3,
+      "pct_female": 84
+    },
+    "preschool_teachers": {
+      "automation_risk": 2,
+      "pct_female": 97
+    },
+    "elder_care_workers": {
+      "automation_risk": 4,
+      "pct_female": 92
+    }
+  },
+  "key_finding": "Women are 2-3x more concentrated in high-automation-risk jobs than men. The care economy (nursing, childcare) is automation-resistant but systematically underpaid. Displaced women are likely to move into care work with no wage improvement."
+}
