@@ -1,5 +1,5 @@
 # SHEtoken WEI Live Scores — Week 2026-W19
-# Generated: 2026-05-04T06:38:29.949153+00:00
+# Generated: 2026-05-04T17:07:28.586916+00:00
 # 90% baseline annual data + 10% weekly news signal adjustment
 # Full methodology: wei-index/methodology.md
 #
@@ -27,8 +27,8 @@ rank,country,iso_code,region,tier,population_millions,empowerment_score,educatio
 21,Czech Republic,CZE,Europe,1,10.9,76,96,74,95,84,80,82,84,12,82.4,1.0,SHE-CZE,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,82.4,82.4,0,,baseline
 22,Latvia,LVA,Europe,1,1.8,76,96,74,94,84,80,82,84,14,82.1,1.0,SHE-LVA,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,82.1,82.1,0,,baseline
 23,Portugal,PRT,Europe,1,10.3,74,95,74,94,84,80,82,83,13,81.7,1.0,SHE-PRT,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,81.7,81.7,0,,baseline
-24,United States,USA,N. America,1,331.0,77,96,73,93,82,78,82,86,20,81.0,1.0,SHE-USA,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,81.0,81.0,0,,baseline
-25,Japan,JPN,Asia,1,125.7,68,97,71,98,80,78,82,85,7,81.0,1.0,SHE-JPN,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,81.0,81.0,0,,baseline
+24,Japan,JPN,Asia,1,125.7,68,97,71,98,80,78,82,85,7,81.0,1.0,SHE-JPN,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,81.0,81.0,0,,baseline
+25,United States,USA,N. America,1,331.0,77,96,73,93,82,76.0,82,86,20,80.7,1.0,SHE-USA,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,81.0,80.7,1,2026-W19,live_signal
 26,Israel,ISR,Middle East,1,9.3,72,96,74,95,78,76,78,82,15,79.4,1.0,SHE-ISR,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,79.4,79.4,0,,baseline
 27,South Korea,KOR,Asia,1,51.7,65,97,68,97,78,76,80,82,11,78.6,1.0,SHE-KOR,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,78.6,78.6,0,,baseline
 28,Barbados,BRB,Caribbean,1,0.3,74,96,70,92,78,74,76,78,18,77.7,1.0,SHE-BRB,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,77.7,77.7,0,,baseline
@@ -44,8 +44,8 @@ rank,country,iso_code,region,tier,population_millions,empowerment_score,educatio
 38,Philippines,PHL,Asia,2,111.0,65,91,58,82,60,56,58,62,32,63.1,1.0,SHE-PHL,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,63.1,63.1,0,,baseline
 39,Vietnam,VNM,Asia,2,97.3,58,90,56,88,56,58,58,60,20,63.1,1.0,SHE-VNM,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,63.1,63.1,0,,baseline
 40,Thailand,THA,Asia,2,71.6,57,88,58,88,58,56,58,62,26,62.6,1.0,SHE-THA,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,62.6,62.6,0,,baseline
-41,Sri Lanka,LKA,Asia,2,22.2,56,92,52,85,58,54,56,58,26,60.9,1.0,SHE-LKA,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,60.9,60.9,0,,baseline
-42,Brazil,BRA,S. America,2,213.0,55,90,54,88,62.0,54,58,62,44,60.6,1.0,SHE-BRA,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,60.9,60.6,1,2026-W19,live_signal
+41,Brazil,BRA,S. America,2,213.0,55,90,54,88,64,54,58,62,44,60.9,1.0,SHE-BRA,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,60.9,60.9,0,,baseline
+42,Sri Lanka,LKA,Asia,2,22.2,56,92,52,85,58,54,56,58,26,60.9,1.0,SHE-LKA,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,60.9,60.9,0,,baseline
 43,Colombia,COL,S. America,2,51.0,52,90,50,87,58.0,54,58,62,42,59.1,1.0,SHE-COL,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,59.4,59.1,1,2026-W19,live_signal
 44,Mongolia,MNG,Asia,2,3.3,55,91,52,84,54,52,54,58,36,58.5,1.0,SHE-MNG,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,58.5,58.5,0,,baseline
 45,Mexico,MEX,N. America,2,128.9,51,88,48,85,58,50,56,60,44.0,57.1,1.0,SHE-MEX,2025,3.0,fallback_estimates,false,Baseline estimate — run pipeline for verified scores,56.9,57.1,1,2026-W19,live_signal

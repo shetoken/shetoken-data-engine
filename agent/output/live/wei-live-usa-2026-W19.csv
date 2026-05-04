@@ -1,5 +1,5 @@
 # SHEtoken WEI Live Scores — Week 2026-W19
-# Generated: 2026-05-04T06:38:29.973086+00:00
+# Generated: 2026-05-04T17:07:28.589955+00:00
 # 90% baseline annual data + 10% weekly news signal adjustment
 # Full methodology: wei-index/methodology.md
 #
@@ -30,8 +30,8 @@ rank,state,state_code,ticker,region,population_millions,empowerment_score,educat
 24,Ohio,OH,SHE-US-OH,Midwest,11.8,68,90,64,78,56,66,66,74,24,67.3,67.3,-0.0,false,false,USA,2025,3.0,false,,67.3,0,baseline
 25,New Mexico,NM,SHE-US-NM,West,2.1,68,86,60,76,72,60,62,72,34,66.0,65.6,0.4,false,false,USA,2025,3.0,false,,66.0,0,baseline
 26,Arizona,AZ,SHE-US-AZ,West,7.4,68,88,66,74,56,64,64,74,28,65.9,65.9,-0.0,false,false,USA,2025,3.0,false,,65.9,0,baseline
-27,Florida,FL,SHE-US-FL,South,22.6,68,88,66,76,52,62,64,72,26,65.3,65.3,-0.0,false,false,USA,2025,3.0,false,,65.3,0,baseline
-28,North Carolina,NC,SHE-US-NC,South,10.5,68,90,66,76,48,64,64,72,26,65.2,65.2,-0.0,false,false,USA,2025,3.0,false,,65.2,0,baseline
+27,North Carolina,NC,SHE-US-NC,South,10.5,68,90,66,76,48,64,64,72,26,65.2,65.2,-0.0,false,false,USA,2025,3.0,false,,65.2,0,baseline
+28,Florida,FL,SHE-US-FL,South,22.6,68,88,66,76,52,60.0,64,72,26,65.0,65.3,-0.0,false,false,USA,2025,3.0,false,,65.3,1,live_signal
 29,Alaska,AK,SHE-US-AK,West,0.7,64,88,68,74,72,54,58,72,36,65.0,65.1,-0.1,false,false,USA,2025,3.0,false,,65.0,0,baseline
 30,Montana,MT,SHE-US-MT,West,1.1,64,92,62,78,58,60,60,68,24,64.9,65.0,-0.1,false,false,USA,2025,3.0,false,,64.9,0,baseline
 31,Utah,UT,SHE-US-UT,West,3.3,64,92,64,82,36,62,64,72,18,64.0,64.1,-0.1,false,false,USA,2025,3.0,false,,64.0,0,baseline
