@@ -1,0 +1,21 @@
+# SHEtoken Microfinance Bond Basket — 2025
+# Total borrowers: 25.1M women
+# Total portfolio: $10.28B
+# Weighted yield: 6.94%
+# NAV per token: 102.4623
+# This basket is the yield engine for the Women's Savings Account
+# (c) 2026 SHE Foundation
+#
+institution,country_iso,region,female_client_pct,active_borrowers_millions,portfolio_size_bn_usd,bond_yield_pct,credit_rating,bond_type,basket_weight_pct,wei_aligned,website,year
+Grameen Bank,BGD,South Asia,97,9.4,2.8,6.2,BB+,social bond,18,yes,grameen.com.bd,2025
+BRAC (microfinance arm),BGD,South Asia,95,8.2,1.9,6.8,BB+,development bond,15,yes,brac.net,2025
+Women's World Banking,USA,Global,100,0.1,0.8,5.4,A-,gender bond,12,yes,womensworldbanking.org,2025
+FINCA International,USA,Global,70,2.1,1.1,7.2,BB,social bond,12,yes,finca.org,2025
+Accion (Quona portfolio),USA,Global,72,0.3,1.4,5.8,BBB-,gender lens note,10,yes,accion.org,2025
+SEWA Bank,IND,South Asia,100,0.1,0.2,8.4,BBB,cooperative bond,6,yes,sewabank.com,2025
+Mann Deshi Bank,IND,South Asia,100,0.1,0.08,9.2,B+,MFI bond,4,yes,manndeshi.org,2025
+JEEViKA (BRLPS bonds),IND,South Asia,100,1.04,0.6,7.8,BB,state-backed social bond,5,yes,jeevika.org,2025
+Equity Bank Women,KEN,East Africa,68,0.8,0.4,9.4,BB-,Eurobond (gender tranche),5,yes,equitybankgroup.com,2025
+LAPO Microfinance,NGA,West Africa,72,0.8,0.3,11.2,B+,MFI bond,4,yes,lapo-mfb.com,2025
+Kashf Foundation,PAK,South Asia,100,0.4,0.2,10.8,BB-,gender bond,3,yes,kashf.org,2025
+ASA International,BGD,Global,74,1.8,0.5,8.6,BB,LSE-listed bond,6,yes,asa-international.com,2025

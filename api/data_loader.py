@@ -616,3 +616,48 @@ def get_partner_companies() -> dict:
         if not path.exists(): return {}
         with open(path,"r",encoding="utf-8") as f: return _json.load(f)
     return cached("partner_companies", _load)
+
+
+def get_mfi_basket() -> dict:
+    def _load():
+        import json as _j
+        path = DATA_DIR / "mfi-basket-nav.json"
+        if not path.exists(): return {}
+        with open(path,"r",encoding="utf-8") as f: return _j.load(f)
+    return cached("mfi_basket", _load)
+
+def get_prediction_markets(category: str = None) -> list:
+    def _load():
+        import json as _j
+        path = DATA_DIR / "prediction-markets.json"
+        if not path.exists(): return []
+        with open(path,"r",encoding="utf-8") as f:
+            data = _j.load(f)
+        return data.get("markets",[])
+    mkts = cached("prediction_markets", _load)
+    if category: mkts=[m for m in mkts if m.get("category")==category.upper()]
+    return mkts
+
+def get_enhanced_tokenomics() -> dict:
+    def _load():
+        import json as _j
+        path = DATA_DIR / "enhanced-tokenomics.json"
+        if not path.exists(): return {}
+        with open(path,"r",encoding="utf-8") as f: return _j.load(f)
+    return cached("enhanced_tokenomics", _load)
+
+def get_savings_product() -> dict:
+    def _load():
+        import json as _j
+        path = DATA_DIR / "savings-product.json"
+        if not path.exists(): return {}
+        with open(path,"r",encoding="utf-8") as f: return _j.load(f)
+    return cached("savings_product", _load)
+
+def get_etf_spec() -> dict:
+    def _load():
+        import json as _j
+        path = DATA_DIR / "she-economy-etf.json"
+        if not path.exists(): return {}
+        with open(path,"r",encoding="utf-8") as f: return _j.load(f)
+    return cached("etf_spec", _load)

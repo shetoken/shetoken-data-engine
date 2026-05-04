@@ -38,16 +38,17 @@ city level.
 9. Corporate Women's Rights Compliance Score (WRBCS)
 10. US Trade Exposure Analysis
 11. Women's Rights Partner Directory
-12. Historical Data (2015–2024)
-13. The Weekly News Agent
-14. Geographic Coverage
-15. How to Invest
-16. Tokenomics
-17. Token Mechanics
-18. Technology & Blockchain
-19. Governance
-20. Roadmap
-21. Legal Disclaimer
+12. Enhanced Token Ecosystem — v2.0
+13. Historical Data (2015–2024)
+14. The Weekly News Agent
+15. Geographic Coverage
+16. How to Invest
+17. Tokenomics
+18. Token Mechanics
+19. Technology & Blockchain
+20. Governance
+21. Roadmap
+22. Legal Disclaimer
 
 ---
 
@@ -420,7 +421,8 @@ public registries:
 - **UN WEPs** — Women's Empowerment Principles signatories (3,000+ companies)
 - **GenderSmart** — Impact investors funding women's initiatives
 
-## 12. Historical Data (2015–2024)
+## 12. Enhanced Token Ecosystem — v2.0
+13. Historical Data (2015–2024)
 
 All major indexes include historical data using the event-reversal model:
 start from 2025 verified baseline, reverse known events going backwards.
@@ -453,7 +455,142 @@ start from 2025 verified baseline, reverse known events going backwards.
 
 ---
 
-## 13. The Weekly News Agent
+
+## 12. Enhanced Token Ecosystem — v2.0
+
+The original SHEtoken (v1.0) had one token with annual price discovery.
+v2.0 adds four complementary instruments that provide price signals
+at every frequency — from real-time to annual.
+
+### The Problem v2.0 Solves
+
+```
+v1.0: Annual WEI update = 364-day price vacuum filled by speculation
+v2.0: Price discovery at every frequency — real-time to annual
+```
+
+### Five Token Types
+
+| Token | What it is | Yield | Update frequency |
+|---|---|---|---|
+| **SHE** | Master WEI index token | Staking rewards | Annual + Weekly signals |
+| **SHE-MFI** | Microfinance bond basket | 6.2–11.2% APY | Daily (bond NAV) |
+| **SHE-SAVE** | Women's savings account | 7.5–9.5% APY | Daily |
+| **SHEETF** | She-Economy ETF basket | Dividend + growth | Real-time (stock prices) |
+| **SHE-STAKE** | Corporate certification | 2–8% APY | Real-time (stake events) |
+
+### SHE-MFI — Microfinance Bond Basket
+
+Basket of bonds from 12 women-focused microfinance institutions.
+Every institution: 70%+ female clients, independently audited, rated debt.
+
+| Institution | Country | Yield | Female clients |
+|---|---|---|---|
+| Grameen Bank | Bangladesh | 6.2% | 97% |
+| BRAC | Bangladesh | 6.8% | 95% |
+| Women's World Banking | Global | 5.4% | 100% |
+| SEWA Bank | India | 8.4% | 100% |
+| JEEViKA bonds | India | 7.8% | 100% |
+| Equity Bank Women | Kenya | 9.4% | 68% |
+
+**Total:** 25.1M women borrowers | $9.78B portfolio | 7.5% weighted yield
+
+Build on: Goldfinch, Centrifuge, or Maple Finance protocol.
+
+### SHE-SAVE — Women's Savings Account
+
+The most accessible entry point. $1 minimum deposit.
+
+```
+Yield = MFI bond yield (base 7.5%) + WEI performance bonus (0-2%)
+      = up to 9.5% APY total
+
+Comparison:
+  Indian bank savings account:  2-3%
+  Indian fixed deposit:         6-7%
+  SHE-SAVE:                     7.5-9.5% + social impact
+```
+
+Target markets: 570M women across four countries.
+
+| Country | Platform | Users | Entry point |
+|---|---|---|---|
+| India | UPI (PhonePe/Paytm) | 400M | ₹100 minimum |
+| Kenya | M-Pesa | 30M | KES 100 minimum |
+| Bangladesh | bKash | 50M | BDT 100 minimum |
+| Nigeria | Opay/Kuda | 40M | NGN 500 minimum |
+
+Chain: Celo (mobile-first, $0.001 gas fee).
+Build on: Celo + Impact Market infrastructure.
+
+### SHEETF — She-Economy ETF Token
+
+Basket of 30 publicly traded companies meeting verified women's
+rights criteria. NAV updates in real-time during market hours.
+
+**Inclusion criteria:**
+- Female board members ≥ 30% (public filing verified)
+- Headquartered in WRBCS PREFERRED or ACCEPTABLE country
+- At least one: B Corp, UN WEPs signatory, EPIC certified, ILO Better Work
+- Not in AVOID country without WRTC certification
+
+**Management fee:** 0.35% (0.20% → WEI Impact Fund | 0.15% → operations)
+
+**vs MSCI Women's Leadership Index:**
+SHEtoken adds WEI integration, WRBCS country screening, retail access from $1,
+and routes fee to Impact Fund. MSCI is institutional only with no impact routing.
+
+Build on: Synthetix or Set Protocol.
+
+### SHE-STAKE — Corporate Certification Staking
+
+Companies sourcing from CAUTION/AVOID countries stake SHE tokens
+as proof of commitment. Slashed if certification lapses. Yield earned
+when their supplier regions show WEI improvement.
+
+| Tier | Country rating | Stake | Slash | Yield (if good) |
+|---|---|---|---|---|
+| Bronze | CAUTION | 10,000 SHE | 20% | 2% APY |
+| Silver | AVOID | 50,000 SHE | 25% | 4% APY |
+| Gold | AVOID + Accord | 250,000 SHE | 30% | 8% APY |
+
+### Prediction Markets
+
+15 live markets resolving on SHEtoken's own index publications.
+Collateral: SHE tokens. Platform fee: 0.5% → WEI Impact Fund.
+
+Example markets:
+- "Will India criminalise marital rape by 2027?" — 22% yes
+- "Will Kanyashree reach 12M girls by 2026?" — 58% yes
+- "Will Texas bodily autonomy exceed 20 by 2028?" — 18% yes
+
+Creates continuous trading activity between annual WEI updates.
+
+### Price Discovery Calendar (v2.0)
+
+```
+Real-time  → SHEETF (stock prices), SHE-MFI (bond NAV)
+Daily      → SHE-SAVE NAV, bond accrual
+Weekly     → Community signals (±0.1M SHE burn/mint)
+Monthly    → Prediction market resolutions
+Quarterly  → ETF rebalancing, staking yield distribution
+Annually   → Full WEI recalculation
+```
+
+### Community Signal Token Mechanic
+
+The grievance app (shetoken.org/signal) directly moves the price:
+```
+Net positive signals this week → 0.1M SHE minted
+Net negative signals this week → 0.1M SHE burned
+Crisis threshold breached       → up to 1M SHE burned
+Maximum weekly movement:         ±0.5% of supply
+```
+
+This is the only financial instrument in history where the people
+it is meant to help are also the price discovery mechanism.
+
+## 14. The Weekly News Agent
 
 Every Sunday at 6am UTC, the agent automatically:
 
@@ -482,7 +619,7 @@ If any country's crime index rises >15% in one year:
 
 ---
 
-## 14. Geographic Coverage
+## 15. Geographic Coverage
 
 | Level | Count | Indexes |
 |---|---|---|
@@ -497,7 +634,7 @@ If any country's crime index rises >15% in one year:
 
 ---
 
-## 15. How to Invest
+## 16. How to Invest
 
 ### Step-by-Step
 
@@ -528,7 +665,7 @@ tokens. Rewards long-term holders over short-term speculators.
 
 ---
 
-## 16. Tokenomics
+## 17. Tokenomics
 
 | Parameter | Value |
 |---|---|
@@ -553,20 +690,24 @@ tokens. Rewards long-term holders over short-term speculators.
 
 ---
 
-## 17. Token Mechanics
+## 18. Token Mechanics
 
 | Event | Token mechanism |
 |---|---|
 | Global WEI rises +1 point | 10M SHE minted → WEI Impact Fund |
 | Global WEI falls -1 point | 10M SHE permanently burned |
 | GPI rises +1 point | 5M SHE minted (secondary signal) |
+| SHE-MFI bond repayment | NAV updates daily |
+| SHEETF basket company price move | NAV updates real-time |
+| Corporate stake slashed | Slashed tokens burned |
+| Prediction market resolved | Payout in SHE tokens |
 | Crime spike >15% in one year | DAO emergency governance vote |
 | Country WEI improves significantly | Country sub-token appreciates |
 | Government registers + improves | Quarterly updates, ESG investor signal |
 
 ---
 
-## 18. Technology & Blockchain
+## 19. Technology & Blockchain
 
 | Layer | Technology |
 |---|---|
@@ -582,7 +723,7 @@ tokens. Rewards long-term holders over short-term speculators.
 
 ---
 
-## 19. Governance
+## 20. Governance
 
 | Decision | Threshold |
 |---|---|
@@ -601,7 +742,7 @@ blockchain security experts.
 
 ---
 
-## 20. Roadmap
+## 21. Roadmap
 
 | Phase | Timeline | Milestones |
 |---|---|---|
@@ -615,7 +756,7 @@ blockchain security experts.
 
 ---
 
-## 21. Legal Disclaimer
+## 22. Legal Disclaimer
 
 This whitepaper is for informational purposes only and does not constitute
 financial, legal, or investment advice. SHE is a utility token and is not

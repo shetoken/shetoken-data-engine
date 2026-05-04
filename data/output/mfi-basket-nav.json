@@ -1,0 +1,106 @@
+{
+  "description": "Women's Savings Account — Microfinance Bond Basket NAV",
+  "basket_institutions": 12,
+  "total_women_borrowers_M": 25.14,
+  "total_portfolio_bn": 10.28,
+  "weighted_yield_pct": 6.94,
+  "nav": {
+    "nav_per_token": 102.4623,
+    "base_nav": 100.0,
+    "accrued_interest": 2.4623,
+    "annualised_yield_pct": 7.25,
+    "as_of": "2026-05-04T07:40:47.862443+00:00",
+    "next_rebalance": "Quarterly — aligned with WEI signal updates"
+  },
+  "rebalancing": {
+    "frequency": "quarterly",
+    "trigger": "WEI score update + credit review",
+    "wei_weight": "30% of rebalancing score from WEI improvement"
+  },
+  "institutions": [
+    {
+      "name": "Grameen Bank",
+      "iso": "BGD",
+      "yield": 6.2,
+      "weight": 18,
+      "female_pct": 97
+    },
+    {
+      "name": "BRAC (microfinance arm)",
+      "iso": "BGD",
+      "yield": 6.8,
+      "weight": 15,
+      "female_pct": 95
+    },
+    {
+      "name": "Women's World Banking",
+      "iso": "USA",
+      "yield": 5.4,
+      "weight": 12,
+      "female_pct": 100
+    },
+    {
+      "name": "FINCA International",
+      "iso": "USA",
+      "yield": 7.2,
+      "weight": 12,
+      "female_pct": 70
+    },
+    {
+      "name": "Accion (Quona portfolio)",
+      "iso": "USA",
+      "yield": 5.8,
+      "weight": 10,
+      "female_pct": 72
+    },
+    {
+      "name": "SEWA Bank",
+      "iso": "IND",
+      "yield": 8.4,
+      "weight": 6,
+      "female_pct": 100
+    },
+    {
+      "name": "Mann Deshi Bank",
+      "iso": "IND",
+      "yield": 9.2,
+      "weight": 4,
+      "female_pct": 100
+    },
+    {
+      "name": "JEEViKA (BRLPS bonds)",
+      "iso": "IND",
+      "yield": 7.8,
+      "weight": 5,
+      "female_pct": 100
+    },
+    {
+      "name": "Equity Bank Women",
+      "iso": "KEN",
+      "yield": 9.4,
+      "weight": 5,
+      "female_pct": 68
+    },
+    {
+      "name": "LAPO Microfinance",
+      "iso": "NGA",
+      "yield": 11.2,
+      "weight": 4,
+      "female_pct": 72
+    },
+    {
+      "name": "Kashf Foundation",
+      "iso": "PAK",
+      "yield": 10.8,
+      "weight": 3,
+      "female_pct": 100
+    },
+    {
+      "name": "ASA International",
+      "iso": "BGD",
+      "yield": 8.6,
+      "weight": 6,
+      "female_pct": 74
+    }
+  ]
+}

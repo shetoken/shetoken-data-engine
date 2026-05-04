@@ -18,13 +18,14 @@
 8. [Widow & Elderly Index (WEVI)](#8-widow--elderly-index)
 9. [Women's AI Displacement Index (WADI)](#9-womens-ai-displacement-index)
 10. [Corporate Compliance Score (WRBCS)](#10-corporate-compliance-score)
-12. [Historical Model](#11-historical-model)
-13. [Weekly Signal Mechanics](#12-weekly-signal-mechanics)
-14. [Crisis Triggers](#13-crisis-triggers)
-15. [Data Sources](#14-data-sources)
-16. [Audit & Challenge Process](#15-audit--challenge-process)
-17. [Worked Example — West Bengal](#16-worked-example--west-bengal)
-18. [Changelog](#17-changelog)
+12. [Enhanced Token Ecosystem Mechanics]
+13. [Historical Model](#11-historical-model)
+14. [Weekly Signal Mechanics](#12-weekly-signal-mechanics)
+15. [Crisis Triggers](#13-crisis-triggers)
+16. [Data Sources](#14-data-sources)
+17. [Audit & Challenge Process](#15-audit--challenge-process)
+18. [Worked Example — West Bengal](#16-worked-example--west-bengal)
+19. [Changelog](#17-changelog)
 
 ---
 
@@ -449,7 +450,145 @@ Going backwards = subtract these rates × years_back.
 
 ---
 
-## 13. Weekly Signal Mechanics
+
+## 12. Enhanced Token Ecosystem Mechanics
+
+### SHE-MFI NAV Calculation
+
+```python
+def compute_daily_nav(basket, base_nav=100.0, day_of_year=None):
+    """
+    NAV accrues daily from weighted bond yields.
+    In production: pulled from Chainlink price feeds.
+    """
+    from datetime import datetime, timezone
+    if day_of_year is None:
+        day_of_year = datetime.now(timezone.utc).timetuple().tm_yday
+
+    weighted_yield = sum(
+        b["basket_weight_pct"] / 100 * b["bond_yield_pct"] / 100
+        for b in basket
+    )
+    accrued = base_nav * weighted_yield * (day_of_year / 365)
+    return round(base_nav + accrued, 4)
+```
+
+**Rebalancing trigger:** Quarterly OR when any institution's WEI-aligned
+country changes WRBCS tier. New institutions added based on:
+```
+✓ Female client % ≥ 70%
+✓ Independent audit last 12 months
+✓ Rated debt (any recognised agency)
+✓ Active in WEI Tier 2/3 country (highest impact geography)
+```
+
+### SHE-SAVE Yield Formula
+
+```
+annual_yield = base_mfi_yield
+             + wei_performance_bonus
+             + country_bonus
+
+where:
+  base_mfi_yield = SHE-MFI current NAV yield (~7.5%)
+
+  wei_performance_bonus:
+    global WEI improved 0.0-0.5 pts → +0.00%
+    global WEI improved 0.5-1.0 pts → +0.25%
+    global WEI improved 1.0-2.0 pts → +0.50%
+    global WEI improved 2.0-3.0 pts → +1.00%
+    global WEI improved 3.0+ pts    → +2.00%
+
+  country_bonus:
+    user's country WEI improved this year → +0.50%
+
+  maximum total yield: 10.0%
+```
+
+### SHEETF Rebalancing Logic
+
+```
+Quarterly rebalancing steps:
+  1. Pull latest WEI scores for all basket company HQ countries
+  2. Pull latest WRBCS ratings for all basket company HQ countries
+  3. Remove any company whose HQ country dropped to AVOID/EMBARGO
+  4. Remove any company failing inclusion criteria (board %, pay gap)
+  5. Add companies from eligible registries (B Corp, WEPs, EPIC)
+  6. Apply WEI tilt: +5% weight to companies in PREFERRED countries
+  7. Apply WEI tilt: +2% weight to companies in ACCEPTABLE countries
+  8. Normalise weights to 100%
+```
+
+### Prediction Market Resolution Oracle
+
+All 15 prediction markets resolve from SHEtoken's own index publications.
+This means SHEtoken IS the oracle — creating a self-contained system:
+
+```
+Market: "Will India WEI exceed 50 by end of 2026?"
+Resolution: SHEtoken annual WEI publication for India
+            published December 2026
+Dispute window: 14 days from publication
+Arbitration: DAO vote (51% majority)
+Settlement: Automatic on-chain, SHE token payout
+```
+
+No external oracle dependency for resolution.
+Manipulation resistance: SHEtoken's index methodology is
+open-source and challengeable (30-day public review window).
+
+### Corporate Staking Mechanics
+
+```
+Stake:
+  Company sends N SHE tokens to staking contract
+  Tokens locked for 12 months
+  Certification issued on-chain
+
+Annual audit:
+  Third-party gender auditor submits pass/fail to oracle
+  PASS → stake unlocked + yield paid in SHE
+  FAIL → 20-30% of stake slashed to Impact Fund
+       → certificate revoked
+       → company must re-stake to restore certification
+
+WEI improvement bonus:
+  If supplier region WEI improves ≥ 0.5 points:
+    Bonus yield = base_yield × WEI_improvement × 0.5
+    Paid from newly minted SHE (same mechanic as WEI mint)
+```
+
+### Community Signal Price Impact
+
+```python
+def compute_weekly_signal_impact(signals: list) -> float:
+    """
+    Returns net SHE token delta from this week's signals.
+    Positive = mint. Negative = burn.
+    """
+    net = sum(
+        s["direction"] * s["severity"] * s["confidence"]
+        for s in signals
+        if s["confidence"] >= 0.55
+    )
+    # Scale to token impact
+    # 1.0 net signal = 100,000 SHE
+    # Cap at ±1,000,000 SHE per week (0.1% of supply)
+    impact = net * 100_000
+    return max(-1_000_000, min(1_000_000, impact))
+```
+
+### Manipulation Protection
+
+```
+Geographic distribution: signals must span ≥ 3 countries
+Confidence threshold: SLM must score ≥ 0.55
+Rolling average: 7-day average used (not single week)
+Maximum weekly impact: ±0.1% of total SHE supply
+Crisis threshold: sustained negative 4+ weeks → DAO vote
+```
+
+## 14. Weekly Signal Mechanics
 
 The weekly news agent provides **leading indicators** between annual
 official data publications.
@@ -482,7 +621,7 @@ delta = max(-2.0, min(2.0, delta))
 
 ---
 
-## 14. Crisis Triggers
+## 15. Crisis Triggers
 
 Automatically flagged when any country's Crime Index rises >15% year-over-year.
 
@@ -499,7 +638,7 @@ Step 4: Execute on-chain within 24 hours of vote
 
 ---
 
-## 15. Data Sources
+## 16. Data Sources
 
 | Index | Primary Sources |
 |---|---|
@@ -531,7 +670,7 @@ Step 4: Execute on-chain within 24 hours of vote
 
 ---
 
-## 16. Audit & Challenge Process
+## 17. Audit & Challenge Process
 
 Anyone — researcher, government, NGO, or token holder — can challenge a
 published WEI score by opening a GitHub Issue with label `wei-challenge`.
@@ -548,7 +687,7 @@ published WEI score by opening a GitHub Issue with label `wei-challenge`.
 
 ---
 
-## 17. Worked Example — West Bengal
+## 18. Worked Example — West Bengal
 
 ### 2025 Baseline
 
@@ -585,12 +724,13 @@ West Bengal WEI timeline:
 
 ---
 
-## 18. Changelog
+## 19. Changelog
 
 | Version | Date | Changes |
 |---|---|---|
 | v1.0 | Jan 2026 | Initial 5-pillar WEI |
 | v2.0 | Mar 2026 | Added India state scoring, underreporting adjustment, crisis triggers |
+| v3.2 | May 2026 | Added enhanced token ecosystem: SHE-MFI, SHE-SAVE, SHEETF, SHE-STAKE, prediction markets, community signal mechanic |
 | v3.1 | May 2026 | Added Partner Directory, corporate actions in policy engine, company registry approach |
 | v3.0 | May 2026 | Added Bodily Autonomy pillar (was missing post-Roe), GPI, SVI, WEVI, WADI, WRBCS, historical model 2015–2024, weekly signal mechanics, corporate compliance, US trade exposure |
 

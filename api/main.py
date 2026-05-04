@@ -21,6 +21,8 @@ import logging
 
 from analytics import AnalyticsMiddleware, get_stats
 from data_loader import (
+    get_mfi_basket, get_prediction_markets, get_enhanced_tokenomics,
+    get_savings_product, get_etf_spec,
     get_partner_countries, get_partner_programs, get_partner_companies,
     get_compliance, get_usa_compliance,
     get_global_scores, get_states, get_cities,
@@ -905,5 +907,91 @@ def partner_companies():
     Each registry is independently maintained and publicly verified.
     """
     data = get_partner_companies()
+    if not data: raise HTTPException(503, "Data unavailable")
+    return data
+
+
+# ── Enhanced Token Ecosystem ──────────────────────────────────────────────────
+
+@app.get("/v1/token/ecosystem", tags=["Token"],
+         summary="Full enhanced token ecosystem — all 5 token types")
+def token_ecosystem():
+    """Full SHEtoken v2.0 ecosystem: SHE, SHE-MFI, SHE-SAVE, SHEETF, SHE-STAKE."""
+    data = get_enhanced_tokenomics()
+    if not data: raise HTTPException(503, "Data unavailable")
+    return data
+
+
+@app.get("/v1/mfi/basket", tags=["Microfinance"],
+         summary="Microfinance bond basket — current NAV and portfolio")
+def mfi_basket():
+    """
+    Women's microfinance bond basket powering the SHE-SAVE savings token.
+    12 MFI institutions. 25.1M women borrowers. 7.5% weighted yield.
+    NAV updates daily via bond accrual.
+    """
+    data = get_mfi_basket()
+    if not data: raise HTTPException(503, "Data unavailable")
+    return data
+
+
+@app.get("/v1/markets", tags=["Prediction Markets"],
+         summary="Women's rights prediction markets")
+def prediction_markets(
+    category: Optional[str] = Query(None,
+        description="WEI_COUNTRY, WEI_STATE, SVI_LAW, GPI_CORP, WADI_SECTOR, IMPACT"),
+):
+    """
+    15 prediction markets resolving on SHEtoken index publications.
+    Collateral: SHE tokens. Creates continuous trading between annual WEI updates.
+
+    Categories:
+    - WEI_COUNTRY: Will India WEI exceed 50 by 2026? (28% yes)
+    - SVI_LAW:     Will India criminalise marital rape by 2027? (22% yes)
+    - IMPACT:      Will Kanyashree reach 12M girls by 2026? (58% yes)
+    """
+    markets = get_prediction_markets(category=category)
+    if not markets: raise HTTPException(404, "No markets found")
+    return {
+        "count": len(markets),
+        "categories": list(set(m["category"] for m in markets)),
+        "data": markets,
+    }
+
+
+@app.get("/v1/markets/{market_id}", tags=["Prediction Markets"],
+         summary="Single prediction market detail")
+def prediction_market(market_id: str):
+    markets = get_prediction_markets()
+    m = next((x for x in markets if x["id"]==market_id), None)
+    if not m: raise HTTPException(404, f"Market {market_id} not found")
+    return m
+
+
+@app.get("/v1/savings", tags=["Savings Product"],
+         summary="Women's Savings Account — product spec and yield")
+def savings_product():
+    """
+    SHE-SAVE: Women's savings account token.
+    $1 minimum. 7.5-9.5% APY. Backed by microfinance bonds.
+    Target: 570M women in India, Kenya, Bangladesh, Nigeria with mobile money.
+
+    Yield = MFI bond yield (7.5%) + WEI performance bonus (0-2%)
+    """
+    data = get_savings_product()
+    if not data: raise HTTPException(503, "Data unavailable")
+    return data
+
+
+@app.get("/v1/etf", tags=["ETF"],
+         summary="She-Economy ETF — basket criteria and NAV mechanics")
+def etf_spec():
+    """
+    SHEETF: Basket of publicly traded companies meeting women's rights criteria.
+    NAV updates in real-time during market hours.
+    Management fee: 0.35% (0.20% → WEI Impact Fund).
+    Differentiator vs MSCI Women's Index: WEI integration + WRBCS screening + tokenised.
+    """
+    data = get_etf_spec()
     if not data: raise HTTPException(503, "Data unavailable")
     return data
