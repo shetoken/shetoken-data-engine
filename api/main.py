@@ -21,6 +21,7 @@ import logging
 
 from analytics import AnalyticsMiddleware, get_stats
 from data_loader import (
+    get_compliance, get_usa_compliance,
     get_global_scores, get_states, get_cities,
     get_latest_signals, get_summary,
     get_history, get_global_trend, get_india_state_history,
@@ -747,3 +748,80 @@ def token_info():
             "crisis_trigger": ">15% crime spike = DAO emergency vote",
         },
     }
+
+
+# ── Corporate Compliance ──────────────────────────────────────────────────────
+
+@app.get("/v1/compliance/countries", tags=["Corporate Compliance"],
+         summary="Women's Rights Business Compliance Score — all countries")
+def compliance_countries(
+    rating: Optional[str] = Query(None,
+        description="Filter by rating: PREFERRED, ACCEPTABLE, CAUTION, AVOID, EMBARGO"),
+    country: Optional[str] = Query(None, description="ISO code"),
+):
+    """
+    Should your company outsource to this country?
+
+    Five ratings:
+    - ✅ PREFERRED  — actively prioritise (Iceland, Norway, Sweden, Germany, Canada, Australia)
+    - 🟢 ACCEPTABLE — standard due diligence (UK, Japan, South Korea, Brazil)
+    - 🟡 CAUTION    — enhanced obligations required (India, China, Philippines, Mexico, Indonesia)
+    - 🔴 AVOID      — do not initiate new contracts (Bangladesh, Pakistan, Cambodia, Nigeria, Ethiopia)
+    - ⛔ EMBARGO    — exit existing operations (Afghanistan, DRC, Somalia)
+
+    Composite = WEI(40%) + SVI(25%) + GPI(20%) + (100-WADI)(15%)
+    """
+    rows = get_compliance(iso_code=country)
+    if rating:
+        rows = [r for r in rows if r["rating"]==rating.upper()]
+    if not rows: raise HTTPException(404, "No data found")
+    return {"count": len(rows), "data": rows}
+
+
+@app.get("/v1/compliance/countries/{iso_code}", tags=["Corporate Compliance"],
+         summary="Single country compliance detail")
+def compliance_country(iso_code: str):
+    """
+    Full compliance profile for a single country.
+    Includes: rating, required actions, NGO partners to fund, key risks.
+
+    Example: /v1/compliance/countries/BGD  → Bangladesh (AVOID)
+             /v1/compliance/countries/IND  → India (CAUTION)
+             /v1/compliance/countries/ISL  → Iceland (PREFERRED)
+    """
+    rows = get_compliance(iso_code=iso_code)
+    if not rows: raise HTTPException(404, f"No compliance data for {iso_code}")
+    return rows[0]
+
+
+@app.get("/v1/compliance/usa-states", tags=["Corporate Compliance"],
+         summary="USA state compliance — post-Dobbs business risk")
+def compliance_usa(
+    rating: Optional[str] = Query(None,
+        description="Filter: PREFERRED, ACCEPTABLE, CAUTION, AVOID"),
+    state_code: Optional[str] = Query(None, description="2-letter state code"),
+):
+    """
+    Which US states are safe for female employees?
+
+    Based on: bodily autonomy score, maternal mortality, pay equity law.
+
+    PREFERRED: Vermont, California, Massachusetts, Washington, Oregon, Colorado
+    AVOID: Texas, Mississippi, Alabama, Louisiana, Arkansas, Kentucky, Oklahoma,
+           Tennessee, Missouri, Idaho, West Virginia, South Dakota, North Dakota
+
+    Texas bodily autonomy: 1/100. Mississippi: 0/100. Vermont: 94/100.
+    """
+    rows = get_usa_compliance(state_code=state_code)
+    if rating:
+        rows = [r for r in rows if r["rating"]==rating.upper()]
+    if not rows: raise HTTPException(404, "No data found")
+    return {"count": len(rows), "data": rows}
+
+
+@app.get("/v1/compliance/usa-states/{state_code}", tags=["Corporate Compliance"],
+         summary="Single US state compliance detail")
+def compliance_usa_state(state_code: str):
+    rows = get_usa_compliance(state_code=state_code.upper())
+    if not rows: raise HTTPException(404, f"No data for state {state_code}")
+    return rows[0]

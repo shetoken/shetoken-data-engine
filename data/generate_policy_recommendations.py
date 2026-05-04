@@ -517,7 +517,7 @@ INTERVENTIONS = {
             "impact":   "WADI sector exposure -10 (garment countries)",
             "cost":     "medium (brand-funded)",
             "time":     "2-5 years",
-            "example":  "ACT (Action Collaboration Transformation) — H&M, Zara funding worker transition",
+            "example":  "ACT (Action Collaboration Transformation) — multi-brand initiative for living wages via collective bargaining. See: actonlivingwages.com for full signatory list",
             "applies_to": ["garment_automation","wadi_sector"],
         },
         {
@@ -564,6 +564,168 @@ INTERVENTIONS = {
             "time":     "2-4 years",
             "example":  "Rwanda Girls in ICT — 50,000 girls trained. Estonia coding curriculum.",
             "applies_to": ["wadi_digital","stem_girls"],
+        },
+    ],
+
+
+    # ── CORPORATE & TRADE INTERVENTIONS ──────────────────────────────────────
+    # For countries rated CAUTION/AVOID/EMBARGO on WRBCS
+    # These are recommendations TO GOVERNMENTS to mandate corporate behaviour
+    # AND recommendations FOR COMPANIES operating in low-scoring countries
+
+    "corporate_sourcing_caution": [
+        {
+            "name":     "Mandatory Supply Chain Gender Audit",
+            "description": (
+                "Require all companies sourcing from this country to conduct "
+                "annual third-party gender audits of Tier 1 suppliers and "
+                "publish results. Model: EU Corporate Sustainability Due "
+                "Diligence Directive (CS3D)."
+            ),
+            "impact":   "WEI Safety +1.5, GPI Labour +1.0 (enforcement signal)",
+            "cost":     "low (law — companies bear audit cost)",
+            "time":     "1-2 years",
+            "example":  "EU CS3D 2024 — mandatory for companies >1,000 employees "
+                        "sourcing from high-risk countries",
+            "applies_to": ["corporate_caution","wrbcs_caution"],
+        },
+        {
+            "name":     "Women's Rights Trade Commitment (WRTC) Mandate",
+            "description": (
+                "Require companies sourcing from CAUTION-rated countries to "
+                "commit 0.5% of annual contract value to a verified women's "
+                "NGO in the origin country. Earns SHEtoken WRTC certification."
+            ),
+            "impact":   "Direct funding: $283M/year if 1% of US AVOID trade committed",
+            "cost":     "very low (law mandating private sector commitment)",
+            "time":     "immediate",
+            "example":  "1% for the Planet — 5,000+ companies, $500M+ donated. "
+                        "Fair Trade Premium — mandatory 1-2% on certified products.",
+            "applies_to": ["corporate_caution","wrbcs_caution","wrbcs_avoid"],
+        },
+        {
+            "name":     "Female Workforce Data Disclosure",
+            "description": (
+                "Require all suppliers to publish: % female workforce, "
+                "gender pay ratio, female manager %, and maternity policy. "
+                "Data feeds directly into WEI economic pillar."
+            ),
+            "impact":   "WEI Economic +0.5 (transparency signal), GPI Wage +0.5",
+            "cost":     "very low",
+            "time":     "immediate",
+            "example":  "UK Gender Pay Gap Reporting 2017 — 10,000+ companies publishing. "
+                        "Australia Workplace Gender Equality Act reporting.",
+            "applies_to": ["corporate_caution","transparency"],
+        },
+    ],
+
+    "corporate_sourcing_avoid": [
+        {
+            "name":     "Supply Chain Accord — Women's Rights",
+            "description": (
+                "Binding 5-year accord for major brands sourcing from "
+                "AVOID-rated countries. Commits to: annual gender audit, "
+                "1% of FOB to women's programs, WEI improvement targets, "
+                "remediation plan, exit plan if EMBARGO triggered."
+            ),
+            "impact":   "Direct: funds women's programs. Indirect: WEI signal +1-2 pts",
+            "cost":     "medium (brand-funded)",
+            "time":     "6-12 months to negotiate",
+            "example":  "Bangladesh Accord on Fire and Building Safety 2013 — "
+                        "200+ brands, legally binding, 4,000 factories audited, "
+                        "150,000 hazards fixed. Most successful supply chain "
+                        "accountability mechanism ever created.",
+            "applies_to": ["wrbcs_avoid","corporate_avoid"],
+        },
+        {
+            "name":     "Garment Sector Just Transition Fund",
+            "description": (
+                "Brand-funded transition support for garment workers displaced "
+                "by automation. Minimum $50/worker/year into country-level "
+                "reskilling fund. Administered by ILO Better Work."
+            ),
+            "impact":   "WADI reskilling -10, WEI Dignity +1.5",
+            "cost":     "medium (brand-funded)",
+            "time":     "2-5 years",
+            "example":  "ACT (Action Collaboration Transformation) — multi-brand initiative. "
+                        "Full signatory list at actonlivingwages.com. "
+                        "Bangladesh: $8.8B US imports, $44M/year at 0.5% would fund "
+                        "reskilling for 880,000 workers.",
+            "applies_to": ["wadi_high","garment_automation","wrbcs_avoid"],
+        },
+        {
+            "name":     "Trade Tariff Adjustment — Women's Rights",
+            "description": (
+                "Government-level: import tariff on goods from AVOID countries, "
+                "waived if importer shows women's rights certification or "
+                "payment into WEI Impact Fund. "
+                "Rate: 1-3% ad valorem scaled to WRBCS score gap."
+            ),
+            "impact":   "Revenue: $283M+/year at 1% of AVOID trade. "
+                        "Incentive: companies self-certify to avoid tariff.",
+            "cost":     "very low (legislative — companies pay)",
+            "time":     "2-4 years (legislative path)",
+            "example":  "EU Carbon Border Adjustment Mechanism (CBAM) 2023 — "
+                        "carbon tariff on steel/cement/aluminium. "
+                        "Uyghur Forced Labor Prevention Act 2021 — "
+                        "import ban unless supply chain proven clean. "
+                        "US GSP statute (19 USC 2462) — already conditions "
+                        "trade preferences on labour rights: one amendment needed.",
+            "applies_to": ["wrbcs_avoid","trade_policy"],
+        },
+        {
+            "name":     "State Procurement Women's Rights Preference",
+            "description": (
+                "State and city governments give procurement preference to "
+                "companies with WRTC certification. Companies sourcing from "
+                "AVOID countries without certification excluded from "
+                "state/city contracts."
+            ),
+            "impact":   "Market signal: $500B+ state procurement as incentive",
+            "cost":     "very low",
+            "time":     "1-2 years (state legislation)",
+            "example":  "California SB 657 (2010) — supply chain transparency "
+                        "for all companies doing business with California. "
+                        "Massachusetts anti-sweatshop procurement. "
+                        "NYC Fair Trade Resolution.",
+            "applies_to": ["wrbcs_avoid","trade_policy","usa_state"],
+        },
+    ],
+
+    "corporate_sourcing_embargo": [
+        {
+            "name":     "Mandatory Supply Chain Exit Plan",
+            "description": (
+                "Companies must publish a credible 18-month exit plan for "
+                "all operations in EMBARGO-rated countries. Report under "
+                "UNGP Pillar III (access to remedy). Failure to exit = "
+                "exclusion from ESG indices and state procurement."
+            ),
+            "impact":   "Reputational: prevents brand from ESG index inclusion",
+            "cost":     "very low (disclosure requirement)",
+            "time":     "immediate",
+            "example":  "Following 2021 Myanmar coup, major garment brands publicly announced exits "
+                        "(widely reported in Reuters, FT, BBC). "
+                        "For cobalt: several EV and technology companies have publicly "
+                        "committed to zero artisanal DRC cobalt — see company ESG reports.",
+            "applies_to": ["wrbcs_embargo"],
+        },
+        {
+            "name":     "Critical Mineral Women's Rights Certification",
+            "description": (
+                "For DRC cobalt, coltan, and conflict minerals: require "
+                "supply chain certification showing no SGBV at mine sites "
+                "and female worker protections. Model: Dodd-Frank 1502 "
+                "conflict minerals reporting, extended to women's rights."
+            ),
+            "impact":   "SVI conflict risk -2.0 (if enforced)",
+            "cost":     "medium (certification infrastructure)",
+            "time":     "2-4 years",
+            "example":  "Dodd-Frank Section 1502 — conflict minerals reporting "
+                        "for SEC-registered companies. "
+                        "RMI Responsible Minerals Assurance Process — "
+                        "needs women's rights rider added.",
+            "applies_to": ["wrbcs_embargo","conflict_sgbv","drc_cobalt"],
         },
     ],
 
@@ -632,6 +794,10 @@ PILLAR_TO_INTERVENTION = {
     "wevi":             "wevi_high",
     "wadi":             "wadi_high",
     "conflict":         "conflict_sgbv",
+    # Corporate
+    "corporate_caution": "corporate_sourcing_caution",
+    "corporate_avoid":   "corporate_sourcing_avoid",
+    "corporate_embargo": "corporate_sourcing_embargo",
 }
 
 WEI_PILLAR_COLS = {
@@ -647,26 +813,38 @@ WEI_PILLAR_COLS = {
 
 # Country-specific flags that trigger additional recommendations
 COUNTRY_FLAGS = {
-    "IND": ["india_specific","svi_low","wevi_high","wadi_high"],
-    "BGD": ["svi_low","wadi_high","garment_automation"],
-    "KHM": ["svi_low","wadi_high","garment_automation"],
-    "VNM": ["wadi_high"],
-    "PAK": ["svi_low","wevi_high","wadi_high"],
-    "AFG": ["svi_low","wevi_high","conflict_sgbv"],
-    "NGA": ["svi_low","wevi_high","wadi_high"],
-    "COD": ["conflict_sgbv","svi_low"],
-    "SDN": ["conflict_sgbv","svi_low"],
-    "YEM": ["conflict_sgbv","svi_low","wevi_high"],
-    "ETH": ["conflict_sgbv","wadi_high"],
-    "JPN": ["gpi_time_poverty","wadi_high"],
-    "KOR": ["gpi_time_poverty","wadi_high"],
+    # Pillar-based + corporate/trade flags
+    # corporate_caution = requires enhanced due diligence + NGO funding
+    # corporate_avoid   = supply chain accord + just transition fund required
+    # corporate_embargo = mandatory exit plan required
+    "IND": ["india_specific","svi_low","wevi_high","wadi_high","corporate_caution"],
+    "BGD": ["svi_low","wadi_high","garment_automation","corporate_avoid"],
+    "KHM": ["svi_low","wadi_high","garment_automation","corporate_avoid"],
+    "VNM": ["wadi_high","corporate_caution"],
+    "PHL": ["wadi_high","corporate_caution"],
+    "PAK": ["svi_low","wevi_high","wadi_high","corporate_avoid"],
+    "AFG": ["svi_low","wevi_high","conflict_sgbv","corporate_embargo"],
+    "NGA": ["svi_low","wevi_high","wadi_high","corporate_avoid"],
+    "COD": ["conflict_sgbv","svi_low","corporate_embargo"],
+    "SDN": ["conflict_sgbv","svi_low","corporate_avoid"],
+    "YEM": ["conflict_sgbv","svi_low","wevi_high","corporate_embargo"],
+    "ETH": ["conflict_sgbv","wadi_high","corporate_avoid"],
+    "MMR": ["conflict_sgbv","corporate_avoid"],
+    "JPN": ["gpi_time_poverty","wadi_high","corporate_caution"],
+    "KOR": ["gpi_time_poverty","wadi_high","corporate_caution"],
+    "CHN": ["wadi_high","corporate_caution"],
+    "IDN": ["svi_low","corporate_caution"],
+    "MEX": ["svi_low","corporate_caution"],
+    "ZAF": ["svi_low","corporate_caution"],
     "USA": ["svi_low"],
-    "KEN": ["svi_low","gpi_land_ownership","wevi_high"],
+    "KEN": ["svi_low","gpi_land_ownership","wevi_high","corporate_caution"],
     "TZA": ["wevi_high","gpi_land_ownership"],
     "UGA": ["wevi_high","gpi_land_ownership"],
-    "CAN": ["svi_low"],     # MMIW indigenous
-    "AUS": ["svi_low"],     # indigenous women
-    "NZL": ["wevi_high"],   # elder care
+    "CAN": ["svi_low"],
+    "AUS": ["svi_low"],
+    "NZL": ["wevi_high"],
+    "BRA": ["svi_low","corporate_caution"],
+    "LKA": ["wadi_high","corporate_caution"],
 }
 
 
@@ -754,7 +932,29 @@ def generate_recommendations(country_row: dict, all_scores: dict,
                     "proven_example": interv["example"],
                 })
 
-    return recs
+    # Separate corporate actions (always shown for CAUTION/AVOID/EMBARGO)
+    corporate_recs = []
+    corp_seen = set()
+    for flag in COUNTRY_FLAGS.get(iso,[]):
+        if not flag.startswith("corporate_"): continue
+        key = PILLAR_TO_INTERVENTION.get(flag, flag)
+        if key not in INTERVENTIONS: continue
+        for interv in INTERVENTIONS[key]:
+            if interv["name"] in corp_seen: continue
+            corp_seen.add(interv["name"])
+            corporate_recs.append({
+                "priority":       len(corporate_recs)+1,
+                "pillar":         f"corporate:{flag.replace('corporate_','')}",
+                "pillar_score":   None,
+                "intervention":   interv["name"],
+                "description":    interv["description"],
+                "impact":         interv["impact"],
+                "cost":           interv["cost"],
+                "time_to_impact": interv["time"],
+                "proven_example": interv["example"],
+            })
+
+    return recs, corporate_recs
 
 
 def load_scores(filename: str, key_col: str, score_cols: list) -> dict:
@@ -802,13 +1002,14 @@ def generate_all(year=BASELINE_YEAR):
 
     for country_row in baseline:
         iso  = country_row.get("iso_code","")
-        recs = generate_recommendations(country_row, all_scores)
+        recs, corp_recs = generate_recommendations(country_row, all_scores)
         by_country[iso] = {
             "country":   country_row.get("country",""),
             "iso_code":  iso,
             "tier":      country_row.get("tier",""),
             "wei_score": country_row.get("wei_score",""),
             "recommendations": recs,
+            "corporate_actions": corp_recs,
         }
         for rec in recs:
             all_recs.append({
@@ -816,6 +1017,17 @@ def generate_all(year=BASELINE_YEAR):
                 "iso_code": iso,
                 "tier":     country_row.get("tier",""),
                 "wei_score":country_row.get("wei_score",""),
+                "section":  "policy",
+                **rec,
+                "year": year,
+            })
+        for rec in corp_recs:
+            all_recs.append({
+                "country":  country_row.get("country",""),
+                "iso_code": iso,
+                "tier":     country_row.get("tier",""),
+                "wei_score":country_row.get("wei_score",""),
+                "section":  "corporate",
                 **rec,
                 "year": year,
             })

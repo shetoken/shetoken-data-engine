@@ -1,0 +1,35 @@
+# SHEtoken — US Trade Exposure vs Women's Rights Scores 2025
+# Shows how much US business flows to AVOID/EMBARGO countries
+# and where it could be redirected to better-scoring countries.
+# Trade figures: USD billions, 2023 estimates
+# Sources: US Census Bureau, BEA, USTR, Gartner, ILO
+# (c) 2026 SHE Foundation
+#
+country,iso_code,wrbcs_rating,us_goods_imports_bn,us_services_imports_bn,us_fdi_stock_bn,total_trade_exposure_bn,main_sectors,female_workforce_pct,women_at_stake_est_millions,redirect_to_countries,redirect_action,year
+Iceland,ISL,PREFERRED,0.4,0.3,0.8,0.7,"Fish, aluminum, creative services",30,0.0,,N/A — already best practice,2025
+Norway,NOR,PREFERRED,4.2,2.1,12.4,6.3,"Oil, seafood, maritime services",32,0.0,,N/A — already best practice,2025
+Sweden,SWE,PREFERRED,6.8,3.2,18.6,10.0,"Machinery, pharma, tech, Volvo/Ikea",34,0.1,,N/A — already best practice,2025
+Germany,DEU,PREFERRED,158.4,42.1,142.8,200.5,"Vehicles, machinery, pharma, chemicals",36,1.4,,N/A — already best practice,2025
+Canada,CAN,PREFERRED,421.1,68.4,422.6,489.5,"Energy, vehicles, lumber, financial services",38,3.7,,N/A — already best practice,2025
+Australia,AUS,PREFERRED,17.2,14.8,52.4,32.0,"Mining, agriculture, education services",36,0.2,,N/A — already best practice,2025
+UK,GBR,ACCEPTABLE,68.4,86.2,750.8,154.6,"Finance, pharma, aerospace, creative",38,1.2,,N/A — acceptable,2025
+Japan,JPN,ACCEPTABLE,148.6,28.4,142.2,177.0,"Vehicles, electronics, machinery",28,1.0,,N/A — acceptable,2025
+South Korea,KOR,ACCEPTABLE,70.8,14.2,42.8,85.0,"Electronics, vehicles, steel",26,0.4,,N/A — acceptable,2025
+Brazil,BRA,ACCEPTABLE,36.2,8.4,72.4,44.6,"Agri (soy, coffee, beef), iron ore, aircraft",42,0.4,,N/A — acceptable with standard due diligence,2025
+Mexico,MEX,CAUTION,475.6,28.4,98.4,504.0,"Vehicles, electronics, agriculture, maquiladora",62,6.2,,USMCA partner — cannot redirect. Require WRBCS compliance clauses in all supplier contracts. Fund Cimac + Red Mesa.,2025
+China,CHN,CAUTION,427.2,18.4,118.4,445.6,"Electronics, machinery, garments, furniture, toys",54,4.8,"Vietnam, Malaysia, Thailand, India, Morocco","Diversify electronics to Vietnam/Malaysia. Garments to Bangladesh alternative — but note Bangladesh is AVOID, redirect garments to Morocco, Peru, Turkey instead.",2025
+India,IND,CAUTION,84.2,42.8,44.2,127.0,"IT services, pharma, garments, gems, steel",62,1.6,,IT outsourcing — India CAUTION. Require suppliers to publish female workforce data. Fund SEWA + Majlis. Consider Philippines or Eastern Europe for some IT.,2025
+Vietnam,VNM,CAUTION,114.8,4.2,14.8,119.0,"Electronics (Samsung), garments, footwear, furniture",64,1.5,"Malaysia, Thailand, Morocco",Electronics: acceptable CAUTION. Garments: redirect premium lines to Morocco or Turkey. Require ILO Better Work enrollment.,2025
+Indonesia,IDN,CAUTION,24.2,2.8,12.4,27.0,"Electronics, palm oil, garments, rubber",60,0.3,"Malaysia, Vietnam",Palm oil — require RSPO certification with gender rider. Fund Kalyanamitra. Require female workforce % disclosure.,2025
+Philippines,PHL,CAUTION,11.4,8.4,8.2,19.8,"Electronics, business services, garments",62,0.2,"Vietnam, India, Poland",BPO — 1.3M women facing automation. Fund GABRIELA. Require suppliers to publish female worker transition plan.,2025
+Saudi Arabia,SAU,CAUTION,18.2,4.2,14.8,22.4,"Oil, petrochemicals, construction",28,0.1,"UAE, Bahrain",Energy imports — limited redirect. Require gender equality reporting for all Saudi JV partners. Vision 2030 monitoring.,2025
+Bangladesh,BGD,AVOID,8.4,0.4,2.2,8.8,"Garments (H&M, Gap, Primark, Walmart suppliers)",72,0.1,"Morocco, Peru, Turkey, Sri Lanka, Portugal","Redirect garment sourcing to Morocco (55 WEI), Peru (62), Turkey (58 — CAUTION but better). For existing contracts: require Bangladesh Accord equivalent. Fund BNWLA + Naripokkho. Commit 1% to WEI Impact Fund.",2025
+Pakistan,PAK,AVOID,4.2,0.6,1.8,4.8,"Textiles, sporting goods, leather",54,0.1,"Turkey, India, Sri Lanka",Redirect textiles to Turkey or India (both CAUTION but better). For existing: require female worker safety audit. Fund Shirkat Gah. Commit 1% to WEI Impact Fund.,2025
+Cambodia,KHM,AVOID,3.8,0.2,0.8,4.0,"Garments (Nike, H&M, Gap suppliers)",90,0.1,"Vietnam, Sri Lanka, Peru, Morocco",CRITICAL: 90% female garment workforce faces full automation. Redirect to Vietnam or Peru. For existing: fund LICADHO. Commit 1% to transition fund. Set 3-year exit or remediation timeline.,2025
+Nigeria,NGA,AVOID,6.8,0.8,8.4,7.6,"Oil, agricultural commodities",42,0.1,"Ghana, South Africa, Kenya",Oil imports — limited redirect. Require gender reporting for all Nigerian JV partners. Fund BAOBAB + WARPA.,2025
+Ethiopia,ETH,AVOID,0.6,0.1,0.4,0.7,"Garments (Hawassa Industrial Park), coffee",62,0.0,"Kenya, Rwanda, Morocco",Hawassa garments — require ACT Fund enrollment. Fund Ethiopian Women Lawyers Association. Coffee: require gender-inclusive cooperative certification.,2025
+Myanmar,MMR,AVOID,0.8,0.1,0.2,0.9,"Garments (US has some sanctions), jade",60,0.0,"Vietnam, Cambodia (itself AVOID) → Morocco",US already has some Myanmar sanctions. Full exit from garment supply chain recommended. Fund Gender Equality Network Myanmar (diaspora).,2025
+Iran,IRN,AVOID,0.2,0.1,0.1,0.3,Limited — US sanctions largely in place,20,0.0,"Turkey, UAE",Existing sanctions reduce exposure. Women leading protest movement — support diaspora orgs.,2025
+DRC,COD,EMBARGO,0.9,0.1,0.4,1.0,"Cobalt (EV batteries, iPhones), coltan",28,0.0,"Zambia, Australia, Chile","CRITICAL SUPPLY CHAIN: iPhone and EV battery cobalt. Armed group SGBV at mine sites. Girls work as mineral carriers. Redirect to Zambian cobalt (lower SGBV) or recycled/Australian. Apple, Tesla, GM have existing commitments — enforce them.",2025
+Afghanistan,AFG,EMBARGO,0.1,0.0,0.1,0.1,Minimal — Taliban sanctions,10,0.0,Pakistan (also AVOID),No US business justification. Support Afghan women's diaspora orgs.,2025
+Somalia,SOM,EMBARGO,0.1,0.0,0.0,0.1,None,10,0.0,,No business. Support Somali Women Development Centre.,2025

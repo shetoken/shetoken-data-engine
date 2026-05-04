@@ -511,3 +511,55 @@ def get_ai_occupations() -> dict:
         with open(path,"r",encoding="utf-8") as f:
             return _json.load(f)
     return cached("ai_occupations", _load)
+
+
+def get_compliance(iso_code: str = None) -> list[dict]:
+    def _load():
+        path = DATA_DIR / "corporate-compliance-countries-2025.csv"
+        if not path.exists(): return []
+        rows = load_csv(path)
+        return [{"rank":safe_int(r.get("rank")),
+                 "country":r.get("country",""),
+                 "iso_code":r.get("iso_code",""),
+                 "region":r.get("region",""),
+                 "composite_score":safe_float(r.get("composite_score")),
+                 "rating":r.get("rating",""),
+                 "rating_headline":r.get("rating_headline",""),
+                 "wei_score":safe_float(r.get("wei_score")),
+                 "gpi_score":safe_float(r.get("gpi_score")),
+                 "svi_score":safe_float(r.get("svi_score")),
+                 "wadi_score":safe_float(r.get("wadi_score")),
+                 "main_outsourcing_sectors":r.get("main_outsourcing_sectors",""),
+                 "key_risk":r.get("key_risk",""),
+                 "required_actions":r.get("required_actions","").split(" | "),
+                 "ngo_partners_to_fund":r.get("ngo_partners_to_fund",""),
+                } for r in rows]
+    rows = cached("compliance", _load)
+    if iso_code:
+        rows = [r for r in rows if r["iso_code"].upper()==iso_code.upper()]
+    return rows
+
+
+def get_usa_compliance(state_code: str = None) -> list[dict]:
+    def _load():
+        path = DATA_DIR / "corporate-compliance-usa-states-2025.csv"
+        if not path.exists(): return []
+        rows = load_csv(path)
+        return [{"rank":safe_int(r.get("rank")),
+                 "state":r.get("state",""),
+                 "state_code":r.get("state_code",""),
+                 "composite_score":safe_float(r.get("composite_score")),
+                 "rating":r.get("rating",""),
+                 "rating_headline":r.get("rating_headline",""),
+                 "wei_score":safe_float(r.get("wei_score")),
+                 "bodily_autonomy_score":safe_float(r.get("bodily_autonomy_score")),
+                 "maternal_mortality_tier":safe_int(r.get("maternal_mortality_tier")),
+                 "pay_equity_law":r.get("pay_equity_law",""),
+                 "key_risk":r.get("key_risk",""),
+                 "recommendation":r.get("recommendation",""),
+                 "required_actions":r.get("required_actions","").split(" | "),
+                } for r in rows]
+    rows = cached("usa_compliance", _load)
+    if state_code:
+        rows = [r for r in rows if r["state_code"].upper()==state_code.upper()]
+    return rows

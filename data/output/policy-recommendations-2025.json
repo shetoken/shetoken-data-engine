@@ -93,7 +93,8 @@
         "time_to_impact": "1-2 years",
         "proven_example": "SEWA Legal Services Gujarat — 50,000+ cases supported"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "NOR": {
     "country": "Norway",
@@ -189,7 +190,8 @@
         "time_to_impact": "1-2 years",
         "proven_example": "SEWA Legal Services Gujarat — 50,000+ cases supported"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "FIN": {
     "country": "Finland",
@@ -285,7 +287,8 @@
         "time_to_impact": "1-2 years",
         "proven_example": "SEWA Legal Services Gujarat — 50,000+ cases supported"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "SWE": {
     "country": "Sweden",
@@ -381,7 +384,8 @@
         "time_to_impact": "1-2 years",
         "proven_example": "SEWA Legal Services Gujarat — 50,000+ cases supported"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "DNK": {
     "country": "Denmark",
@@ -477,7 +481,8 @@
         "time_to_impact": "1-2 years",
         "proven_example": "SEWA Legal Services Gujarat — 50,000+ cases supported"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "NZL": {
     "country": "New Zealand",
@@ -573,7 +578,8 @@
         "time_to_impact": "1-2 years",
         "proven_example": "SEWA Legal Services Gujarat — 50,000+ cases supported"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "NLD": {
     "country": "Netherlands",
@@ -669,7 +675,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "CHE": {
     "country": "Switzerland",
@@ -765,7 +772,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "CAN": {
     "country": "Canada",
@@ -861,7 +869,8 @@
         "time_to_impact": "1-2 years",
         "proven_example": "SEWA Legal Services Gujarat — 50,000+ cases supported"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "DEU": {
     "country": "Germany",
@@ -957,7 +966,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "IRL": {
     "country": "Ireland",
@@ -1053,7 +1063,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "AUS": {
     "country": "Australia",
@@ -1149,7 +1160,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "BEL": {
     "country": "Belgium",
@@ -1245,7 +1257,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "AUT": {
     "country": "Austria",
@@ -1341,7 +1354,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "GBR": {
     "country": "United Kingdom",
@@ -1437,7 +1451,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "FRA": {
     "country": "France",
@@ -1533,7 +1548,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "ESP": {
     "country": "Spain",
@@ -1629,7 +1645,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "PRT": {
     "country": "Portugal",
@@ -1725,7 +1742,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "USA": {
     "country": "United States",
@@ -1821,7 +1839,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "JPN": {
     "country": "Japan",
@@ -1916,6 +1935,41 @@
         "cost": "low-medium",
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
+      }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Mandatory Supply Chain Gender Audit",
+        "description": "Require all companies sourcing from this country to conduct annual third-party gender audits of Tier 1 suppliers and publish results. Model: EU Corporate Sustainability Due Diligence Directive (CS3D).",
+        "impact": "WEI Safety +1.5, GPI Labour +1.0 (enforcement signal)",
+        "cost": "low (law — companies bear audit cost)",
+        "time_to_impact": "1-2 years",
+        "proven_example": "EU CS3D 2024 — mandatory for companies >1,000 employees sourcing from high-risk countries"
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Women's Rights Trade Commitment (WRTC) Mandate",
+        "description": "Require companies sourcing from CAUTION-rated countries to commit 0.5% of annual contract value to a verified women's NGO in the origin country. Earns SHEtoken WRTC certification.",
+        "impact": "Direct funding: $283M/year if 1% of US AVOID trade committed",
+        "cost": "very low (law mandating private sector commitment)",
+        "time_to_impact": "immediate",
+        "proven_example": "1% for the Planet — 5,000+ companies, $500M+ donated. Fair Trade Premium — mandatory 1-2% on certified products."
+      },
+      {
+        "priority": 3,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Female Workforce Data Disclosure",
+        "description": "Require all suppliers to publish: % female workforce, gender pay ratio, female manager %, and maternity policy. Data feeds directly into WEI economic pillar.",
+        "impact": "WEI Economic +0.5 (transparency signal), GPI Wage +0.5",
+        "cost": "very low",
+        "time_to_impact": "immediate",
+        "proven_example": "UK Gender Pay Gap Reporting 2017 — 10,000+ companies publishing. Australia Workplace Gender Equality Act reporting."
       }
     ]
   },
@@ -2013,7 +2067,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "KOR": {
     "country": "South Korea",
@@ -2108,6 +2163,41 @@
         "cost": "medium",
         "time_to_impact": "immediate (law) + culture shift 3-5 yrs",
         "proven_example": "Sweden 16-month shared leave — men now take 30% of leave days"
+      }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Mandatory Supply Chain Gender Audit",
+        "description": "Require all companies sourcing from this country to conduct annual third-party gender audits of Tier 1 suppliers and publish results. Model: EU Corporate Sustainability Due Diligence Directive (CS3D).",
+        "impact": "WEI Safety +1.5, GPI Labour +1.0 (enforcement signal)",
+        "cost": "low (law — companies bear audit cost)",
+        "time_to_impact": "1-2 years",
+        "proven_example": "EU CS3D 2024 — mandatory for companies >1,000 employees sourcing from high-risk countries"
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Women's Rights Trade Commitment (WRTC) Mandate",
+        "description": "Require companies sourcing from CAUTION-rated countries to commit 0.5% of annual contract value to a verified women's NGO in the origin country. Earns SHEtoken WRTC certification.",
+        "impact": "Direct funding: $283M/year if 1% of US AVOID trade committed",
+        "cost": "very low (law mandating private sector commitment)",
+        "time_to_impact": "immediate",
+        "proven_example": "1% for the Planet — 5,000+ companies, $500M+ donated. Fair Trade Premium — mandatory 1-2% on certified products."
+      },
+      {
+        "priority": 3,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Female Workforce Data Disclosure",
+        "description": "Require all suppliers to publish: % female workforce, gender pay ratio, female manager %, and maternity policy. Data feeds directly into WEI economic pillar.",
+        "impact": "WEI Economic +0.5 (transparency signal), GPI Wage +0.5",
+        "cost": "very low",
+        "time_to_impact": "immediate",
+        "proven_example": "UK Gender Pay Gap Reporting 2017 — 10,000+ companies publishing. Australia Workplace Gender Equality Act reporting."
       }
     ]
   },
@@ -2205,7 +2295,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "CHN": {
     "country": "China",
@@ -2300,6 +2391,41 @@
         "cost": "low-medium",
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
+      }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Mandatory Supply Chain Gender Audit",
+        "description": "Require all companies sourcing from this country to conduct annual third-party gender audits of Tier 1 suppliers and publish results. Model: EU Corporate Sustainability Due Diligence Directive (CS3D).",
+        "impact": "WEI Safety +1.5, GPI Labour +1.0 (enforcement signal)",
+        "cost": "low (law — companies bear audit cost)",
+        "time_to_impact": "1-2 years",
+        "proven_example": "EU CS3D 2024 — mandatory for companies >1,000 employees sourcing from high-risk countries"
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Women's Rights Trade Commitment (WRTC) Mandate",
+        "description": "Require companies sourcing from CAUTION-rated countries to commit 0.5% of annual contract value to a verified women's NGO in the origin country. Earns SHEtoken WRTC certification.",
+        "impact": "Direct funding: $283M/year if 1% of US AVOID trade committed",
+        "cost": "very low (law mandating private sector commitment)",
+        "time_to_impact": "immediate",
+        "proven_example": "1% for the Planet — 5,000+ companies, $500M+ donated. Fair Trade Premium — mandatory 1-2% on certified products."
+      },
+      {
+        "priority": 3,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Female Workforce Data Disclosure",
+        "description": "Require all suppliers to publish: % female workforce, gender pay ratio, female manager %, and maternity policy. Data feeds directly into WEI economic pillar.",
+        "impact": "WEI Economic +0.5 (transparency signal), GPI Wage +0.5",
+        "cost": "very low",
+        "time_to_impact": "immediate",
+        "proven_example": "UK Gender Pay Gap Reporting 2017 — 10,000+ companies publishing. Australia Workplace Gender Equality Act reporting."
       }
     ]
   },
@@ -2397,7 +2523,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "UKR": {
     "country": "Ukraine",
@@ -2493,7 +2620,8 @@
         "time_to_impact": "2-4 years",
         "proven_example": "Iceland Equal Pay Certification 2018 — first country to mandate it"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "CHL": {
     "country": "Chile",
@@ -2589,7 +2717,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "RUS": {
     "country": "Russia",
@@ -2685,7 +2814,8 @@
         "time_to_impact": "2-4 years",
         "proven_example": "Iceland Equal Pay Certification 2018 — first country to mandate it"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "KAZ": {
     "country": "Kazakhstan",
@@ -2781,7 +2911,8 @@
         "time_to_impact": "2-4 years",
         "proven_example": "Iceland Equal Pay Certification 2018 — first country to mandate it"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "PHL": {
     "country": "Philippines",
@@ -2809,7 +2940,7 @@
         "impact": "WADI sector exposure -10 (garment countries)",
         "cost": "medium (brand-funded)",
         "time_to_impact": "2-5 years",
-        "proven_example": "ACT (Action Collaboration Transformation) — H&M, Zara funding worker transition"
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative for living wages via collective bargaining. See: actonlivingwages.com for full signatory list"
       },
       {
         "priority": 3,
@@ -2877,6 +3008,41 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
       }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Mandatory Supply Chain Gender Audit",
+        "description": "Require all companies sourcing from this country to conduct annual third-party gender audits of Tier 1 suppliers and publish results. Model: EU Corporate Sustainability Due Diligence Directive (CS3D).",
+        "impact": "WEI Safety +1.5, GPI Labour +1.0 (enforcement signal)",
+        "cost": "low (law — companies bear audit cost)",
+        "time_to_impact": "1-2 years",
+        "proven_example": "EU CS3D 2024 — mandatory for companies >1,000 employees sourcing from high-risk countries"
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Women's Rights Trade Commitment (WRTC) Mandate",
+        "description": "Require companies sourcing from CAUTION-rated countries to commit 0.5% of annual contract value to a verified women's NGO in the origin country. Earns SHEtoken WRTC certification.",
+        "impact": "Direct funding: $283M/year if 1% of US AVOID trade committed",
+        "cost": "very low (law mandating private sector commitment)",
+        "time_to_impact": "immediate",
+        "proven_example": "1% for the Planet — 5,000+ companies, $500M+ donated. Fair Trade Premium — mandatory 1-2% on certified products."
+      },
+      {
+        "priority": 3,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Female Workforce Data Disclosure",
+        "description": "Require all suppliers to publish: % female workforce, gender pay ratio, female manager %, and maternity policy. Data feeds directly into WEI economic pillar.",
+        "impact": "WEI Economic +0.5 (transparency signal), GPI Wage +0.5",
+        "cost": "very low",
+        "time_to_impact": "immediate",
+        "proven_example": "UK Gender Pay Gap Reporting 2017 — 10,000+ companies publishing. Australia Workplace Gender Equality Act reporting."
+      }
     ]
   },
   "VNM": {
@@ -2905,7 +3071,7 @@
         "impact": "WADI sector exposure -10 (garment countries)",
         "cost": "medium (brand-funded)",
         "time_to_impact": "2-5 years",
-        "proven_example": "ACT (Action Collaboration Transformation) — H&M, Zara funding worker transition"
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative for living wages via collective bargaining. See: actonlivingwages.com for full signatory list"
       },
       {
         "priority": 3,
@@ -2972,6 +3138,41 @@
         "cost": "low",
         "time_to_impact": "2-4 years",
         "proven_example": "Kudumbashree Kerala — 46 lakh members, half of all Kerala families"
+      }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Mandatory Supply Chain Gender Audit",
+        "description": "Require all companies sourcing from this country to conduct annual third-party gender audits of Tier 1 suppliers and publish results. Model: EU Corporate Sustainability Due Diligence Directive (CS3D).",
+        "impact": "WEI Safety +1.5, GPI Labour +1.0 (enforcement signal)",
+        "cost": "low (law — companies bear audit cost)",
+        "time_to_impact": "1-2 years",
+        "proven_example": "EU CS3D 2024 — mandatory for companies >1,000 employees sourcing from high-risk countries"
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Women's Rights Trade Commitment (WRTC) Mandate",
+        "description": "Require companies sourcing from CAUTION-rated countries to commit 0.5% of annual contract value to a verified women's NGO in the origin country. Earns SHEtoken WRTC certification.",
+        "impact": "Direct funding: $283M/year if 1% of US AVOID trade committed",
+        "cost": "very low (law mandating private sector commitment)",
+        "time_to_impact": "immediate",
+        "proven_example": "1% for the Planet — 5,000+ companies, $500M+ donated. Fair Trade Premium — mandatory 1-2% on certified products."
+      },
+      {
+        "priority": 3,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Female Workforce Data Disclosure",
+        "description": "Require all suppliers to publish: % female workforce, gender pay ratio, female manager %, and maternity policy. Data feeds directly into WEI economic pillar.",
+        "impact": "WEI Economic +0.5 (transparency signal), GPI Wage +0.5",
+        "cost": "very low",
+        "time_to_impact": "immediate",
+        "proven_example": "UK Gender Pay Gap Reporting 2017 — 10,000+ companies publishing. Australia Workplace Gender Equality Act reporting."
       }
     ]
   },
@@ -3069,7 +3270,8 @@
         "time_to_impact": "2-4 years",
         "proven_example": "Iceland Equal Pay Certification 2018 — first country to mandate it"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "BRA": {
     "country": "Brazil",
@@ -3165,6 +3367,41 @@
         "time_to_impact": "1-2 years",
         "proven_example": "SEWA Legal Services Gujarat — 50,000+ cases supported"
       }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Mandatory Supply Chain Gender Audit",
+        "description": "Require all companies sourcing from this country to conduct annual third-party gender audits of Tier 1 suppliers and publish results. Model: EU Corporate Sustainability Due Diligence Directive (CS3D).",
+        "impact": "WEI Safety +1.5, GPI Labour +1.0 (enforcement signal)",
+        "cost": "low (law — companies bear audit cost)",
+        "time_to_impact": "1-2 years",
+        "proven_example": "EU CS3D 2024 — mandatory for companies >1,000 employees sourcing from high-risk countries"
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Women's Rights Trade Commitment (WRTC) Mandate",
+        "description": "Require companies sourcing from CAUTION-rated countries to commit 0.5% of annual contract value to a verified women's NGO in the origin country. Earns SHEtoken WRTC certification.",
+        "impact": "Direct funding: $283M/year if 1% of US AVOID trade committed",
+        "cost": "very low (law mandating private sector commitment)",
+        "time_to_impact": "immediate",
+        "proven_example": "1% for the Planet — 5,000+ companies, $500M+ donated. Fair Trade Premium — mandatory 1-2% on certified products."
+      },
+      {
+        "priority": 3,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Female Workforce Data Disclosure",
+        "description": "Require all suppliers to publish: % female workforce, gender pay ratio, female manager %, and maternity policy. Data feeds directly into WEI economic pillar.",
+        "impact": "WEI Economic +0.5 (transparency signal), GPI Wage +0.5",
+        "cost": "very low",
+        "time_to_impact": "immediate",
+        "proven_example": "UK Gender Pay Gap Reporting 2017 — 10,000+ companies publishing. Australia Workplace Gender Equality Act reporting."
+      }
     ]
   },
   "LKA": {
@@ -3193,7 +3430,7 @@
         "impact": "WADI sector exposure -10 (garment countries)",
         "cost": "medium (brand-funded)",
         "time_to_impact": "2-5 years",
-        "proven_example": "ACT (Action Collaboration Transformation) — H&M, Zara funding worker transition"
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative for living wages via collective bargaining. See: actonlivingwages.com for full signatory list"
       },
       {
         "priority": 3,
@@ -3260,6 +3497,41 @@
         "cost": "low",
         "time_to_impact": "2-4 years",
         "proven_example": "Kudumbashree Kerala — 46 lakh members, half of all Kerala families"
+      }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Mandatory Supply Chain Gender Audit",
+        "description": "Require all companies sourcing from this country to conduct annual third-party gender audits of Tier 1 suppliers and publish results. Model: EU Corporate Sustainability Due Diligence Directive (CS3D).",
+        "impact": "WEI Safety +1.5, GPI Labour +1.0 (enforcement signal)",
+        "cost": "low (law — companies bear audit cost)",
+        "time_to_impact": "1-2 years",
+        "proven_example": "EU CS3D 2024 — mandatory for companies >1,000 employees sourcing from high-risk countries"
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Women's Rights Trade Commitment (WRTC) Mandate",
+        "description": "Require companies sourcing from CAUTION-rated countries to commit 0.5% of annual contract value to a verified women's NGO in the origin country. Earns SHEtoken WRTC certification.",
+        "impact": "Direct funding: $283M/year if 1% of US AVOID trade committed",
+        "cost": "very low (law mandating private sector commitment)",
+        "time_to_impact": "immediate",
+        "proven_example": "1% for the Planet — 5,000+ companies, $500M+ donated. Fair Trade Premium — mandatory 1-2% on certified products."
+      },
+      {
+        "priority": 3,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Female Workforce Data Disclosure",
+        "description": "Require all suppliers to publish: % female workforce, gender pay ratio, female manager %, and maternity policy. Data feeds directly into WEI economic pillar.",
+        "impact": "WEI Economic +0.5 (transparency signal), GPI Wage +0.5",
+        "cost": "very low",
+        "time_to_impact": "immediate",
+        "proven_example": "UK Gender Pay Gap Reporting 2017 — 10,000+ companies publishing. Australia Workplace Gender Equality Act reporting."
       }
     ]
   },
@@ -3357,7 +3629,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "MNG": {
     "country": "Mongolia",
@@ -3453,7 +3726,8 @@
         "time_to_impact": "1-2 years",
         "proven_example": "SEWA Legal Services Gujarat — 50,000+ cases supported"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "MEX": {
     "country": "Mexico",
@@ -3481,7 +3755,7 @@
         "impact": "WADI sector exposure -10 (garment countries)",
         "cost": "medium (brand-funded)",
         "time_to_impact": "2-5 years",
-        "proven_example": "ACT (Action Collaboration Transformation) — H&M, Zara funding worker transition"
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative for living wages via collective bargaining. See: actonlivingwages.com for full signatory list"
       },
       {
         "priority": 3,
@@ -3549,6 +3823,41 @@
         "time_to_impact": "immediate (law) + enforcement culture 5-10 yrs",
         "proven_example": "Still legal in India, Bangladesh, Pakistan, Indonesia, Egypt, Iran + 16 others. UK criminalised 1991."
       }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Mandatory Supply Chain Gender Audit",
+        "description": "Require all companies sourcing from this country to conduct annual third-party gender audits of Tier 1 suppliers and publish results. Model: EU Corporate Sustainability Due Diligence Directive (CS3D).",
+        "impact": "WEI Safety +1.5, GPI Labour +1.0 (enforcement signal)",
+        "cost": "low (law — companies bear audit cost)",
+        "time_to_impact": "1-2 years",
+        "proven_example": "EU CS3D 2024 — mandatory for companies >1,000 employees sourcing from high-risk countries"
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Women's Rights Trade Commitment (WRTC) Mandate",
+        "description": "Require companies sourcing from CAUTION-rated countries to commit 0.5% of annual contract value to a verified women's NGO in the origin country. Earns SHEtoken WRTC certification.",
+        "impact": "Direct funding: $283M/year if 1% of US AVOID trade committed",
+        "cost": "very low (law mandating private sector commitment)",
+        "time_to_impact": "immediate",
+        "proven_example": "1% for the Planet — 5,000+ companies, $500M+ donated. Fair Trade Premium — mandatory 1-2% on certified products."
+      },
+      {
+        "priority": 3,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Female Workforce Data Disclosure",
+        "description": "Require all suppliers to publish: % female workforce, gender pay ratio, female manager %, and maternity policy. Data feeds directly into WEI economic pillar.",
+        "impact": "WEI Economic +0.5 (transparency signal), GPI Wage +0.5",
+        "cost": "very low",
+        "time_to_impact": "immediate",
+        "proven_example": "UK Gender Pay Gap Reporting 2017 — 10,000+ companies publishing. Australia Workplace Gender Equality Act reporting."
+      }
     ]
   },
   "RWA": {
@@ -3577,7 +3886,7 @@
         "impact": "WADI sector exposure -10 (garment countries)",
         "cost": "medium (brand-funded)",
         "time_to_impact": "2-5 years",
-        "proven_example": "ACT (Action Collaboration Transformation) — H&M, Zara funding worker transition"
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative for living wages via collective bargaining. See: actonlivingwages.com for full signatory list"
       },
       {
         "priority": 3,
@@ -3645,7 +3954,8 @@
         "time_to_impact": "2-4 years",
         "proven_example": "Kudumbashree Kerala — 46 lakh members, half of all Kerala families"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "TUR": {
     "country": "Turkey",
@@ -3741,7 +4051,8 @@
         "time_to_impact": "2-4 years",
         "proven_example": "Iceland Equal Pay Certification 2018 — first country to mandate it"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "BOL": {
     "country": "Bolivia",
@@ -3837,7 +4148,8 @@
         "time_to_impact": "1-2 years",
         "proven_example": "SEWA Legal Services Gujarat — 50,000+ cases supported"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "NAM": {
     "country": "Namibia",
@@ -3933,7 +4245,8 @@
         "time_to_impact": "immediate (law) + 3-5 years (enforcement)",
         "proven_example": "UK criminalised 1991. Nepal 2006. Turkey 2005. Still legal in India, Bangladesh, Pakistan"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "TUN": {
     "country": "Tunisia",
@@ -4029,7 +4342,8 @@
         "time_to_impact": "3-5 years",
         "proven_example": "Kanyashree WB — child marriage fell 40% in 5 years"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "BWA": {
     "country": "Botswana",
@@ -4125,7 +4439,8 @@
         "time_to_impact": "1-2 years",
         "proven_example": "M-Pesa Kenya women agents — transformed rural financial access"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "PER": {
     "country": "Peru",
@@ -4221,7 +4536,8 @@
         "time_to_impact": "3-5 years",
         "proven_example": "Kanyashree WB — child marriage fell 40% in 5 years"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "IDN": {
     "country": "Indonesia",
@@ -4249,7 +4565,7 @@
         "impact": "WADI sector exposure -10 (garment countries)",
         "cost": "medium (brand-funded)",
         "time_to_impact": "2-5 years",
-        "proven_example": "ACT (Action Collaboration Transformation) — H&M, Zara funding worker transition"
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative for living wages via collective bargaining. See: actonlivingwages.com for full signatory list"
       },
       {
         "priority": 3,
@@ -4317,6 +4633,41 @@
         "time_to_impact": "immediate (law) + enforcement culture 5-10 yrs",
         "proven_example": "Still legal in India, Bangladesh, Pakistan, Indonesia, Egypt, Iran + 16 others. UK criminalised 1991."
       }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Mandatory Supply Chain Gender Audit",
+        "description": "Require all companies sourcing from this country to conduct annual third-party gender audits of Tier 1 suppliers and publish results. Model: EU Corporate Sustainability Due Diligence Directive (CS3D).",
+        "impact": "WEI Safety +1.5, GPI Labour +1.0 (enforcement signal)",
+        "cost": "low (law — companies bear audit cost)",
+        "time_to_impact": "1-2 years",
+        "proven_example": "EU CS3D 2024 — mandatory for companies >1,000 employees sourcing from high-risk countries"
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Women's Rights Trade Commitment (WRTC) Mandate",
+        "description": "Require companies sourcing from CAUTION-rated countries to commit 0.5% of annual contract value to a verified women's NGO in the origin country. Earns SHEtoken WRTC certification.",
+        "impact": "Direct funding: $283M/year if 1% of US AVOID trade committed",
+        "cost": "very low (law mandating private sector commitment)",
+        "time_to_impact": "immediate",
+        "proven_example": "1% for the Planet — 5,000+ companies, $500M+ donated. Fair Trade Premium — mandatory 1-2% on certified products."
+      },
+      {
+        "priority": 3,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Female Workforce Data Disclosure",
+        "description": "Require all suppliers to publish: % female workforce, gender pay ratio, female manager %, and maternity policy. Data feeds directly into WEI economic pillar.",
+        "impact": "WEI Economic +0.5 (transparency signal), GPI Wage +0.5",
+        "cost": "very low",
+        "time_to_impact": "immediate",
+        "proven_example": "UK Gender Pay Gap Reporting 2017 — 10,000+ companies publishing. Australia Workplace Gender Equality Act reporting."
+      }
     ]
   },
   "ZAF": {
@@ -4367,7 +4718,7 @@
         "impact": "WADI sector exposure -10 (garment countries)",
         "cost": "medium (brand-funded)",
         "time_to_impact": "2-5 years",
-        "proven_example": "ACT (Action Collaboration Transformation) — H&M, Zara funding worker transition"
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative for living wages via collective bargaining. See: actonlivingwages.com for full signatory list"
       },
       {
         "priority": 5,
@@ -4412,6 +4763,41 @@
         "cost": "very low",
         "time_to_impact": "immediate",
         "proven_example": "UNESCO Recommendation on AI Ethics 2021 — 193 countries, gender chapter"
+      }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Mandatory Supply Chain Gender Audit",
+        "description": "Require all companies sourcing from this country to conduct annual third-party gender audits of Tier 1 suppliers and publish results. Model: EU Corporate Sustainability Due Diligence Directive (CS3D).",
+        "impact": "WEI Safety +1.5, GPI Labour +1.0 (enforcement signal)",
+        "cost": "low (law — companies bear audit cost)",
+        "time_to_impact": "1-2 years",
+        "proven_example": "EU CS3D 2024 — mandatory for companies >1,000 employees sourcing from high-risk countries"
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Women's Rights Trade Commitment (WRTC) Mandate",
+        "description": "Require companies sourcing from CAUTION-rated countries to commit 0.5% of annual contract value to a verified women's NGO in the origin country. Earns SHEtoken WRTC certification.",
+        "impact": "Direct funding: $283M/year if 1% of US AVOID trade committed",
+        "cost": "very low (law mandating private sector commitment)",
+        "time_to_impact": "immediate",
+        "proven_example": "1% for the Planet — 5,000+ companies, $500M+ donated. Fair Trade Premium — mandatory 1-2% on certified products."
+      },
+      {
+        "priority": 3,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Female Workforce Data Disclosure",
+        "description": "Require all suppliers to publish: % female workforce, gender pay ratio, female manager %, and maternity policy. Data feeds directly into WEI economic pillar.",
+        "impact": "WEI Economic +0.5 (transparency signal), GPI Wage +0.5",
+        "cost": "very low",
+        "time_to_impact": "immediate",
+        "proven_example": "UK Gender Pay Gap Reporting 2017 — 10,000+ companies publishing. Australia Workplace Gender Equality Act reporting."
       }
     ]
   },
@@ -4509,7 +4895,8 @@
         "time_to_impact": "1-2 years",
         "proven_example": "SEWA Legal Services Gujarat — 50,000+ cases supported"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "MAR": {
     "country": "Morocco",
@@ -4605,7 +4992,8 @@
         "time_to_impact": "3-5 years",
         "proven_example": "Kanyashree WB — child marriage fell 40% in 5 years"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "KEN": {
     "country": "Kenya",
@@ -4655,7 +5043,7 @@
         "impact": "WADI sector exposure -10 (garment countries)",
         "cost": "medium (brand-funded)",
         "time_to_impact": "2-5 years",
-        "proven_example": "ACT (Action Collaboration Transformation) — H&M, Zara funding worker transition"
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative for living wages via collective bargaining. See: actonlivingwages.com for full signatory list"
       },
       {
         "priority": 5,
@@ -4701,6 +5089,41 @@
         "time_to_impact": "immediate",
         "proven_example": "UNESCO Recommendation on AI Ethics 2021 — 193 countries, gender chapter"
       }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Mandatory Supply Chain Gender Audit",
+        "description": "Require all companies sourcing from this country to conduct annual third-party gender audits of Tier 1 suppliers and publish results. Model: EU Corporate Sustainability Due Diligence Directive (CS3D).",
+        "impact": "WEI Safety +1.5, GPI Labour +1.0 (enforcement signal)",
+        "cost": "low (law — companies bear audit cost)",
+        "time_to_impact": "1-2 years",
+        "proven_example": "EU CS3D 2024 — mandatory for companies >1,000 employees sourcing from high-risk countries"
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Women's Rights Trade Commitment (WRTC) Mandate",
+        "description": "Require companies sourcing from CAUTION-rated countries to commit 0.5% of annual contract value to a verified women's NGO in the origin country. Earns SHEtoken WRTC certification.",
+        "impact": "Direct funding: $283M/year if 1% of US AVOID trade committed",
+        "cost": "very low (law mandating private sector commitment)",
+        "time_to_impact": "immediate",
+        "proven_example": "1% for the Planet — 5,000+ companies, $500M+ donated. Fair Trade Premium — mandatory 1-2% on certified products."
+      },
+      {
+        "priority": 3,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Female Workforce Data Disclosure",
+        "description": "Require all suppliers to publish: % female workforce, gender pay ratio, female manager %, and maternity policy. Data feeds directly into WEI economic pillar.",
+        "impact": "WEI Economic +0.5 (transparency signal), GPI Wage +0.5",
+        "cost": "very low",
+        "time_to_impact": "immediate",
+        "proven_example": "UK Gender Pay Gap Reporting 2017 — 10,000+ companies publishing. Australia Workplace Gender Equality Act reporting."
+      }
     ]
   },
   "GHA": {
@@ -4729,7 +5152,7 @@
         "impact": "WADI sector exposure -10 (garment countries)",
         "cost": "medium (brand-funded)",
         "time_to_impact": "2-5 years",
-        "proven_example": "ACT (Action Collaboration Transformation) — H&M, Zara funding worker transition"
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative for living wages via collective bargaining. See: actonlivingwages.com for full signatory list"
       },
       {
         "priority": 3,
@@ -4797,7 +5220,8 @@
         "time_to_impact": "2-4 years",
         "proven_example": "Kudumbashree Kerala — 46 lakh members, half of all Kerala families"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "IND": {
     "country": "India",
@@ -4847,7 +5271,7 @@
         "impact": "WADI sector exposure -10 (garment countries)",
         "cost": "medium (brand-funded)",
         "time_to_impact": "2-5 years",
-        "proven_example": "ACT (Action Collaboration Transformation) — H&M, Zara funding worker transition"
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative for living wages via collective bargaining. See: actonlivingwages.com for full signatory list"
       },
       {
         "priority": 5,
@@ -4893,6 +5317,41 @@
         "time_to_impact": "immediate",
         "proven_example": "UNESCO Recommendation on AI Ethics 2021 — 193 countries, gender chapter"
       }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Mandatory Supply Chain Gender Audit",
+        "description": "Require all companies sourcing from this country to conduct annual third-party gender audits of Tier 1 suppliers and publish results. Model: EU Corporate Sustainability Due Diligence Directive (CS3D).",
+        "impact": "WEI Safety +1.5, GPI Labour +1.0 (enforcement signal)",
+        "cost": "low (law — companies bear audit cost)",
+        "time_to_impact": "1-2 years",
+        "proven_example": "EU CS3D 2024 — mandatory for companies >1,000 employees sourcing from high-risk countries"
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Women's Rights Trade Commitment (WRTC) Mandate",
+        "description": "Require companies sourcing from CAUTION-rated countries to commit 0.5% of annual contract value to a verified women's NGO in the origin country. Earns SHEtoken WRTC certification.",
+        "impact": "Direct funding: $283M/year if 1% of US AVOID trade committed",
+        "cost": "very low (law mandating private sector commitment)",
+        "time_to_impact": "immediate",
+        "proven_example": "1% for the Planet — 5,000+ companies, $500M+ donated. Fair Trade Premium — mandatory 1-2% on certified products."
+      },
+      {
+        "priority": 3,
+        "pillar": "corporate:caution",
+        "pillar_score": null,
+        "intervention": "Female Workforce Data Disclosure",
+        "description": "Require all suppliers to publish: % female workforce, gender pay ratio, female manager %, and maternity policy. Data feeds directly into WEI economic pillar.",
+        "impact": "WEI Economic +0.5 (transparency signal), GPI Wage +0.5",
+        "cost": "very low",
+        "time_to_impact": "immediate",
+        "proven_example": "UK Gender Pay Gap Reporting 2017 — 10,000+ companies publishing. Australia Workplace Gender Equality Act reporting."
+      }
     ]
   },
   "KHM": {
@@ -4921,7 +5380,7 @@
         "impact": "WADI sector exposure -10 (garment countries)",
         "cost": "medium (brand-funded)",
         "time_to_impact": "2-5 years",
-        "proven_example": "ACT (Action Collaboration Transformation) — H&M, Zara funding worker transition"
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative for living wages via collective bargaining. See: actonlivingwages.com for full signatory list"
       },
       {
         "priority": 3,
@@ -4989,6 +5448,52 @@
         "time_to_impact": "immediate (law) + 1 election cycle",
         "proven_example": "Rwanda 61% women parliament via quota — highest globally"
       }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Supply Chain Accord — Women's Rights",
+        "description": "Binding 5-year accord for major brands sourcing from AVOID-rated countries. Commits to: annual gender audit, 1% of FOB to women's programs, WEI improvement targets, remediation plan, exit plan if EMBARGO triggered.",
+        "impact": "Direct: funds women's programs. Indirect: WEI signal +1-2 pts",
+        "cost": "medium (brand-funded)",
+        "time_to_impact": "6-12 months to negotiate",
+        "proven_example": "Bangladesh Accord on Fire and Building Safety 2013 — 200+ brands, legally binding, 4,000 factories audited, 150,000 hazards fixed. Most successful supply chain accountability mechanism ever created."
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Garment Sector Just Transition Fund",
+        "description": "Brand-funded transition support for garment workers displaced by automation. Minimum $50/worker/year into country-level reskilling fund. Administered by ILO Better Work.",
+        "impact": "WADI reskilling -10, WEI Dignity +1.5",
+        "cost": "medium (brand-funded)",
+        "time_to_impact": "2-5 years",
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative. Full signatory list at actonlivingwages.com. Bangladesh: $8.8B US imports, $44M/year at 0.5% would fund reskilling for 880,000 workers."
+      },
+      {
+        "priority": 3,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Trade Tariff Adjustment — Women's Rights",
+        "description": "Government-level: import tariff on goods from AVOID countries, waived if importer shows women's rights certification or payment into WEI Impact Fund. Rate: 1-3% ad valorem scaled to WRBCS score gap.",
+        "impact": "Revenue: $283M+/year at 1% of AVOID trade. Incentive: companies self-certify to avoid tariff.",
+        "cost": "very low (legislative — companies pay)",
+        "time_to_impact": "2-4 years (legislative path)",
+        "proven_example": "EU Carbon Border Adjustment Mechanism (CBAM) 2023 — carbon tariff on steel/cement/aluminium. Uyghur Forced Labor Prevention Act 2021 — import ban unless supply chain proven clean. US GSP statute (19 USC 2462) — already conditions trade preferences on labour rights: one amendment needed."
+      },
+      {
+        "priority": 4,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "State Procurement Women's Rights Preference",
+        "description": "State and city governments give procurement preference to companies with WRTC certification. Companies sourcing from AVOID countries without certification excluded from state/city contracts.",
+        "impact": "Market signal: $500B+ state procurement as incentive",
+        "cost": "very low",
+        "time_to_impact": "1-2 years (state legislation)",
+        "proven_example": "California SB 657 (2010) — supply chain transparency for all companies doing business with California. Massachusetts anti-sweatshop procurement. NYC Fair Trade Resolution."
+      }
     ]
   },
   "BGD": {
@@ -5017,7 +5522,7 @@
         "impact": "WADI sector exposure -10 (garment countries)",
         "cost": "medium (brand-funded)",
         "time_to_impact": "2-5 years",
-        "proven_example": "ACT (Action Collaboration Transformation) — H&M, Zara funding worker transition"
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative for living wages via collective bargaining. See: actonlivingwages.com for full signatory list"
       },
       {
         "priority": 3,
@@ -5084,6 +5589,52 @@
         "cost": "low",
         "time_to_impact": "2-4 years",
         "proven_example": "Ethiopia Land Certification — 6M women landholders registered, domestic violence fell 33%"
+      }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Supply Chain Accord — Women's Rights",
+        "description": "Binding 5-year accord for major brands sourcing from AVOID-rated countries. Commits to: annual gender audit, 1% of FOB to women's programs, WEI improvement targets, remediation plan, exit plan if EMBARGO triggered.",
+        "impact": "Direct: funds women's programs. Indirect: WEI signal +1-2 pts",
+        "cost": "medium (brand-funded)",
+        "time_to_impact": "6-12 months to negotiate",
+        "proven_example": "Bangladesh Accord on Fire and Building Safety 2013 — 200+ brands, legally binding, 4,000 factories audited, 150,000 hazards fixed. Most successful supply chain accountability mechanism ever created."
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Garment Sector Just Transition Fund",
+        "description": "Brand-funded transition support for garment workers displaced by automation. Minimum $50/worker/year into country-level reskilling fund. Administered by ILO Better Work.",
+        "impact": "WADI reskilling -10, WEI Dignity +1.5",
+        "cost": "medium (brand-funded)",
+        "time_to_impact": "2-5 years",
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative. Full signatory list at actonlivingwages.com. Bangladesh: $8.8B US imports, $44M/year at 0.5% would fund reskilling for 880,000 workers."
+      },
+      {
+        "priority": 3,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Trade Tariff Adjustment — Women's Rights",
+        "description": "Government-level: import tariff on goods from AVOID countries, waived if importer shows women's rights certification or payment into WEI Impact Fund. Rate: 1-3% ad valorem scaled to WRBCS score gap.",
+        "impact": "Revenue: $283M+/year at 1% of AVOID trade. Incentive: companies self-certify to avoid tariff.",
+        "cost": "very low (legislative — companies pay)",
+        "time_to_impact": "2-4 years (legislative path)",
+        "proven_example": "EU Carbon Border Adjustment Mechanism (CBAM) 2023 — carbon tariff on steel/cement/aluminium. Uyghur Forced Labor Prevention Act 2021 — import ban unless supply chain proven clean. US GSP statute (19 USC 2462) — already conditions trade preferences on labour rights: one amendment needed."
+      },
+      {
+        "priority": 4,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "State Procurement Women's Rights Preference",
+        "description": "State and city governments give procurement preference to companies with WRTC certification. Companies sourcing from AVOID countries without certification excluded from state/city contracts.",
+        "impact": "Market signal: $500B+ state procurement as incentive",
+        "cost": "very low",
+        "time_to_impact": "1-2 years (state legislation)",
+        "proven_example": "California SB 657 (2010) — supply chain transparency for all companies doing business with California. Massachusetts anti-sweatshop procurement. NYC Fair Trade Resolution."
       }
     ]
   },
@@ -5181,7 +5732,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India Sakhi One-Stop Centres — 700+ operational"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "MMR": {
     "country": "Myanmar",
@@ -5276,6 +5828,52 @@
         "cost": "high",
         "time_to_impact": "immediate",
         "proven_example": "IRC emergency SGBV programs — DRC, South Sudan, Syria. MSF safe spaces."
+      }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Supply Chain Accord — Women's Rights",
+        "description": "Binding 5-year accord for major brands sourcing from AVOID-rated countries. Commits to: annual gender audit, 1% of FOB to women's programs, WEI improvement targets, remediation plan, exit plan if EMBARGO triggered.",
+        "impact": "Direct: funds women's programs. Indirect: WEI signal +1-2 pts",
+        "cost": "medium (brand-funded)",
+        "time_to_impact": "6-12 months to negotiate",
+        "proven_example": "Bangladesh Accord on Fire and Building Safety 2013 — 200+ brands, legally binding, 4,000 factories audited, 150,000 hazards fixed. Most successful supply chain accountability mechanism ever created."
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Garment Sector Just Transition Fund",
+        "description": "Brand-funded transition support for garment workers displaced by automation. Minimum $50/worker/year into country-level reskilling fund. Administered by ILO Better Work.",
+        "impact": "WADI reskilling -10, WEI Dignity +1.5",
+        "cost": "medium (brand-funded)",
+        "time_to_impact": "2-5 years",
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative. Full signatory list at actonlivingwages.com. Bangladesh: $8.8B US imports, $44M/year at 0.5% would fund reskilling for 880,000 workers."
+      },
+      {
+        "priority": 3,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Trade Tariff Adjustment — Women's Rights",
+        "description": "Government-level: import tariff on goods from AVOID countries, waived if importer shows women's rights certification or payment into WEI Impact Fund. Rate: 1-3% ad valorem scaled to WRBCS score gap.",
+        "impact": "Revenue: $283M+/year at 1% of AVOID trade. Incentive: companies self-certify to avoid tariff.",
+        "cost": "very low (legislative — companies pay)",
+        "time_to_impact": "2-4 years (legislative path)",
+        "proven_example": "EU Carbon Border Adjustment Mechanism (CBAM) 2023 — carbon tariff on steel/cement/aluminium. Uyghur Forced Labor Prevention Act 2021 — import ban unless supply chain proven clean. US GSP statute (19 USC 2462) — already conditions trade preferences on labour rights: one amendment needed."
+      },
+      {
+        "priority": 4,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "State Procurement Women's Rights Preference",
+        "description": "State and city governments give procurement preference to companies with WRTC certification. Companies sourcing from AVOID countries without certification excluded from state/city contracts.",
+        "impact": "Market signal: $500B+ state procurement as incentive",
+        "cost": "very low",
+        "time_to_impact": "1-2 years (state legislation)",
+        "proven_example": "California SB 657 (2010) — supply chain transparency for all companies doing business with California. Massachusetts anti-sweatshop procurement. NYC Fair Trade Resolution."
       }
     ]
   },
@@ -5373,7 +5971,8 @@
         "time_to_impact": "2-4 years",
         "proven_example": "Kudumbashree Kerala — 46 lakh members, half of all Kerala families"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "NPL": {
     "country": "Nepal",
@@ -5469,7 +6068,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "GTM": {
     "country": "Guatemala",
@@ -5565,7 +6165,8 @@
         "time_to_impact": "1-2 years",
         "proven_example": "SEWA Legal Services Gujarat — 50,000+ cases supported"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "EGY": {
     "country": "Egypt",
@@ -5661,7 +6262,8 @@
         "time_to_impact": "immediate (law) + 1 election cycle",
         "proven_example": "Rwanda 61% women parliament via quota — highest globally"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "ZWE": {
     "country": "Zimbabwe",
@@ -5757,7 +6359,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "UGA": {
     "country": "Uganda",
@@ -5853,7 +6456,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "TZA": {
     "country": "Tanzania",
@@ -5949,7 +6553,8 @@
         "time_to_impact": "2-5 years",
         "proven_example": "Kenya Succession Act enforcement campaign — 10,000 widows assisted"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "ZMB": {
     "country": "Zambia",
@@ -6045,7 +6650,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "NGA": {
     "country": "Nigeria",
@@ -6140,6 +6746,52 @@
         "cost": "low",
         "time_to_impact": "1-3 years",
         "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
+      }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Supply Chain Accord — Women's Rights",
+        "description": "Binding 5-year accord for major brands sourcing from AVOID-rated countries. Commits to: annual gender audit, 1% of FOB to women's programs, WEI improvement targets, remediation plan, exit plan if EMBARGO triggered.",
+        "impact": "Direct: funds women's programs. Indirect: WEI signal +1-2 pts",
+        "cost": "medium (brand-funded)",
+        "time_to_impact": "6-12 months to negotiate",
+        "proven_example": "Bangladesh Accord on Fire and Building Safety 2013 — 200+ brands, legally binding, 4,000 factories audited, 150,000 hazards fixed. Most successful supply chain accountability mechanism ever created."
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Garment Sector Just Transition Fund",
+        "description": "Brand-funded transition support for garment workers displaced by automation. Minimum $50/worker/year into country-level reskilling fund. Administered by ILO Better Work.",
+        "impact": "WADI reskilling -10, WEI Dignity +1.5",
+        "cost": "medium (brand-funded)",
+        "time_to_impact": "2-5 years",
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative. Full signatory list at actonlivingwages.com. Bangladesh: $8.8B US imports, $44M/year at 0.5% would fund reskilling for 880,000 workers."
+      },
+      {
+        "priority": 3,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Trade Tariff Adjustment — Women's Rights",
+        "description": "Government-level: import tariff on goods from AVOID countries, waived if importer shows women's rights certification or payment into WEI Impact Fund. Rate: 1-3% ad valorem scaled to WRBCS score gap.",
+        "impact": "Revenue: $283M+/year at 1% of AVOID trade. Incentive: companies self-certify to avoid tariff.",
+        "cost": "very low (legislative — companies pay)",
+        "time_to_impact": "2-4 years (legislative path)",
+        "proven_example": "EU Carbon Border Adjustment Mechanism (CBAM) 2023 — carbon tariff on steel/cement/aluminium. Uyghur Forced Labor Prevention Act 2021 — import ban unless supply chain proven clean. US GSP statute (19 USC 2462) — already conditions trade preferences on labour rights: one amendment needed."
+      },
+      {
+        "priority": 4,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "State Procurement Women's Rights Preference",
+        "description": "State and city governments give procurement preference to companies with WRTC certification. Companies sourcing from AVOID countries without certification excluded from state/city contracts.",
+        "impact": "Market signal: $500B+ state procurement as incentive",
+        "cost": "very low",
+        "time_to_impact": "1-2 years (state legislation)",
+        "proven_example": "California SB 657 (2010) — supply chain transparency for all companies doing business with California. Massachusetts anti-sweatshop procurement. NYC Fair Trade Resolution."
       }
     ]
   },
@@ -6237,7 +6889,8 @@
         "time_to_impact": "1-2 years",
         "proven_example": "SEWA Legal Services Gujarat — 50,000+ cases supported"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "CMR": {
     "country": "Cameroon",
@@ -6333,7 +6986,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "IRQ": {
     "country": "Iraq",
@@ -6429,7 +7083,8 @@
         "time_to_impact": "2-5 years",
         "proven_example": "Kenya Succession Act enforcement campaign — 10,000 widows assisted"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "MOZ": {
     "country": "Mozambique",
@@ -6525,7 +7180,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "ETH": {
     "country": "Ethiopia",
@@ -6575,7 +7231,7 @@
         "impact": "WADI sector exposure -10 (garment countries)",
         "cost": "medium (brand-funded)",
         "time_to_impact": "2-5 years",
-        "proven_example": "ACT (Action Collaboration Transformation) — H&M, Zara funding worker transition"
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative for living wages via collective bargaining. See: actonlivingwages.com for full signatory list"
       },
       {
         "priority": 5,
@@ -6620,6 +7276,52 @@
         "cost": "very low",
         "time_to_impact": "immediate",
         "proven_example": "UNESCO Recommendation on AI Ethics 2021 — 193 countries, gender chapter"
+      }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Supply Chain Accord — Women's Rights",
+        "description": "Binding 5-year accord for major brands sourcing from AVOID-rated countries. Commits to: annual gender audit, 1% of FOB to women's programs, WEI improvement targets, remediation plan, exit plan if EMBARGO triggered.",
+        "impact": "Direct: funds women's programs. Indirect: WEI signal +1-2 pts",
+        "cost": "medium (brand-funded)",
+        "time_to_impact": "6-12 months to negotiate",
+        "proven_example": "Bangladesh Accord on Fire and Building Safety 2013 — 200+ brands, legally binding, 4,000 factories audited, 150,000 hazards fixed. Most successful supply chain accountability mechanism ever created."
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Garment Sector Just Transition Fund",
+        "description": "Brand-funded transition support for garment workers displaced by automation. Minimum $50/worker/year into country-level reskilling fund. Administered by ILO Better Work.",
+        "impact": "WADI reskilling -10, WEI Dignity +1.5",
+        "cost": "medium (brand-funded)",
+        "time_to_impact": "2-5 years",
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative. Full signatory list at actonlivingwages.com. Bangladesh: $8.8B US imports, $44M/year at 0.5% would fund reskilling for 880,000 workers."
+      },
+      {
+        "priority": 3,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Trade Tariff Adjustment — Women's Rights",
+        "description": "Government-level: import tariff on goods from AVOID countries, waived if importer shows women's rights certification or payment into WEI Impact Fund. Rate: 1-3% ad valorem scaled to WRBCS score gap.",
+        "impact": "Revenue: $283M+/year at 1% of AVOID trade. Incentive: companies self-certify to avoid tariff.",
+        "cost": "very low (legislative — companies pay)",
+        "time_to_impact": "2-4 years (legislative path)",
+        "proven_example": "EU Carbon Border Adjustment Mechanism (CBAM) 2023 — carbon tariff on steel/cement/aluminium. Uyghur Forced Labor Prevention Act 2021 — import ban unless supply chain proven clean. US GSP statute (19 USC 2462) — already conditions trade preferences on labour rights: one amendment needed."
+      },
+      {
+        "priority": 4,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "State Procurement Women's Rights Preference",
+        "description": "State and city governments give procurement preference to companies with WRTC certification. Companies sourcing from AVOID countries without certification excluded from state/city contracts.",
+        "impact": "Market signal: $500B+ state procurement as incentive",
+        "cost": "very low",
+        "time_to_impact": "1-2 years (state legislation)",
+        "proven_example": "California SB 657 (2010) — supply chain transparency for all companies doing business with California. Massachusetts anti-sweatshop procurement. NYC Fair Trade Resolution."
       }
     ]
   },
@@ -6717,6 +7419,52 @@
         "time_to_impact": "1-2 years",
         "proven_example": "ActionAid Kenya widow property program — 80% property retention rate"
       }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Supply Chain Accord — Women's Rights",
+        "description": "Binding 5-year accord for major brands sourcing from AVOID-rated countries. Commits to: annual gender audit, 1% of FOB to women's programs, WEI improvement targets, remediation plan, exit plan if EMBARGO triggered.",
+        "impact": "Direct: funds women's programs. Indirect: WEI signal +1-2 pts",
+        "cost": "medium (brand-funded)",
+        "time_to_impact": "6-12 months to negotiate",
+        "proven_example": "Bangladesh Accord on Fire and Building Safety 2013 — 200+ brands, legally binding, 4,000 factories audited, 150,000 hazards fixed. Most successful supply chain accountability mechanism ever created."
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Garment Sector Just Transition Fund",
+        "description": "Brand-funded transition support for garment workers displaced by automation. Minimum $50/worker/year into country-level reskilling fund. Administered by ILO Better Work.",
+        "impact": "WADI reskilling -10, WEI Dignity +1.5",
+        "cost": "medium (brand-funded)",
+        "time_to_impact": "2-5 years",
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative. Full signatory list at actonlivingwages.com. Bangladesh: $8.8B US imports, $44M/year at 0.5% would fund reskilling for 880,000 workers."
+      },
+      {
+        "priority": 3,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Trade Tariff Adjustment — Women's Rights",
+        "description": "Government-level: import tariff on goods from AVOID countries, waived if importer shows women's rights certification or payment into WEI Impact Fund. Rate: 1-3% ad valorem scaled to WRBCS score gap.",
+        "impact": "Revenue: $283M+/year at 1% of AVOID trade. Incentive: companies self-certify to avoid tariff.",
+        "cost": "very low (legislative — companies pay)",
+        "time_to_impact": "2-4 years (legislative path)",
+        "proven_example": "EU Carbon Border Adjustment Mechanism (CBAM) 2023 — carbon tariff on steel/cement/aluminium. Uyghur Forced Labor Prevention Act 2021 — import ban unless supply chain proven clean. US GSP statute (19 USC 2462) — already conditions trade preferences on labour rights: one amendment needed."
+      },
+      {
+        "priority": 4,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "State Procurement Women's Rights Preference",
+        "description": "State and city governments give procurement preference to companies with WRTC certification. Companies sourcing from AVOID countries without certification excluded from state/city contracts.",
+        "impact": "Market signal: $500B+ state procurement as incentive",
+        "cost": "very low",
+        "time_to_impact": "1-2 years (state legislation)",
+        "proven_example": "California SB 657 (2010) — supply chain transparency for all companies doing business with California. Massachusetts anti-sweatshop procurement. NYC Fair Trade Resolution."
+      }
     ]
   },
   "CIV": {
@@ -6813,7 +7561,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "HTI": {
     "country": "Haiti",
@@ -6909,7 +7658,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "SDN": {
     "country": "Sudan",
@@ -7004,6 +7754,52 @@
         "cost": "very low (law)",
         "time_to_impact": "immediate (law) + enforcement culture 5-10 yrs",
         "proven_example": "Still legal in India, Bangladesh, Pakistan, Indonesia, Egypt, Iran + 16 others. UK criminalised 1991."
+      }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Supply Chain Accord — Women's Rights",
+        "description": "Binding 5-year accord for major brands sourcing from AVOID-rated countries. Commits to: annual gender audit, 1% of FOB to women's programs, WEI improvement targets, remediation plan, exit plan if EMBARGO triggered.",
+        "impact": "Direct: funds women's programs. Indirect: WEI signal +1-2 pts",
+        "cost": "medium (brand-funded)",
+        "time_to_impact": "6-12 months to negotiate",
+        "proven_example": "Bangladesh Accord on Fire and Building Safety 2013 — 200+ brands, legally binding, 4,000 factories audited, 150,000 hazards fixed. Most successful supply chain accountability mechanism ever created."
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Garment Sector Just Transition Fund",
+        "description": "Brand-funded transition support for garment workers displaced by automation. Minimum $50/worker/year into country-level reskilling fund. Administered by ILO Better Work.",
+        "impact": "WADI reskilling -10, WEI Dignity +1.5",
+        "cost": "medium (brand-funded)",
+        "time_to_impact": "2-5 years",
+        "proven_example": "ACT (Action Collaboration Transformation) — multi-brand initiative. Full signatory list at actonlivingwages.com. Bangladesh: $8.8B US imports, $44M/year at 0.5% would fund reskilling for 880,000 workers."
+      },
+      {
+        "priority": 3,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "Trade Tariff Adjustment — Women's Rights",
+        "description": "Government-level: import tariff on goods from AVOID countries, waived if importer shows women's rights certification or payment into WEI Impact Fund. Rate: 1-3% ad valorem scaled to WRBCS score gap.",
+        "impact": "Revenue: $283M+/year at 1% of AVOID trade. Incentive: companies self-certify to avoid tariff.",
+        "cost": "very low (legislative — companies pay)",
+        "time_to_impact": "2-4 years (legislative path)",
+        "proven_example": "EU Carbon Border Adjustment Mechanism (CBAM) 2023 — carbon tariff on steel/cement/aluminium. Uyghur Forced Labor Prevention Act 2021 — import ban unless supply chain proven clean. US GSP statute (19 USC 2462) — already conditions trade preferences on labour rights: one amendment needed."
+      },
+      {
+        "priority": 4,
+        "pillar": "corporate:avoid",
+        "pillar_score": null,
+        "intervention": "State Procurement Women's Rights Preference",
+        "description": "State and city governments give procurement preference to companies with WRTC certification. Companies sourcing from AVOID countries without certification excluded from state/city contracts.",
+        "impact": "Market signal: $500B+ state procurement as incentive",
+        "cost": "very low",
+        "time_to_impact": "1-2 years (state legislation)",
+        "proven_example": "California SB 657 (2010) — supply chain transparency for all companies doing business with California. Massachusetts anti-sweatshop procurement. NYC Fair Trade Resolution."
       }
     ]
   },
@@ -7101,7 +7897,8 @@
         "time_to_impact": "1-2 years",
         "proven_example": "Ethiopia Health Extension Workers — 38,000 deployed, MMR halved"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "MLI": {
     "country": "Mali",
@@ -7197,7 +7994,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "COD": {
     "country": "DRC",
@@ -7292,6 +8090,30 @@
         "cost": "low (law + courts)",
         "time_to_impact": "1-3 years",
         "proven_example": "India SC/ST Prevention of Atrocities Act — needs stronger enforcement"
+      }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:embargo",
+        "pillar_score": null,
+        "intervention": "Mandatory Supply Chain Exit Plan",
+        "description": "Companies must publish a credible 18-month exit plan for all operations in EMBARGO-rated countries. Report under UNGP Pillar III (access to remedy). Failure to exit = exclusion from ESG indices and state procurement.",
+        "impact": "Reputational: prevents brand from ESG index inclusion",
+        "cost": "very low (disclosure requirement)",
+        "time_to_impact": "immediate",
+        "proven_example": "Following 2021 Myanmar coup, major garment brands publicly announced exits (widely reported in Reuters, FT, BBC). For cobalt: several EV and technology companies have publicly committed to zero artisanal DRC cobalt — see company ESG reports."
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:embargo",
+        "pillar_score": null,
+        "intervention": "Critical Mineral Women's Rights Certification",
+        "description": "For DRC cobalt, coltan, and conflict minerals: require supply chain certification showing no SGBV at mine sites and female worker protections. Model: Dodd-Frank 1502 conflict minerals reporting, extended to women's rights.",
+        "impact": "SVI conflict risk -2.0 (if enforced)",
+        "cost": "medium (certification infrastructure)",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Dodd-Frank Section 1502 — conflict minerals reporting for SEC-registered companies. RMI Responsible Minerals Assurance Process — needs women's rights rider added."
       }
     ]
   },
@@ -7389,7 +8211,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "YEM": {
     "country": "Yemen",
@@ -7484,6 +8307,30 @@
         "cost": "low",
         "time_to_impact": "2-5 years",
         "proven_example": "Kenya Succession Act enforcement campaign — 10,000 widows assisted"
+      }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:embargo",
+        "pillar_score": null,
+        "intervention": "Mandatory Supply Chain Exit Plan",
+        "description": "Companies must publish a credible 18-month exit plan for all operations in EMBARGO-rated countries. Report under UNGP Pillar III (access to remedy). Failure to exit = exclusion from ESG indices and state procurement.",
+        "impact": "Reputational: prevents brand from ESG index inclusion",
+        "cost": "very low (disclosure requirement)",
+        "time_to_impact": "immediate",
+        "proven_example": "Following 2021 Myanmar coup, major garment brands publicly announced exits (widely reported in Reuters, FT, BBC). For cobalt: several EV and technology companies have publicly committed to zero artisanal DRC cobalt — see company ESG reports."
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:embargo",
+        "pillar_score": null,
+        "intervention": "Critical Mineral Women's Rights Certification",
+        "description": "For DRC cobalt, coltan, and conflict minerals: require supply chain certification showing no SGBV at mine sites and female worker protections. Model: Dodd-Frank 1502 conflict minerals reporting, extended to women's rights.",
+        "impact": "SVI conflict risk -2.0 (if enforced)",
+        "cost": "medium (certification infrastructure)",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Dodd-Frank Section 1502 — conflict minerals reporting for SEC-registered companies. RMI Responsible Minerals Assurance Process — needs women's rights rider added."
       }
     ]
   },
@@ -7581,7 +8428,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "SSD": {
     "country": "South Sudan",
@@ -7677,7 +8525,8 @@
         "time_to_impact": "1-3 years",
         "proven_example": "India SC/ST Prevention of Atrocities Act — needs stronger enforcement"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "CAF": {
     "country": "Central African Republic",
@@ -7773,7 +8622,8 @@
         "time_to_impact": "6-12 months",
         "proven_example": "SHEtoken grievance app (shetoken.org/signal) — zero PII, immediate resources"
       }
-    ]
+    ],
+    "corporate_actions": []
   },
   "AFG": {
     "country": "Afghanistan",
@@ -7868,6 +8718,30 @@
         "cost": "low",
         "time_to_impact": "1-2 years",
         "proven_example": "ActionAid Kenya widow property program — 80% property retention rate"
+      }
+    ],
+    "corporate_actions": [
+      {
+        "priority": 1,
+        "pillar": "corporate:embargo",
+        "pillar_score": null,
+        "intervention": "Mandatory Supply Chain Exit Plan",
+        "description": "Companies must publish a credible 18-month exit plan for all operations in EMBARGO-rated countries. Report under UNGP Pillar III (access to remedy). Failure to exit = exclusion from ESG indices and state procurement.",
+        "impact": "Reputational: prevents brand from ESG index inclusion",
+        "cost": "very low (disclosure requirement)",
+        "time_to_impact": "immediate",
+        "proven_example": "Following 2021 Myanmar coup, major garment brands publicly announced exits (widely reported in Reuters, FT, BBC). For cobalt: several EV and technology companies have publicly committed to zero artisanal DRC cobalt — see company ESG reports."
+      },
+      {
+        "priority": 2,
+        "pillar": "corporate:embargo",
+        "pillar_score": null,
+        "intervention": "Critical Mineral Women's Rights Certification",
+        "description": "For DRC cobalt, coltan, and conflict minerals: require supply chain certification showing no SGBV at mine sites and female worker protections. Model: Dodd-Frank 1502 conflict minerals reporting, extended to women's rights.",
+        "impact": "SVI conflict risk -2.0 (if enforced)",
+        "cost": "medium (certification infrastructure)",
+        "time_to_impact": "2-4 years",
+        "proven_example": "Dodd-Frank Section 1502 — conflict minerals reporting for SEC-registered companies. RMI Responsible Minerals Assurance Process — needs women's rights rider added."
       }
     ]
   },
@@ -7965,6 +8839,7 @@
         "time_to_impact": "1-3 years",
         "proven_example": "Guild of Service Vrindavan — 1,500 widows with income. Sulabh International vocational training"
       }
-    ]
+    ],
+    "corporate_actions": []
   }
 }

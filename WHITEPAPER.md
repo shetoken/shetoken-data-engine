@@ -1,473 +1,579 @@
-# SHEtoken ($SHE)
-## Women's Empowerment Index Token
+# SHE — Women's Empowerment Index Token
+## Whitepaper v3.0 — May 2026
 
-> **"She was always the currency. We just never measured it."**
+**Where S is the Dollar — She Is the Currency**
 
-![SHEtoken](https://shetoken.org/coin.png)
-
-**Version 2.0 • May 2026 • Ticker: SHE**
-
-[![Website](https://img.shields.io/badge/Website-shetoken.org-6D2E46)](https://shetoken.org)
-[![Twitter](https://img.shields.io/badge/Twitter-@ShetokenDAO-C9A84C)](https://twitter.com/ShetokenDAO)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+| Ticker | SHE | Blockchain | Ethereum ERC-20 + Polygon L2 |
+|---|---|---|---|
+| Website | shetoken.org | GitHub | github.com/shetoken |
+| Email | contact@shetoken.org | Twitter | @ShetokenDAO |
 
 ---
 
 ## Abstract
 
-SHE (the Women's Empowerment Index Token) is the world's first data-backed cryptocurrency whose value is algorithmically tied to real-world women's empowerment outcomes. The ticker symbol SHE is rendered with the S styled as a dollar sign — because She is the currency. The S is the gold. The HE completes the word.
+SHE (Women's Empowerment Index Token) is the world's first data-backed
+cryptocurrency whose value is algorithmically tied to real-world women's
+empowerment outcomes. When women's conditions improve globally, tokens are
+minted. When conditions worsen, tokens are burned.
 
-SHE's value is governed by the Women's Empowerment Index (WEI) — a composite annual score measuring female literacy, economic empowerment, safety from crime, poverty levels, and political participation across every nation and major state or province.
-
-- When women's conditions improve → tokens are **minted**
-- When crimes against women rise or female poverty deepens → tokens are **burned**
-
-> **Mission:** To make the advancement of women's rights financially measurable, publicly transparent, and globally investable — so that the world's progress on gender equality is not just moral, but economic.
+Version 3.0 expands the original single-index model into a comprehensive
+**Women's Rights Intelligence Platform** — six interconnected indexes, 168+
+data files, a weekly AI news agent, and a corporate compliance scoring system
+that makes women's rights financially measurable at the country, state, and
+city level.
 
 ---
 
 ## Table of Contents
 
-1. [The Problem](#1-the-problem)
-2. [The Solution](#2-the-solution)
-3. [Branding — The SHE Identity](#3-branding)
-4. [Index Architecture — The WEI Formula](#4-the-wei-formula)
-5. [India as a Model](#5-india-as-a-model)
-6. [Data Sources](#6-data-sources)
-7. [How to Buy & Invest](#7-how-to-buy--invest)
-8. [Geographic Investment Tiers](#8-geographic-investment-tiers)
-9. [Government & NGO Registration](#9-government--ngo-registration)
-10. [Tokenomics](#10-tokenomics)
-11. [How the Index Drives Token Value](#11-how-the-index-drives-token-value)
-12. [Technology & Blockchain](#12-technology--blockchain)
-13. [Governance](#13-governance)
-14. [Fundraising & Community Building](#14-fundraising--community-building)
-15. [Roadmap](#15-roadmap)
-16. [Legal Disclaimer](#16-legal-disclaimer)
+1. The Problem
+2. The Solution — Six Indexes
+3. The WEI Formula
+4. The Gender Poverty Index (GPI)
+5. The Sexual Violence Index (SVI)
+6. The Widow & Elderly Vulnerability Index (WEVI)
+7. The Women's AI Displacement Index (WADI)
+8. The Policy Recommendation Engine
+9. Corporate Women's Rights Compliance Score (WRBCS)
+10. US Trade Exposure Analysis
+11. Historical Data (2015–2024)
+12. The Weekly News Agent
+13. Geographic Coverage
+14. How to Invest
+15. Tokenomics
+16. Token Mechanics
+17. Technology & Blockchain
+18. Governance
+19. Roadmap
+20. Legal Disclaimer
 
 ---
 
 ## 1. The Problem
 
-Despite decades of advocacy, women face profound structural disadvantages globally:
+Despite decades of advocacy, women face profound structural disadvantages
+globally — and these disadvantages are not random. They are concentrated,
+measurable, and in many cases worsening.
 
-| Indicator | Scale | Region | Source |
-|---|---|---|---|
-| Violence against women | 1 in 3 women experience physical/sexual violence | Global | WHO 2021 |
-| Female literacy gap | Two-thirds of the world's illiterate adults are women | Global | UNESCO |
-| Feminization of poverty | Women represent 70% of those in extreme poverty | Global | UN Women |
-| Political representation | Only 26% of parliamentary seats held by women | Global | IPU 2024 |
-| Gender pay gap | Women earn 20% less than men on average | Global | ILO |
-
-No single public-facing tool simultaneously measures, penalizes, and rewards progress across all these dimensions. Existing indices are for researchers. Existing women-focused crypto is speculative. **SHE bridges this gap.**
-
----
-
-## 2. The Solution
-
-SHE introduces two interlocking innovations:
-
-| Component | Description |
-|---|---|
-| **Women's Empowerment Index (WEI)** | A composite annual score for every country and major state/province, built from verified international data across 5 pillars |
-| **SHE Token** | An Ethereum ERC-20 token whose tokenomics are algorithmically governed by WEI score movements. Progress is rewarded. Regression is penalized. |
-| **WEI Impact Fund** | 25% of all tokens held in a transparent DAO-governed fund. Distributes grants directly to NGOs in literacy, legal aid, anti-violence, and economic empowerment |
-
-> **The Core Innovation:** SHE is NOT speculative crypto. Its token supply mechanics are governed by real-world women's data. When the world gets better for women, SHE gets more valuable.
-
----
-
-## 3. Branding
-
-### 3.1 The Coin Logo
-
-The primary logo is a 3D physical cryptocurrency coin:
-
-- Deep berry-burgundy coin face
-- Thick warm gold rim border
-- Bold serif **S** centred with two thin vertical lines — reading as a dollar sign
-- Letters **SHE** appear to the right of the S
-- **SHE GOES UP** arcs along the top in gold
-- **SHETOKEN** runs along the bottom arc
-
-> The coin is the mission statement made physical. Every time someone sees it they read: *She goes up. SHEtoken.*
-
-### 3.2 The Typographic Mark
-
-For documents and digital interfaces:
-
-| Element | Design Decision |
-|---|---|
-| **Coin — primary mark** | CoinGecko/CoinMarketCap listings, social media, YouTube thumbnails |
-| **S — Gold, glowing** | Dominant foreground. Dollar-sign lines peek out top and bottom |
-| **HE — Faint, ghosted** | 35% opacity. Readable but not competing. The S is the hero |
-| **SHE GOES UP** | Tagline baked into the coin face. Mission and brand inseparable |
-| **Official ticker** | SHE on all exchange listings. $SHE in social/marketing contexts |
-| **TechDIVA co-brand** | SHEtoken coin appears alongside TechDIVA branding in video content |
-
----
-
-## 4. The WEI Formula — Version 3.0
-
-The Women's Empowerment Index (WEI) is calculated annually for each country on a **0–100 scale** across **eight pillars** — the most comprehensive women's empowerment index ever published.
-
-| Pillar | Weight | Direction | Key Indicators |
-|---|---|---|---|
-| Empowerment | 15% | + Positive | Political seats, ministerial roles, legal rights, freedom of movement |
-| Education & Literacy | 12% | + Positive | Female literacy, enrollment, STEM, menstrual health & school attendance |
-| Economic Inclusion | 12% | + Positive | Wage gap, LFPR, bank accounts, formal employment, maternity protection |
-| Health & Survival | 12% | + Positive | Maternal mortality, life expectancy, contraception, anaemia rate |
-| **Bodily Autonomy** | **15%** | **+ Positive** | **Reproductive rights, child marriage, FGM, period poverty, forced marriage** |
-| **Safety & Justice** | **14%** | **+ Positive** | **DV prevalence & legal framework, honour violence, legal aid access, femicide** |
-| **Dignity & Welfare** | **10%** | **+ Positive** | **Widow rights, caregiver burden, food insecurity, housing security** |
-| **Digital & Social** | **10%** | **+ Positive** | **Online harassment, internet gender gap, mobile gap, cyberstalking laws** |
-| Violence Penalty | 10% | − Penalty | Rape, acid attacks, dowry violence, femicide, FGM |
-
-### Formula
-
-```
-WEI = (Empowerment         × 0.15)
-    + (Education            × 0.12)
-    + (Economic Inclusion   × 0.12)
-    + (Health & Survival    × 0.12)
-    + (Bodily Autonomy      × 0.15)
-    + (Safety & Justice     × 0.14)
-    + (Dignity & Welfare    × 0.10)
-    + (Digital & Social     × 0.10)
-    − (Violence Penalty     × 0.10)
-```
-
-All sub-scores normalised 0–100. Global WEI = population-weighted average.
-
-### Why These Eight Pillars?
-
-No existing gender index measures all dimensions of women's lived experience. The WEI v3.0 is the first index to include period poverty, FGM, child marriage, digital violence, caregiver burden, widow rights, and dowry violence alongside traditional economic and political indicators.
-
-| Index | Pillars | Period Poverty | FGM | Dowry Violence | Digital Violence | Financially Investable |
-|---|---|---|---|---|---|---|
-| WEF Gender Gap Index | 4 | ❌ | ❌ | ❌ | ❌ | ❌ |
-| OECD SIGI | 5 | ❌ | ⚠️ | ❌ | ❌ | ❌ |
-| UN GII | 3 | ❌ | ❌ | ❌ | ❌ | ❌ |
-| **SHEtoken WEI v3** | **8** | **✅** | **✅** | **✅** | **✅** | **✅** |
-
-### Country Tiers
-
-| Tier | WEI Score | Description |
+| Indicator | Scale | Source |
 |---|---|---|
-| Tier 1 | 70+ | High-performing nations (Nordic, Canada, NZ) |
-| Tier 2 | 45–69 | Mid-performing, showing progress |
-| Tier 3 | 20–44 | Developing nations, significant gender gaps |
-| Tier 4 | <20 | Crisis-level gender inequality |
+| Violence against women | 1 in 3 women experience physical/sexual violence | WHO |
+| Rape underreporting | Only 1 in 10 rapes reported globally | WHO |
+| Marital rape | Legal in 20+ countries including India, Pakistan, Bangladesh | UNHCR |
+| Female illiteracy | Two-thirds of world's illiterate adults are women | UNESCO |
+| Feminisation of poverty | Women represent 55% of those in extreme poverty | UN Women |
+| Political representation | Only 26% of parliamentary seats held by women | IPU 2024 |
+| Gender pay gap | Women earn 20% less than men on average | ILO |
+| AI displacement | Women 2-3× more concentrated in high-automation-risk jobs | McKinsey |
+| Widow poverty | 258 million widows globally; 115 million in poverty | UN Women |
+| Temple town widows | 200,000+ abandoned widows at India pilgrimage sites | NHRC |
+| Child marriage | 12 million girls married under 18 every year | Girls Not Brides |
+| Period poverty | Girls miss 18+ school days/year due to menstruation (India) | UNICEF |
+
+No single financial instrument simultaneously measures, tracks, and
+creates economic incentive for progress across all these dimensions.
 
 ---
 
-## 5. India as a Model
+## 2. The Solution — Six Indexes
 
-India provides the most compelling real-world proof that targeted programs measurably improve women's empowerment.
+SHEtoken v3.0 introduces six interlocking indexes:
 
-### 5.1 West Bengal Government Schemes
-
-| Scheme | Scale | What It Does | WEI Pillar |
+| Index | What it measures | Coverage | Token linked? |
 |---|---|---|---|
-| **Lakshmi Bhandar** | 2.41 crore (24.1M) beneficiaries | Direct cash transfer ₹1,500–1,700/month | Economic Inclusion |
-| **Kanyashree** | 1 crore (10M) girls | Conditional cash transfer to keep girls in school. UNESCO top honour winner | Education & Literacy |
-| **Rupashree** | 23 lakh (2.3M) women | One-time ₹25,000 financial assistance for marriage | Economic Inclusion |
-| **Swasthya Sathi** | 2.42 crore smart cards | Health insurance in the female head's name | Health & Survival |
+| **WEI** | Women's Empowerment Index — 8 pillars | 105 countries, 174 states, 111 cities | ✅ Yes |
+| **GPI** | Gender Poverty Index — 9 economic dimensions | 34 countries | Signal |
+| **SVI** | Sexual Violence Index — WHO prevalence based | 38 countries | Signal |
+| **WEVI** | Widow & Elderly Vulnerability Index | 35 countries + India states | Signal |
+| **WADI** | Women's AI Displacement Index | 28 countries | Signal |
+| **WRBCS** | Corporate Women's Rights Compliance Score | 30 countries + 36 US states | Due diligence |
 
-> **Real Story:** When Lakshmi Bhandar launched, Dipali Santra's family was near penury. She saved her monthly grants and launched a flower shop — named *'Lakshmir Bhandar Phooler Dokan'* in gratitude. Her husband now works the counter. Her son sources flowers. This is the story the WEI index is built to count — and reward.
-
-### 5.2 National Grassroots Programs
-
-| Program | Founded | Scale & Reach | WEI Relevance |
-|---|---|---|---|
-| **Kudumbashree, Kerala** | 1998 | Asia's largest women's SHG network. 46 lakh members. Integrated with half of Kerala's families | Economic, Education, Health |
-| **JEEViKA, Bihar** | 2007 | 1.04 million SHGs across 34,000+ villages. ₹11,000+ crore in bank credit leveraged | Economic Inclusion, Poverty |
-| **Educate Girls, Rajasthan/MP** | 2007 | 6.7 million beneficiaries. 380,000+ girls enrolled | Education & Literacy |
-| **Mann Deshi Bank, Maharashtra** | 1997 | 100,000+ women account holders. Loans exclusively to women entrepreneurs | Economic Inclusion |
-
-> **The Narrative Bridge:** India has already proven the model works. Every girl kept in school by Kanyashree should move the Education pillar. Every woman lifted by Lakshmi Bhandar should move the Poverty score. That's the accountability layer we're building.
+**The WEI drives the token.** The other five indexes provide intelligence,
+policy recommendations, and corporate due diligence data.
 
 ---
 
-## 6. Data Sources
+## 3. The WEI Formula
 
-| Source | Data Provided |
+```
+WEI = (Empowerment × 0.15) + (Education × 0.12) + (Economic × 0.12)
+    + (Health × 0.12) + (Bodily Autonomy × 0.15)
+    + (Safety & Justice × 0.14) + (Dignity & Welfare × 0.10)
+    + (Digital & Social × 0.10) − (Violence Penalty × 0.10)
+```
+
+**Score: 0–100 | Iceland: 93.4 | Global avg: 56.0 | Somalia: 5.2**
+
+### The Eight Pillars
+
+| Pillar | Weight | Key Indicators |
+|---|---|---|
+| Empowerment | 15% | Parliament seats, ministerial roles, legal rights, freedom of movement |
+| Education | 12% | Female literacy, enrollment rates, STEM participation |
+| Economic | 12% | Wage gap, LFPR, bank account access, property rights |
+| Health | 12% | Maternal mortality, life expectancy, reproductive healthcare |
+| Bodily Autonomy | 15% | Child marriage rate, FGM, period product access, reproductive rights |
+| Safety & Justice | 14% | DV law, female police, legal aid access, reporting rate |
+| Dignity & Welfare | 10% | Widow rights, food insecurity, housing, care burden |
+| Digital & Social | 10% | Internet gender gap, online harassment law, women in tech |
+| Violence Penalty | 10% | Rape rate, femicide, trafficking (subtracted) |
+
+### Why Bodily Autonomy at 15%
+
+The original v1.0 formula did not include Bodily Autonomy as a distinct
+pillar. The post-Roe US data makes the case: Mississippi bodily autonomy
+score 0/100 vs Vermont 94/100 — same country, same year. A formula that
+doesn't capture this cannot reflect women's real conditions.
+
+---
+
+## 4. The Gender Poverty Index (GPI)
+
+The GPI answers a different question from the WEI:
+**Not "are women empowered?" but "how equal is women's economic position vs men's?"**
+
+```
+GPI = average(income_poverty + wealth + wage + labour_participation
+            + financial_inclusion + food_security + time_poverty
+            + land_ownership + social_protection)
+
+Score: 100 = perfect equality | 50 = women at half of men | 0 = total exclusion
+```
+
+### The Time Poverty Innovation
+
+No existing index tracks unpaid care work as an economic dimension.
+The GPI does. Women in India perform 5.8× more unpaid care work than men.
+In Japan 3.8×. This suppresses careers, wages, and political participation
+— but is invisible in all traditional poverty statistics.
+
+### Key GPI Findings
+
+| Country | GPI | Weakest dimension | Notes |
+|---|---|---|---|
+| Iceland | 91.0 | Minor wage gap | Near-equality across all 9 dimensions |
+| Japan | 77.3 | Time poverty 3.8× | High WEI but GPI reveals hidden inequality |
+| India | 43.2 | Land ownership 14% | Women own 14% of land despite 50% of population |
+| Afghanistan | 16.7 | Everything | Near-zero on all 9 dimensions |
+
+---
+
+## 5. The Sexual Violence Index (SVI)
+
+### The Most Important Methodological Decision
+
+**The SVI uses WHO survey-based prevalence — NOT police-reported crime statistics.**
+
+All existing violence indices use police reports. This is a fundamental
+methodological error: countries with better reporting infrastructure
+(Sweden, Norway) appear more dangerous than countries where women
+cannot report (Pakistan, Afghanistan).
+
+```
+Sweden UNODC rate:  188 per 100K | SVI score: 79.7 (safe)
+Pakistan UNODC rate: 2 per 100K  | SVI score: 25.3 (dangerous)
+```
+
+Sweden reports 94× more rapes than Pakistan yet scores far safer —
+because WHO lifetime prevalence, legal framework, and impunity are measured.
+
+### What SVI Tracks That Others Don't
+
+- **Marital rape legal status** — still legal in 20+ countries including
+  India, Pakistan, Bangladesh, Indonesia, Egypt, Iran
+- **Conflict SGBV** — DRC (48+ women raped per hour at conflict peak),
+  Sudan, Myanmar, South Sudan
+- **Reporting gap** — India: 98% of rapes never reported
+- **Impunity** — UK: only 5.2% of reported rapes lead to conviction
+- **Caste-based targeting** — India Dalit women, Canada/USA indigenous women
+- **Digital sexual violence** — non-consensual images, sextortion, deepfakes
+
+### India Rape Count
+
+| Measure | Annual count |
 |---|---|
-| **UN Women** | Political empowerment, ministerial roles, legal protections |
-| **World Bank Gender Data Portal** | Economic participation, poverty rates, property rights, child marriage |
-| **UNESCO Institute for Statistics** | Female literacy, enrollment, menstrual health & school attendance |
-| **UNODC** | Femicide, rape, trafficking, acid attacks |
-| **WHO Global Health Observatory** | Maternal mortality, life expectancy, contraception, anaemia, DV prevalence |
-| **ILO** | Wage gap, LFPR, formal employment, maternity protection, caregiver burden |
-| **OECD SIGI** | Social norms, inheritance rights, widow rights, freedom of movement |
-| **UNICEF** | Child marriage, FGM, period poverty, menstrual hygiene in schools |
-| **Center for Reproductive Rights** | Reproductive rights legal score by country |
-| **Guttmacher Institute** | Safe abortion access and legal framework |
-| **Plan International** | Period poverty index, online harassment prevalence |
-| **ITU (Int'l Telecom Union)** | Internet access gender gap, digital inclusion |
-| **GSMA Connected Women** | Mobile phone ownership gender gap |
-| **World Justice Project** | Legal aid access, police responsiveness to women's cases |
-| **UNFPA** | Honour-based violence, forced marriage, reproductive health |
-| **FAO** | Female food insecurity (State of Food Security report) |
-| **UN Habitat** | Women's housing security |
-| **NCRB (India)** | State-level crime including dowry deaths, acid attacks |
-| **NFHS-5 (India)** | State-level health, child marriage, anaemia, DV prevalence |
-| **State Government Portals** | Verified program data (Bengal, Kerala, Bihar etc.) |
-| **shetoken.org/signal** | Community distress signals (anonymised, aggregated) |
-
-> **Data Integrity:** All WEI calculations are published annually as open-source datasets on GitHub. Smart contracts execute supply changes only after a **30-day public review window** following index publication.
+| NCRB officially reported | 35,300 |
+| WHO-estimated actual | **5,648,000** |
+| Multiplier | 160× |
+| Marital rape status | Not criminalised |
 
 ---
 
-## 7. How to Buy & Invest
+## 6. The Widow & Elderly Vulnerability Index (WEVI)
 
-### Step-by-Step: Buying SHE
+India has **42.4 million widows** — the largest widow population globally.
+55% live in poverty. Only 18% receive any pension (₹200-500/month).
+
+### The Temple Town Crisis
+
+| City | Documented abandoned widows | Condition |
+|---|---|---|
+| Vrindavan | ~15,000 | Sing bhajans for 2kg rice/day |
+| Varanasi | ~12,000 | Brought to die at Kashi, beg at ghats |
+| Puri | ~8,000 | Shaved heads, denied temple entry |
+| Mathura | ~6,000 | Abandoned at Krishna temples |
+| Tirupati | ~4,000 | Beg outside world's wealthiest temple |
+| **Total documented** | **~45,000** | True estimate: **200,000+** |
+
+The WEVI score: India 69.2/100 (higher = more vulnerable).
+Kerala: 28/100 — the Kudumbashree effect.
+
+---
+
+## 7. The Women's AI Displacement Index (WADI)
+
+AI and automation are not gender-neutral. Women are 2–3× more concentrated
+in high-automation-risk jobs than men.
+
+### The Most Exposed Occupations
+
+| Occupation | Automation risk | Female % |
+|---|---|---|
+| Medical transcriptionists | 98% | 89% |
+| Secretaries | 96% | 94% |
+| Receptionists | 96% | 93% |
+| Bank tellers | 98% | 70% |
+| Cashiers | 97% | 73% |
+| Payroll clerks | 98% | 82% |
+
+### The Care Economy Paradox
+
+Nursing, childcare, social work — **automation-resistant but systematically
+underpaid**. When women are displaced from admin and garment work, they
+will flow into care work. Supply increases. Wages stay suppressed.
+This is not a solution. It is a wage trap.
+
+### Critical Countries
+
+| Country | WADI | Why |
+|---|---|---|
+| Cambodia | 86.3 | 90% of garment workers female, near-zero reskilling |
+| Bangladesh | 82.7 | 4M women garment workers face automation by 2030 |
+| Ethiopia | 82.4 | Chinese-owned factories automating fastest |
+| Philippines | 64.9 | 1.3M women in BPO — 79% automation risk |
+| India | 69.8 | 230M+ women in high-risk sectors |
+
+---
+
+## 8. The Policy Recommendation Engine
+
+Every country receives ranked, evidence-based policy recommendations
+derived from all index scores combined — each citing a proven real-world program.
+
+### Sample Output — India Top Priorities
+
+| Priority | Pillar | Intervention | Proven Example | Impact |
+|---|---|---|---|---|
+| 1 | GPI Land | Women's Land Title Campaign | Ethiopia — DV fell 33% after registration | GPI Land +4.0 |
+| 2 | WADI | AI Reskilling Program | Singapore SkillsFuture | WADI -15 pts |
+| 3 | WADI | Garment Just Transition Fund | ACT Fund (H&M, Zara) | Sector exposure -10 |
+| 4 | SVI | Criminalise Marital Rape | UK 1991 — zero cost, law change only | SVI +8.0 |
+| 5 | WEVI | Temple Town Rehabilitation | Guild of Service Vrindavan | WEVI -5 pts |
+
+### Sample Output — Bangladesh Top Priorities
+
+| Priority | Intervention | Impact |
+|---|---|---|
+| 1 | Garment Sector Just Transition Fund | 4M workers |
+| 2 | Criminalise Marital Rape | SVI +8.0 |
+| 3 | AI Reskilling Program | WADI -15 |
+| 4 | Extend Social Protection to Gig Workers | GPI +3.0 |
+| 5 | Female Police + Gender Training | SVI reporting gap -10% |
+
+---
+
+## 9. Corporate Women's Rights Compliance Score (WRBCS)
+
+A due diligence rating for companies deciding where to outsource,
+invest, or source from.
+
+```
+Composite = WEI(40%) + SVI(25%) + GPI(20%) + (100-WADI)(15%)
+```
+
+| Rating | Score | Meaning |
+|---|---|---|
+| ✅ PREFERRED | 75+ | Actively prioritise. Publish as ESG positive. |
+| 🟢 ACCEPTABLE | 55+ | Standard due diligence. Annual monitoring. |
+| 🟡 CAUTION | 35+ | Human Rights Impact Assessment required. Fund local NGO. |
+| 🔴 AVOID | 20+ | No new contracts. 18-month remediation plan required. |
+| ⛔ EMBARGO | 0+ | Exit existing operations. Report under UNGP Article 19. |
+
+### Country Ratings
+
+**PREFERRED ✅** — Iceland, Norway, Sweden, Germany, Canada, Australia
+
+**ACCEPTABLE 🟢** — UK, Japan, South Korea, Brazil
+
+**CAUTION 🟡** — India, China, Philippines, Vietnam, Indonesia, Mexico, South Africa
+
+**AVOID 🔴** — Bangladesh, Pakistan, Cambodia, Nigeria, Ethiopia, Myanmar
+
+**EMBARGO ⛔** — Afghanistan, DRC, Somalia
+
+### USA State Ratings (Post-Dobbs)
+
+**PREFERRED ✅** — Vermont (94), California (94), Massachusetts (91)
+
+**AVOID 🔴** — Mississippi (0), Alabama (0), Texas (1), Louisiana (0), Kentucky (0)
+
+---
+
+## 10. US Trade Exposure Analysis
+
+**$28.3 billion per year** flows from US companies to AVOID/EMBARGO countries.
+
+| Country | US Trade/yr | Female % of workforce |
+|---|---|---|
+| Bangladesh | $8.8B | 72% — garment workers |
+| Nigeria | $7.6B | 42% — oil sector |
+| Pakistan | $4.8B | 54% — textiles |
+| Cambodia | $4.0B | **90%** — garment workers |
+| DRC | $1.0B | 28% — **cobalt in iPhones and EVs** |
+
+### The 1% Commitment
+
+If US companies sourcing from AVOID/EMBARGO countries committed just
+**1% of contract value** to verified women's programs:
+
+- Annual contribution: **$283 million**
+- That equals 35% of UN Women's entire annual budget
+- Generated from business that's already happening
+
+### Four Policy Mechanisms
+
+**1. Voluntary WRTC** (Women's Rights Trade Commitment) — companies commit
+1% to WEI Impact Fund, earn certification badge. Model: 1% for the Planet.
+
+**2. Supply Chain Accord** — binding 5-year commitment by major brands.
+Model: Bangladesh Accord on Fire and Building Safety (200+ brands, legally
+binding, 4,000 factories audited). Target: Walmart, H&M, Nike, Apple, Tesla.
+
+**3. Trade Tariff (WRTA)** — import tariff on AVOID/EMBARGO goods, waived
+if company shows women's rights certification. Model: EU Carbon Border
+Adjustment Mechanism. Legislative path: amend US GSP statute (19 USC 2462).
+
+**4. State Procurement Preference** — California, New York, Massachusetts
+give procurement preference to WRTC-certified companies. Combined
+procurement: $500B+/year. Model: California SB 657 supply chain law.
+
+---
+
+## 11. Historical Data (2015–2024)
+
+All major indexes include historical data using the event-reversal model:
+start from 2025 verified baseline, reverse known events going backwards.
+
+### Key Historical Events Encoded
+
+| Year | Event | Countries affected | Score change |
+|---|---|---|---|
+| 2020 | COVID-19 global regression | All | -2 to -5 WEI pts |
+| 2021 | Taliban takeover | Afghanistan | -40 WEI pts |
+| 2021 | Myanmar coup | Myanmar | -8 WEI pts |
+| 2021 | Lakshmi Bhandar launch | India/WB | +3 WEI pts |
+| 2022 | Dobbs/Roe overturned | USA states | -20 to 0 bodily autonomy |
+| 2023 | Japan consent-based rape law | Japan | SVI +7 pts |
+| 2023 | Sudan civil war escalation | Sudan | -8 SVI pts |
+| 2024 | Mexico first female president | Mexico | Empowerment +4 pts |
+
+### Historical Coverage by Index
+
+| Index | Coverage | Historical |
+|---|---|---|
+| WEI Countries | 105 | ✅ 2015–2024 |
+| WEI India States | 25 | ✅ 2015–2024 |
+| WEI USA States | 50 | ✅ 2015–2024 |
+| WEI Top 20 Cities | 20 | ✅ 2015–2024 |
+| GPI | 34 | ✅ 2015–2024 |
+| SVI | 38 | ✅ 2015–2024 |
+| WEVI | 35 | 2025 only |
+| WADI | 28 | 2025 only |
+
+---
+
+## 12. The Weekly News Agent
+
+Every Sunday at 6am UTC, the agent automatically:
+
+1. **Scans 139+ sources** — RSS feeds, YouTube, Reddit across 15 languages
+2. **Classifies with SLM** — Phi-3.5 Mini + Qwen2.5:3b (Ollama, runs locally)
+3. **Updates WEI live scores** — signals carry 10% weight in weekly update
+4. **Writes to Google Sheets** — signals tab + live WEI tab
+5. **Sends branded newsletter** — founder version + subscriber version + NGO version
+6. **Posts Twitter thread** — 5-tweet weekly signal report to @ShetokenDAO
+7. **Posts Instagram card** — branded weekly image
+
+### Signal → Score Mechanics
+
+```
+WEI_live = WEI_annual_baseline (90%) + weekly_news_signals (10%)
+Maximum weekly movement: ±2.0 WEI points per country
+Signals decay over 12 weeks (half-life model)
+```
+
+### Crisis Trigger Protocol
+
+If any country's crime index rises >15% in one year:
+1. Automatic red flag on shetoken.org dashboard
+2. DAO governance vote opens (72-hour emergency window)
+3. Options: emergency NGO grants, additional token burn, or both
+
+---
+
+## 13. Geographic Coverage
+
+| Level | Count | Indexes |
+|---|---|---|
+| Countries | 105 | WEI, GPI, SVI, WEVI, WADI, WRBCS |
+| India states | 25 | WEI, WEVI |
+| USA states | 50 | WEI, WRBCS |
+| Brazil states | 27 | WEI |
+| Nigeria states | 34 | WEI |
+| Mexico states | 31 | WEI |
+| Pakistan provinces | 7 | WEI |
+| World cities | 111 | WEI |
+
+---
+
+## 14. How to Invest
+
+### Step-by-Step
 
 | Step | Action |
 |---|---|
-| **Step 1 — Get a Wallet** | Download MetaMask (free, 5 minutes). Your personal crypto bank — nobody controls it but you |
-| **Step 2 — Buy Ethereum (ETH)** | Purchase ETH on Coinbase, Binance, or WazirX. Start with as little as $10 / ₹800 |
-| **Step 3 — Swap for SHE** | Go to Uniswap and swap your ETH for SHE tokens at the live market price |
-| **Step 4 — Hold in Your Wallet** | Your SHE tokens are fully yours. Track on CoinGecko or CoinMarketCap |
+| 1 | Download MetaMask (free, 5 minutes) |
+| 2 | Buy ETH on Coinbase, Binance, or WazirX |
+| 3 | Swap ETH for SHE on Uniswap |
+| 4 | Hold in your wallet. Track on CoinGecko. |
 
-### Three Ways to Make Money
+### Three Return Mechanisms
 
-| Method | How It Works |
-|---|---|
-| **1. Price Appreciation** | As the global WEI score improves, demand rises and so does the token price |
-| **2. Token Scarcity via Burns** | When WEI score falls, tokens are burned. Less supply = each token becomes rarer and more valuable |
-| **3. Staking Rewards** | Lock your SHE tokens for 6–12 months and earn additional tokens — like interest in a savings account |
+**1. Price Appreciation** — as WEI score improves globally, demand rises.
 
-> **Example:** Priya in Mumbai buys 1,000 SHE tokens at ₹8 each = ₹8,000 invested. Over two years, Kanyashree enrols record girls, JEEViKA lifts 50,000 women from poverty, and crime falls in three Indian states. The Global WEI rises 4 points. Price rises to ₹22. Priya sells 500 tokens = ₹11,000 back — pocketing ₹3,000 profit while keeping 500 tokens still appreciating.
+**2. Token Scarcity via Burns** — when WEI falls, tokens are permanently
+burned. Less supply + same demand = each remaining token more valuable.
 
-### Risk Disclosure
+**3. Staking Rewards** — lock SHE tokens for 6–12 months, earn additional
+tokens. Rewards long-term holders over short-term speculators.
 
-| Risk | Reality |
-|---|---|
-| Crypto volatility | Price can drop even if WEI improves, due to broader market conditions |
-| Data lag | WEI scores update annually — not real-time |
-| Regulatory risk | Cryptocurrency regulation varies by jurisdiction |
-| Early stage | No guarantee of exchange listings or liquidity in early phases |
-| Oracle risk | Real-world data feeds may be delayed or inaccurate |
+### Geographic Sub-Tokens
 
----
-
-## 8. Geographic Investment Tiers
-
-| Tier | Token Format | Description | Launch |
+| Tier | Format | Example | When |
 |---|---|---|---|
-| **Global Index** | `$SHE` | Tracks worldwide WEI score. One token, whole world | Year 1 |
-| **Country Sub-Token** | `$SHE-IND`, `$SHE-NGA`, `$SHE-USA` | Each country pegged to its own national WEI score | Year 2 |
-| **State / Province Token** | `$SHE-WB`, `$SHE-KL`, `$SHE-MH` | State-level tokens. Profit directly from Kanyashree & Kudumbashree | Year 3 |
-
-### Live WEI Leaderboard
-
-| Rank | State / Country | Ticker | WEI Score | Change |
-|---|---|---|---|---|
-| 🥇 1st | Kerala, India | `$SHE-KL` | 74.2 | +2.1 |
-| 🔥 2nd (HOT) | West Bengal, India | `$SHE-WB` | 68.9 | **+3.4** ← fastest mover |
-| 🥈 3rd | Tamil Nadu, India | `$SHE-TN` | 67.1 | +1.2 |
-| ⚠️ Watch | Bihar, India | `$SHE-BR` | 41.3 | −0.8 |
+| Global | SHE | Master token | Live |
+| Country | SHE-IND, SHE-USA | National WEI | Year 2 |
+| State | SHE-WB, SHE-KL | State WEI | Year 3 |
 
 ---
 
-## 9. Government & NGO Registration
-
-### 9.1 Government Registration
-
-| Step | What Happens |
-|---|---|
-| **1. Submit Verified Data** | Government submits program data to the WEI Chainlink oracle via secure API |
-| **2. Earn a Blue Tick** | Independently verified data earns a Blue Tick on the SHE dashboard |
-| **3. Unlock Quarterly Updates** | Registered governments get quarterly WEI updates instead of annual |
-| **4. Issue WEI Impact Bonds** | Governments can issue tokenised Impact Bonds — raising capital from global investors |
-| **5. Attract Global Capital** | A verified, improving state becomes a 'growth stock' on the SHE leaderboard |
-
-> **Example:** West Bengal registers, submits Lakshmi Bhandar and Kanyashree data, and issues a $5M WEI Impact Bond. Global investors buy in. Government expands programs. Score rises. Investors profit. Women benefit. **This is the world's first government accountability crypto bond.**
-
-### 9.2 NGO Registration
-
-| NGO / Program | What They Can Register |
-|---|---|
-| **Kudumbashree (Kerala)** | SHG enrollment milestones — quarterly verified counts |
-| **JEEViKA (Bihar)** | Village-level poverty reduction data — tied to Bihar sub-token |
-| **Educate Girls (Rajasthan)** | Girls enrolled and retained — education pillar directly updated |
-| **Mann Deshi Bank** | Women's business loan disbursements — economic pillar update |
-
----
-
-## 10. Tokenomics
-
-### Token Overview
+## 15. Tokenomics
 
 | Parameter | Value |
 |---|---|
-| **Token Name** | SHE (Women's Empowerment Index Token) |
-| **Ticker Symbol** | SHE |
-| **Blockchain** | Ethereum (ERC-20) + Polygon L2 |
-| **Initial Total Supply** | 1,000,000,000 SHE (1 Billion) |
-| **Baseline WEI Score** | 2025 Global WEI = Index value of 100 |
-| **Decimals** | 18 |
-| **Smart Contract** | Audited by CertiK / OpenZeppelin (pre-launch) |
+| Token name | SHE (Women's Empowerment Index Token) |
+| Ticker | SHE |
+| Blockchain | Ethereum ERC-20 |
+| Layer 2 | Polygon (low-fee transactions) |
+| Initial supply | 1,000,000,000 SHE (1 billion) |
+| Decimals | 18 |
+| Smart contract | Audited by CertiK + OpenZeppelin |
+| DEX listing | Uniswap V3 |
 
-### Token Distribution
+### Distribution
 
 | Allocation | Amount |
 |---|---|
-| **Public Sale / Community** | 40% — 400M SHE |
-| **WEI Impact Fund** | 25% — 250M SHE |
-| **Founding Team (3-year vesting)** | 15% — 150M SHE |
-| **Ecosystem & Partnerships** | 10% — 100M SHE |
-| **Reserve & Liquidity Pool** | 10% — 100M SHE |
+| Public Sale / Community | 40% — 400M SHE |
+| WEI Impact Fund | 25% — 250M SHE |
+| Founding Team (3yr vesting) | 15% — 150M SHE |
+| Ecosystem & Partnerships | 10% — 100M SHE |
+| Reserve & Liquidity Pool | 10% — 100M SHE |
 
 ---
 
-## 11. How the Index Drives Token Value
+## 16. Token Mechanics
 
-| Event | Token Mechanism |
+| Event | Token mechanism |
 |---|---|
-| **Global WEI rises +1 point** | 10 million SHE tokens minted → added to WEI Impact Fund |
-| **Global WEI falls −1 point** | 10 million SHE tokens permanently burned |
-| **Country WEI rises significantly** | Country sub-token price appreciates |
-| **Crime spike >15% in one year** | Crisis Trigger: DAO vote, emergency grants, Red Flag alert |
-| **Government registers & improves** | Quarterly data signals attract ESG investors to sub-token |
+| Global WEI rises +1 point | 10M SHE minted → WEI Impact Fund |
+| Global WEI falls -1 point | 10M SHE permanently burned |
+| GPI rises +1 point | 5M SHE minted (secondary signal) |
+| Crime spike >15% in one year | DAO emergency governance vote |
+| Country WEI improves significantly | Country sub-token appreciates |
+| Government registers + improves | Quarterly updates, ESG investor signal |
 
 ---
 
-## 12. Technology & Blockchain
+## 17. Technology & Blockchain
 
 | Layer | Technology |
 |---|---|
-| **Primary Blockchain** | Ethereum (ERC-20) |
-| **Layer 2 (low fees)** | Polygon |
-| **Oracle (data feed)** | Chainlink |
-| **Governance** | Snapshot DAO |
-| **Data Storage** | IPFS |
-| **Smart Contract Audit** | CertiK + OpenZeppelin |
-| **DEX Listing** | Uniswap V3 |
-| **Government API** | Secure REST API |
+| Primary blockchain | Ethereum ERC-20 |
+| Layer 2 | Polygon — micro-transactions and NGO grants |
+| Oracle | Chainlink — connects WEI data to smart contracts |
+| Governance | Snapshot DAO — off-chain voting, on-chain execution |
+| Data storage | IPFS — tamper-proof, permanent |
+| Smart contract audit | CertiK + OpenZeppelin (dual audit pre-launch) |
+| DEX listing | Uniswap V3 |
+| API | FastAPI — serves live WEI data to dashboard |
+| SLM classification | Phi-3.5 Mini + Qwen2.5:3b (Ollama) |
 
 ---
 
-## 13. Governance
+## 18. Governance
 
-| Decision Type | Voting Threshold |
+| Decision | Threshold |
 |---|---|
 | WEI methodology changes | 66% supermajority |
-| New data source inclusion/removal | Simple majority (51%) |
-| WEI Impact Fund grant allocations | Simple majority (51%) |
+| New data source | 51% simple majority |
+| Impact Fund grant allocations | 51% simple majority |
 | Smart contract upgrades | 75% supermajority + 60-day timelock |
-| Crisis trigger responses | Simple majority, 72-hour emergency window |
-| Government / NGO registration | Simple majority (51%) |
-| New country or state sub-token | 66% supermajority |
+| Crisis trigger response | 51% majority, 72-hour window |
+| New country/state sub-token | 66% supermajority |
 
-> **Advisory Council:** Representatives from UN Women, academic gender studies researchers, civil society organisations (Kudumbashree, JEEViKA), state government program officers, and blockchain security experts.
+### Advisory Council
 
----
-
-## 14. Fundraising & Community Building
-
-### 14.1 GoFundMe / Crowdfunding
-
-| Platform | Purpose & Target |
-|---|---|
-| **GoFundMe** | Public emotional storytelling. India program stories. Target: $25,000 for WEI dashboard |
-| **Gitcoin** | Web3 / open-source crypto community. Target: $50,000 for smart contract development |
-| **Indiegogo** | Tech & innovation audience. Target: $100,000 combined |
-| **Experiment.com** | Academic framing. Legitimises the WEI index as a research project |
-
-**GoFundMe Story Arc:**
-1. Open with Dipali Santra's flower shop story (Lakshmi Bhandar)
-2. Show Kanyashree's UNESCO win — one crore girls in school
-3. Show Kudumbashree's 25-year journey — half of Kerala's families transformed
-4. Show JEEViKA in Bihar — one million SHGs across 34,000 villages
-5. Ask: what if every program like this moved a global score, and that score was investable?
-6. That's SHE. Fund the index. Change the world.
-
-### 14.2 Institutional Seed Partnership
-
-SHEtoken is actively seeking a $2M seed partnership from impact investors, philanthropic foundations, and ESG-aligned institutions. SHEtoken aligns with organisations that take a data-driven approach to gender equity and fund innovative, market-based solutions for women's empowerment globally.
-
-| Ask | Amount |
-|---|---|
-| WEI Index Build | $800,000 |
-| Smart Contract & Audit | $600,000 |
-| WEI Impact Fund Seed | $400,000 |
-| Community & Launch | $200,000 |
-| **Total Seed Ask** | **$2,000,000** |
-
-*In return, our seed partner receives: a DAO board observer seat, naming rights on a WEI Impact Fund grant category, and co-branding on the annual WEI Report.*
-
-### 14.3 TechDIVA Co-Brand Strategy
-
-SHEtoken is co-branded with **TechDIVA** — a kids' AI education brand (techdiva.io, YouTube: techdiva-ai-school, book series: Kids ABC of AI).
-
-> TechDIVA's mission: girls should see themselves as future tech leaders.
-> SHEtoken's mission: the world should financially value women's progress.
-> One brand teaches girls. The other rewards their rise.
-
-| Channel | Strategy |
-|---|---|
-| **TechDIVA YouTube** | 90-second explainer: TechDIVA character presents SHEtoken |
-| **X / Twitter (@ShetokenDAO)** | Launch thread. Opening: *"What if Bitcoin went up every time a girl stayed in school?"* |
-| **LinkedIn** | Founder post calling for partners, blockchain collaborators, NGOs, and sponsors |
-| **GitHub (github.com/shetoken)** | Open-source WEI methodology, formula code, data CSVs, smart contract skeleton |
-
-### 14.4 Blockchain & Ecosystem Partners
-
-| Partner Type | Target Organisations |
-|---|---|
-| **Infrastructure grants** | Ethereum Foundation, Polygon ecosystem fund, Chainlink BUILD program, Uniswap Foundation |
-| **Impact crypto funds** | Celo Foundation, Gitcoin, Mercy Corps Ventures, Ripple Impact |
-| **Women in Web3** | She256, Global Women in Blockchain, Women in Web3, Crypto Chicks |
-| **Indian crypto partners** | CoinDCX, WazirX, Polygon (India-founded), Nasscom |
-| **ESG finance bridges** | Ethic, OpenInvest, Triodos Bank |
+Representatives from: UN Women, academic gender studies researchers,
+SEWA, Kudumbashree, JEEViKA, state government program officers,
+blockchain security experts.
 
 ---
 
-## 15. Roadmap
+## 19. Roadmap
 
 | Phase | Timeline | Milestones |
 |---|---|---|
-| **Phase 1: Foundation** | Months 1–3 | Publish whitepaper. Build WEI formula. Launch shetoken.org and GitHub. Launch GoFundMe |
-| **Phase 2: Build** | Months 4–6 | Smart contract development. CertiK audit begins. NGO partnerships. Institutional investor outreach |
-| **Phase 3: Testnet** | Months 7–9 | Ethereum testnet. Chainlink oracle. DAO governance. West Bengal pilot |
-| **Phase 4: Mainnet** | Months 10–12 | Public token sale. Uniswap V3 listing. CoinGecko/CoinMarketCap. First WEI Report |
-| **Phase 5: Country Tokens** | Year 2 | Launch $SHE-IND, $SHE-NGA, $SHE-USA + 10 country sub-tokens. First Impact Bond pilot |
-| **Phase 6: State Tokens** | Year 3 | Launch $SHE-WB, $SHE-KL, $SHE-MH. NGO registration portal. Corporate WEI for ESG |
-| **Phase 7: Scale** | Year 4+ | UN Women / World Bank data partnership. 50+ country tokens. 20+ state tokens. Impact Bond marketplace |
+| Foundation | Months 1–3 | Whitepaper, WEI baseline, shetoken.org, GitHub |
+| Build | Months 4–6 | Smart contracts, NGO partnerships, Pivotal Ventures pitch |
+| Testnet | Months 7–9 | Ethereum testnet, Chainlink oracle, DAO on Snapshot |
+| Mainnet | Month 10–12 | Public token sale, Uniswap listing, first WEI Report |
+| Country Tokens | Year 2 | SHE-IND, SHE-NGA, SHE-USA + 10 more |
+| State Tokens | Year 3 | SHE-WB, SHE-KL, SHE-MH + NGO portal |
+| Scale | Year 4+ | UN Women partnership, institutional ESG, 50+ countries |
 
 ---
 
-## 16. Legal Disclaimer
+## 20. Legal Disclaimer
 
-This whitepaper is for informational purposes only and does not constitute financial, legal, or investment advice. SHE is a utility token and is not intended to be a security or financial instrument in any jurisdiction.
+This whitepaper is for informational purposes only and does not constitute
+financial, legal, or investment advice. SHE is a utility token and is not
+intended to be a security, investment product, or financial instrument in
+any jurisdiction.
 
 | Risk | Detail |
 |---|---|
-| Regulatory risk | Cryptocurrency regulation varies by jurisdiction and may change |
-| Data risk | WEI scores depend on quality and availability of international data |
-| Smart contract risk | Despite auditing, bugs may exist in on-chain code |
-| Market risk | Token value may be volatile independently of WEI score movements |
+| Regulatory risk | Cryptocurrency regulation varies and may change |
+| Data risk | WEI scores depend on quality of international data |
+| Smart contract risk | Despite auditing, bugs may exist |
+| Market risk | Token value may be volatile independently of WEI |
 | Oracle risk | Real-world data feeds may be delayed or inaccurate |
 | Liquidity risk | Early-stage tokens may have limited trading volume |
-
-*Prospective participants should conduct their own due diligence and consult qualified legal and financial advisors.*
-
----
-
-## Contact & Community
-
-| Channel | Link |
-|---|---|
-| **Website** | [shetoken.org](https://shetoken.org) |
-| **Email** | contact@shetoken.org |
-| **Twitter** | [@ShetokenDAO](https://twitter.com/ShetokenDAO) |
-| **GitHub** | [github.com/shetoken](https://github.com/shetoken) |
-| **Discord** | discord.gg/shetoken |
 
 ---
 
 *© 2026 SHE Foundation. All rights reserved.*
+*shetoken.org · github.com/shetoken · contact@shetoken.org*
 
-*SHE — Women's Empowerment Index Whitepaper v2.0*
+**SHE GOES UP.**
