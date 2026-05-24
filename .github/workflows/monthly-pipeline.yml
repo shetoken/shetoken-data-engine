@@ -21,9 +21,10 @@ jobs:
         with:
           python-version: '3.11'
 
+      # EDIT 1 — added `supabase` to the install line
       - name: Install dependencies
         run: |
-          pip install requests pandas numpy python-dotenv openpyxl gspread google-auth
+          pip install requests pandas numpy python-dotenv openpyxl gspread google-auth supabase
 
       - name: Create all output directories
         run: |
@@ -90,6 +91,14 @@ jobs:
           ls data/output/
           echo "=== Historical files ==="
           ls data/output/historical/ 2>/dev/null || echo "No historical files"
+
+      # EDIT 2 — load the freshly-generated baselines into Supabase, in-run.
+      # Runs right after the CSVs land in data/output/, same job, visible log.
+      - name: Load baselines into Supabase
+        env:
+          SUPABASE_URL:              ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python pipeline/load_to_supabase.py
 
       - name: Copy data into api/data for Railway
         run: |
