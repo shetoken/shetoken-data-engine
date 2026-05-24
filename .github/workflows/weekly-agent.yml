@@ -45,6 +45,20 @@ jobs:
           cd agent
           python run_agent.py
 
+      # ── NEW: load this week's live scores into Supabase ──────────────────────
+      # Runs in the SAME job, while agent/output/live/*.csv still exist on disk
+      # (those files are gitignored, so they must be read here before the runner
+      # is destroyed). Updates the live hero score + appends a history snapshot.
+      - name: Install Supabase loader deps
+        run: pip install supabase pandas python-dotenv
+
+      - name: Load weekly live scores to Supabase
+        env:
+          SUPABASE_URL:              ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python pipeline/load_live_to_supabase.py
+      # ─────────────────────────────────────────────────────────────────────────
+
       - name: Commit updated live scores
         run: |
           git config user.name  "SHEtoken Agent"
