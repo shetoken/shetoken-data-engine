@@ -348,6 +348,108 @@ def load_wadi(sb: Client) -> None:
     upsert(sb, "she_wadi_countries", rows, on_conflict="iso_code,year")
 
 
+def load_widow_elderly(sb: Client) -> None:
+    print("\n[7b/9] Loading she_widow_elderly...")
+    df = read_csv("widow-elderly-index-2025.csv")
+    if df.empty:
+        return
+    rows = select_cols(df, {
+        "iso_code":                  "iso_code",
+        "year":                      "year",
+        "rank":                      "rank",
+        "country":                   "country",
+        "region":                    "region",
+        "wevi_score":                "wevi_score",
+        "widow_population_millions": "widow_population_millions",
+        "widows_in_poverty_pct":     "widows_in_poverty_pct",
+        "legal_inheritance_rights":  "legal_inheritance_rights",
+        "inheritance_enforcement":   "inheritance_enforcement",
+        "social_restrictions_score": "social_restrictions_score",
+        "widow_abandonment_rate":    "widow_abandonment_rate",
+        "elderly_women_homeless_pct": "elderly_women_homeless_pct",
+        "pension_coverage_pct":      "pension_coverage_pct",
+        "elder_care_access_score":   "elder_care_access_score",
+        "notes":                     "notes",
+    })
+    rows = [r for r in rows if r.get("iso_code")]
+    upsert(sb, "she_widow_elderly", rows, on_conflict="iso_code,year")
+
+
+def load_corporate_compliance(sb: Client) -> None:
+    print("\n[7c/9] Loading she_corporate_compliance...")
+    df = read_csv("corporate-compliance-countries-2025.csv")
+    if df.empty:
+        return
+    rows = select_cols(df, {
+        "iso_code":                 "iso_code",
+        "year":                     "year",
+        "rank":                     "rank",
+        "country":                  "country",
+        "region":                   "region",
+        "composite_score":          "composite_score",
+        "rating":                   "rating",
+        "rating_headline":          "rating_headline",
+        "wei_score":                "wei_score",
+        "gpi_score":                "gpi_score",
+        "svi_score":                "svi_score",
+        "wadi_score":               "wadi_score",
+        "main_outsourcing_sectors": "main_outsourcing_sectors",
+        "key_risk":                 "key_risk",
+        "required_actions":         "required_actions",
+        "ngo_partners_to_fund":     "ngo_partners_to_fund",
+    })
+    rows = [r for r in rows if r.get("iso_code")]
+    upsert(sb, "she_corporate_compliance", rows, on_conflict="iso_code,year")
+
+
+def load_whi(sb: Client) -> None:
+    print("\n[7d/9] Loading she_whi_countries...")
+    df = read_csv("womens-health-index-2025.csv")
+    if df.empty:
+        return
+    rows = select_cols(df, {
+        "iso_code":                "iso_code",
+        "year":                    "year",
+        "rank":                    "rank",
+        "country":                 "country",
+        "region":                  "region",
+        "whi_score":               "whi_score",
+        "depression_prev_pct":     "depression_prev_pct",
+        "suicide_rate_per_100k":   "suicide_rate_per_100k",
+        "anaemia_pct":             "anaemia_pct",
+        "menstrual_access_pct":    "menstrual_access_pct",
+        "contraceptive_unmet_pct": "contraceptive_unmet_pct",
+        "maternal_mh_support":     "maternal_mh_support",
+        "data_source":             "data_source",
+    })
+    rows = [r for r in rows if r.get("iso_code")]
+    upsert(sb, "she_whi_countries", rows, on_conflict="iso_code,year")
+
+
+def load_wvi(sb: Client) -> None:
+    print("\n[7e/9] Loading she_wvi_countries...")
+    df = read_csv("womens-voice-index-2025.csv")
+    if df.empty:
+        return
+    rows = select_cols(df, {
+        "iso_code":             "iso_code",
+        "year":                 "year",
+        "rank":                 "rank",
+        "country":              "country",
+        "region":               "region",
+        "wvi_score":            "wvi_score",
+        "online_gbv_pct":       "online_gbv_pct",
+        "media_leadership_pct": "media_leadership_pct",
+        "women_tech_pct":       "women_tech_pct",
+        "civil_society_score":  "civil_society_score",
+        "journalists_pct":      "journalists_pct",
+        "press_freedom_score":  "press_freedom_score",
+        "data_source":          "data_source",
+    })
+    rows = [r for r in rows if r.get("iso_code")]
+    upsert(sb, "she_wvi_countries", rows, on_conflict="iso_code,year")
+
+
 def load_vital_counters(sb: Client) -> None:
     """Seed initial vital counters. Agent will update these weekly going forward."""
     print("\n[8/9] Loading she_vital_counters (seed values)...")
@@ -457,6 +559,10 @@ def main() -> None:
     load_gpi(sb)
     load_svi(sb)
     load_wadi(sb)
+    load_widow_elderly(sb)
+    load_corporate_compliance(sb)
+    load_whi(sb)
+    load_wvi(sb)
     load_vital_counters(sb)
     update_meta(sb)
 
