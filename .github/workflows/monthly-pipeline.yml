@@ -60,6 +60,8 @@ jobs:
           python generate_womens_vital_stats.py --year 2025
           python generate_rape_counts.py --year 2025
           python generate_school_dropout_data.py --year 2025
+          python generate_womens_health_index.py --year 2025
+          python generate_womens_voice_index.py --year 2025
 
       - name: Step 3 — Policy and compliance
         run: |
