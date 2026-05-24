@@ -6,10 +6,10 @@ name: Load Data to Supabase
 
 on:
   workflow_dispatch:          # manual trigger button in the Actions tab
-  workflow_run:               # auto-run right after the monthly refresh
-    workflows: ["SHEtoken Monthly Data Refresh"]
-    types:
-      - completed
+  # workflow_run:               # auto-run right after the monthly refresh
+  #   workflows: ["SHEtoken Monthly Data Refresh"]
+  #   types:
+  #     - completed
 
 jobs:
   load:
