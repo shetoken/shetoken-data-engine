@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
 
+    # Pin the Ollama model directory so cache + server + pulls all agree on it.
+    env:
+      OLLAMA_MODELS: /home/runner/.ollama/models
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -23,13 +27,36 @@ jobs:
       - name: Install dependencies
         run: pip install -r agent/requirements.txt
 
-      - name: Install Ollama
+      # ── NEW: restore cached Ollama models (skips the 4 GB download on hits) ──
+      - name: Cache Ollama models
+        id: cache-ollama
+        uses: actions/cache@v4
+        with:
+          path: /home/runner/.ollama/models
+          key: ollama-models-phi3.5-qwen2.5-3b-v1
+      # ─────────────────────────────────────────────────────────────────────────
+
+      - name: Install & start Ollama
         run: |
           curl -fsSL https://ollama.com/install.sh | sh
+          # Stop the auto-started systemd service so OUR server (with the pinned
+          # OLLAMA_MODELS path) is the one that answers — keeps the cache valid.
+          sudo systemctl stop ollama 2>/dev/null || true
+          mkdir -p "$OLLAMA_MODELS"
           ollama serve &
           sleep 10
+
+      # ── NEW: only pull when the cache missed (first run, or after a key bump) ─
+      - name: Pull models (cache miss only)
+        if: steps.cache-ollama.outputs.cache-hit != 'true'
+        run: |
+          echo "Cache miss — downloading models..."
           ollama pull phi3.5
           ollama pull qwen2.5:3b
+
+      - name: Confirm models present
+        run: ollama list
+      # ─────────────────────────────────────────────────────────────────────────
 
       - name: Run WEI agent
         env:
@@ -45,10 +72,7 @@ jobs:
           cd agent
           python run_agent.py
 
-      # ── NEW: load this week's live scores into Supabase ──────────────────────
-      # Runs in the SAME job, while agent/output/live/*.csv still exist on disk
-      # (those files are gitignored, so they must be read here before the runner
-      # is destroyed). Updates the live hero score + appends a history snapshot.
+      # ── Load this week's live scores into Supabase (same job, files on disk) ──
       - name: Install Supabase loader deps
         run: pip install supabase pandas python-dotenv
 
