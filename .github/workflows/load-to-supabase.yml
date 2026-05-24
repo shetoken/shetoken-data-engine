@@ -1,0 +1,45 @@
+name: Load Data to Supabase
+
+# Loads data/output/*.csv into the she_* Supabase tables.
+# • Run it NOW: Actions tab → "Load Data to Supabase" → Run workflow
+# • Auto-runs after the monthly data refresh completes (see workflow_run below)
+
+on:
+  workflow_dispatch:          # manual trigger button in the Actions tab
+  workflow_run:               # auto-run right after the monthly refresh
+    workflows: ["SHEtoken Monthly Data Refresh"]
+    types:
+      - completed
+
+jobs:
+  load:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    # When chained after the monthly refresh, only run if it succeeded.
+    # (For manual workflow_dispatch runs this condition is also true.)
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install loader dependencies
+        run: pip install supabase pandas python-dotenv
+
+      - name: Show CSVs that will be loaded
+        run: |
+          echo "=== data/output ==="
+          ls -la data/output/ || echo "WARNING: data/output not found"
+
+      - name: Load CSVs into Supabase
+        env:
+          SUPABASE_URL:              ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python pipeline/load_to_supabase.py
