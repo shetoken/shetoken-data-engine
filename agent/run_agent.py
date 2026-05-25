@@ -217,19 +217,19 @@ def main():
                     delta = live - base
                     arrow = "+" if delta >= 0 else ""
                     logger.info(f"    {country:<22} {base:.1f} -> {live:.1f}  ({arrow}{delta:.2f})")
-      # ── STEP 5b: News-sensitive sister indexes (SVI, WVI) ────────────────────
-      # Structural sisters (WHI/GPI/WEVI/WADI/FHI) are NOT touched — monthly only.
-      logger.info("\n[5b] Updating news-sensitive sister indexes (SVI, WVI)...")
-      try:
-          from sister_updater import apply_signals_to_sister_indexes
-          apply_signals_to_sister_indexes(
-              signals,
-              data_dir=str(DATA_DIR),
-              live_dir=str(LIVE_OUTPUT_DIR),
-              week=week,
-          )
-      except Exception as e:
-          logger.warning(f"  Sister index update skipped (non-fatal): {e}")
+        # ── STEP 5b: News-sensitive sister indexes (SVI, WVI) ────────────────────
+        # Structural sisters (WHI/GPI/WEVI/WADI/FHI) are NOT touched — monthly only.
+        logger.info("\n[5b] Updating news-sensitive sister indexes (SVI, WVI)...")
+        try:
+            from sister_updater import apply_signals_to_sister_indexes
+            apply_signals_to_sister_indexes(
+                signals,
+                data_dir=str(DATA_DIR),
+                live_dir=str(LIVE_OUTPUT_DIR),
+                week=week,
+            )
+        except Exception as e:
+            logger.warning(f"  Sister index update skipped (non-fatal): {e}")
 
 
     # ── STEP 6: Report ───────────────────────────────────────────────────────
