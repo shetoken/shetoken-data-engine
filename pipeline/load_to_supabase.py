@@ -536,7 +536,68 @@ def update_meta(sb: Client) -> None:
     upsert(sb, "she_meta", rows, on_conflict="meta_key")
     print(f"  → Global WEI computed: {global_wei}")
 
+"""
+SHEtoken — Supporting-data loaders (ADD THESE TO pipeline/load_to_supabase.py)
+==============================================================================
+Three loaders matching the existing pattern (read_csv → select_cols → upsert).
+Paste these functions alongside the other load_* functions, then add the three
+calls inside main() (see bottom of this file).
 
+Requires the tables from db/schema_supporting_data.sql to exist first.
+"""
+
+# ── PASTE THESE FUNCTIONS into load_to_supabase.py ───────────────────────────
+
+def load_vital_stats(sb) -> None:
+    print("\n[8a] Loading she_vital_stats...")
+    df = read_csv("womens-vital-stats-2025.csv")
+    if df.empty:
+        return
+    cols = ["iso_code", "year", "country", "region",
+            "girls_born_per_1000_pop", "life_expectancy_female", "life_expectancy_male",
+            "le_gap_years", "maternal_mortality_per_100k",
+            "girls_primary_enrollment_pct", "girls_secondary_enrollment_pct",
+            "women_tertiary_enrollment_pct", "child_marriage_rate_pct", "fertility_rate",
+            "female_poverty_rate_pct", "male_poverty_rate_pct", "gender_poverty_gap_pct",
+            "gender_wealth_gap_pct", "women_killed_by_partner_per_100k",
+            "female_labour_force_pct", "gender_wage_gap_pct", "women_with_bank_account_pct",
+            "girls_born_per_week_est", "maternal_deaths_per_week_est",
+            "girls_drop_out_school_per_week_est", "girls_married_under18_per_week_est",
+            "women_killed_by_partner_per_week_est"]
+    rows = select_cols(df, {c: c for c in cols})
+    rows = [r for r in rows if r.get("iso_code")]
+    upsert(sb, "she_vital_stats", rows, on_conflict="iso_code,year")
+
+
+def load_rape_counts(sb) -> None:
+    print("\n[8b] Loading she_rape_counts...")
+    df = read_csv("rape-counts-reported-vs-estimated-2025.csv")
+    if df.empty:
+        return
+    cols = ["iso_code", "year", "rank_estimated", "country", "region",
+            "female_population_millions", "unodc_reported_per_100k",
+            "who_lifetime_prevalence_pct", "reporting_gap_pct", "marital_rape_criminalised",
+            "reported_annual", "estimated_annual", "unreported_annual",
+            "reported_weekly", "estimated_weekly", "unreported_weekly",
+            "reported_daily", "estimated_daily", "estimation_multiplier", "source_note"]
+    rows = select_cols(df, {c: c for c in cols})
+    rows = [r for r in rows if r.get("iso_code")]
+    upsert(sb, "she_rape_counts", rows, on_conflict="iso_code,year")
+
+
+def load_sex_ratio_birth(sb) -> None:
+    print("\n[8c] Loading she_sex_ratio_birth...")
+    df = read_csv("sex-ratio-at-birth-2025.csv")
+    if df.empty:
+        return
+    cols = ["iso_code", "year", "country", "srb_boys_per_100_girls", "source_note"]
+    rows = select_cols(df, {c: c for c in cols})
+    # Honesty flag: current values are estimates, not yet source-verified.
+    for r in rows:
+        r["is_verified"] = False
+    rows = [r for r in rows if r.get("iso_code")]
+    upsert(sb, "she_sex_ratio_birth", rows, on_conflict="iso_code,year")
+       
 # ─────────────────────────────────────────────────────────────────────────────
 # Main
 # ─────────────────────────────────────────────────────────────────────────────
@@ -561,6 +622,9 @@ def main() -> None:
     load_wadi(sb)
     load_widow_elderly(sb)
     load_corporate_compliance(sb)
+    load_vital_stats(sb)
+    load_rape_counts(sb)
+    load_sex_ratio_birth(sb)
     load_whi(sb)
     load_wvi(sb)
     load_vital_counters(sb)
