@@ -19,12 +19,16 @@ from fastapi.responses import JSONResponse
 from typing import Optional
 import logging
 
-import os, secrets
+import os, secrets, re
 import httpx
 
 from supabase_source import get_svi, get_wevi, get_whi, get_wvi
 from lifepath import get_life_path
 from newsletter_source import list_newsletters, get_newsletter, get_latest_newsletter
+
+
+from pydantic import BaseModel
+
 
 from analytics import AnalyticsMiddleware, get_stats
 from rate_limiter import rate_limit_middleware
@@ -43,6 +47,13 @@ from data_loader import (
 )
 
 logger = logging.getLogger(__name__)
+
+class SubscribeRequest(BaseModel):
+    email: str
+    tier: str = "subscriber"          # 'subscriber' | 'ngo'
+
+_EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+
 
 app = FastAPI(
     title="SHEtoken WEI API",
@@ -1127,3 +1138,36 @@ def newsletters_one(week: str):
     if not nl:
         raise HTTPException(404, f"No public newsletter for {week}")
     return nl
+@app.post("/v1/subscribe")
+def subscribe(req: SubscribeRequest):
+    """Subscribe an email to the newsletter (called by the website)."""
+    email = (req.email or "").strip().lower()
+    tier  = req.tier if req.tier in ("subscriber", "ngo") else "subscriber"
+
+    if not _EMAIL_RE.match(email):
+        raise HTTPException(400, "Please enter a valid email address.")
+
+    url = os.getenv("SUPABASE_URL", "")
+    key = os.getenv("SUPABASE_SERVICE_ROLE_KEY", "")
+    if not url or not key:
+        raise HTTPException(503, "Subscriptions are temporarily unavailable.")
+
+    try:
+        httpx.post(
+            f"{url}/rest/v1/she_subscribers",
+            headers={
+                "apikey": key,
+                "Authorization": f"Bearer {key}",
+                "Content-Type": "application/json",
+                "Prefer": "resolution=merge-duplicates",   # upsert on email
+            },
+            json={"email": email, "tier": tier, "active": True, "source": "website"},
+            timeout=5.0,
+        )
+    except Exception:
+        # Don't leak internals; subscribing should feel reliable to the user.
+        pass
+
+    # Always the same response (no enumeration of existing subscribers).
+    return {"ok": True, "message": "Thanks for subscribing! You'll hear from us weekly."}
+
