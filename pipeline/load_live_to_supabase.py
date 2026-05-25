@@ -167,6 +167,37 @@ def load_region_live(sb: Client, pattern: str, label: str) -> None:
         print(f"  ✓ {label} live: {len(rows)} rows")
 
 
+def load_sister_index_live(sb: Client, pattern: str, table: str, score_col: str) -> None:
+    """Load a news-sensitive sister index live file (svi-live / wvi-live)."""
+    f = newest_live_file(pattern)
+    if not f:
+        print(f"  · no {table} live file")
+        return
+    week = week_from_filename(f)
+    df = clean(pd.read_csv(f, comment="#"))
+    if "iso_code" not in df.columns:
+        print(f"  · {table}: no iso_code column, skipping")
+        return
+    rows = []
+    for _, row in df.iterrows():
+        rows.append({
+            "iso_code": row.get("iso_code"),
+            "week": week,
+            "rank": row.get("rank"),
+            "country": row.get("country"),
+            "region": row.get("region"),
+            score_col: row.get(score_col),
+            f"{score_col}_baseline": row.get(f"{score_col}_baseline"),
+            "signal_count_this_week": row.get("signal_count_this_week"),
+        })
+    rows = [{k: (None if (v is not None and not isinstance(v, (list, dict)) and pd.isna(v)) else v)
+             for k, v in r.items()} for r in rows]
+    rows = [r for r in rows if r.get("iso_code")]
+    if rows:
+        sb.table(table).upsert(rows, on_conflict="iso_code,week").execute()
+        print(f"  ✓ {table}: {len(rows)} rows ({week})")
+
+
 def update_meta_and_history(
     sb: Client, global_wei: float, pillars: dict[str, float], week: str
 ) -> None:
@@ -207,6 +238,11 @@ def main() -> None:
 
     load_region_live(sb, "wei-live-india-*.csv", "IND")
     load_region_live(sb, "wei-live-usa-*.csv", "USA")
+
+    # News-sensitive sister indexes (SVI, WVI) — written by the agent's
+    # sister_updater. Structural sisters are NOT loaded here (monthly only).
+    load_sister_index_live(sb, "svi-live-*.csv", "she_svi_live", "svi_score")
+    load_sister_index_live(sb, "wvi-live-*.csv", "she_wvi_live", "wvi_score")
 
     update_meta_and_history(sb, global_wei, pillars, week)
 
