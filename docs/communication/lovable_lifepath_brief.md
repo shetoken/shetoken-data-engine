@@ -9,9 +9,21 @@
 ## The core idea
 
 The visitor picks a country. The screen then walks them through the life of
-**100 girls born there today** — Born → Childhood → Adolescence → Womanhood →
-Working life → Motherhood → Partnership → Old age. At each stage, real numbers
-show how many of the 100 make it through, and what they face.
+**100 girls born there today** — but it opens *before* they're even counted:
+Before birth → Born → Childhood → Adolescence → Womanhood → Working life →
+Motherhood → Partnership → Old age. At each stage, real numbers show how many
+of the 100 make it through, and what they face.
+
+### The opening stage carries the most weight
+
+The journey begins at age **−1**: *"Before we count 100 girls — how many were
+never allowed to be born?"* Using sex ratio at birth (natural ≈ 105 boys per
+100 girls), the model shows the **missing girls** — lost to sex-selective
+practices before birth. China shows ~6 missing per 100; India ~3; Iceland and
+Norway show none ("girls are not lost before birth here"). That contrast — some
+countries erase girls before birth, others don't — is the most arresting
+possible way to open. Visually: before the 100 dots even appear, a faded set of
+"missing" dots can be shown and never light up.
 
 It is the difference between *"India's female secondary enrollment is 74%"* and
 *"of 100 girls, 74 reach secondary school — 26 don't."* Same data. Completely
