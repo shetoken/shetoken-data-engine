@@ -18,8 +18,17 @@ stable annual figures, safe to read from the Railway filesystem.
 from __future__ import annotations
 import logging
 from data_loader import load_csv, safe_float, safe_int, DATA_DIR
+from supabase_source import _rows as _sb_or_csv   # Supabase-first, CSV fallback
 
 logger = logging.getLogger(__name__)
+
+
+def _src(table: str, csv_filename: str) -> list[dict]:
+    """Supabase rows if reachable, else the committed CSV. No ordering (we filter by iso)."""
+    try:
+        return _sb_or_csv(table, csv_filename, order=None)
+    except Exception:
+        return load_csv(DATA_DIR / csv_filename)
 
 DISCLAIMER = (
     "An illustrative cohort of 100 girls born today, walked through life using "
@@ -78,11 +87,11 @@ def _every_x_time(annual) -> str | None:
 
 def get_life_path(iso_code: str) -> dict | None:
     """Assemble the staged life journey for one country from real data."""
-    vital = _find(load_csv(DATA_DIR / "womens-vital-stats-2025.csv"), iso_code)
-    rape  = _find(load_csv(DATA_DIR / "rape-counts-reported-vs-estimated-2025.csv"), iso_code)
-    widow = _find(load_csv(DATA_DIR / "widow-elderly-index-2025.csv"), iso_code)
+    vital = _find(_src("she_vital_stats", "womens-vital-stats-2025.csv"), iso_code)
+    rape  = _find(_src("she_rape_counts", "rape-counts-reported-vs-estimated-2025.csv"), iso_code)
+    widow = _find(_src("she_widow_elderly", "widow-elderly-index-2025.csv"), iso_code)
     try:
-        srb_row = _find(load_csv(DATA_DIR / "sex-ratio-at-birth-2025.csv"), iso_code)
+        srb_row = _find(_src("she_sex_ratio_birth", "sex-ratio-at-birth-2025.csv"), iso_code)
     except Exception:
         srb_row = None
     if not vital and not rape:
