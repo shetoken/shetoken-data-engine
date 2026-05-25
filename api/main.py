@@ -1093,3 +1093,14 @@ def wvi_country(iso_code: str):
     if not rows:
         raise HTTPException(404, f"No WVI data for {iso_code}")
     return rows[0]
+@app.get("/v1/lifepath/{iso_code}")
+def life_path(iso_code: str):
+    """
+    The '100 Girls' life journey for one country — a cohort of 100 girls walked
+    through life using real, sourced statistics. A narrative device to make the
+    data felt, NOT a personal prediction (see the 'disclaimer' field).
+    """
+    lp = get_life_path(iso_code)
+    if not lp:
+        raise HTTPException(404, f"No life-path data for {iso_code}")
+    return lp
