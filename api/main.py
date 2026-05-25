@@ -23,6 +23,7 @@ import os, secrets
 import httpx
 
 from supabase_source import get_svi, get_wevi, get_whi, get_wvi
+from lifepath import get_life_path
 
 from analytics import AnalyticsMiddleware, get_stats
 from rate_limiter import rate_limit_middleware
