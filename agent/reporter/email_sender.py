@@ -512,6 +512,7 @@ def build_newsletter(report: dict, recipient_type: str = "founder") -> str:
     {movers_html}
     {pillar_html}
     {token_html}
+    {report.get("cta_html", "")}
     {extra_section}
 
   </div>
@@ -604,6 +605,11 @@ def send_report(report: dict) -> bool:
                     server.sendmail(GMAIL_USER, r["email"], msg.as_string())
                     logger.info(f"  Email sent → {r['email']} ({r['type']})")
                     ok_count += 1
+                    # Archive this edition to Supabase (best-effort, non-fatal)
+                    try:
+                        archive_newsletter(week, r["type"], subject, html, "")
+                    except Exception as ae:
+                        logger.warning(f"  Archive skipped for {r['email']}: {ae}")
                 except Exception as e:
                     logger.error(f"  Email failed → {r['email']}: {e}")
 
