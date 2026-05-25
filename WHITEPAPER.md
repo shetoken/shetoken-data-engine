@@ -78,22 +78,28 @@ creates economic incentive for progress across all these dimensions.
 
 ---
 
-## 2. The Solution — Six Indexes
+## 2. The Solution — Eight Indexes
 
-SHEtoken v3.0 introduces six interlocking indexes:
+SHEtoken v3.0 introduces eight interlocking indexes:
 
 | Index | What it measures | Coverage | Token linked? |
 |---|---|---|---|
 | **WEI** | Women's Empowerment Index — 8 pillars | 105 countries, 174 states, 111 cities | ✅ Yes |
 | **GPI** | Gender Poverty Index — 9 economic dimensions | 34 countries | Signal |
-| **SVI** | Sexual Violence Index — WHO prevalence based | 38 countries | Signal |
+| **SVI** | Sexual Violence Index — WHO prevalence based | 38 countries | Signal (weekly) |
 | **WEVI** | Widow & Elderly Vulnerability Index | 35 countries + India states | Signal |
 | **WADI** | Women's AI Displacement Index | 28 countries | Signal |
+| **WHI** | Women's Health Index — mental health, anaemia, menstrual, contraception | 38 countries | Signal |
+| **WVI** | Women's Voice Index — online GBV, media, tech, civil-society freedom | 38 countries | Signal (weekly) |
 | **WRBCS** | Corporate Women's Rights Compliance Score | 30 countries + 36 US states | Due diligence |
 | **Partner Directory** | Country, program + company finder for women's work | 15 countries, 14 programs, 6 registries | Discovery tool |
 
-**The WEI drives the token.** The other five indexes provide intelligence,
-policy recommendations, and corporate due diligence data.
+**The WEI drives the token.** The other seven indexes provide intelligence,
+policy recommendations, and corporate due diligence data. Two of them —
+**SVI and WVI** — are news-sensitive and update weekly from the agent's
+signals; the rest are structural and refresh monthly. WHI and WVI currently
+ship as transparent modeled estimates (each row carries a `data_source` flag),
+with verified WHO / V-Dem / DHS data pulls on the roadmap.
 
 ---
 
@@ -259,6 +265,46 @@ This is not a solution. It is a wage trap.
 
 ---
 
+## 7b. The Women's Health Index (WHI)
+
+Mainstream gender indices systematically ignore the dimensions of women's
+health that matter most day to day. The WHI captures four:
+
+| Dimension | Why it matters | Source (roadmap) |
+|---|---|---|
+| Female mental health | Depression, anxiety, suicide — almost never measured in gender indices | WHO GHO |
+| Anaemia in women 15–49 | Sharp poverty-and-nutrition signal; India 57% (NFHS-5) | WHO |
+| Menstrual health & dignity | Period poverty drives school dropout | UNICEF / DHS / MICS |
+| Contraceptive unmet need | The clearest practical measure of bodily autonomy | UN Population Division |
+
+WHI is scored 0–100, higher = better. It is a structural index (refreshes
+monthly). It currently ships as transparent modeled estimates — solid global
+data exists for anaemia, suicide, and contraceptive unmet need; menstrual
+health is patchy and flagged as such via each row's `data_source`. The
+verified-data version replaces estimates per indicator without changing the
+schema.
+
+---
+
+## 7c. The Women's Voice Index (WVI)
+
+Voice is the most neglected dimension of gender measurement and the one most
+aligned with SHEtoken's mission. The WVI captures four:
+
+| Dimension | Why it matters | Source (roadmap) |
+|---|---|---|
+| Online gender-based violence | Fastest-growing, least-measured form of abuse | EIU / regional |
+| Women in media & journalism | Voice in the literal sense — who tells the story | GMMP |
+| Women in tech & AI | Who builds the tools that shape the future | ILO |
+| Civil-society freedom for women | Can women organise and protest? Maps to V-Dem WCSP and the Georgetown Women, Peace & Security Index | V-Dem |
+
+WVI is scored 0–100, higher = stronger voice. It is **news-sensitive**: a
+journalist crackdown or internet shutdown moves it within the week via the
+agent (see Section 14). The civil-society dimension's alignment with the
+Georgetown WPS framework gives the index academic grounding.
+
+---
+
 ## 8. The Policy Recommendation Engine
 
 Every country receives ranked, evidence-based policy recommendations
@@ -421,8 +467,7 @@ public registries:
 - **UN WEPs** — Women's Empowerment Principles signatories (3,000+ companies)
 - **GenderSmart** — Impact investors funding women's initiatives
 
-## 12. Enhanced Token Ecosystem — v2.0
-13. Historical Data (2015–2024)
+## 12. Historical Data (2015–2024)
 
 All major indexes include historical data using the event-reversal model:
 start from 2025 verified baseline, reverse known events going backwards.
@@ -456,7 +501,7 @@ start from 2025 verified baseline, reverse known events going backwards.
 ---
 
 
-## 12. Enhanced Token Ecosystem — v2.0
+## 13. Enhanced Token Ecosystem — v2.0
 
 The original SHEtoken (v1.0) had one token with annual price discovery.
 v2.0 adds four complementary instruments that provide price signals
@@ -597,16 +642,20 @@ Every Sunday at 6am UTC, the agent automatically:
 1. **Scans 139+ sources** — RSS feeds, YouTube, Reddit across 15 languages
 2. **Classifies with SLM** — Phi-3.5 Mini + Qwen2.5:3b (Ollama, runs locally)
 3. **Updates WEI live scores** — signals carry 10% weight in weekly update
-4. **Writes to Google Sheets** — signals tab + live WEI tab
-5. **Sends branded newsletter** — founder version + subscriber version + NGO version
-6. **Posts Twitter thread** — 5-tweet weekly signal report to @ShetokenDAO
-7. **Posts Instagram card** — branded weekly image
+4. **Moves the news-sensitive sister indexes** — SVI (from safety/violence signals) and WVI (from empowerment/digital signals) also update weekly, capped at ±2.0 points; structural indexes stay monthly
+5. **Loads everything into Supabase** — live WEI + SVI + WVI written to the `she_*` tables the website reads, plus a dated history snapshot
+6. **Writes to Google Sheets** — signals tab + live WEI tab
+7. **Sends branded newsletter** — founder version + subscriber version + NGO version
+8. **Posts Twitter thread** — 5-tweet weekly signal report to @ShetokenDAO
+9. **Posts Instagram card** — branded weekly image
 
 ### Signal → Score Mechanics
 
 ```
 WEI_live = WEI_annual_baseline (90%) + weekly_news_signals (10%)
-Maximum weekly movement: ±2.0 WEI points per country
+SVI_live = SVI_baseline + capped signals from safety_justice + violence_penalty
+WVI_live = WVI_baseline + capped signals from empowerment + digital_social
+Maximum weekly movement: ±2.0 points per country (same engine for all three)
 Signals decay over 12 weeks (half-life model)
 ```
 
@@ -623,7 +672,7 @@ If any country's crime index rises >15% in one year:
 
 | Level | Count | Indexes |
 |---|---|---|
-| Countries | 105 | WEI, GPI, SVI, WEVI, WADI, WRBCS |
+| Countries | 105 | WEI, GPI, SVI, WEVI, WADI, WHI, WVI, WRBCS |
 | India states | 25 | WEI, WEVI |
 | USA states | 50 | WEI, WRBCS |
 | Brazil states | 27 | WEI |
