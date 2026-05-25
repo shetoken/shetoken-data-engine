@@ -24,6 +24,7 @@ import httpx
 
 from supabase_source import get_svi, get_wevi, get_whi, get_wvi
 from lifepath import get_life_path
+from newsletter_source import list_newsletters, get_newsletter, get_latest_newsletter
 
 from analytics import AnalyticsMiddleware, get_stats
 from rate_limiter import rate_limit_middleware
@@ -1105,3 +1106,24 @@ def life_path(iso_code: str):
     if not lp:
         raise HTTPException(404, f"No life-path data for {iso_code}")
     return lp
+@app.get("/v1/newsletters")
+def newsletters_list(limit: int = 50):
+    """List archived newsletter editions (metadata only). Public/NGO tiers."""
+    rows = list_newsletters(limit=limit)
+    return {"count": len(rows), "data": rows}
+
+@app.get("/v1/newsletters/latest")
+def newsletters_latest():
+    """The most recent public newsletter (full HTML)."""
+    nl = get_latest_newsletter("public")
+    if not nl:
+        raise HTTPException(404, "No newsletters archived yet")
+    return nl
+
+@app.get("/v1/newsletters/{week}")
+def newsletters_one(week: str):
+    """Full HTML for one week's public edition. Week format: 2026-W21"""
+    nl = get_newsletter(week, "public")
+    if not nl:
+        raise HTTPException(404, f"No public newsletter for {week}")
+    return nl
