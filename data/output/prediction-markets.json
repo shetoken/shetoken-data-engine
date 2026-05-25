@@ -2,12 +2,12 @@
   "description": "SHEtoken Women's Rights Prediction Markets",
   "total_markets": 15,
   "categories": [
-    "WEI_STATE",
     "GPI_CORP",
-    "WADI_SECTOR",
+    "WEI_COUNTRY",
+    "WEI_STATE",
     "IMPACT",
     "SVI_LAW",
-    "WEI_COUNTRY"
+    "WADI_SECTOR"
   ],
   "markets": [
     {
