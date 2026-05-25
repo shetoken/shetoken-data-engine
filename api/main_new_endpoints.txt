@@ -1,0 +1,75 @@
+═══════════════════════════════════════════════════════════════════════════
+ADD TO api/main.py — four new index endpoints (SVI, WEVI, WHI, WVI)
+═══════════════════════════════════════════════════════════════════════════
+
+1. Add this import near the other data_loader import block:
+
+    from supabase_source import get_svi, get_wevi, get_whi, get_wvi
+
+2. Add these four routes alongside your other @app routes (they mirror the
+   existing /v1/gpi and /v1/wadi patterns exactly):
+
+───────────────────────────────────────────────────────────────────────────
+@app.get("/v1/svi")
+def svi_scores():
+    """Sexual Violence Index — all countries (WHO-prevalence based)."""
+    return {"count": len(get_svi()), "data": get_svi()}
+
+@app.get("/v1/svi/{iso_code}")
+def svi_country(iso_code: str):
+    rows = get_svi(iso_code)
+    if not rows:
+        raise HTTPException(404, f"No SVI data for {iso_code}")
+    return rows[0]
+
+@app.get("/v1/wevi")
+def wevi_scores():
+    """Widow & Elderly Vulnerability Index — all countries."""
+    return {"count": len(get_wevi()), "data": get_wevi()}
+
+@app.get("/v1/wevi/{iso_code}")
+def wevi_country(iso_code: str):
+    rows = get_wevi(iso_code)
+    if not rows:
+        raise HTTPException(404, f"No WEVI data for {iso_code}")
+    return rows[0]
+
+@app.get("/v1/whi")
+def whi_scores():
+    """Women's Health Index — mental health, anaemia, menstrual, contraception."""
+    return {"count": len(get_whi()), "data": get_whi()}
+
+@app.get("/v1/whi/{iso_code}")
+def whi_country(iso_code: str):
+    rows = get_whi(iso_code)
+    if not rows:
+        raise HTTPException(404, f"No WHI data for {iso_code}")
+    return rows[0]
+
+@app.get("/v1/wvi")
+def wvi_scores():
+    """Women's Voice Index — online GBV, media, tech, civil-society freedom."""
+    return {"count": len(get_wvi()), "data": get_wvi()}
+
+@app.get("/v1/wvi/{iso_code}")
+def wvi_country(iso_code: str):
+    rows = get_wvi(iso_code)
+    if not rows:
+        raise HTTPException(404, f"No WVI data for {iso_code}")
+    return rows[0]
+───────────────────────────────────────────────────────────────────────────
+
+3. Railway env vars the API now needs for Supabase reads:
+       SUPABASE_URL              = https://ezfnvonjhnssotaaqpmr.supabase.co
+       SUPABASE_ANON_KEY         = <your anon/publishable key>   (public-read tables)
+
+   (The token system separately needs SUPABASE_SERVICE_ROLE_KEY for the
+   RLS-locked she_api_keys table — different key, different purpose.)
+
+4. After deploy, verify:
+       https://api.shetoken.org/v1/svi
+       https://api.shetoken.org/v1/whi
+       https://api.shetoken.org/v1/wvi
+       https://api.shetoken.org/v1/wevi
+   Each should return JSON. If Supabase is unreachable, they fall back to CSV
+   automatically — so they work even before Supabase env vars are set.
