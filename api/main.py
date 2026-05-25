@@ -26,6 +26,7 @@ from supabase_source import get_svi, get_wevi, get_whi, get_wvi
 from lifepath import get_life_path
 from newsletter_source import list_newsletters, get_newsletter, get_latest_newsletter
 from audit_source import get_audit, get_indicator_trend
+from history_source import get_history, get_history_weekly
 
 from pydantic import BaseModel
 
@@ -1232,4 +1233,20 @@ def audit_indicator_trend(index_name: str, iso_code: str, indicator_key: str):
         raise HTTPException(404, "No history for that indicator yet")
     return {"index": index_name.lower(), "iso_code": iso_code.upper(),
             "indicator": indicator_key, "points": len(data), "data": data}
+@app.get("/v1/history/{index_name}/{iso_code}")
+def history_trend(index_name: str, iso_code: str):
+    """Monthly trend for a country+index. e.g. /v1/history/wei/IND"""
+    data = get_history(index_name.lower(), iso_code)
+    if not data:
+        raise HTTPException(404, f"No history for {index_name}/{iso_code} yet")
+    return {"index": index_name.lower(), "iso_code": iso_code.upper(),
+            "cadence": "monthly", "points": len(data), "data": data}
 
+@app.get("/v1/history/weekly/{index_name}/{iso_code}")
+def history_trend_weekly(index_name: str, iso_code: str):
+    """Weekly trend for a news-sensitive index. e.g. /v1/history/weekly/svi/IND"""
+    data = get_history_weekly(index_name.lower(), iso_code)
+    if not data:
+        raise HTTPException(404, f"No weekly history for {index_name}/{iso_code} yet")
+    return {"index": index_name.lower(), "iso_code": iso_code.upper(),
+            "cadence": "weekly", "points": len(data), "data": data}
