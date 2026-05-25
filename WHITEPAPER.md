@@ -18,10 +18,17 @@ empowerment outcomes. When women's conditions improve globally, tokens are
 minted. When conditions worsen, tokens are burned.
 
 Version 3.0 expands the original single-index model into a comprehensive
-**Women's Rights Intelligence Platform** — six interconnected indexes, 168+
+**Women's Rights Intelligence Platform** — eight interconnected indexes, 168+
 data files, a weekly AI news agent, and a corporate compliance scoring system
 that makes women's rights financially measurable at the country, state, and
 city level.
+
+To make the data felt rather than merely read, the platform also includes the
+**Life Path** experience: pick a country, and a cohort of 100 girls born there
+is walked through an entire life — from before birth to old age — showing, at
+each stage, how many face violence, leave school, survive childbirth, or end
+their lives as widows in poverty. The same numbers that drive the index,
+retold as a life.
 
 ---
 
@@ -302,6 +309,54 @@ WVI is scored 0–100, higher = stronger voice. It is **news-sensitive**: a
 journalist crackdown or internet shutdown moves it within the week via the
 agent (see Section 14). The civil-society dimension's alignment with the
 Georgetown WPS framework gives the index academic grounding.
+
+---
+
+## 7d. The Life Path — Making the Data Felt
+
+Indexes are read. Lives are felt. The Life Path turns the platform's data into
+a single human narrative: choose a country, and a **cohort of 100 girls** born
+there today is walked through an entire life — from before birth to old age —
+using real, sourced statistics at each stage.
+
+The design principle is deliberate and non-negotiable: it is always **a cohort
+of 100, never "you."** The experience says *"28 of 100 will face violence in
+their lifetime,"* not *"you will."* This creates empathy at human scale without
+making a false personal prediction. Every figure is a real cross-sectional
+statistic; assembling them into one journey is a narrative device to make the
+data felt, not a longitudinal forecast.
+
+**The stages**, each drawn from the platform's own data:
+
+| Stage | What the data shows | Source |
+|---|---|---|
+| Before birth | Missing girls, from the sex ratio at birth (natural ≈ 105 boys per 100 girls) | UNFPA / World Bank* |
+| Childhood | How many of 100 start primary school; how many reach secondary | UNESCO |
+| Adolescence | How many are married before 18 | UNICEF |
+| Womanhood | How many will face sexual or physical violence in their lifetime | WHO / UNODC |
+| Working life | How many join the labour force; how many control their own bank account | ILO / World Bank |
+| Motherhood | Risk of dying in childbirth | WHO |
+| Partnership | Risk of being killed by a partner | UNODC |
+| Old age | How many widows live in poverty; how many receive any pension | WEVI / World Bank |
+
+**Example — 100 girls born in India today:** 94 start primary school, but only
+74 reach secondary. 23 are married before 18. 28 will face sexual or physical
+violence in their lifetime. A mother dies in childbirth roughly every 21
+minutes. Of those who reach old age as widows, 55 in 100 live in poverty and
+only 18 receive any pension. The same data also renders as felt time — a girl
+married before 18, a mother lost in childbirth, each expressed as an event
+recurring every few minutes.
+
+The contrast between countries is the most powerful single view: the same 100
+girls live a dramatically different life in Iceland than in a crisis-tier
+nation. That contrast — visible, sourced, and human — is the platform's thesis
+in one screen: the world's progress on women's rights is not abstract. It is a
+life, lived or lost.
+
+> *The sex-ratio-at-birth figures behind the "Before birth" stage are currently
+> documented estimates pending verified extraction from World Bank data; like
+> WHI and WVI, they are flagged as such. Every other Life Path stage draws on
+> the platform's verified indicator data.
 
 ---
 
