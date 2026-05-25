@@ -22,6 +22,8 @@ import logging
 import os, secrets
 import httpx
 
+from supabase_source import get_svi, get_wevi, get_whi, get_wvi
+
 from analytics import AnalyticsMiddleware, get_stats
 from rate_limiter import rate_limit_middleware
 from data_loader import (
@@ -1044,4 +1046,50 @@ async def create_api_key(
         "tier": tier,
         "message": "Store this token securely — it won't be shown again.",
     }
+@app.get("/v1/svi")
+def svi_scores():
+    """Sexual Violence Index — all countries (WHO-prevalence based)."""
+    return {"count": len(get_svi()), "data": get_svi()}
 
+@app.get("/v1/svi/{iso_code}")
+def svi_country(iso_code: str):
+    rows = get_svi(iso_code)
+    if not rows:
+        raise HTTPException(404, f"No SVI data for {iso_code}")
+    return rows[0]
+
+@app.get("/v1/wevi")
+def wevi_scores():
+    """Widow & Elderly Vulnerability Index — all countries."""
+    return {"count": len(get_wevi()), "data": get_wevi()}
+
+@app.get("/v1/wevi/{iso_code}")
+def wevi_country(iso_code: str):
+    rows = get_wevi(iso_code)
+    if not rows:
+        raise HTTPException(404, f"No WEVI data for {iso_code}")
+    return rows[0]
+
+@app.get("/v1/whi")
+def whi_scores():
+    """Women's Health Index — mental health, anaemia, menstrual, contraception."""
+    return {"count": len(get_whi()), "data": get_whi()}
+
+@app.get("/v1/whi/{iso_code}")
+def whi_country(iso_code: str):
+    rows = get_whi(iso_code)
+    if not rows:
+        raise HTTPException(404, f"No WHI data for {iso_code}")
+    return rows[0]
+
+@app.get("/v1/wvi")
+def wvi_scores():
+    """Women's Voice Index — online GBV, media, tech, civil-society freedom."""
+    return {"count": len(get_wvi()), "data": get_wvi()}
+
+@app.get("/v1/wvi/{iso_code}")
+def wvi_country(iso_code: str):
+    rows = get_wvi(iso_code)
+    if not rows:
+        raise HTTPException(404, f"No WVI data for {iso_code}")
+    return rows[0]
