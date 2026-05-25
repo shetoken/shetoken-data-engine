@@ -42,7 +42,8 @@ from typing import Iterable
 import pandas as pd
 from dotenv import load_dotenv
 from supabase import create_client, Client
-
+from history_loaders import snapshot_all_history
+from indicator_history import snapshot_all_indicators
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Config
@@ -628,7 +629,11 @@ def main() -> None:
     load_whi(sb)
     load_wvi(sb)
     load_vital_counters(sb)
+    snapshot_all_history(sb)        # score history (monthly)
+    snapshot_all_indicators(sb)     # indicator audit (monthly)
+
     update_meta(sb)
+
 
     print("\n" + "=" * 70)
     print("✓ DONE — All tables loaded.")
