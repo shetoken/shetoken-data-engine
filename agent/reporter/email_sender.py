@@ -309,6 +309,86 @@ def build_pillar_table(pillars: dict) -> str:
     </div>"""
 
 
+def build_sister_movers(report: dict) -> str:
+    """
+    SVI + WVI weekly movements, read from the agent's live files written this
+    run (svi-live-{week}.csv / wvi-live-{week}.csv). Self-contained: if the
+    sister update was skipped or no country moved, the section is omitted.
+    """
+    import csv as _csv
+    week = report.get("week", "")
+    if not week:
+        return ""
+    live_dir = Path(__file__).parent.parent / "output" / "live"
+
+    blocks = ""
+    for idx, score_col, label in [
+        ("svi", "svi_score", "🛡️ Sexual Violence Index — weekly shift"),
+        ("wvi", "wvi_score", "📣 Women's Voice Index — weekly shift"),
+    ]:
+        path = live_dir / f"{idx}-live-{week}.csv"
+        if not path.exists():
+            continue
+        try:
+            with open(path, newline="", encoding="utf-8") as f:
+                lines = [l for l in f if not l.lstrip().startswith("#")]
+            rows = list(_csv.DictReader(lines))
+        except Exception:
+            continue
+
+        movers = []
+        for r in rows:
+            try:
+                live = float(r.get(score_col) or 0)
+                base = float(r.get(score_col + "_baseline") or 0)
+            except (ValueError, TypeError):
+                continue
+            if round(live, 2) != round(base, 2):
+                movers.append((r.get("country", ""), base, live, live - base))
+        if not movers:
+            continue
+        movers.sort(key=lambda x: abs(x[3]), reverse=True)
+
+        rows_html = ""
+        for country, base, live, delta in movers[:5]:
+            colour = GREEN if delta > 0 else RED
+            arrow  = "▲" if delta > 0 else "▼"
+            rows_html += f"""
+              <tr>
+                <td style="padding:8px 12px;font-size:14px;font-weight:bold;
+                           color:{BERRY};">{country}</td>
+                <td style="padding:8px 12px;font-size:13px;text-align:center;
+                           color:#888;">{base:.1f} → {live:.1f}</td>
+                <td style="padding:8px 12px;font-size:13px;text-align:center;
+                           color:{colour};font-weight:bold;">{arrow} {delta:+.2f}</td>
+              </tr>"""
+
+        blocks += f"""
+        <div style="margin-bottom:16px;">
+          <div style="font-size:13px;font-weight:bold;color:{BERRY};
+                      margin-bottom:6px;">{label}</div>
+          <table style="width:100%;border-collapse:collapse;">
+            <tbody>{rows_html}</tbody>
+          </table>
+        </div>"""
+
+    if not blocks:
+        return ""
+
+    return f"""
+    <div style="margin:24px 0;">
+      <h2 style="color:{BERRY};font-size:18px;margin:0 0 16px;
+                 padding-bottom:8px;border-bottom:2px solid {GOLD};">
+        🔀 Sister Index Movers
+      </h2>
+      {blocks}
+      <p style="font-size:11px;color:#aaa;margin-top:4px;">
+        SVI and WVI move weekly from news signals (capped ±2.0 pts).
+        Higher = better for both. Structural indexes update monthly.
+      </p>
+    </div>"""
+
+
 def build_token_section(report: dict) -> str:
     pillars = report.get("global_pillar_summary", {})
     signals = report.get("total_signals", 0)
@@ -391,6 +471,7 @@ def build_newsletter(report: dict, recipient_type: str = "founder") -> str:
     stories_html = build_top_stories(raw_signals)
     movers_html  = build_region_movers(movers)
     pillar_html  = build_pillar_table(pillars)
+    sister_html  = build_sister_movers(report)
     token_html   = build_token_section(report)
 
     # Founder gets full technical data; subscribers get cleaner version
@@ -511,6 +592,7 @@ def build_newsletter(report: dict, recipient_type: str = "founder") -> str:
     {stories_html}
     {movers_html}
     {pillar_html}
+    {sister_html}
     {token_html}
     {report.get("cta_html", "")}
     {extra_section}
@@ -547,26 +629,50 @@ def build_newsletter(report: dict, recipient_type: str = "founder") -> str:
 
 
 def get_all_recipients() -> list:
-    """Build list of all recipients with their type."""
+    """
+    Build list of all recipients with their type.
+    Subscribers come from Supabase (she_subscribers) first; if that's empty or
+    unavailable, falls back to the NEWSLETTER_SUBSCRIBERS / NEWSLETTER_NGOS env
+    vars (legacy behaviour). Founder always included.
+    """
     recipients = []
+    seen = set()
 
     # Always send to founder
     if REPORT_TO:
         recipients.append({"email": REPORT_TO, "type": "founder"})
+        seen.add(REPORT_TO.lower())
 
-    # Subscriber list
-    if NEWSLETTER_SUBSCRIBERS:
-        for email in NEWSLETTER_SUBSCRIBERS.split(","):
-            email = email.strip()
-            if email and email != REPORT_TO:
-                recipients.append({"email": email, "type": "subscriber"})
+    # Subscribers from Supabase (written by the website via POST /v1/subscribe)
+    supa_subs = []
+    try:
+        from subscriber_source import get_subscribers
+        supa_subs = get_subscribers()
+    except Exception as e:
+        logger.warning(f"subscriber load failed ({e}) — using env fallback")
 
-    # NGO partners
-    if NEWSLETTER_NGOS:
-        for email in NEWSLETTER_NGOS.split(","):
-            email = email.strip()
-            if email and email != REPORT_TO:
-                recipients.append({"email": email, "type": "ngo"})
+    if supa_subs:
+        for s in supa_subs:
+            email = (s.get("email") or "").strip()
+            if email and email.lower() not in seen:
+                recipients.append({"email": email,
+                                   "type": s.get("tier", "subscriber")})
+                seen.add(email.lower())
+        logger.info(f"Recipients from Supabase: {len(supa_subs)}")
+    else:
+        # ── Fallback: env-var lists (legacy) ─────────────────────────────────
+        if NEWSLETTER_SUBSCRIBERS:
+            for email in NEWSLETTER_SUBSCRIBERS.split(","):
+                email = email.strip()
+                if email and email.lower() not in seen:
+                    recipients.append({"email": email, "type": "subscriber"})
+                    seen.add(email.lower())
+        if NEWSLETTER_NGOS:
+            for email in NEWSLETTER_NGOS.split(","):
+                email = email.strip()
+                if email and email.lower() not in seen:
+                    recipients.append({"email": email, "type": "ngo"})
+                    seen.add(email.lower())
 
     return recipients
 
