@@ -19,6 +19,9 @@ from fastapi.responses import JSONResponse
 from typing import Optional
 import logging
 
+import os, secrets
+import httpx
+
 from analytics import AnalyticsMiddleware, get_stats
 from rate_limiter import rate_limit_middleware
 from data_loader import (
@@ -999,3 +1002,46 @@ def etf_spec():
     data = get_etf_spec()
     if not data: raise HTTPException(503, "Data unavailable")
     return data
+
+@app.post("/v1/admin/keys")
+async def create_api_key(
+    owner_email: str,
+    tier: str = "free",
+    token: str | None = None, ):         # admin auth, ?token=..
+    """
+    Mint a new developer API key. Admin only.
+    Call: POST /v1/admin/keys?owner_email=dev@x.com&tier=free&token=<ADMIN_TOKEN>
+    """
+    # The rate-limit middleware already enforces admin on /v1/admin/* —
+    # if we got here, the caller is admin.
+    if tier not in ("free", "paid", "admin"):
+        raise HTTPException(400, "tier must be free, paid, or admin")
+
+    new_token = secrets.token_urlsafe(32)
+    supabase_url = os.getenv("SUPABASE_URL")
+    service_key  = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
+    if not supabase_url or not service_key:
+        raise HTTPException(500, "Supabase service credentials not configured")
+
+    resp = httpx.post(
+        f"{supabase_url}/rest/v1/she_api_keys",
+        headers={
+            "apikey":        service_key,
+            "Authorization": f"Bearer {service_key}",
+            "Content-Type":  "application/json",
+            "Prefer":        "return=minimal",
+        },
+        json={"token": new_token, "owner_email": owner_email, "tier": tier,
+              "active": True},
+        timeout=5.0,
+    )
+    if resp.status_code not in (200, 201, 204):
+        raise HTTPException(500, f"Could not create key: {resp.text}")
+
+    return {
+        "token": new_token,
+        "owner_email": owner_email,
+        "tier": tier,
+        "message": "Store this token securely — it won't be shown again.",
+    }
+
