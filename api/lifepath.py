@@ -29,6 +29,22 @@ DISCLAIMER = (
 )
 
 
+NATURAL_SRB = 105.0  # boys per 100 girls — biological baseline
+
+
+def _missing_girls_per_100(srb) -> float | None:
+    """
+    Missing girls per 100 girls actually born, from sex ratio at birth.
+    expected_girls (per 100 boys' worth) vs actual. Standard 'missing women' method.
+    For SRB boys-per-100-girls: expected girls = boys / 1.05; missing = expected - 100.
+    """
+    s = safe_float(srb)
+    if s is None or s <= NATURAL_SRB:
+        return 0.0
+    expected = s / (NATURAL_SRB / 100.0)   # girls there 'should' be per 100 boys
+    return round(expected - 100.0, 1)
+
+
 def _find(rows: list[dict], iso: str) -> dict | None:
     iso = iso.upper()
     for r in rows:
@@ -65,6 +81,10 @@ def get_life_path(iso_code: str) -> dict | None:
     vital = _find(load_csv(DATA_DIR / "womens-vital-stats-2025.csv"), iso_code)
     rape  = _find(load_csv(DATA_DIR / "rape-counts-reported-vs-estimated-2025.csv"), iso_code)
     widow = _find(load_csv(DATA_DIR / "widow-elderly-index-2025.csv"), iso_code)
+    try:
+        srb_row = _find(load_csv(DATA_DIR / "sex-ratio-at-birth-2025.csv"), iso_code)
+    except Exception:
+        srb_row = None
     if not vital and not rape:
         return None
 
@@ -73,7 +93,32 @@ def get_life_path(iso_code: str) -> dict | None:
     w = widow or {}
     stages = []
 
-    # ── Stage 1 — Born ───────────────────────────────────────────────────────
+    # ── Stage 0 — Before birth (the missing girls) ───────────────────────────
+    srb = safe_float((srb_row or {}).get("srb_boys_per_100_girls"))
+    missing = _missing_girls_per_100(srb)
+    if srb is not None:
+        if missing and missing >= 0.5:
+            stages.append({
+                "stage": "Before birth",
+                "age_band": "−1",
+                "headline": "Were they allowed to be born?",
+                "cohort": f"For every 100 girls born here, about {missing:.0f} more are "
+                          f"missing — never born, through sex-selective practices.",
+                "detail": f"Sex ratio at birth is {srb:.0f} boys per 100 girls "
+                          f"(natural is ~105).",
+                "note": (srb_row or {}).get("source_note"),
+                "source": "UNFPA / World Bank sex ratio at birth (estimate)",
+            })
+        else:
+            stages.append({
+                "stage": "Before birth",
+                "age_band": "−1",
+                "headline": "Were they allowed to be born?",
+                "cohort": "The sex ratio at birth here is natural — girls are not "
+                          "lost before birth.",
+                "detail": f"Sex ratio at birth ≈ {srb:.0f} boys per 100 girls (natural).",
+                "source": "UNFPA / World Bank sex ratio at birth (estimate)",
+            })
     born_week = safe_float(v.get("girls_born_per_week_est"))
     le_f = safe_float(v.get("life_expectancy_female"))
     stages.append({
