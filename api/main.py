@@ -25,7 +25,7 @@ import httpx
 from supabase_source import get_svi, get_wevi, get_whi, get_wvi
 from lifepath import get_life_path
 from newsletter_source import list_newsletters, get_newsletter, get_latest_newsletter
-
+from audit_source import get_audit, get_indicator_trend
 
 from pydantic import BaseModel
 
@@ -1214,4 +1214,22 @@ def subscribe(req: SubscribeRequest):
 
     #Always the same response (no enumeration of existing subscribers).
     return {"ok": True, "message": "Thanks for subscribing! You'll hear from us weekly."}
+@app.get("/v1/audit/{index_name}/{iso_code}")
+def audit_score(index_name: str, iso_code: str, month: str = None):
+    """The raw inputs behind a score. e.g. /v1/audit/svi/IND  or  ?month=2026-05-01"""
+    data = get_audit(index_name.lower(), iso_code, month)
+    if not data:
+        raise HTTPException(404, f"No audit data for {index_name}/{iso_code} yet")
+    return {"index": index_name.lower(), "iso_code": iso_code.upper(),
+            "snapshot_date": data[0]["snapshot_date"],
+            "indicators": {d["indicator_key"]: d["indicator_value"] for d in data}}
+
+@app.get("/v1/audit/{index_name}/{iso_code}/{indicator_key}")
+def audit_indicator_trend(index_name: str, iso_code: str, indicator_key: str):
+    """One indicator's history. e.g. /v1/audit/svi/IND/impunity_score"""
+    data = get_indicator_trend(index_name.lower(), iso_code, indicator_key)
+    if not data:
+        raise HTTPException(404, "No history for that indicator yet")
+    return {"index": index_name.lower(), "iso_code": iso_code.upper(),
+            "indicator": indicator_key, "points": len(data), "data": data}
 
