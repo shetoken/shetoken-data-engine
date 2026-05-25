@@ -24,7 +24,7 @@ Five complementary tokens solving the annual price discovery gap:
 
 ---
 
-## The Seven Data Tools
+## The Nine Data Tools
 
 ### 1. WEI — Women's Empowerment Index
 **Drives the SHE token.** 8 pillars, 0–100 scale.
@@ -63,12 +63,20 @@ Coverage: 35 countries + India states
 Women 2–3× more concentrated in high-automation-risk jobs. Cambodia 86.3 (90% garment workers female, near-zero reskilling). Bangladesh 82.7 (4M women garment workers).
 Coverage: 28 countries
 
-### 6. Corporate Women's Rights Compliance Score (WRBCS)
+### 6. WHI — Women's Health Index
+Captures the health blind spots mainstream gender indices ignore: female mental health (depression, suicide), anaemia in women 15–49, menstrual health & dignity, and contraceptive unmet need. India 41.6 (dragged by 57% anaemia, NFHS-5). 0–100, higher = better.
+Coverage: 38 countries | Mostly modeled estimates (see `data_source` column); verified WHO/DHS/UN Population Division pulls on roadmap.
+
+### 7. WVI — Women's Voice Index
+The most neglected dimension: online gender-based violence, women in media/journalism, women in tech & AI, and civil-society freedom (maps to V-Dem WCSP / Georgetown Women, Peace & Security Index). 0–100, higher = stronger voice.
+Coverage: 38 countries | Mostly modeled estimates (see `data_source` column); verified V-Dem/GMMP/ILO pulls on roadmap.
+
+### 8. Corporate Women's Rights Compliance Score (WRBCS)
 Due diligence for outsourcing decisions. WRBCS = WEI(40%) + SVI(25%) + GPI(20%) + (100−WADI)(15%).
 Ratings: ✅ PREFERRED | 🟢 ACCEPTABLE | 🟡 CAUTION | 🔴 AVOID | ⛔ EMBARGO
 US trade exposure: $28.3B/year to AVOID/EMBARGO. 1% commitment = $283M to Impact Fund.
 
-### 7. Partner Directory
+### 9. Partner Directory
 Find partners for women-focused work: 15 country profiles, 14 proven programs, 6 company registries.
 
 ---
@@ -160,6 +168,10 @@ GET /v1/svi/history
 GET /v1/gpi                  GET /v1/gpi/{iso}
 GET /v1/wadi                 GET /v1/wadi/{iso}
 GET /v1/wadi/occupations/high-risk
+GET /v1/svi                  GET /v1/svi/{iso}        → Sexual Violence Index
+GET /v1/wevi                 GET /v1/wevi/{iso}       → Widow & Elderly Index
+GET /v1/whi                  GET /v1/whi/{iso}        → Women's Health Index
+GET /v1/wvi                  GET /v1/wvi/{iso}        → Women's Voice Index
 GET /v1/vital/global-counters
 GET /v1/vital/countries/{iso}
 
@@ -219,11 +231,11 @@ Full .env guide: `agent/.env.example`
 
 ## Weekly Rhythm
 
-**Sunday automated:** Scan 139+ sources → classify → update WEI → Sheets → newsletter → Twitter + Instagram
+**Sunday automated:** Scan 139+ sources → classify → update WEI → also move the two news-sensitive sister indexes (SVI, WVI) → load into Supabase → Sheets → newsletter → Twitter + Instagram
 
 **Monday (15 min):** Read Gmail report → check crisis alerts → done
 
-**Monthly:** `python run_pipeline.py && git add data/output/ && git push`
+**Monthly:** `python run_pipeline.py && git add data/output/ && git push` — regenerates all nine tools and reloads Supabase (structural indexes WHI/GPI/WEVI/WADI refresh here, not weekly)
 
 **Annually:** Full WEI recalculation when WHO/UNESCO/UNODC publish.
 
@@ -232,13 +244,24 @@ Full .env guide: `agent/.env.example`
 ## Architecture
 
 ```
-Data Engine (this repo)                 Lovable Website
-pipeline/ → generates all data          React components
-agent/    → weekly news agent    →API→  Pages + routes
-api/      → serves everything           fetch('/v1/...')
+Data Engine (this repo)          Read layers              Frontend
+pipeline/ → generates CSVs   →   FastAPI (api/, Railway) → Lovable site
+agent/    → weekly agent      →   Supabase (she_* tables)   (fetch /v1/...)
+api/      → serves CSVs           Chainlink oracle        → smart contract
 ```
 
+The CSVs in `data/output/` are the single source of truth. The **Lovable site
+reads the FastAPI** — the data engine and UI are fully separate, connected only
+over HTTP. Supabase is populated in parallel (independent read layer over the
+same CSVs) as a fallback/alternative store, but the site does not read it
+directly. Loaders that keep Supabase in sync: `pipeline/load_to_supabase.py`
+(monthly) and `pipeline/load_live_to_supabase.py` (weekly).
+
 Full Lovable build prompt: `docs/INDEXES_AND_API_SUMMARY.md`
+
+**Public API:** read endpoints are open and keyless at a basic rate limit
+(60/min per IP). Free and paid tokens unlock higher daily quotas — request one
+at contact@shetoken.org. Tier details in `docs/api-reference.md`.
 
 ---
 
