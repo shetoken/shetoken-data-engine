@@ -1,0 +1,78 @@
+═══════════════════════════════════════════════════════════════════════════
+ADD TO api/main.py — Newsletter subscribe endpoint (for Lovable)
+═══════════════════════════════════════════════════════════════════════════
+
+Lets the website subscribe people to the newsletter. Writes to she_subscribers
+with the SERVICE ROLE (table is private — no public write). Validates the
+email, upserts (so re-subscribing is harmless), and ALWAYS returns success so
+the endpoint can't be used to discover who is already subscribed.
+
+1. Add these imports near the top (if not already present):
+
+    import os, re
+    import httpx
+    from pydantic import BaseModel
+
+2. Add a request model + route:
+
+───────────────────────────────────────────────────────────────────────────
+class SubscribeRequest(BaseModel):
+    email: str
+    tier: str = "subscriber"          # 'subscriber' | 'ngo'
+
+_EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+
+@app.post("/v1/subscribe")
+def subscribe(req: SubscribeRequest):
+    """Subscribe an email to the newsletter (called by the website)."""
+    email = (req.email or "").strip().lower()
+    tier  = req.tier if req.tier in ("subscriber", "ngo") else "subscriber"
+
+    if not _EMAIL_RE.match(email):
+        raise HTTPException(400, "Please enter a valid email address.")
+
+    url = os.getenv("SUPABASE_URL", "")
+    key = os.getenv("SUPABASE_SERVICE_ROLE_KEY", "")
+    if not url or not key:
+        raise HTTPException(503, "Subscriptions are temporarily unavailable.")
+
+    try:
+        httpx.post(
+            f"{url}/rest/v1/she_subscribers",
+            headers={
+                "apikey": key,
+                "Authorization": f"Bearer {key}",
+                "Content-Type": "application/json",
+                "Prefer": "resolution=merge-duplicates",   # upsert on email
+            },
+            json={"email": email, "tier": tier, "active": True, "source": "website"},
+            timeout=5.0,
+        )
+    except Exception:
+        # Don't leak internals; subscribing should feel reliable to the user.
+        pass
+
+    # Always the same response (no enumeration of existing subscribers).
+    return {"ok": True, "message": "Thanks for subscribing! You'll hear from us weekly."}
+───────────────────────────────────────────────────────────────────────────
+
+3. Env var required on Railway (the API service):
+       SUPABASE_SERVICE_ROLE_KEY   (service role — bypasses RLS to write the
+                                     private subscribers table)
+   (SUPABASE_URL you already have.)
+
+4. Verify after deploy:
+       curl -X POST https://api.shetoken.org/v1/subscribe \
+            -H "Content-Type: application/json" \
+            -d '{"email":"test@example.com","tier":"subscriber"}'
+   → {"ok": true, "message": "..."}
+   Then check Supabase: select * from she_subscribers;  → the row is there.
+
+───────────────────────────────────────────────────────────────────────────
+FOR LOVABLE (the website form)
+───────────────────────────────────────────────────────────────────────────
+On the newsletter signup form, POST to:
+       https://api.shetoken.org/v1/subscribe
+   body: { "email": "<user email>", "tier": "subscriber" }
+Show req success message on {ok:true}. Use tier:"ngo" only on an NGO-specific
+form. The founder is never set via this endpoint.
