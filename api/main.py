@@ -1140,33 +1140,77 @@ def newsletters_one(week: str):
     return nl
 @app.post("/v1/subscribe")
 def subscribe(req: SubscribeRequest):
-    """Subscribe an email to the newsletter (called by the website)."""
     email = (req.email or "").strip().lower()
     tier  = req.tier if req.tier in ("subscriber", "ngo") else "subscriber"
-
     if not _EMAIL_RE.match(email):
         raise HTTPException(400, "Please enter a valid email address.")
 
     url = os.getenv("SUPABASE_URL", "")
     key = os.getenv("SUPABASE_SERVICE_ROLE_KEY", "")
+
+    # --- diagnostic info (TEMPORARY) ---
+    diag = {
+        "url_set": bool(url),
+        "url_tail": url[-20:] if url else None,         # confirm right project
+        "key_set": bool(key),
+        "key_len": len(key) if key else 0,              # service keys are long (~200+)
+        "key_prefix": key[:6] if key else None,         # 'eyJhbG' = a JWT (service/anon)
+    }
     if not url or not key:
-        raise HTTPException(503, "Subscriptions are temporarily unavailable.")
+        return {"ok": False, "stage": "env", "diag": diag}
 
     try:
-        httpx.post(
+        import httpx
+        r = httpx.post(
             f"{url}/rest/v1/she_subscribers",
             headers={
                 "apikey": key,
                 "Authorization": f"Bearer {key}",
                 "Content-Type": "application/json",
-                "Prefer": "resolution=merge-duplicates",   # upsert on email
+                "Prefer": "resolution=merge-duplicates",
             },
             json={"email": email, "tier": tier, "active": True, "source": "website"},
             timeout=5.0,
         )
-    except Exception:
-        # Don't leak internals; subscribing should feel reliable to the user.
-        pass
+        return {
+            "ok": r.status_code in (200, 201),
+            "stage": "supabase",
+            "status": r.status_code,         # 201=ok, 401/403=key/RLS, 404=table missing
+            "body": r.text[:400],            # Supabase error message
+            "diag": diag,
+        }
+    except Exception as e:
+        return {"ok": False, "stage": "exception", "error": str(e), "diag": diag}
+
+# @app.post("/v1/subscribe")
+# def subscribe(req: SubscribeRequest):
+#     """Subscribe an email to the newsletter (called by the website)."""
+#     email = (req.email or "").strip().lower()
+#     tier  = req.tier if req.tier in ("subscriber", "ngo") else "subscriber"
+
+#     if not _EMAIL_RE.match(email):
+#         raise HTTPException(400, "Please enter a valid email address.")
+
+#     url = os.getenv("SUPABASE_URL", "")
+#     key = os.getenv("SUPABASE_SERVICE_ROLE_KEY", "")
+#     if not url or not key:
+#         raise HTTPException(503, "Subscriptions are temporarily unavailable.")
+
+#     try:
+#         httpx.post(
+#             f"{url}/rest/v1/she_subscribers",
+#             headers={
+#                 "apikey": key,
+#                 "Authorization": f"Bearer {key}",
+#                 "Content-Type": "application/json",
+#                 "Prefer": "resolution=merge-duplicates",   # upsert on email
+#             },
+#             json={"email": email, "tier": tier, "active": True, "source": "website"},
+#             timeout=5.0,
+#         )
+#     except Exception:
+#         # Don't leak internals; subscribing should feel reliable to the user.
+#         pass
 
     # Always the same response (no enumeration of existing subscribers).
     return {"ok": True, "message": "Thanks for subscribing! You'll hear from us weekly."}
