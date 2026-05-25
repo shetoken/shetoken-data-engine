@@ -1,7 +1,7 @@
 # SHEtoken API Reference
 ## WEI Data API — Technical Documentation
 
-> The SHEtoken WEI API provides programmatic access to Women's Empowerment Index scores, token supply data, and program milestone submissions. All endpoints are public and free to use.
+> The SHEtoken WEI API provides programmatic access to Women's Empowerment Index scores, token supply data, and program milestone submissions. Read endpoints are public and keyless at a basic rate limit; free and paid tokens unlock higher daily quotas (see Authentication & Tiers).
 
 ---
 
@@ -13,19 +13,36 @@ https://api.shetoken.org/v1
 
 ---
 
-## Authentication
+## Authentication & Tiers
 
-Public read endpoints require no authentication.
+The API is **public and keyless at a basic rate limit** — you can call read
+endpoints with no token at all. Tokens unlock higher daily quotas.
 
-Write endpoints (government and NGO data submission) require an API key.
+| Tier | Token? | Limit | How to get it |
+|---|---|---|---|
+| **Public** | none | 60 requests/min per IP | Just call the API |
+| **Free** | yes | 5,000 requests/day | Email contact@shetoken.org |
+| **Paid** | yes | 100,000 requests/day | Email contact@shetoken.org |
+| **Admin** | yes | Unlimited | Internal only |
 
-**Get an API key:**
-Email contact@shetoken.org with your organisation name and registration details.
-
-**Using your API key:**
+**Using a token:**
 ```
-Authorization: Bearer YOUR_API_KEY
+Authorization: Bearer YOUR_TOKEN
 ```
+(or, for quick browser testing, append `?token=YOUR_TOKEN`)
+
+**Rate-limit headers** are returned on every response:
+```
+X-RateLimit-Tier:       public | free | paid | admin
+X-RateLimit-Limit:      <your limit>
+X-RateLimit-Remaining:  <calls left>
+```
+
+**When you exceed your limit** you receive HTTP `429` with a JSON body
+explaining the limit and how to upgrade. Public callers get a per-minute
+window; token holders get a daily quota.
+
+Write endpoints (government and NGO data submission) always require a token.
 
 ---
 
@@ -215,8 +232,32 @@ curl https://api.shetoken.org/v1/wei/leaderboard?type=states&limit=10
 
 ---
 
-### Token Supply
+### Sister Indexes
 
+All sister-index endpoints follow the same shape: a list endpoint returns all
+scored countries, and `/{iso_code}` returns one. All are 0–100.
+
+| Endpoint | Index | Direction |
+|---|---|---|
+| `GET /gpi` · `/gpi/:iso` | Gender Poverty Index (9 dimensions) | higher = better |
+| `GET /svi` · `/svi/:iso` | Sexual Violence Index (WHO prevalence) | higher = better |
+| `GET /wevi` · `/wevi/:iso` | Widow & Elderly Vulnerability Index | higher = more vulnerable |
+| `GET /wadi` · `/wadi/:iso` | Women's AI Displacement Index | higher = more exposed |
+| `GET /whi` · `/whi/:iso` | Women's Health Index (mental, anaemia, menstrual, contraception) | higher = better |
+| `GET /wvi` · `/wvi/:iso` | Women's Voice Index (online GBV, media, tech, civil society) | higher = better |
+| `GET /compliance/countries` · `/{iso}` | Corporate Compliance Score (WRBCS) | higher = safer to source |
+
+```bash
+curl https://api.shetoken.org/v1/whi
+curl https://api.shetoken.org/v1/wvi/IND
+```
+
+> WHI and WVI currently return transparent modeled estimates — each record
+> includes a `data_source` field indicating modeled vs verified.
+
+---
+
+### Token Supply
 #### GET /token/supply
 
 Returns current token supply statistics.

@@ -3,7 +3,7 @@
 
 ---
 
-## THE FIVE INDEXES
+## THE EIGHT INDEXES (+ POLICY ENGINE)
 
 ### 1. WEI — Women's Empowerment Index
 **The master index. Drives the token.**
@@ -103,7 +103,34 @@ Score: 0–100 | Higher = more vulnerable
 
 ---
 
-### 5. Policy Recommendation Engine
+### 5. WADI — Women's AI Displacement Index
+**Tracks women's exposure to automation/AI job loss.**
+0–100, higher = more vulnerable. Cambodia 86.3 (90% garment workers female).
+Coverage: 28 countries.
+
+### 6. WHI — Women's Health Index
+**Health blind spots mainstream indices ignore.**
+Female mental health (depression, suicide), anaemia in women 15–49,
+menstrual health & dignity, contraceptive unmet need. 0–100, higher = better.
+India 41.6 (57% anaemia). Coverage: 38 countries.
+*Ships as transparent modeled estimates — see `data_source` column.*
+
+### 7. WVI — Women's Voice Index
+**The most neglected dimension.**
+Online GBV, women in media, women in tech & AI, civil-society freedom
+(maps to V-Dem WCSP / Georgetown WPS Index). 0–100, higher = stronger voice.
+News-sensitive — updates weekly. Coverage: 38 countries.
+*Ships as transparent modeled estimates — see `data_source` column.*
+
+### 8. WRBCS — Corporate Compliance Score
+**Outsourcing due-diligence rating.**
+WRBCS = WEI(40%) + SVI(25%) + GPI(20%) + (100−WADI)(15%).
+Ratings: PREFERRED / ACCEPTABLE / CAUTION / AVOID / EMBARGO.
+Coverage: 30 countries + 36 US states.
+
+---
+
+### Policy Recommendation Engine
 **Not an index — an output layer.**
 
 Reads WEI + GPI pillar scores for any country and generates
@@ -188,7 +215,7 @@ CWPS = (WEI × 0.60) + (GPI × 0.40)
 
 **Base URL:** `https://api.shetoken.org`
 **Interactive docs:** `/docs`
-**All endpoints are public, no API key needed.**
+**Public & keyless at a basic rate limit (60/min per IP). Free/paid tokens unlock higher daily quotas — email contact@shetoken.org.**
 
 ### Dashboard
 ```
@@ -270,6 +297,15 @@ GET /v1/gpi/{iso}
              /v1/gpi/ISL  → Iceland (near equality)
 ```
 
+### Other Sister Indexes
+```
+GET /v1/svi      GET /v1/svi/{iso}    → Sexual Violence Index (WHO prevalence)
+GET /v1/wevi     GET /v1/wevi/{iso}   → Widow & Elderly Vulnerability Index
+GET /v1/whi      GET /v1/whi/{iso}    → Women's Health Index (mental, anaemia, menstrual)
+GET /v1/wvi      GET /v1/wvi/{iso}    → Women's Voice Index (online GBV, media, civil society)
+GET /v1/wadi     GET /v1/wadi/{iso}   → Women's AI Displacement Index
+```
+
 ### Vital Statistics
 ```
 GET /v1/vital/global-counters
@@ -305,6 +341,33 @@ GET /v1/token
 
 ---
 
+## DATA LAYER — HOW LOVABLE READS THE DATA
+
+The Lovable site reads from the **FastAPI** (`api.shetoken.org`). The data
+engine and the UI are fully separate, connected only through HTTP. The UI
+knows nothing about how data is produced — it just calls endpoints.
+
+```
+Data Engine (repo)        API boundary          UI (Lovable)
+generators → CSVs   →   FastAPI (Railway)   →   fetch('/v1/...')
+```
+
+**Supabase is also populated** (the `she_*` tables below) as a parallel store
+and fallback, but the Lovable site does NOT read it directly — it goes through
+the API. Both are independent read layers over the same source CSVs and return
+identical numbers, so Supabase remains available if you ever want the site to
+switch to it.
+
+| Supabase table (parallel store) | Holds |
+|---|---|
+| `she_wei_countries` | WEI hero + 8 pillars, 105 countries |
+| `she_gpi_countries` / `she_svi_countries` / `she_wadi_countries` | GPI, SVI, WADI |
+| `she_widow_elderly` / `she_corporate_compliance` | WEVI, WRBCS |
+| `she_whi_countries` / `she_wvi_countries` | Women's Health, Women's Voice |
+| `she_wei_live` / `she_svi_live` / `she_wvi_live` | weekly signal-adjusted scores |
+
+---
+
 ## WHAT TO TELL LOVABLE
 
 Copy this entire prompt into Lovable:
@@ -314,8 +377,11 @@ Build a website for SHEtoken (shetoken.org) — the world's first
 data-backed cryptocurrency tied to women's empowerment.
 
 Connect to our live API at: https://api.shetoken.org
-All endpoints are public, no API key needed.
+Public and keyless at a basic rate limit — no token needed for normal site
+traffic. (Higher-volume third-party developers can request a token.)
 See full docs at: https://api.shetoken.org/docs
+
+Do NOT use any database directly — fetch everything from the API endpoints.
 
 PAGES TO BUILD:
 
