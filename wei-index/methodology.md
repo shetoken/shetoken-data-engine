@@ -340,6 +340,53 @@ of Work (2021), WEF Future of Jobs Report 2023, ILO WESO 2024.
 
 ---
 
+## 9b. Women's Health Index (WHI)
+
+Captures health dimensions absent from mainstream gender indices. Scored
+0–100, higher = better. Structural index (monthly refresh).
+
+| Indicator | Weight | Direction | Source (roadmap) |
+|---|---|---|---|
+| Female depression/anxiety prevalence | 20% | invert | WHO GHO |
+| Female suicide rate (per 100k) | 15% | invert | WHO GHO |
+| Anaemia in women 15–49 (%) | 20% | invert | WHO |
+| Menstrual hygiene access (%) | 15% | positive | UNICEF / DHS / MICS |
+| Contraceptive unmet need (%) | 20% | invert | UN Population Division |
+| Maternal mental-health support (0–10) | 10% | positive | modeled |
+
+```
+WHI = depression(0.20) + suicide(0.15) + anaemia(0.20)
+    + menstrual(0.15) + contraceptive(0.20) + maternal_mh(0.10)
+all sub-scores normalised 0–100; invert applied per the table above
+```
+
+**Data honesty:** ships as transparent modeled estimates (each row carries a
+`data_source` flag). Solid global data exists for anaemia, suicide, and
+contraceptive unmet need; menstrual health is patchy and flagged as such.
+Anchor point: India anaemia 57% (NFHS-5). **Coverage:** 38 countries.
+
+---
+
+## 9c. Women's Voice Index (WVI)
+
+Captures women's voice — political, civic, media, digital. Scored 0–100,
+higher = stronger voice. **News-sensitive** (updates weekly, see Section 14).
+
+| Indicator | Weight | Direction | Source (roadmap) |
+|---|---|---|---|
+| Online gender-based violence (%) | 20% | invert | EIU / regional |
+| Women in media leadership (%) | 15% | positive | GMMP |
+| Women in tech & AI (%) | 15% | positive | ILO |
+| Civil-society freedom for women (0–10) | 25% | positive | V-Dem WCSP |
+| Women journalists / bylines (%) | 10% | positive | GMMP |
+| Press / expression freedom (0–10) | 15% | positive | V-Dem / RSF |
+
+The civil-society dimension (highest weight at 25%) maps directly to V-Dem's
+Women's Civil Society Participation index and the Georgetown Women, Peace &
+Security Index — the credibility anchor for this index. **Coverage:** 38 countries.
+
+---
+
 ## 10. Corporate Compliance Score
 
 ```
@@ -618,6 +665,25 @@ signal_value = direction × severity × confidence
 delta = signal_value × 0.08 × 100
 delta = max(-2.0, min(2.0, delta))
 ```
+
+### News-Sensitive Sister Indexes (SVI, WVI)
+
+The same signal engine also moves the two news-sensitive sister indexes each
+week — reusing the identical scaling and ±2.0 cap. Pillar signals map to a
+sister index, and the signed delta is applied to its baseline composite
+(both indexes are higher = better, so no inversion):
+
+```
+SVI_live = SVI_baseline + capped(safety_justice + violence_penalty signals)
+WVI_live = WVI_baseline + capped(empowerment + digital_social signals)
+```
+
+A femicide (direction −1) pushes SVI down; a new digital-rights law
+(direction +1) pushes WVI up. **Structural indexes (WHI, GPI, WEVI, WADI)
+are deliberately NOT signal-adjusted** — nothing in a single week's news
+legitimately moves anaemia prevalence or pension coverage. They refresh
+monthly only. This mixed cadence — fast data looks fast, slow data looks
+slow — is a deliberate credibility choice, not a limitation.
 
 ---
 
