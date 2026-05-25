@@ -25,6 +25,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from config import GMAIL_USER, GMAIL_APP_PASS, REPORT_TO, REPORT_SUBJECT
+from newsletter_cta import generate_cta, cta_text
+from newsletter_archive import archive_newsletter
 
 logger = logging.getLogger(__name__)
 
@@ -51,6 +53,11 @@ def build_week_in_review(report: dict) -> str:
     signals    = report.get("total_signals", 0)
     crises     = report.get("crisis_count", 0)
     movers     = report.get("top_movers", [])
+    # LLM-generated summary + call-to-action (with safe fallback)
+    cta = generate_cta(report)
+    report["cta_html"] = cta["html"]      # builders inject this
+    report["cta_text"] = cta_text(cta)    # text version
+
     pillars    = report.get("global_pillar_summary", {})
 
     top_geo    = movers[0]["geo"] if movers else "global"
