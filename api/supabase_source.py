@@ -139,6 +139,48 @@ def get_whi(iso_code: str | None = None) -> list[dict]:
     return all_rows
 
 
+def get_country_blurb(iso_code: str) -> dict | None:
+    """
+    Fetch the SLM-generated performance blurb for one country.
+    Queries she_country_blurbs by iso_code. Returns None when not yet generated.
+
+    Return shape: { performance_summary: str, sources: list[dict] }
+    """
+    import json as _json
+
+    if not SUPABASE_URL or not SUPABASE_KEY:
+        return None
+    try:
+        import httpx
+        resp = httpx.get(
+            f"{SUPABASE_URL}/rest/v1/she_country_blurbs",
+            params={
+                "select":   "*",
+                "iso_code": f"eq.{iso_code.upper()}",
+                "limit":    "1",
+            },
+            headers={
+                "apikey":        SUPABASE_KEY,
+                "Authorization": f"Bearer {SUPABASE_KEY}",
+            },
+            timeout=4.0,
+        )
+        if resp.status_code == 200:
+            rows = resp.json()
+            if rows:
+                r       = rows[0]
+                sources = r.get("sources") or []
+                if isinstance(sources, str):
+                    sources = _json.loads(sources)
+                return {
+                    "performance_summary": r.get("performance_summary"),
+                    "sources":             sources,
+                }
+    except Exception as exc:
+        logger.warning("supabase_source: blurb fetch failed (%s)", exc)
+    return None
+
+
 def get_wvi(iso_code: str | None = None) -> list[dict]:
     """Women's Voice Index. Supabase she_wvi_countries → CSV."""
     def _load():

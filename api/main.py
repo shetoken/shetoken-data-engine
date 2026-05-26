@@ -22,7 +22,7 @@ import logging
 import os, secrets, re
 import httpx
 
-from supabase_source import get_svi, get_wevi, get_whi, get_wvi
+from supabase_source import get_svi, get_wevi, get_whi, get_wvi, get_country_blurb
 from lifepath import get_life_path
 from newsletter_source import list_newsletters, get_newsletter, get_latest_newsletter
 from audit_source import get_audit, get_indicator_trend
@@ -207,6 +207,14 @@ def get_country(iso_code: str):
     match = next((c for c in countries if c["iso_code"] == iso_upper), None)
     if not match:
         raise HTTPException(404, f"Country '{iso_code}' not found")
+
+    # Merge SLM-generated blurb + source links if the weekly pipeline has run
+    blurb = get_country_blurb(iso_upper)
+    if blurb:
+        match = dict(match)
+        match["performance_summary"] = blurb["performance_summary"]
+        match["sources"]             = blurb["sources"]
+
     return match
 
 

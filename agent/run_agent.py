@@ -232,6 +232,27 @@ def main():
             logger.warning(f"  Sister index update skipped (non-fatal): {e}")
 
 
+    # ── STEP 5c: Generate SLM country blurbs ────────────────────────────────
+    # Uses Phi-3.5 via Ollama to write a 2-sentence performance summary per country.
+    # Only countries that have classified signals get a blurb — others fall back to
+    # the template in the frontend. Writes country_blurbs.json + Supabase.
+    logger.info("\n[5c] Generating SLM performance blurbs...")
+    try:
+        from reporter.blurb_generator import generate_blurbs
+        blurb_rows = live_scores.get("global", [])
+        if blurb_rows:
+            blurbs = generate_blurbs(
+                country_rows = blurb_rows,
+                signals      = signals,
+                live_dir     = LIVE_OUTPUT_DIR,
+                dry_run      = args.dry_run,
+            )
+            logger.info(f"  {len(blurbs)} countries received signal-backed blurbs")
+        else:
+            logger.info("  Skipped — no live global scores available (--skip-wei?)")
+    except Exception as e:
+        logger.warning(f"  Blurb generation skipped (non-fatal): {e}")
+
     # ── STEP 6: Report ───────────────────────────────────────────────────────
     # Summary printout
     logger.info("\n" + "-" * 60)
