@@ -310,7 +310,7 @@ def wadi_all(country: Optional[str] = Query(None, description="ISO code")):
     """
     rows = get_wadi(iso_code=country)
     if not rows: raise HTTPException(404, "No WADI data found")
-    return {"count": len(rows), "data": rows}
+    return rows
 
 
 @app.get("/v1/wadi/{iso_code}", tags=["AI Displacement"],
@@ -405,7 +405,7 @@ def gender_poverty_index(
     """
     rows = get_gpi(iso_code=country)
     if not rows: raise HTTPException(404, "No data found")
-    return {"count": len(rows), "data": rows}
+    return rows
 
 
 @app.get("/v1/gpi/{iso_code}", tags=["Gender Poverty Index"],
@@ -809,7 +809,7 @@ def compliance_countries(
     if rating:
         rows = [r for r in rows if r["rating"]==rating.upper()]
     if not rows: raise HTTPException(404, "No data found")
-    return {"count": len(rows), "data": rows}
+    return rows
 
 
 @app.get("/v1/compliance/countries/{iso_code}", tags=["Corporate Compliance"],
@@ -1070,8 +1070,11 @@ async def create_api_key(
     }
 @app.get("/v1/svi")
 def svi_scores():
-    """Sexual Violence Index — all countries (WHO-prevalence based)."""
-    return {"count": len(get_svi()), "data": get_svi()}
+    """Sexual Violence Index — all countries (WHO-prevalence based). Returns flat array."""
+    rows = get_svi()
+    if not rows:
+        raise HTTPException(404, "No SVI data available")
+    return rows
 
 @app.get("/v1/svi/{iso_code}")
 def svi_country(iso_code: str):
@@ -1082,8 +1085,11 @@ def svi_country(iso_code: str):
 
 @app.get("/v1/wevi")
 def wevi_scores():
-    """Widow & Elderly Vulnerability Index — all countries."""
-    return {"count": len(get_wevi()), "data": get_wevi()}
+    """Widow & Elderly Vulnerability Index — all countries. Returns flat array."""
+    rows = get_wevi()
+    if not rows:
+        raise HTTPException(404, "No WEVI data available")
+    return rows
 
 @app.get("/v1/wevi/{iso_code}")
 def wevi_country(iso_code: str):
@@ -1094,8 +1100,11 @@ def wevi_country(iso_code: str):
 
 @app.get("/v1/whi")
 def whi_scores():
-    """Women's Health Index — mental health, anaemia, menstrual, contraception."""
-    return {"count": len(get_whi()), "data": get_whi()}
+    """Women's Health Index — mental health, anaemia, menstrual, contraception. Returns flat array."""
+    rows = get_whi()
+    if not rows:
+        raise HTTPException(404, "No WHI data available")
+    return rows
 
 @app.get("/v1/whi/{iso_code}")
 def whi_country(iso_code: str):
@@ -1106,8 +1115,11 @@ def whi_country(iso_code: str):
 
 @app.get("/v1/wvi")
 def wvi_scores():
-    """Women's Voice Index — online GBV, media, tech, civil-society freedom."""
-    return {"count": len(get_wvi()), "data": get_wvi()}
+    """Women's Voice Index — online GBV, media, tech, civil-society freedom. Returns flat array."""
+    rows = get_wvi()
+    if not rows:
+        raise HTTPException(404, "No WVI data available")
+    return rows
 
 @app.get("/v1/wvi/{iso_code}")
 def wvi_country(iso_code: str):

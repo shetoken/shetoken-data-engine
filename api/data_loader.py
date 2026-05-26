@@ -184,6 +184,10 @@ def get_latest_signals() -> dict:
 def get_summary() -> dict:
     """Compute global summary stats for the dashboard."""
     def _load():
+        # Lazy import avoids circular dependency:
+        # supabase_source imports data_loader, so we can't import it at module level.
+        from supabase_source import get_svi, get_wevi, get_whi, get_wvi
+
         countries = get_global_scores()
         if not countries:
             return {}
@@ -198,6 +202,11 @@ def get_summary() -> dict:
             c["wei_score"] * (c["population_millions"] or 0)
             for c in countries if c["wei_score"]
         ) / max(sum(c["population_millions"] or 0 for c in countries), 1)
+
+        def _avg(rows, field):
+            """Simple mean of a numeric field; ignores None/missing values."""
+            vals = [r[field] for r in rows if isinstance(r.get(field), (int, float))]
+            return round(sum(vals) / len(vals), 2) if vals else None
 
         return {
             "global_wei_score":        round(pop_weighted, 1),
@@ -215,6 +224,18 @@ def get_summary() -> dict:
             "latest_signals_count":    sigs.get("total_signals",0),
             "latest_crisis_count":     sigs.get("crisis_count",0),
             "last_updated":            datetime.now(timezone.utc).isoformat(),
+            # ── Pre-computed global averages for the 7 non-WEI indexes ──────────
+            # Shipped here so the frontend never needs to download all index rows
+            # just to show a global average chip.  Values are simple (unweighted)
+            # country means.  composite_score is used for Compliance because that
+            # is the field name in the CSV / Supabase table.
+            "gpi_global_avg":          _avg(get_gpi(),        "gpi_score"),
+            "svi_global_avg":          _avg(get_svi(),        "svi_score"),
+            "wadi_global_avg":         _avg(get_wadi(),       "wadi_score"),
+            "wevi_global_avg":         _avg(get_wevi(),       "wevi_score"),
+            "whi_global_avg":          _avg(get_whi(),        "whi_score"),
+            "wvi_global_avg":          _avg(get_wvi(),        "wvi_score"),
+            "compliance_global_avg":   _avg(get_compliance(), "composite_score"),
         }
     return cached("summary", _load)
 
@@ -546,6 +567,9 @@ def get_compliance(iso_code: str = None) -> list[dict]:
                  "iso_code":r.get("iso_code",""),
                  "region":r.get("region",""),
                  "composite_score":safe_float(r.get("composite_score")),
+                 # compliance_score is an alias so the frontend INDEX_CONFIGS
+                 # scoreField ("compliance_score") resolves correctly
+                 "compliance_score":safe_float(r.get("composite_score")),
                  "rating":r.get("rating",""),
                  "rating_headline":r.get("rating_headline",""),
                  "wei_score":safe_float(r.get("wei_score")),
