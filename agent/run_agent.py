@@ -126,8 +126,16 @@ def main():
         rss_articles = fetch_all_sources(days_back=args.days_back)
         yt_articles  = fetch_all_youtube(days_back=args.days_back)
         rd_articles  = fetch_all_reddit(days_back=args.days_back)
-        articles     = rss_articles + yt_articles + rd_articles
-        logger.info(f"  RSS: {len(rss_articles)} | YouTube: {len(yt_articles)} | Reddit: {len(rd_articles)}")
+
+        # GDELT — structured global news, no scraping, no 403s
+        from scanner.fetch_gdelt import fetch_all_gdelt
+        gdelt_articles = fetch_all_gdelt(days_back=args.days_back)
+
+        articles = rss_articles + yt_articles + rd_articles + gdelt_articles
+        logger.info(
+            f"  RSS: {len(rss_articles)} | YouTube: {len(yt_articles)} "
+            f"| Reddit: {len(rd_articles)} | GDELT: {len(gdelt_articles)}"
+        )
 
         # ── Deduplicate against previously-seen article URLs ─────────────────
         # Drops articles whose URL was already processed in an earlier run so
@@ -159,6 +167,25 @@ def main():
 
     if not articles:
         logger.warning("No articles fetched — check network/sources")
+
+    # ── LLM Scout: fill gaps for countries with no organic signals ───────────
+    # Runs AFTER dedup so it only fires for countries genuinely not covered.
+    # Requires ANTHROPIC_API_KEY or PERPLEXITY_API_KEY in environment.
+    if not args.no_dedup:  # skip in no-dedup (manual re-run) mode
+        try:
+            from scanner.fetch_llm_scout import fetch_llm_scout
+            # Find countries already represented in the organic articles
+            covered = {a.get("region", "").lower() for a in articles if a.get("region")}
+            scout_arts = fetch_llm_scout(week_str=week)
+            # Filter to countries not already covered
+            scout_new = [a for a in scout_arts
+                         if a.get("scout_country", "").lower() not in covered]
+            if scout_new:
+                logger.info(f"  LLM Scout added {len(scout_new)} items for uncovered countries")
+                articles = articles + scout_new
+        except Exception as exc:
+            logger.info(f"  LLM Scout skipped: {exc}")
+    # ─────────────────────────────────────────────────────────────────────────
 
     # ── STEP 3: Classify ─────────────────────────────────────────────────────
     logger.info(f"\n[3/6] Classifying {len(articles)} articles with SLM...")

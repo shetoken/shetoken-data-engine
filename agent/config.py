@@ -237,26 +237,16 @@ NEWS_SOURCES = [
     ("TOI Women",              "https://timesofindia.indiatimes.com/rssfeeds/2647163.cms","en","India","regional"),
     ("TOI World",              "https://timesofindia.indiatimes.com/rssfeeds/296589292.cms","en","global","regional"),
 
-    # ── USA — CNN ─────────────────────────────────────────────────────────────
-    ("CNN World",              "http://rss.cnn.com/rss/edition_world.rss",             "en","global","global"),
-    ("CNN US",                 "http://rss.cnn.com/rss/edition.rss",                  "en","USA","regional"),
-    ("CNN Health",             "http://rss.cnn.com/rss/edition_health.rss",           "en","global","global"),
-
-    # ── USA — Fox News ────────────────────────────────────────────────────────
-    ("Fox News World",         "https://moxie.foxnews.com/google-publisher/world.xml","en","global","global"),
-    ("Fox News US",            "https://moxie.foxnews.com/google-publisher/us.xml",   "en","USA","regional"),
-    ("Fox News Politics",      "https://moxie.foxnews.com/google-publisher/politics.xml","en","USA","regional"),
-
-    # ── USA — Other major outlets ─────────────────────────────────────────────
-    ("New York Times World",   "https://rss.nytimes.com/services/xml/rss/nyt/World.xml","en","global","global"),
-    ("New York Times US",      "https://rss.nytimes.com/services/xml/rss/nyt/US.xml", "en","USA","regional"),
-    ("Washington Post World",  "https://feeds.washingtonpost.com/rss/world",          "en","global","global"),
+    # ── USA ───────────────────────────────────────────────────────────────────
+    # NOTE: NYT and WaPo removed — paywalled + Cloudflare; always 403.
+    # CNN and Fox removed — block Cloud Run IPs.
+    # Replaced by GDELT which indexes all of them without scraping.
     ("NPR News",               "https://feeds.npr.org/1001/rss.xml",                  "en","USA","regional"),
     ("PBS NewsHour",           "https://www.pbs.org/newshour/feeds/rss/headlines",    "en","USA","regional"),
 
     # ── UK ────────────────────────────────────────────────────────────────────
-    ("The Times UK",           "https://www.thetimes.co.uk/rss/news",                 "en","global","global"),
-    ("The Independent",        "https://www.independent.co.uk/news/rss",              "en","global","global"),
+    # NOTE: The Times UK removed — paywall. The Independent often 403s.
+    # Sky News is reliable.
     ("Sky News World",         "https://feeds.skynews.com/feeds/rss/world.xml",       "en","global","global"),
 
     # ── AUSTRALIA ─────────────────────────────────────────────────────────────

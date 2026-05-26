@@ -12,6 +12,30 @@ from config import (NEWS_SOURCES, WEI_KEYWORDS, MAX_ARTICLES_PER_SOURCE,
 
 logger = logging.getLogger(__name__)
 
+# Rotate through real browser user-agents so sites that serve RSS only to
+# browsers don't immediately reject the request.  We keep an honest
+# SHEtoken agent in the pool for sites that honour the robots.txt ethos.
+_USER_AGENTS = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) "
+    "Gecko/20100101 Firefox/127.0",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) AppleWebKit/605.1.15 "
+    "(KHTML, like Gecko) Version/17.5 Safari/605.1.15",
+    # Honest agent for sites that respect bot identification
+    "SHEtoken-WEI-Research/2.0 (+https://shetoken.org)",
+]
+
+import random as _random
+
+
+def _headers() -> dict:
+    return {"User-Agent": _random.choice(_USER_AGENTS)}
+
 
 def is_relevant(text):
     """Pre-filter: check if article contains any WEI keyword."""
@@ -65,13 +89,7 @@ def fetch_source(name, url, language, region, tier, days_back=7):
     cutoff = datetime.now(timezone.utc) - timedelta(days=days_back)
 
     try:
-        headers = {
-            "User-Agent": (
-                "Mozilla/5.0 (compatible; SHEtoken-WEI-Agent/1.0; "
-                "+https://shetoken.org)"
-            )
-        }
-        resp = requests.get(url, headers=headers,
+        resp = requests.get(url, headers=_headers(),
                             timeout=REQUEST_TIMEOUT, allow_redirects=True)
         resp.raise_for_status()
         feed = feedparser.parse(resp.content)
