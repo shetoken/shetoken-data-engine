@@ -186,7 +186,17 @@ def fetch_gdelt_query(
             headers={"User-Agent": _UA},
             timeout=20,
         )
+        if resp.status_code == 429:
+            logger.debug(f"  GDELT 429 on '{query[:55]}' — backing off 15s")
+            time.sleep(15)
+            return []
         resp.raise_for_status()
+
+        raw_text = resp.text.strip()
+        if not raw_text:
+            time.sleep(2.0)
+            return []
+
         data     = resp.json()
         raw_arts = data.get("articles") or []
 
@@ -209,8 +219,8 @@ def fetch_gdelt_query(
                 "region":            country or "global",
                 "tier":              "global",
                 "title":             title,
-                "summary":           title,   # artlist mode returns title only
-                "text":              title,   # classifier works from title for GDELT items
+                "summary":           title,
+                "text":              title,
                 "url":               url,
                 "published":         published,
                 "fetched_at":        datetime.now(timezone.utc).isoformat(),
@@ -218,15 +228,17 @@ def fetch_gdelt_query(
                 "gdelt_pillar_hint": pillar,
             })
 
-        time.sleep(1.0)   # GDELT asks for ~1 req/sec
+        time.sleep(1.5)   # GDELT asks for ~1 req/sec; 1.5s gives headroom
         logger.debug(f"  GDELT | '{query[:55]}' → {len(results)} articles")
         return results
 
     except requests.exceptions.Timeout:
         logger.debug(f"  GDELT timeout: '{query[:55]}' (skipped)")
+        time.sleep(2.0)
         return []
     except Exception as exc:
         logger.warning(f"  GDELT query failed '{query[:55]}': {exc}")
+        time.sleep(2.0)   # always sleep so failures don't pile up
         return []
 
 
