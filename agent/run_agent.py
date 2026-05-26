@@ -91,6 +91,8 @@ def main():
     parser.add_argument("--skip-fetch", action="store_true")
     parser.add_argument("--skip-wei",   action="store_true",
                         help="Skip WEI update step")
+    parser.add_argument("--no-dedup",   action="store_true",
+                        help="Disable URL deduplication (re-classify all fetched articles)")
     args = parser.parse_args()
 
     week       = args.week or get_week_str()
@@ -126,9 +128,34 @@ def main():
         rd_articles  = fetch_all_reddit(days_back=args.days_back)
         articles     = rss_articles + yt_articles + rd_articles
         logger.info(f"  RSS: {len(rss_articles)} | YouTube: {len(yt_articles)} | Reddit: {len(rd_articles)}")
+
+        # ── Deduplicate against previously-seen article URLs ─────────────────
+        # Drops articles whose URL was already processed in an earlier run so
+        # the SLM classifier never wastes time on the same piece twice.
+        # Pass --no-dedup to skip (useful when intentionally re-processing).
+        if not args.no_dedup:
+            from dedup import filter_new, stats as dedup_stats
+            articles, n_skipped = filter_new(articles, week)
+            if n_skipped:
+                ds = dedup_stats()
+                logger.info(
+                    f"  Dedup: {n_skipped} already-seen articles filtered out "
+                    f"→ {len(articles)} new to classify"
+                )
+                logger.info(
+                    f"  Dedup store: {ds['total_urls']} total URLs, "
+                    f"{ds['weeks_covered']} weeks on record "
+                    f"[{ds.get('backend','?')}]"
+                )
+            else:
+                logger.info(
+                    f"  Dedup: all {len(articles)} articles are new this week"
+                )
+        # ─────────────────────────────────────────────────────────────────────
+
         with open(cache_path, "w", encoding="utf-8") as f:
             json.dump(articles, f, ensure_ascii=False, indent=2)
-        logger.info(f"  {len(articles)} relevant articles cached")
+        logger.info(f"  {len(articles)} new articles cached")
 
     if not articles:
         logger.warning("No articles fetched — check network/sources")
@@ -143,6 +170,22 @@ def main():
     logger.info(f"\n[4/6] Aggregating signals...")
     from aggregator.aggregate import aggregate_signals
     report = aggregate_signals(signals, week)
+
+    # ── Mark processed URLs as seen (after successful aggregation) ───────────
+    # We wait until here — not at fetch time — so a mid-run crash doesn't
+    # permanently suppress articles that were never actually classified.
+    if not args.no_dedup:
+        try:
+            from dedup import mark_seen, prune_old
+            n_marked = mark_seen(articles, week)
+            n_pruned = prune_old(days_keep=90)
+            logger.info(
+                f"  Dedup: recorded {n_marked} new URLs; "
+                f"pruned {n_pruned} entries older than 90 days"
+            )
+        except Exception as exc:
+            logger.warning(f"  Dedup mark_seen failed (non-fatal): {exc}")
+    # ─────────────────────────────────────────────────────────────────────────
 
     # ── STEP 5: Update WEI scores ────────────────────────────────────────────
     live_scores = {}
