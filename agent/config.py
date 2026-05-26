@@ -49,6 +49,11 @@ GOOGLE_SA_JSON  = os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON")
 SIGNALS_TAB     = "📡 Weekly Signals"
 WEI_LIVE_TAB    = "📊 WEI Live Scores"
 
+# Anthropic API — fallback classifier when Ollama times out during manual runs
+ANTHROPIC_API_KEY        = os.getenv("ANTHROPIC_API_KEY", "")
+ANTHROPIC_FALLBACK_MODEL = os.getenv("ANTHROPIC_FALLBACK_MODEL", "claude-haiku-4-5-20251001")
+CLASSIFY_TIMEOUT_SECS    = int(os.getenv("CLASSIFY_TIMEOUT_SECS", "600"))  # 10 minutes
+
 # Agent settings
 MAX_ARTICLES_PER_SOURCE = 25
 MAX_ARTICLE_LENGTH      = 900
