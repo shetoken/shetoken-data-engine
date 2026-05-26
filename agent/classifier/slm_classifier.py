@@ -4,6 +4,7 @@ Uses Phi-3.5 Mini (English) and Qwen2.5:3b (multilingual)
 via Ollama to classify articles into WEI signals.
 """
 import json, logging, re, sys
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from config import (ENGLISH_MODEL, MULTILINGUAL_MODEL,
@@ -165,14 +166,24 @@ def classify_all(articles: list) -> list:
     )
     # ─────────────────────────────────────────────────────────────────────────
 
-    logger.info(f"Classifying {len(to_classify)} articles...")
+    total = len(to_classify)
+    logger.info(f"Classifying {total} articles (parallel, 4 workers)...")
     signals = []
-    for i, article in enumerate(to_classify):
-        signal = classify_article(article)
-        if signal:
-            signals.append(signal)
-        if (i + 1) % 20 == 0:
-            logger.info(f"  {i+1}/{len(to_classify)} classified, {len(signals)} signals so far")
+    completed = 0
 
-    logger.info(f"Classification complete: {len(signals)} signals from {len(to_classify)} articles")
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        futures = {pool.submit(classify_article, art): art for art in to_classify}
+        for fut in as_completed(futures):
+            completed += 1
+            try:
+                signal = fut.result()
+                if signal:
+                    signals.append(signal)
+            except Exception as e:
+                art = futures[fut]
+                logger.warning(f"  Worker error ({art['title'][:40]}): {e}")
+            if completed % 20 == 0:
+                logger.info(f"  {completed}/{total} classified, {len(signals)} signals so far")
+
+    logger.info(f"Classification complete: {len(signals)} signals from {total} articles")
     return signals
