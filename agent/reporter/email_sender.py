@@ -649,7 +649,9 @@ def build_newsletter(report: dict, recipient_type: str = "founder") -> str:
         @ShetokenDAO</a>
     </div>
     <div style="color:{CREAM};font-size:11px;opacity:0.6;">
-      © 2026 SHE Foundation · contact@shetoken.org
+      © 2026 SHE Foundation ·
+      <a href="mailto:contact@shetoken.org"
+         style="color:{CREAM};text-decoration:none;">contact@shetoken.org</a>
     </div>
   </div>
 
