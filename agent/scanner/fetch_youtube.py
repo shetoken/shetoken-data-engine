@@ -143,6 +143,10 @@ def search_youtube(query: str, days_back: int = 7,
             },
             timeout=REQUEST_TIMEOUT,
         )
+        if resp.status_code == 429:
+            logger.warning("YouTube rate limit (429) — sleeping 60s")
+            time.sleep(60)
+            return []
         resp.raise_for_status()
         items = resp.json().get("items", [])
 
@@ -171,10 +175,11 @@ def search_youtube(query: str, days_back: int = 7,
                 "video_id":   vid_id,
             })
 
-        time.sleep(0.5)   # respect rate limits
+        time.sleep(2.0)
         return results
 
     except Exception as e:
+        time.sleep(2.0)
         logger.warning(f"YouTube search '{query[:40]}': {e}")
         return []
 
@@ -203,6 +208,10 @@ def fetch_channel_videos(channel_id: str, channel_name: str,
             },
             timeout=REQUEST_TIMEOUT,
         )
+        if resp.status_code == 429:
+            logger.warning(f"YouTube rate limit (429) — {channel_name}: sleeping 60s")
+            time.sleep(60)
+            return []
         resp.raise_for_status()
         items = resp.json().get("items", [])
 
@@ -230,11 +239,12 @@ def fetch_channel_videos(channel_id: str, channel_name: str,
                 "video_id":   vid_id,
             })
 
-        time.sleep(0.5)
+        time.sleep(2.0)
         logger.info(f"  YouTube/{channel_name}: {len(results)} videos")
         return results
 
     except Exception as e:
+        time.sleep(2.0)
         logger.warning(f"YouTube channel {channel_name}: {e}")
         return []
 

@@ -197,7 +197,12 @@ def fetch_gdelt_query(
             time.sleep(2.0)
             return []
 
-        data     = resp.json()
+        try:
+            data = resp.json()
+        except ValueError:
+            logger.debug(f"  GDELT non-JSON response ({len(resp.text)}B): {resp.text[:80]!r}")
+            time.sleep(2.0)
+            return []
         raw_arts = data.get("articles") or []
 
         results = []
@@ -250,6 +255,25 @@ def fetch_all_gdelt(days_back: int = 7) -> list[dict]:
     """
     all_articles: list[dict] = []
     seen_urls:    set[str]   = set()
+
+    # Quick probe — skip all queries if GDELT is unreachable or returning non-JSON
+    try:
+        probe = requests.get(
+            GDELT_DOC_API,
+            params={"query": "women", "mode": "artlist", "maxrecords": "1", "format": "json"},
+            headers={"User-Agent": _UA},
+            timeout=10,
+        )
+        if probe.status_code != 200:
+            logger.warning(f"  GDELT API probe returned {probe.status_code} — skipping all {len(GDELT_QUERIES)} queries")
+            return []
+        probe.json()  # raises ValueError if response isn't JSON
+    except ValueError:
+        logger.warning("  GDELT API returning non-JSON — skipping all queries")
+        return []
+    except Exception as exc:
+        logger.warning(f"  GDELT API unreachable ({exc}) — skipping all queries")
+        return []
 
     logger.info(f"  GDELT: running {len(GDELT_QUERIES)} queries ({days_back}d lookback)...")
 

@@ -204,6 +204,10 @@ def fetch_arxiv_query(
     try:
         resp = requests.get(url, headers={"User-Agent": _UA},
                             timeout=REQUEST_TIMEOUT)
+        if resp.status_code == 429:
+            logger.warning("arXiv rate limit (429) — sleeping 60s")
+            time.sleep(60)
+            return []
         resp.raise_for_status()
         feed = feedparser.parse(resp.text)
 
@@ -254,13 +258,15 @@ def fetch_arxiv_query(
                 "pillar_hint": pillar,
             })
 
-        time.sleep(1.0)   # polite delay
+        time.sleep(3.0)
         return results
 
     except requests.exceptions.Timeout:
         logger.debug(f"  arXiv timeout: '{query[:40]}' (skipped)")
+        time.sleep(3.0)
         return []
     except Exception as exc:
+        time.sleep(3.0)
         logger.warning(f"  arXiv query failed '{query[:40]}': {exc}")
         return []
 
