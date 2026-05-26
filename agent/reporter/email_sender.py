@@ -34,15 +34,18 @@ logger = logging.getLogger(__name__)
 NEWSLETTER_SUBSCRIBERS = os.getenv("NEWSLETTER_SUBSCRIBERS", "")
 NEWSLETTER_NGOS        = os.getenv("NEWSLETTER_NGOS", "")
 
-# Brand colours
-BERRY = "#6D2E46"
-GOLD  = "#C9A84C"
-CREAM = "#ECE2D0"
-DARK  = "#1A0A12"
-WHITE = "#FFFFFF"
-GREEN = "#1A6B34"
-RED   = "#8B0000"
-GREY  = "#F5F5F5"
+# Brand colours — matched to shetoken.org (index.css CSS variables)
+PURPLE = "#9B40D9"   # --primary: hsl(280 75% 60%)
+GOLD   = "#F5C212"   # --accent:  hsl(45 95% 60%)
+DARK   = "#0D0A1A"   # --background: hsl(260 40% 6%)
+CARD   = "#120B1C"   # --card: hsl(260 35% 9%)
+CREAM  = "#F7F3ED"   # --foreground: hsl(40 30% 96%)
+WHITE  = "#FFFFFF"
+GREEN  = "#22C55E"
+RED    = "#EF4444"
+GREY   = "#F5F3FA"
+# Legacy alias kept so any external references don't break
+BERRY  = PURPLE
 
 
 def build_week_in_review(report: dict) -> str:
@@ -141,22 +144,27 @@ def build_crisis_section(crisis_list: list) -> str:
     </div>"""
 
 
-def build_top_stories(signals: list) -> str:
-    """Show top 5 stories by severity."""
+def build_top_stories(signals: list, limit: int = 3) -> str:
+    """Show top stories by severity × confidence."""
     if not signals:
         return ""
 
     top = sorted(signals,
                  key=lambda x: x.get("severity",0) * abs(x.get("confidence",0)),
-                 reverse=True)[:5]
+                 reverse=True)[:limit]
 
     items = ""
     for s in top:
         direction = s.get("direction", 0)
         pillar    = s.get("pillar","").replace("_"," ").title()
         country   = s.get("country","") or ""
-        state     = s.get("state","")
-        geo       = f"{country}-{state}" if state else country
+        state     = s.get("state","") or ""
+        # Skip UNKNOWN / unresolved geography labels
+        if country.upper() in ("UNKNOWN", "NONE", ""):
+            country = ""
+        if state.upper() in ("UNKNOWN", "NONE", ""):
+            state = ""
+        geo       = f"{country}, {state}" if country and state else country
         summary   = s.get("summary_en","")[:180]
         source    = s.get("source","")
         url       = s.get("url","")
@@ -196,16 +204,24 @@ def build_top_stories(signals: list) -> str:
     </div>"""
 
 
-def build_region_movers(movers: list) -> str:
+def build_region_movers(movers: list, limit: int = 3) -> str:
     if not movers:
         return ""
 
+    # Filter out unresolved geos before ranking
+    clean = [m for m in movers
+             if m.get("geo","").upper() not in ("UNKNOWN","NONE","","GLOBAL")]
+
     rows = ""
-    for i, m in enumerate(movers[:8]):
+    rank = 0
+    for m in clean:
+        if rank >= limit:
+            break
         geo      = m.get("geo","")
         sigs     = m.get("signals", 0)
         activity = m.get("activity_score", 0)
-        medal    = ["🥇","🥈","🥉"][i] if i < 3 else f"{i+1}."
+        medal    = ["🥇","🥈","🥉"][rank] if rank < 3 else f"{rank+1}."
+        rank    += 1
 
         rows += f"""
           <tr style="background:{'#FAF0F3' if i%2==0 else WHITE};">
@@ -466,17 +482,22 @@ def build_newsletter(report: dict, recipient_type: str = "founder") -> str:
     # Week in review
     wir = build_week_in_review(report)
 
-    # Sections
+    # Subscriber/NGO gets a short 3-section edition; founder gets everything
+    is_external = recipient_type in ("subscriber", "ngo")
+
     crisis_html  = build_crisis_section(crisis_list)
-    stories_html = build_top_stories(raw_signals)
-    movers_html  = build_region_movers(movers)
-    pillar_html  = build_pillar_table(pillars)
-    sister_html  = build_sister_movers(report)
+    stories_html = build_top_stories(raw_signals, limit=3)
+    movers_html  = build_region_movers(movers, limit=3)
     token_html   = build_token_section(report)
 
-    # Founder gets full technical data; subscribers get cleaner version
-    extra_section = ""
-    if recipient_type == "founder":
+    if is_external:
+        # Short edition: crisis → top 3 regions → top 3 stories → token signal
+        pillar_html = ""
+        sister_html = ""
+        extra_section = ""
+    else:
+        pillar_html  = build_pillar_table(pillars)
+        sister_html  = build_sister_movers(report)
         extra_section = f"""
         <div style="background:{GREY};border-radius:6px;padding:16px;
                     margin:24px 0;font-size:12px;color:#666;">
@@ -487,19 +508,31 @@ def build_newsletter(report: dict, recipient_type: str = "founder") -> str:
           Datasets updated: {len(report.get('live_scores_summary',{}))}
           <br><br>
           <a href="https://api.shetoken.org/v1/admin/stats"
-             style="color:{BERRY};">API stats</a> &nbsp;|&nbsp;
+             style="color:{PURPLE};">API stats</a> &nbsp;|&nbsp;
           <a href="https://api.shetoken.org/v1/signals/latest"
-             style="color:{BERRY};">Raw signals JSON</a>
+             style="color:{PURPLE};">Raw signals JSON</a>
         </div>"""
 
     unsubscribe = ""
-    if recipient_type in ("subscriber","ngo"):
+    if is_external:
         unsubscribe = f"""
-        <p style="text-align:center;font-size:11px;color:#aaa;margin-top:8px;">
-          You're receiving this because you subscribed to SHEtoken signals.
-          <a href="mailto:contact@shetoken.org?subject=Unsubscribe"
-             style="color:#aaa;">Unsubscribe</a>
-        </p>"""
+        <div style="text-align:center;padding:16px 32px 8px;
+                    border-top:1px solid #e8e0f0;margin-top:8px;">
+          <p style="font-size:12px;color:#999;margin:0 0 4px;">
+            You're receiving this because you subscribed to SHEtoken weekly signals.
+          </p>
+          <p style="font-size:12px;margin:0;">
+            <a href="mailto:contact@shetoken.org?subject=Unsubscribe%20me"
+               style="color:{PURPLE};text-decoration:underline;">
+              Unsubscribe
+            </a>
+            &nbsp;·&nbsp;
+            <a href="https://shetoken.org/dashboard"
+               style="color:{PURPLE};text-decoration:none;">
+              View live dashboard →
+            </a>
+          </p>
+        </div>"""
 
     html = f"""<!DOCTYPE html>
 <html>
@@ -516,8 +549,9 @@ def build_newsletter(report: dict, recipient_type: str = "founder") -> str:
             box-shadow:0 2px 12px rgba(0,0,0,0.1);">
 
   <!-- HEADER -->
-  <div style="background:{BERRY};padding:28px 32px;text-align:center;">
-    <div style="font-size:32px;font-weight:900;letter-spacing:-1px;
+  <div style="background:linear-gradient(135deg,#1A0A30 0%,#3D1278 50%,#6B1FA0 100%);
+              padding:28px 32px;text-align:center;">
+    <div style="font-size:36px;font-weight:900;letter-spacing:-1px;
                 margin-bottom:4px;">
       <span style="color:{GOLD};">$</span><span style="color:white;">HE</span>
     </div>
@@ -525,49 +559,42 @@ def build_newsletter(report: dict, recipient_type: str = "founder") -> str:
                 text-transform:uppercase;margin-bottom:12px;">
       Women's Empowerment Index
     </div>
-    <div style="color:{CREAM};font-size:14px;">
+    <div style="color:{CREAM};font-size:14px;opacity:0.85;">
       Weekly Signal Report &nbsp;·&nbsp; {week} &nbsp;·&nbsp; {now}
     </div>
     <div style="margin-top:16px;display:inline-block;
                 background:{GOLD};color:{DARK};font-size:11px;
-                font-weight:bold;padding:6px 16px;border-radius:20px;
+                font-weight:bold;padding:6px 18px;border-radius:20px;
                 letter-spacing:1px;">
       SHE GOES UP
     </div>
   </div>
 
   <!-- STAT BAR -->
-  <div style="background:{DARK};padding:16px 32px;
-              display:flex;gap:0;">
+  <div style="background:{DARK};padding:16px 32px;display:flex;gap:0;">
     <div style="flex:1;text-align:center;padding:0 16px;
-                border-right:1px solid #333;">
-      <div style="font-size:28px;font-weight:bold;color:{GOLD};">
-        {signals}
-      </div>
+                border-right:1px solid #2A1A40;">
+      <div style="font-size:28px;font-weight:bold;color:{GOLD};">{signals}</div>
       <div style="font-size:11px;color:#888;text-transform:uppercase;
                   letter-spacing:1px;">Signals</div>
     </div>
     <div style="flex:1;text-align:center;padding:0 16px;
-                border-right:1px solid #333;">
+                border-right:1px solid #2A1A40;">
       <div style="font-size:28px;font-weight:bold;
-                  color:{'#E07B00' if crises > 0 else GOLD};">
-        {crises}
-      </div>
+                  color:{'#FB923C' if crises > 0 else GOLD};">{crises}</div>
       <div style="font-size:11px;color:#888;text-transform:uppercase;
                   letter-spacing:1px;">Crisis Alerts</div>
     </div>
     <div style="flex:1;text-align:center;padding:0 16px;
-                border-right:1px solid #333;">
+                border-right:1px solid #2A1A40;">
       <div style="font-size:28px;font-weight:bold;color:{GOLD};">
-        {len(movers)}
+        {len([m for m in movers if m.get("geo","").upper() not in ("UNKNOWN","NONE","")])}
       </div>
       <div style="font-size:11px;color:#888;text-transform:uppercase;
                   letter-spacing:1px;">Active Regions</div>
     </div>
     <div style="flex:1;text-align:center;padding:0 16px;">
-      <div style="font-size:28px;font-weight:bold;color:{GOLD};">
-        {len(pillars)}
-      </div>
+      <div style="font-size:28px;font-weight:bold;color:{GOLD};">{len(pillars)}</div>
       <div style="font-size:11px;color:#888;text-transform:uppercase;
                   letter-spacing:1px;">Pillars Moved</div>
     </div>
@@ -599,26 +626,28 @@ def build_newsletter(report: dict, recipient_type: str = "founder") -> str:
 
   </div>
 
+  {unsubscribe}
+
   <!-- FOOTER -->
-  <div style="background:{BERRY};padding:20px 32px;text-align:center;">
-    <div style="margin-bottom:12px;">
+  <div style="background:linear-gradient(135deg,#1A0A30 0%,#3D1278 100%);
+              padding:20px 32px;text-align:center;">
+    <div style="margin-bottom:10px;">
       <a href="https://shetoken.org"
-         style="color:{GOLD};text-decoration:none;font-size:12px;
-                margin:0 12px;">shetoken.org</a>
+         style="color:{GOLD};text-decoration:none;font-size:12px;margin:0 12px;">
+        shetoken.org</a>
       <a href="https://api.shetoken.org/docs"
-         style="color:{GOLD};text-decoration:none;font-size:12px;
-                margin:0 12px;">API Docs</a>
+         style="color:{GOLD};text-decoration:none;font-size:12px;margin:0 12px;">
+        API Docs</a>
       <a href="https://github.com/shetoken"
-         style="color:{GOLD};text-decoration:none;font-size:12px;
-                margin:0 12px;">GitHub</a>
+         style="color:{GOLD};text-decoration:none;font-size:12px;margin:0 12px;">
+        GitHub</a>
       <a href="https://twitter.com/ShetokenDAO"
-         style="color:{GOLD};text-decoration:none;font-size:12px;
-                margin:0 12px;">@ShetokenDAO</a>
+         style="color:{GOLD};text-decoration:none;font-size:12px;margin:0 12px;">
+        @ShetokenDAO</a>
     </div>
-    <div style="color:{CREAM};font-size:11px;opacity:0.7;">
+    <div style="color:{CREAM};font-size:11px;opacity:0.6;">
       © 2026 SHE Foundation · contact@shetoken.org
     </div>
-    {unsubscribe}
   </div>
 
 </div>
