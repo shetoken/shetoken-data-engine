@@ -3,7 +3,20 @@ name: SHEtoken Weekly WEI Agent
 on:
   schedule:
     - cron: '0 6 * * 0'   # Every Sunday 6am UTC
-  workflow_dispatch:        # Manual trigger from GitHub UI
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run — skip email, Sheets and social posts'
+        type: boolean
+        default: false
+      no_dedup:
+        description: 'Skip dedup — full article set, nothing written to seen-URLs (safe for re-runs)'
+        type: boolean
+        default: false
+      days_back:
+        description: 'How many days back to fetch articles (default 7)'
+        type: number
+        default: 7
 
 jobs:
   run-agent:
@@ -72,7 +85,10 @@ jobs:
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: |
           cd agent
-          python run_agent.py
+          python run_agent.py \
+            ${{ inputs.dry_run  == true && '--dry-run'  || '' }} \
+            ${{ inputs.no_dedup == true && '--no-dedup' || '' }} \
+            --days-back ${{ inputs.days_back || 7 }}
 
       # ── Load this week's live scores into Supabase (same job, files on disk) ──
       - name: Install Supabase loader deps
