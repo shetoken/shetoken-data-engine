@@ -1,0 +1,47 @@
+# SHEtoken Women's Voice Index (WVI) — 2025
+# WVI: 0-100, HIGHER = STRONGER voice for women
+# Civil-society dimension maps to V-Dem WCSP + Georgetown WPS Index
+# Captures online GBV, media, tech, civil-society freedom
+# Most values are transparent MODELED ESTIMATES (see data_source col)
+# Verified sources to wire in: V-Dem, GMMP, ILO, RSF
+# (c) 2026 SHE Foundation
+#
+rank,country,iso_code,region,wvi_score,online_gbv_pct,media_leadership_pct,women_tech_pct,civil_society_score,journalists_pct,press_freedom_score,data_source,year
+1,Iceland,ISL,Europe,94.2,17,46,33,10,49,10,modeled_estimate,2025
+2,Norway,NOR,Europe,93.0,18,45,32,10,48,10,modeled_estimate,2025
+3,Sweden,SWE,Europe,91.6,20,44,31,10,47,10,modeled_estimate,2025
+4,Finland,FIN,Europe,91.1,19,43,30,10,47,10,modeled_estimate,2025
+5,Denmark,DNK,Europe,89.1,19,42,30,10,46,9,modeled_estimate,2025
+6,Canada,CAN,N. America,83.6,25,41,28,9,45,9,modeled_estimate,2025
+7,Australia,AUS,Oceania,82.9,26,40,28,9,44,9,modeled_estimate,2025
+8,Germany,DEU,Europe,81.9,24,38,27,9,42,9,modeled_estimate,2025
+9,UK,GBR,Europe,80.9,28,39,26,9,43,9,modeled_estimate,2025
+10,USA,USA,N. America,75.6,33,40,26,8,41,8,modeled_estimate,2025
+11,Japan,JPN,East Asia,64.7,30,22,18,8,28,8,modeled_estimate,2025
+12,South Africa,ZAF,Africa,62.8,44,34,22,7,37,6,modeled_estimate,2025
+13,Brazil,BRA,S. America,62.0,40,30,21,7,36,6,modeled_estimate,2025
+14,South Korea,KOR,East Asia,61.1,38,26,20,7,30,7,modeled_estimate,2025
+15,Philippines,PHL,SE Asia,60.9,38,32,24,6,38,5,modeled_estimate,2025
+16,Mexico,MEX,N. America,56.6,43,30,20,6,35,5,modeled_estimate,2025
+17,Colombia,COL,S. America,56.0,42,28,20,6,34,5,modeled_estimate,2025
+18,Kenya,KEN,Africa,48.8,48,26,16,5,30,5,modeled_estimate,2025
+19,India,IND,South Asia,48.3,58,22,25,5,26,5,modeled_estimate,2025
+20,Indonesia,IDN,SE Asia,47.7,46,24,18,5,28,4,modeled_estimate,2025
+21,Nigeria,NGA,Africa,44.8,52,24,15,5,28,4,modeled_estimate,2025
+22,Turkey,TUR,Europe/Asia,41.0,45,20,16,4,24,3,modeled_estimate,2025
+23,Bangladesh,BGD,South Asia,38.1,55,18,14,4,22,4,modeled_estimate,2025
+24,Ethiopia,ETH,Africa,36.9,54,20,12,4,24,3,modeled_estimate,2025
+25,Palestine,PSE,Middle East,30.8,62,18,14,3,22,2,modeled_estimate,2025
+26,Egypt,EGY,Africa/ME,30.3,60,16,14,3,20,2,modeled_estimate,2025
+27,Pakistan,PAK,South Asia,29.9,60,14,12,3,18,3,modeled_estimate,2025
+28,Niger,NER,Africa,29.0,58,14,9,3,18,3,modeled_estimate,2025
+29,Iran,IRN,Middle East,25.8,62,14,13,2,18,2,modeled_estimate,2025
+30,Myanmar,MMR,SE Asia,25.4,60,16,12,2,20,1,modeled_estimate,2025
+31,Iraq,IRQ,Middle East,22.7,64,12,10,2,15,2,modeled_estimate,2025
+32,Sudan,SDN,Africa,21.5,66,12,8,2,16,2,modeled_estimate,2025
+33,DRC,COD,Africa,21.5,66,12,8,2,16,2,modeled_estimate,2025
+34,CAR,CAF,Africa,19.1,68,10,6,2,14,2,modeled_estimate,2025
+35,South Sudan,SSD,Africa,13.1,70,8,5,1,12,1,modeled_estimate,2025
+36,Somalia,SOM,Africa,12.2,72,8,5,1,10,1,modeled_estimate,2025
+37,Yemen,YEM,Middle East,10.0,75,6,4,1,8,1,modeled_estimate,2025
+38,Afghanistan,AFG,South Asia,7.6,78,4,3,1,5,1,modeled_estimate,2025
