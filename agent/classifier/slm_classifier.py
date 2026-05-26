@@ -8,10 +8,28 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from config import (ENGLISH_MODEL, MULTILINGUAL_MODEL,
                     LANGUAGE_MODEL_MAP, OLLAMA_HOST,
-                    MIN_CONFIDENCE, GEOGRAPHY_KEYWORDS)
+                    MIN_CONFIDENCE, GEOGRAPHY_KEYWORDS, WEI_KEYWORDS)
 from classifier.prompts import CLASSIFICATION_PROMPT, MULTILINGUAL_PROMPT
 
 logger = logging.getLogger(__name__)
+
+# Platforms already filtered by curated queries — skip keyword check for these
+_CURATED_PLATFORMS = {"gdelt", "arxiv", "pubmed"}
+
+# Flat keyword list built once at import time
+_WEI_KEYWORDS_FLAT = [kw.lower()
+                       for kws in WEI_KEYWORDS.values()
+                       for kw in kws]
+
+
+def _has_wei_signal(article: dict) -> bool:
+    """Return True if the article contains at least one WEI keyword."""
+    text = " ".join([
+        article.get("title", ""),
+        article.get("summary", ""),
+    ]).lower()
+    return any(kw in text for kw in _WEI_KEYWORDS_FLAT)
+
 
 try:
     import ollama
@@ -131,14 +149,30 @@ def classify_article(article: dict) -> dict | None:
 
 def classify_all(articles: list) -> list:
     """Classify all articles. Returns list of valid signals."""
-    logger.info(f"Classifying {len(articles)} articles...")
+    # ── Keyword pre-filter ────────────────────────────────────────────────────
+    # Curated platforms (GDELT, arXiv, PubMed) are pre-filtered by their
+    # queries and bypass the keyword check. All other sources must contain at
+    # least one WEI keyword in title+summary to reach the SLM.
+    to_classify, skipped = [], 0
+    for a in articles:
+        if a.get("platform", "") in _CURATED_PLATFORMS or _has_wei_signal(a):
+            to_classify.append(a)
+        else:
+            skipped += 1
+    logger.info(
+        f"Pre-filter: {skipped} articles dropped (no WEI keywords), "
+        f"{len(to_classify)}/{len(articles)} sent to SLM"
+    )
+    # ─────────────────────────────────────────────────────────────────────────
+
+    logger.info(f"Classifying {len(to_classify)} articles...")
     signals = []
-    for i, article in enumerate(articles):
+    for i, article in enumerate(to_classify):
         signal = classify_article(article)
         if signal:
             signals.append(signal)
         if (i + 1) % 20 == 0:
-            logger.info(f"  {i+1}/{len(articles)} classified, {len(signals)} signals so far")
+            logger.info(f"  {i+1}/{len(to_classify)} classified, {len(signals)} signals so far")
 
-    logger.info(f"Classification complete: {len(signals)} signals from {len(articles)} articles")
+    logger.info(f"Classification complete: {len(signals)} signals from {len(to_classify)} articles")
     return signals

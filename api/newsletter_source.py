@@ -48,7 +48,7 @@ def _query(select: str, filters: dict | None = None, order: str | None = None,
 def list_newsletters(limit: int = 50) -> list[dict]:
     """Metadata only (no HTML) for the archive list — public/ngo tiers only."""
     rows = _query(
-        select="week,tier,subject,sent_at",
+        select="week,tier,subject,sent_at,pdf_url",
         filters={"tier": "in.(public,ngo)"},
         order="sent_at.desc",
         limit=limit,
@@ -57,11 +57,11 @@ def list_newsletters(limit: int = 50) -> list[dict]:
 
 
 def get_newsletter(week: str, tier: str = "public") -> dict | None:
-    """Full edition (incl. HTML) for one week — public/ngo only."""
+    """Full edition (incl. HTML and pdf_url) for one week — public/ngo only."""
     if tier not in PUBLIC_TIERS:
         tier = "public"
     rows = _query(
-        select="week,tier,subject,html,text,sent_at",
+        select="week,tier,subject,html,text,sent_at,pdf_url",
         filters={"week": f"eq.{week}", "tier": f"eq.{tier}"},
         limit=1,
     )
@@ -73,7 +73,7 @@ def get_latest_newsletter(tier: str = "public") -> dict | None:
     if tier not in PUBLIC_TIERS:
         tier = "public"
     rows = _query(
-        select="week,tier,subject,html,text,sent_at",
+        select="week,tier,subject,html,text,sent_at,pdf_url",
         filters={"tier": f"eq.{tier}"},
         order="sent_at.desc",
         limit=1,

@@ -18,7 +18,7 @@ Can send to:
 (c) 2026 SHE Foundation. MIT License.
 """
 
-import smtplib, logging, os, sys
+import re, smtplib, logging, os, sys
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import datetime, timezone
@@ -478,6 +478,9 @@ def build_newsletter(report: dict, recipient_type: str = "founder") -> str:
     raw_signals= report.get("raw_signals", [])
 
     now = datetime.now(timezone.utc).strftime("%B %d, %Y")
+    m = re.match(r"(\d{4})-W(\d+)", week)
+    issue_label = (f"Vol. {int(m.group(1)) - 2025} · Issue {int(m.group(2))}"
+                   if m else week)
 
     # Week in review
     wir = build_week_in_review(report)
@@ -560,7 +563,7 @@ def build_newsletter(report: dict, recipient_type: str = "founder") -> str:
       Women's Empowerment Index
     </div>
     <div style="color:{CREAM};font-size:14px;opacity:0.85;">
-      Weekly Signal Report &nbsp;·&nbsp; {week} &nbsp;·&nbsp; {now}
+      Weekly Signal Report &nbsp;·&nbsp; {issue_label} &nbsp;·&nbsp; {now}
     </div>
     <div style="margin-top:16px;display:inline-block;
                 background:{GOLD};color:{DARK};font-size:11px;
