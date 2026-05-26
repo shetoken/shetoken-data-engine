@@ -68,6 +68,8 @@ jobs:
           NEWSLETTER_SUBSCRIBERS: ${{ secrets.NEWSLETTER_SUBSCRIBERS }}
           OLLAMA_HOST:          http://localhost:11434
           ANALYTICS_BACKEND:    memory
+          SUPABASE_URL:              ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: |
           cd agent
           python run_agent.py

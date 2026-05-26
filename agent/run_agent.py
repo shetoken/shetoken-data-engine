@@ -18,7 +18,7 @@ Run:
 (c) 2026 SHE Foundation. MIT License.
 """
 
-import argparse, json, logging, sys, time, io
+import argparse, json, logging, os, sys, time, io
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -57,6 +57,106 @@ LIVE_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 def get_week_str():
     now = datetime.now(timezone.utc)
     return f"{now.year}-W{now.isocalendar()[1]:02d}"
+
+
+def save_scan_stats(stats: dict) -> None:
+    """
+    Persist weekly scan statistics to output/signals/scan_stats.json.
+
+    The file is a JSON array of weekly stat dicts, newest first.
+    A maximum of 26 weeks (6 months) of history is kept.
+    If an entry for the same week already exists it is overwritten.
+
+    Supabase DDL (run once, backend team):
+        CREATE TABLE IF NOT EXISTS she_scan_stats (
+            week             TEXT PRIMARY KEY,
+            scanned_at       TIMESTAMPTZ NOT NULL,
+            rss_count        INTEGER DEFAULT 0,
+            youtube_count    INTEGER DEFAULT 0,
+            reddit_count     INTEGER DEFAULT 0,
+            gdelt_count      INTEGER DEFAULT 0,
+            research_count   INTEGER DEFAULT 0,
+            social_count     INTEGER DEFAULT 0,
+            llm_scout_count  INTEGER DEFAULT 0,
+            total_fetched    INTEGER DEFAULT 0,
+            total_after_dedup INTEGER DEFAULT 0,
+            signals_found    INTEGER DEFAULT 0,
+            crisis_signals   INTEGER DEFAULT 0
+        );
+    """
+    path = AGENT_DIR / "output" / "signals" / "scan_stats.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    existing: list[dict] = []
+    if path.exists():
+        try:
+            with open(path, encoding="utf-8") as f:
+                existing = json.load(f)
+            if not isinstance(existing, list):
+                existing = []
+        except Exception:
+            existing = []
+
+    # Replace existing entry for this week (idempotent)
+    existing = [e for e in existing if e.get("week") != stats.get("week")]
+    existing.insert(0, stats)      # newest first
+    existing = existing[:26]       # keep ≤ 26 weeks
+
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(existing, f, ensure_ascii=False, indent=2)
+    logger.info(f"  Scan stats saved → {path.name} ({len(existing)} weeks on record)")
+
+    # Persist to Supabase so stats survive Cloud Run container recycling
+    _sb_upsert_scan_stats(stats)
+
+
+def _sb_upsert_scan_stats(stats: dict) -> None:
+    """Upsert weekly scan stats to Supabase she_scan_stats (no-op if env vars absent)."""
+    supabase_url = os.getenv("SUPABASE_URL", "")
+    supabase_key = (
+        os.getenv("SUPABASE_SERVICE_ROLE_KEY")
+        or os.getenv("SUPABASE_ANON_KEY")
+        or os.getenv("SUPABASE_PUBLISHABLE_KEY", "")
+    )
+    if not (supabase_url and supabase_key):
+        return
+
+    import httpx
+
+    row = {
+        "week":               stats.get("week"),
+        "scanned_at":         stats.get("scanned_at"),
+        "rss_count":          stats.get("rss_count", 0),
+        "youtube_count":      stats.get("youtube_count", 0),
+        "reddit_count":       stats.get("reddit_count", 0),
+        "gdelt_count":        stats.get("gdelt_count", 0),
+        "research_count":     stats.get("research_count", 0),
+        "social_count":       stats.get("social_count", 0),
+        "llm_scout_count":    stats.get("llm_scout_count", 0),
+        "total_fetched":      stats.get("total_fetched", 0),
+        "total_after_dedup":  stats.get("total_after_dedup", 0),
+        "signals_found":      stats.get("signals_found", 0),
+        "crisis_signals":     stats.get("crisis_signals", 0),
+    }
+    headers = {
+        "apikey":        supabase_key,
+        "Authorization": f"Bearer {supabase_key}",
+        "Content-Type":  "application/json",
+        "Prefer":        "resolution=merge-duplicates,return=minimal",
+    }
+    try:
+        resp = httpx.post(
+            f"{supabase_url}/rest/v1/she_scan_stats",
+            json=row,
+            headers=headers,
+            timeout=15.0,
+        )
+        if resp.status_code in (200, 201):
+            logger.info("  Scan stats upserted → Supabase she_scan_stats")
+        else:
+            logger.warning(f"  Supabase scan_stats upsert {resp.status_code}: {resp.text[:200]}")
+    except Exception as exc:
+        logger.warning(f"  Supabase scan_stats upsert failed ({exc})")
 
 
 def check_ollama():
@@ -112,6 +212,9 @@ def main():
     cache_path = AGENT_DIR / f"output/signals/articles_{week}.json"
     cache_path.parent.mkdir(parents=True, exist_ok=True)
 
+    # Scan stats dict — populated during the fetch else-branch (not cache hits)
+    _scan_counts: dict = {}
+
     if args.skip_fetch and cache_path.exists():
         logger.info(f"\n[2/6] Loading cached articles...")
         with open(cache_path, encoding="utf-8") as f:
@@ -131,11 +234,39 @@ def main():
         from scanner.fetch_gdelt import fetch_all_gdelt
         gdelt_articles = fetch_all_gdelt(days_back=args.days_back)
 
-        articles = rss_articles + yt_articles + rd_articles + gdelt_articles
+        # Academic research papers (arXiv + PubMed)
+        from scanner.fetch_research import fetch_all_research
+        research_articles = fetch_all_research(days_back=args.days_back)
+
+        # Substack newsletters + Medium tag feeds
+        from scanner.fetch_social import fetch_all_social
+        social_articles = fetch_all_social(days_back=args.days_back)
+
+        articles = (rss_articles + yt_articles + rd_articles
+                    + gdelt_articles + research_articles + social_articles)
         logger.info(
             f"  RSS: {len(rss_articles)} | YouTube: {len(yt_articles)} "
-            f"| Reddit: {len(rd_articles)} | GDELT: {len(gdelt_articles)}"
+            f"| Reddit: {len(rd_articles)} | GDELT: {len(gdelt_articles)} "
+            f"| Research: {len(research_articles)} | Social: {len(social_articles)}"
         )
+
+        # ── Record source counts for scan stats ──────────────────────────────
+        _scan_counts = {
+            "week":            week,
+            "scanned_at":      datetime.now(timezone.utc).isoformat(),
+            "rss_count":       len(rss_articles),
+            "youtube_count":   len(yt_articles),
+            "reddit_count":    len(rd_articles),
+            "gdelt_count":     len(gdelt_articles),
+            "research_count":  len(research_articles),
+            "social_count":    len(social_articles),
+            "llm_scout_count": 0,   # updated below after LLM Scout
+            "total_fetched":   len(articles),
+            "total_after_dedup": len(articles),  # updated after dedup
+            "signals_found":   0,   # updated after classify
+            "crisis_signals":  0,   # updated after aggregate
+        }
+        # ─────────────────────────────────────────────────────────────────────
 
         # ── Deduplicate against previously-seen article URLs ─────────────────
         # Drops articles whose URL was already processed in an earlier run so
@@ -159,6 +290,8 @@ def main():
                 logger.info(
                     f"  Dedup: all {len(articles)} articles are new this week"
                 )
+            if _scan_counts:
+                _scan_counts["total_after_dedup"] = len(articles)
         # ─────────────────────────────────────────────────────────────────────
 
         with open(cache_path, "w", encoding="utf-8") as f:
@@ -183,6 +316,8 @@ def main():
             if scout_new:
                 logger.info(f"  LLM Scout added {len(scout_new)} items for uncovered countries")
                 articles = articles + scout_new
+            if _scan_counts:
+                _scan_counts["llm_scout_count"] = len(scout_arts)
         except Exception as exc:
             logger.info(f"  LLM Scout skipped: {exc}")
     # ─────────────────────────────────────────────────────────────────────────
@@ -192,6 +327,8 @@ def main():
     from classifier.slm_classifier import classify_all
     signals = classify_all(articles)
     logger.info(f"  {len(signals)} signals from {len(articles)} articles")
+    if _scan_counts:
+        _scan_counts["signals_found"] = len(signals)
 
     # ── STEP 4: Aggregate signals ────────────────────────────────────────────
     logger.info(f"\n[4/6] Aggregating signals...")
@@ -212,6 +349,15 @@ def main():
             )
         except Exception as exc:
             logger.warning(f"  Dedup mark_seen failed (non-fatal): {exc}")
+    # ─────────────────────────────────────────────────────────────────────────
+
+    # ── Save scan stats (runs after successful classify + aggregate) ──────────
+    if _scan_counts:
+        _scan_counts["crisis_signals"] = report.get("crisis_count", 0)
+        try:
+            save_scan_stats(_scan_counts)
+        except Exception as exc:
+            logger.warning(f"  Scan stats save failed (non-fatal): {exc}")
     # ─────────────────────────────────────────────────────────────────────────
 
     # ── STEP 5: Update WEI scores ────────────────────────────────────────────
