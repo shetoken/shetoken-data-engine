@@ -39,7 +39,7 @@ from data_loader import (
     get_partner_countries, get_partner_programs, get_partner_companies,
     get_compliance, get_usa_compliance,
     get_global_scores, get_states, get_cities,
-    get_latest_signals, get_summary,
+    get_latest_signals, get_summary, get_scan_stats,
     get_history, get_global_trend, get_india_state_history,
     get_vital_stats, get_gpi, get_global_weekly_counters,
     get_history_gpi, get_history_usa_states,
@@ -750,6 +750,43 @@ def top_movers(limit: int = Query(10, ge=1, le=50)):
     return {
         "week": report.get("week"),
         "data": report.get("top_movers", [])[:limit],
+    }
+
+
+# ── Scan stats ───────────────────────────────────────────────────────────────
+
+@app.get("/v1/scan-stats", tags=["Signals"],
+         summary="Weekly signal scan statistics (source channel breakdown)")
+def scan_stats_endpoint(weeks: int = Query(12, ge=1, le=26,
+                        description="Number of past weeks to return (max 26)")):
+    """
+    Returns weekly article scan statistics produced by the SHEtoken data agent.
+
+    Each entry shows how many articles were fetched from each source channel
+    (RSS, GDELT, research papers, social blogs, YouTube, Reddit) and how many
+    became classified signals.
+
+    Use this to power the 'Signal Pulse' widget on the dashboard.
+
+    **Fields per week:**
+    - `week` — ISO week string, e.g. "2026-W21"
+    - `scanned_at` — ISO timestamp of the run
+    - `rss_count` — articles from RSS / news site scrapers
+    - `youtube_count` — YouTube video transcripts
+    - `reddit_count` — Reddit posts
+    - `gdelt_count` — GDELT structured news database
+    - `research_count` — arXiv + PubMed academic papers
+    - `social_count` — Substack + Medium blogs
+    - `llm_scout_count` — LLM Scout (Claude/Perplexity) synthesised items
+    - `total_fetched` — sum before deduplication
+    - `total_after_dedup` — articles actually sent to the classifier
+    - `signals_found` — articles the SLM flagged as WEI-relevant signals
+    - `crisis_signals` — high-severity signals (confidence ≥ 0.80)
+    """
+    data = get_scan_stats(weeks=weeks)
+    return {
+        "count": len(data),
+        "data":  data,
     }
 
 

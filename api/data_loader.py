@@ -181,23 +181,71 @@ def get_latest_signals() -> dict:
     return cached("latest_signals", _load)
 
 
+def get_scan_stats(weeks: int = 26) -> list[dict]:
+    """
+    Load weekly scan statistics produced by run_agent.py.
+
+    Each entry looks like:
+      { week, scanned_at, rss_count, youtube_count, reddit_count,
+        gdelt_count, research_count, social_count, llm_scout_count,
+        total_fetched, total_after_dedup, signals_found, crisis_signals }
+
+    The file is written by agent/run_agent.py → save_scan_stats().
+    On Cloud Run (ephemeral FS) this will be empty until the agent writes it
+    to a mounted volume or the data is read from Supabase.
+    """
+    def _load():
+        path = SIG_DIR / "scan_stats.json"
+        if not path.exists():
+            return []
+        try:
+            with open(path, encoding="utf-8") as f:
+                data = json.load(f)
+            if isinstance(data, list):
+                return data[:weeks]
+        except Exception as exc:
+            logger.warning(f"scan_stats.json read error: {exc}")
+        return []
+    return cached("scan_stats", _load)
+
+
 def get_summary() -> dict:
     """Compute global summary stats for the dashboard."""
     def _load():
-        # Lazy import avoids circular dependency:
+        # Lazy imports avoid circular dependency:
         # supabase_source imports data_loader, so we can't import it at module level.
-        from supabase_source import get_svi, get_wevi, get_whi, get_wvi
+        # Each import is wrapped individually — a single failing supabase call
+        # must NOT silently suppress the entire summary response.
+        _svi_fn = _wevi_fn = _whi_fn = _wvi_fn = None
+        try:
+            from supabase_source import get_svi as _svi_fn   # noqa: F401
+        except Exception as exc:
+            logger.warning(f"  get_summary: could not import get_svi — {exc}")
+        try:
+            from supabase_source import get_wevi as _wevi_fn  # noqa: F401
+        except Exception as exc:
+            logger.warning(f"  get_summary: could not import get_wevi — {exc}")
+        try:
+            from supabase_source import get_whi as _whi_fn    # noqa: F401
+        except Exception as exc:
+            logger.warning(f"  get_summary: could not import get_whi — {exc}")
+        try:
+            from supabase_source import get_wvi as _wvi_fn    # noqa: F401
+        except Exception as exc:
+            logger.warning(f"  get_summary: could not import get_wvi — {exc}")
 
         countries = get_global_scores()
         if not countries:
             return {}
-        scores    = [c["wei_score"] for c in countries if c["wei_score"]]
-        tier_counts = {}
+
+        tier_counts: dict[str, int] = {}
         for c in countries:
-            t = str(c.get("tier",""))
-            tier_counts[t] = tier_counts.get(t,0) + 1
-        india = next((c for c in countries if c["iso_code"]=="IND"), {})
+            t = str(c.get("tier", ""))
+            tier_counts[t] = tier_counts.get(t, 0) + 1
+
+        india = next((c for c in countries if c["iso_code"] == "IND"), {})
         sigs  = get_latest_signals()
+
         pop_weighted = sum(
             c["wei_score"] * (c["population_millions"] or 0)
             for c in countries if c["wei_score"]
@@ -208,34 +256,49 @@ def get_summary() -> dict:
             vals = [r[field] for r in rows if isinstance(r.get(field), (int, float))]
             return round(sum(vals) / len(vals), 2) if vals else None
 
+        def _safe_avg(fn, field: str):
+            """Call fn() → _avg(), returning None on any error."""
+            if fn is None:
+                return None
+            try:
+                return _avg(fn(), field)
+            except Exception as exc:
+                logger.warning(f"  get_summary _safe_avg({fn.__name__}): {exc}")
+                return None
+
+        # Scan stats (latest week only — the full history is at /v1/scan-stats)
+        scan_hist = get_scan_stats(weeks=1)
+        latest_scan = scan_hist[0] if scan_hist else None
+
         return {
             "global_wei_score":        round(pop_weighted, 1),
             "countries_scored":        len(countries),
             "india_wei":               india.get("wei_score"),
-            "tier_1_count":            tier_counts.get("1",0),
-            "tier_2_count":            tier_counts.get("2",0),
-            "tier_3_count":            tier_counts.get("3",0),
-            "tier_4_count":            tier_counts.get("4",0),
+            "tier_1_count":            tier_counts.get("1", 0),
+            "tier_2_count":            tier_counts.get("2", 0),
+            "tier_3_count":            tier_counts.get("3", 0),
+            "tier_4_count":            tier_counts.get("4", 0),
             "highest_country":         countries[0]["country"] if countries else None,
             "highest_score":           countries[0]["wei_score"] if countries else None,
             "lowest_country":          countries[-1]["country"] if countries else None,
             "lowest_score":            countries[-1]["wei_score"] if countries else None,
             "latest_signal_week":      sigs.get("week"),
-            "latest_signals_count":    sigs.get("total_signals",0),
-            "latest_crisis_count":     sigs.get("crisis_count",0),
+            "latest_signals_count":    sigs.get("total_signals", 0),
+            "latest_crisis_count":     sigs.get("crisis_count", 0),
             "last_updated":            datetime.now(timezone.utc).isoformat(),
             # ── Pre-computed global averages for the 7 non-WEI indexes ──────────
             # Shipped here so the frontend never needs to download all index rows
             # just to show a global average chip.  Values are simple (unweighted)
-            # country means.  composite_score is used for Compliance because that
-            # is the field name in the CSV / Supabase table.
-            "gpi_global_avg":          _avg(get_gpi(),        "gpi_score"),
-            "svi_global_avg":          _avg(get_svi(),        "svi_score"),
-            "wadi_global_avg":         _avg(get_wadi(),       "wadi_score"),
-            "wevi_global_avg":         _avg(get_wevi(),       "wevi_score"),
-            "whi_global_avg":          _avg(get_whi(),        "whi_score"),
-            "wvi_global_avg":          _avg(get_wvi(),        "wvi_score"),
-            "compliance_global_avg":   _avg(get_compliance(), "composite_score"),
+            # country means.  Each call is individually try/except-protected.
+            "gpi_global_avg":          _safe_avg(get_gpi,         "gpi_score"),
+            "svi_global_avg":          _safe_avg(_svi_fn,         "svi_score"),
+            "wadi_global_avg":         _safe_avg(get_wadi,        "wadi_score"),
+            "wevi_global_avg":         _safe_avg(_wevi_fn,        "wevi_score"),
+            "whi_global_avg":          _safe_avg(_whi_fn,         "whi_score"),
+            "wvi_global_avg":          _safe_avg(_wvi_fn,         "wvi_score"),
+            "compliance_global_avg":   _safe_avg(get_compliance,  "composite_score"),
+            # ── Latest scan stats (null when agent hasn't run yet) ──────────────
+            "scan_stats":              latest_scan,
         }
     return cached("summary", _load)
 

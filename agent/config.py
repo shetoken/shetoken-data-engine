@@ -258,6 +258,54 @@ NEWS_SOURCES = [
 
 ]
 
+# ── Substack sources ──────────────────────────────────────────────────────────
+# Format: (name, rss_url, language, region, tier)
+# Every Substack publication has a public RSS feed at /{slug}.substack.com/feed
+# Add any new gender/women-rights focused Substacks here.
+SUBSTACK_SOURCES = [
+
+    # ── Reproductive rights & bodily autonomy ─────────────────────────────────
+    ("Abortion Every Day",        "https://jessica.substack.com/feed",                   "en","USA","blog"),
+    ("Shero Project",             "https://sheroprojectblog.substack.com/feed",          "en","global","blog"),
+
+    # ── Global gender policy ──────────────────────────────────────────────────
+    ("Gender Policy Report",      "https://genderpolicyreport.substack.com/feed",        "en","global","blog"),
+    ("The 19th News",             "https://19thnews.substack.com/feed",                  "en","USA","blog"),
+    ("Dignity Dispatch",          "https://dignitydispatch.substack.com/feed",           "en","global","blog"),
+
+    # ── Global South + development ────────────────────────────────────────────
+    ("Feminism in India Weekly",  "https://feminisminindia.substack.com/feed",           "en","India","blog"),
+    ("African Feminist Forum",    "https://africanfeministforum.substack.com/feed",      "en","Africa","blog"),
+    ("Devex Gender",              "https://devexgender.substack.com/feed",               "en","global","blog"),
+
+    # ── Violence & safety ─────────────────────────────────────────────────────
+    ("Ending Violence Together",  "https://endingviolencetogether.substack.com/feed",    "en","global","blog"),
+    ("GBV Research Brief",        "https://gbvresearch.substack.com/feed",               "en","global","blog"),
+
+    # ── Economic empowerment ──────────────────────────────────────────────────
+    ("Women & Work",              "https://womenandwork.substack.com/feed",              "en","global","blog"),
+    ("The Gender Gap Brief",      "https://gendergap.substack.com/feed",                "en","global","blog"),
+]
+
+# ── Medium tag RSS sources ────────────────────────────────────────────────────
+# Format: (tag_label, rss_url)
+# Medium exposes the 10 most recent posts per tag as RSS.
+# Posts are English-language and region-agnostic (global).
+MEDIUM_TAG_SOURCES = [
+    ("gender-equality",        "https://medium.com/feed/tag/gender-equality"),
+    ("feminism",               "https://medium.com/feed/tag/feminism"),
+    ("womens-rights",          "https://medium.com/feed/tag/womens-rights"),
+    ("gender-based-violence",  "https://medium.com/feed/tag/gender-based-violence"),
+    ("reproductive-rights",    "https://medium.com/feed/tag/reproductive-rights"),
+    ("domestic-violence",      "https://medium.com/feed/tag/domestic-violence"),
+    ("child-marriage",         "https://medium.com/feed/tag/child-marriage"),
+    ("maternal-health",        "https://medium.com/feed/tag/maternal-health"),
+    ("women-empowerment",      "https://medium.com/feed/tag/women-empowerment"),
+    ("gender-pay-gap",         "https://medium.com/feed/tag/gender-pay-gap"),
+    ("women-in-leadership",    "https://medium.com/feed/tag/women-in-leadership"),
+    ("human-trafficking",      "https://medium.com/feed/tag/human-trafficking"),
+]
+
 # WEI signal keywords (used to pre-filter articles before SLM)
 WEI_KEYWORDS = {
     "empowerment":     ["women parliament","female minister","women president",
