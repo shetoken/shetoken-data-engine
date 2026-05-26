@@ -189,6 +189,10 @@ def apply_signals_to_wei(signals: list,
         updated["wei_score_baseline"] = old_wei
         updated["wei_score"]          = new_wei
         updated["wei_score_live"]     = new_wei
+        # weekly_delta = actual movement this week (0.0 on quiet weeks).
+        # This overwrites the stale CSV value so the UI always shows a
+        # fresh, accurate delta rather than a number from months ago.
+        updated["weekly_delta"]       = round(new_wei - old_wei, 2)
         updated["signal_count_this_week"] = len(deltas.get(geo_key, {}))
         updated["last_signal_week"]   = week if country_deltas else updated.get("last_signal_week","")
         updated["wei_data_type"]      = "live_signal" if country_deltas else "baseline"
@@ -247,6 +251,7 @@ def apply_signals_to_states(signals: list,
         new_wei = recalc_wei(updated)
         updated["wei_score_baseline"] = old_wei
         updated["wei_score"]          = new_wei
+        updated["weekly_delta"]       = round(new_wei - old_wei, 2)
         updated["signal_count_this_week"] = len(state_deltas)
         updated["wei_data_type"]      = "live_signal" if state_deltas else "baseline"
         updated_rows.append(updated)
