@@ -232,6 +232,27 @@ def get_life_path(iso_code: str) -> dict | None:
         "source": "WEVI — national + World Bank pension data",
     })
 
+    # ── Funnel milestones — share of 100 girls who clear each life hurdle ─────
+    # Positive framing, each out of 100. Independent indicators (not strictly
+    # cumulative) — surfaced for the cohort-funnel visual. Only include knowns.
+    milestones = []
+    def _ms(label, reached, stage):
+        if reached is not None:
+            milestones.append({
+                "label": label,
+                "reached": max(0, min(100, round(reached))),
+                "stage": stage,
+            })
+
+    born_ok = (100 - missing) if (missing is not None and missing > 0) else (100 if srb is not None else None)
+    _ms("Allowed to be born",              born_ok,                                  "Before birth")
+    _ms("Reach secondary school",          sec,                                      "Childhood")
+    _ms("Marry by choice (not before 18)", (100 - cm)   if cm   is not None else None, "Adolescence")
+    _ms("Live free of lifetime violence",  (100 - prev) if prev is not None else None, "Womanhood")
+    _ms("Join the workforce",              lab,                                      "Working life")
+    _ms("Survive childbirth",              (100 - mm / 1000.0) if mm else None,      "Motherhood")
+    _ms("Escape poverty in old age",       (100 - wp)   if wp   is not None else None, "Old age")
+
     name = (vital or rape or {}).get("country", iso_code)
     return {
         "iso_code": iso_code.upper(),
@@ -239,4 +260,5 @@ def get_life_path(iso_code: str) -> dict | None:
         "disclaimer": DISCLAIMER,
         "cohort_size": 100,
         "stages": [s for s in stages if any(s.get(k) for k in ("cohort", "felt", "detail"))],
+        "milestones": milestones,
     }

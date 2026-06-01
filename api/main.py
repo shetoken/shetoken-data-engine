@@ -44,7 +44,8 @@ from data_loader import (
     get_vital_stats, get_gpi, get_global_weekly_counters,
     get_history_gpi, get_history_usa_states,
     get_history_cities, get_history_svi,
-    get_wadi, get_ai_occupations, get_indicator_provenance
+    get_wadi, get_ai_occupations, get_indicator_provenance,
+    get_all_country_history
 )
 
 logger = logging.getLogger(__name__)
@@ -453,6 +454,20 @@ def global_trend():
     if not data:
         raise HTTPException(503, "Historical data not available")
     return {"data": data, "years": len(data)}
+
+
+@app.get("/v1/wei/history/all-countries", tags=["Historical"],
+         summary="WEI trajectories for ALL countries 2015-2024 (trend backdrop)")
+def all_country_history():
+    """
+    Year-by-year WEI score for every country, plus the global average — for
+    drawing all countries as a faint backdrop behind a highlighted one on
+    country pages. Response: { years, countries:[{iso_code,country,scores}], global_avg }.
+    """
+    data = get_all_country_history()
+    if not data or not data.get("countries"):
+        raise HTTPException(503, "Historical data not available")
+    return data
 
 
 @app.get("/v1/wei/history/country/{iso_code}", tags=["Historical"],

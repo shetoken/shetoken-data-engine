@@ -635,6 +635,57 @@ def get_indicator_provenance() -> dict:
     return cached("indicator_provenance", _load)
 
 
+def get_all_country_history() -> dict:
+    """
+    WEI trajectories for ALL countries across the historical years, for the
+    multi-country trend backdrop on country pages.
+
+    Returns: { "years": [2015, …, 2024],
+               "countries": [ { "iso_code", "country", "scores": [.. per year ..] } ],
+               "global_avg": [.. per year ..] }
+    Reads data/output/historical/baseline-YYYY.csv.
+    """
+    def _load():
+        hist_dir = DATA_DIR / "historical"
+        if not hist_dir.exists():
+            return {"years": [], "countries": [], "global_avg": []}
+
+        by_iso: dict[str, dict] = {}
+        years: list[int] = []
+        for f in sorted(hist_dir.glob("baseline-*.csv")):
+            try:
+                yr = int(f.stem.split("-")[-1])
+            except ValueError:
+                continue
+            years.append(yr)
+            for r in load_csv(f):
+                iso = (r.get("iso_code") or "").strip().upper()
+                wei = safe_float(r.get("wei_score"))
+                if not iso or wei is None:
+                    continue
+                d = by_iso.setdefault(
+                    iso, {"iso_code": iso, "country": r.get("country", ""), "scores": {}}
+                )
+                d["scores"][yr] = round(wei, 1)
+
+        years = sorted(set(years))
+        countries = []
+        for d in by_iso.values():
+            series = [d["scores"].get(y) for y in years]
+            if sum(1 for s in series if s is not None) >= 2:
+                countries.append({
+                    "iso_code": d["iso_code"], "country": d["country"], "scores": series,
+                })
+
+        global_avg = []
+        for i in range(len(years)):
+            vals = [c["scores"][i] for c in countries if c["scores"][i] is not None]
+            global_avg.append(round(sum(vals) / len(vals), 1) if vals else None)
+
+        return {"years": years, "countries": countries, "global_avg": global_avg}
+    return cached("all_country_history", _load)
+
+
 def get_compliance(iso_code: str = None) -> list[dict]:
     def _load():
         path = DATA_DIR / "corporate-compliance-countries-2025.csv"
