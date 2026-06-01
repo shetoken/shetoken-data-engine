@@ -126,9 +126,14 @@ def get_whi(iso_code: str | None = None) -> list[dict]:
     fall back to Supabase if the CSV is unavailable in this deployment.
     """
     def _load():
-        rows = load_csv(DATA_DIR / "womens-health-index-2025.csv")
-        if not rows:
-            rows = _sb_rows("she_whi_countries", order="rank") or []
+        # Prefer Supabase once it carries the maternal_mortality_per_100k column
+        # (added 2026). Until the table is migrated + re-seeded, fall back to the
+        # CSV which is always complete. Self-healing: no deploy-order dependency.
+        sb = _sb_rows("she_whi_countries", order="rank")
+        has_mmr = bool(sb) and any(
+            r.get("maternal_mortality_per_100k") not in (None, "") for r in sb
+        )
+        rows = sb if has_mmr else load_csv(DATA_DIR / "womens-health-index-2025.csv")
         return [{
             "rank":                    safe_int(r.get("rank")),
             "country":                 r.get("country", ""),
