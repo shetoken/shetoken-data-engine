@@ -6,6 +6,11 @@ name: Load Data to Supabase
 
 on:
   workflow_dispatch:          # manual trigger button in the Actions tab
+    inputs:
+      only:
+        description: "Optional: space-separated tables to load (e.g. 'whi'). Leave blank to load ALL tables."
+        required: false
+        default: ""
   # workflow_run:               # auto-run right after the monthly refresh
   #   workflows: ["SHEtoken Monthly Data Refresh"]
   #   types:
@@ -42,4 +47,12 @@ jobs:
         env:
           SUPABASE_URL:              ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-        run: python pipeline/load_to_supabase.py
+          ONLY: ${{ inputs.only }}
+        run: |
+          if [ -n "$ONLY" ]; then
+            echo "Loading only: $ONLY"
+            python pipeline/load_to_supabase.py --only $ONLY
+          else
+            echo "Loading ALL tables"
+            python pipeline/load_to_supabase.py
+          fi
