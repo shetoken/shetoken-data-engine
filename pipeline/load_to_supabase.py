@@ -604,9 +604,37 @@ def load_sex_ratio_birth(sb) -> None:
 # Main
 # ─────────────────────────────────────────────────────────────────────────────
 
-def main() -> None:
+# Named loaders — lets `--only <name> [<name> ...]` re-seed a subset of tables
+# without clobbering tables the weekly agent keeps fresh (e.g. svi, wvi).
+LOADERS = {
+    "countries":          load_countries,
+    "wei":                load_wei_countries,
+    "wei_india_states":   load_wei_india_states,
+    "wei_usa_states":     load_wei_usa_states,
+    "gpi":                load_gpi,
+    "svi":                load_svi,
+    "wadi":               load_wadi,
+    "widow_elderly":      load_widow_elderly,
+    "compliance":         load_corporate_compliance,
+    "vital_stats":        load_vital_stats,
+    "rape_counts":        load_rape_counts,
+    "sex_ratio_birth":    load_sex_ratio_birth,
+    "whi":                load_whi,
+    "wvi":                load_wvi,
+    "vital_counters":     load_vital_counters,
+}
+
+# Full run order (FK deps: countries before WEI)
+_FULL_ORDER = [
+    "countries", "wei", "wei_india_states", "wei_usa_states", "gpi", "svi",
+    "wadi", "widow_elderly", "compliance", "vital_stats", "rape_counts",
+    "sex_ratio_birth", "whi", "wvi", "vital_counters",
+]
+
+
+def main(only: list[str] | None = None) -> None:
     print("=" * 70)
-    print("SHEtoken — Supabase Loader")
+    print("SHEtoken — Supabase Loader" + (f"  (only: {', '.join(only)})" if only else ""))
     print("=" * 70)
     print(f"Data directory: {DATA_DIR}")
     if not DATA_DIR.exists():
@@ -614,34 +642,35 @@ def main() -> None:
 
     sb = get_client()
 
-    # Order matters: countries must load before WEI (FK dependency)
-    load_countries(sb)
-    load_wei_countries(sb)
-    load_wei_india_states(sb)
-    load_wei_usa_states(sb)
-    load_gpi(sb)
-    load_svi(sb)
-    load_wadi(sb)
-    load_widow_elderly(sb)
-    load_corporate_compliance(sb)
-    load_vital_stats(sb)
-    load_rape_counts(sb)
-    load_sex_ratio_birth(sb)
-    load_whi(sb)
-    load_wvi(sb)
-    load_vital_counters(sb)
+    if only:
+        unknown = [t for t in only if t not in LOADERS]
+        if unknown:
+            sys.exit(f"ERROR: unknown table(s): {unknown}. Choices: {list(LOADERS)}")
+        for name in only:
+            LOADERS[name](sb)
+        update_meta(sb)
+        print("\n" + "=" * 70)
+        print(f"✓ DONE — re-seeded: {', '.join(only)}")
+        print("=" * 70)
+        return
+
+    # Full run
+    for name in _FULL_ORDER:
+        LOADERS[name](sb)
     snapshot_all_history(sb)        # score history (monthly)
     snapshot_all_indicators(sb)     # indicator audit (monthly)
-
     update_meta(sb)
-
 
     print("\n" + "=" * 70)
     print("✓ DONE — All tables loaded.")
     print("=" * 70)
     print("Verify in Supabase Table Editor → all `she_*` tables should have rows.")
-    print("Next: I'll build the WEI gauge React component for your Lovable site.")
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+    _p = argparse.ArgumentParser(description="SHEtoken Supabase loader")
+    _p.add_argument("--only", nargs="+", metavar="TABLE",
+                    help=f"Re-seed only these tables (choices: {', '.join(LOADERS)})")
+    _args = _p.parse_args()
+    main(only=_args.only)
