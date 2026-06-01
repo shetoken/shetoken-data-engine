@@ -3,11 +3,11 @@
   "total_markets": 15,
   "categories": [
     "GPI_CORP",
-    "WEI_COUNTRY",
-    "WEI_STATE",
-    "IMPACT",
+    "WADI_SECTOR",
     "SVI_LAW",
-    "WADI_SECTOR"
+    "IMPACT",
+    "WEI_STATE",
+    "WEI_COUNTRY"
   ],
   "markets": [
     {
