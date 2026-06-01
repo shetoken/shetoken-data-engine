@@ -116,9 +116,19 @@ def get_wevi(iso_code: str | None = None) -> list[dict]:
 
 
 def get_whi(iso_code: str | None = None) -> list[dict]:
-    """Women's Health Index. Supabase she_whi_countries → CSV."""
+    """
+    Women's Health Index. CSV-first.
+
+    WHI is a STRUCTURAL index — the weekly news agent never updates it (only
+    SVI/WVI are news-sensitive). The CSV is therefore the authoritative, most
+    complete source and carries fields the Supabase table may lag on (e.g.
+    maternal_mortality_per_100k, added 2026). We read the CSV first and only
+    fall back to Supabase if the CSV is unavailable in this deployment.
+    """
     def _load():
-        rows = _rows("she_whi_countries", "womens-health-index-2025.csv")
+        rows = load_csv(DATA_DIR / "womens-health-index-2025.csv")
+        if not rows:
+            rows = _sb_rows("she_whi_countries", order="rank") or []
         return [{
             "rank":                    safe_int(r.get("rank")),
             "country":                 r.get("country", ""),
