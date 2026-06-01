@@ -125,6 +125,7 @@ def get_whi(iso_code: str | None = None) -> list[dict]:
             "iso_code":                r.get("iso_code", ""),
             "region":                  r.get("region", ""),
             "whi_score":               safe_float(r.get("whi_score")),
+            "maternal_mortality_per_100k": safe_float(r.get("maternal_mortality_per_100k")),
             "depression_prev_pct":     safe_float(r.get("depression_prev_pct")),
             "suicide_rate_per_100k":   safe_float(r.get("suicide_rate_per_100k")),
             "anaemia_pct":             safe_float(r.get("anaemia_pct")),

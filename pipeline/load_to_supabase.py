@@ -415,6 +415,7 @@ def load_whi(sb: Client) -> None:
         "country":                 "country",
         "region":                  "region",
         "whi_score":               "whi_score",
+        "maternal_mortality_per_100k": "maternal_mortality_per_100k",
         "depression_prev_pct":     "depression_prev_pct",
         "suicide_rate_per_100k":   "suicide_rate_per_100k",
         "anaemia_pct":             "anaemia_pct",

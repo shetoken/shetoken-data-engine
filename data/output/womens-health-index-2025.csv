@@ -1,47 +1,48 @@
 # SHEtoken Women's Health Index (WHI) — 2025
 # WHI: 0-100, HIGHER = BETTER health outcomes for women
-# Captures mental health + menstrual dignity — usually ignored by gender indices
+# Captures maternal mortality + mental health + menstrual dignity
+# Maternal mortality = WHO GHO 2020 (deaths per 100k live births), weighted 20%
 # Anchor data point: India anaemia 57% (NFHS-5)
-# Most values are transparent MODELED ESTIMATES (see data_source col)
-# Verified sources to wire in: WHO GHO, UNICEF/DHS, UN Population Division
+# Mental-health / menstrual values are transparent MODELED ESTIMATES (see data_source col)
+# Verified sources: WHO GHO, UNICEF/DHS, UN Population Division
 # (c) 2026 SHE Foundation
 #
-rank,country,iso_code,region,whi_score,depression_prev_pct,suicide_rate_per_100k,anaemia_pct,menstrual_access_pct,contraceptive_unmet_pct,maternal_mh_support,data_source,year
-1,Iceland,ISL,Europe,82.7,4.2,3.5,11,99,5,9,modeled_estimate,2025
-2,Norway,NOR,Europe,80.7,4.5,4.0,12,98,6,9,modeled_estimate,2025
-3,Denmark,DNK,Europe,79.8,4.8,4.5,12,98,6,9,modeled_estimate,2025
-4,Sweden,SWE,Europe,78.3,5.0,5.5,13,98,6,9,modeled_estimate,2025
-5,Finland,FIN,Europe,76.3,5.2,6.0,14,98,6,8,modeled_estimate,2025
-6,Germany,DEU,Europe,75.4,5.5,5.0,15,96,7,8,modeled_estimate,2025
-7,Australia,AUS,Oceania,75.4,5.8,4.8,14,96,7,8,modeled_estimate,2025
-8,Canada,CAN,N. America,74.6,5.6,5.0,15,96,8,8,modeled_estimate,2025
-9,UK,GBR,Europe,74.2,6.0,4.2,16,95,8,8,modeled_estimate,2025
-10,USA,USA,N. America,69.9,6.5,6.5,13,94,10,7,modeled_estimate,2025
-11,Japan,JPN,East Asia,66.6,5.5,11.0,22,95,8,7,modeled_estimate,2025
-12,Mexico,MEX,N. America,62.8,6.8,3.0,25,75,12,5,modeled_estimate,2025
-13,Brazil,BRA,S. America,62.2,7.0,4.0,28,78,12,6,modeled_estimate,2025
-14,Colombia,COL,S. America,62.1,6.5,3.2,27,76,13,5,modeled_estimate,2025
-15,Turkey,TUR,Europe/Asia,61.3,6.2,3.0,32,80,14,5,modeled_estimate,2025
-16,Indonesia,IDN,SE Asia,61.0,6.2,3.0,31,64,11,5,modeled_estimate,2025
-17,Philippines,PHL,SE Asia,59.5,6.0,3.5,26,70,17,5,modeled_estimate,2025
-18,Iran,IRN,Middle East,58.2,7.0,3.5,28,70,14,4,modeled_estimate,2025
-19,Egypt,EGY,Africa/ME,56.8,6.5,2.5,30,62,16,4,modeled_estimate,2025
-20,South Korea,KOR,East Asia,56.3,6.8,18.0,23,92,9,6,modeled_estimate,2025
-21,South Africa,ZAF,Africa,56.1,7.5,4.0,31,68,15,5,modeled_estimate,2025
-22,Kenya,KEN,Africa,52.5,7.0,5.0,27,55,18,4,modeled_estimate,2025
-23,Bangladesh,BGD,South Asia,52.0,6.8,5.5,40,52,12,4,modeled_estimate,2025
-24,Iraq,IRQ,Middle East,50.4,8.0,3.0,28,58,20,3,modeled_estimate,2025
-25,Pakistan,PAK,South Asia,47.1,7.0,4.0,42,45,17,3,modeled_estimate,2025
-26,Myanmar,MMR,SE Asia,47.1,7.8,6.5,35,50,16,3,modeled_estimate,2025
-27,Ethiopia,ETH,Africa,47.0,7.0,6.0,24,42,22,3,modeled_estimate,2025
-28,Palestine,PSE,Middle East,46.6,10.0,4.0,32,60,18,3,modeled_estimate,2025
-29,Nigeria,NGA,Africa,41.9,7.2,4.5,55,48,19,3,modeled_estimate,2025
-30,India,IND,South Asia,41.6,7.5,11.0,57,58,13,4,anchor:NFHS-5_anaemia,2025
-31,Sudan,SDN,Africa,35.6,9.0,5.5,38,35,26,2,modeled_estimate,2025
-32,DRC,COD,Africa,33.3,9.5,6.0,41,30,25,2,modeled_estimate,2025
-33,Niger,NER,Africa,32.1,7.5,5.0,50,32,30,2,modeled_estimate,2025
-34,CAR,CAF,Africa,27.5,10.0,6.5,46,28,28,1,modeled_estimate,2025
-35,South Sudan,SSD,Africa,26.4,10.5,6.0,42,24,30,1,modeled_estimate,2025
-36,Somalia,SOM,Africa,25.9,10.5,6.0,44,25,30,1,modeled_estimate,2025
-37,Afghanistan,AFG,South Asia,24.8,12.0,6.0,45,28,28,1,modeled_estimate,2025
-38,Yemen,YEM,Middle East,18.0,11.0,5.0,70,30,32,1,modeled_estimate,2025
+rank,country,iso_code,region,whi_score,maternal_mortality_per_100k,depression_prev_pct,suicide_rate_per_100k,anaemia_pct,menstrual_access_pct,contraceptive_unmet_pct,maternal_mh_support,data_source,year
+1,Iceland,ISL,Europe,86.8,4,4.2,3.5,11,99,5,9,WHO-MMR-2020;modeled_rest,2025
+2,Norway,NOR,Europe,85.4,2,4.5,4.0,12,98,6,9,WHO-MMR-2020;modeled_rest,2025
+3,Denmark,DNK,Europe,84.6,5,4.8,4.5,12,98,6,9,WHO-MMR-2020;modeled_rest,2025
+4,Sweden,SWE,Europe,83.6,5,5.0,5.5,13,98,6,9,WHO-MMR-2020;modeled_rest,2025
+5,Finland,FIN,Europe,81.7,8,5.2,6.0,14,98,6,8,WHO-MMR-2020;modeled_rest,2025
+6,Germany,DEU,Europe,81.1,4,5.5,5.0,15,96,7,8,WHO-MMR-2020;modeled_rest,2025
+7,Australia,AUS,Oceania,81.1,3,5.8,4.8,14,96,7,8,WHO-MMR-2020;modeled_rest,2025
+8,Canada,CAN,N. America,80.2,11,5.6,5.0,15,96,8,8,WHO-MMR-2020;modeled_rest,2025
+9,UK,GBR,Europe,79.8,10,6.0,4.2,16,95,8,8,WHO-MMR-2020;modeled_rest,2025
+10,USA,USA,N. America,76.1,21,6.5,6.5,13,94,10,7,WHO-MMR-2020;modeled_rest,2025
+11,Japan,JPN,East Asia,74.6,4,5.5,11.0,22,95,8,7,WHO-MMR-2020;modeled_rest,2025
+12,Turkey,TUR,Europe/Asia,68.5,17,6.2,3.0,32,80,14,5,WHO-MMR-2020;modeled_rest,2025
+13,Mexico,MEX,N. America,67.7,59,6.8,3.0,25,75,12,5,WHO-MMR-2020;modeled_rest,2025
+14,Brazil,BRA,S. America,67.2,72,7.0,4.0,28,78,12,6,WHO-MMR-2020;modeled_rest,2025
+15,South Korea,KOR,East Asia,66.8,8,6.8,18.0,23,92,9,6,WHO-MMR-2020;modeled_rest,2025
+16,Colombia,COL,S. America,66.6,75,6.5,3.2,27,76,13,5,WHO-MMR-2020;modeled_rest,2025
+17,Iran,IRN,Middle East,65.4,22,7.0,3.5,28,70,14,4,WHO-MMR-2020;modeled_rest,2025
+18,Philippines,PHL,SE Asia,64.4,78,6.0,3.5,26,70,17,5,WHO-MMR-2020;modeled_rest,2025
+19,Egypt,EGY,Africa/ME,64.2,17,6.5,2.5,30,62,16,4,WHO-MMR-2020;modeled_rest,2025
+20,Indonesia,IDN,SE Asia,61.5,173,6.2,3.0,31,64,11,5,WHO-MMR-2020;modeled_rest,2025
+21,South Africa,ZAF,Africa,59.8,127,7.5,4.0,31,68,15,5,WHO-MMR-2020;modeled_rest,2025
+22,Iraq,IRQ,Middle East,56.6,76,8.0,3.0,28,58,20,3,WHO-MMR-2020;modeled_rest,2025
+23,Bangladesh,BGD,South Asia,56.1,123,6.8,5.5,40,52,12,4,WHO-MMR-2020;modeled_rest,2025
+24,Palestine,PSE,Middle East,55.9,27,10.0,4.0,32,60,18,3,WHO-MMR-2020;modeled_rest,2025
+25,Pakistan,PAK,South Asia,50.6,154,7.0,4.0,42,45,17,3,WHO-MMR-2020;modeled_rest,2025
+26,Myanmar,MMR,SE Asia,50.0,179,7.8,6.5,35,50,16,3,WHO-MMR-2020;modeled_rest,2025
+27,India,IND,South Asia,49.8,103,7.5,11.0,57,58,13,4,WHO-MMR-2020;anchor:NFHS-5_anaemia,2025
+28,Ethiopia,ETH,Africa,46.1,267,7.0,6.0,24,42,22,3,WHO-MMR-2020;modeled_rest,2025
+29,Kenya,KEN,Africa,41.5,530,7.0,5.0,27,55,18,4,WHO-MMR-2020;modeled_rest,2025
+30,Sudan,SDN,Africa,36.8,270,9.0,5.5,38,35,26,2,WHO-MMR-2020;modeled_rest,2025
+31,Nigeria,NGA,Africa,33.0,1047,7.2,4.5,55,48,19,3,WHO-MMR-2020;modeled_rest,2025
+32,Niger,NER,Africa,27.2,441,7.5,5.0,50,32,30,2,WHO-MMR-2020;modeled_rest,2025
+33,Yemen,YEM,Middle East,26.7,183,11.0,5.0,70,30,32,1,WHO-MMR-2020;modeled_rest,2025
+34,DRC,COD,Africa,25.8,547,9.5,6.0,41,30,25,2,WHO-MMR-2020;modeled_rest,2025
+35,CAR,CAF,Africa,21.1,835,10.0,6.5,46,28,28,1,WHO-MMR-2020;modeled_rest,2025
+36,South Sudan,SSD,Africa,20.1,1223,10.5,6.0,42,24,30,1,WHO-MMR-2020;modeled_rest,2025
+37,Somalia,SOM,Africa,19.8,621,10.5,6.0,44,25,30,1,WHO-MMR-2020;modeled_rest,2025
+38,Afghanistan,AFG,South Asia,19.1,620,12.0,6.0,45,28,28,1,WHO-MMR-2020;modeled_rest,2025
