@@ -423,6 +423,31 @@ def get_vital_stats(iso_code: str = None) -> list[dict]:
     def _load():
         path = DATA_DIR / "womens-vital-stats-2025.csv"
         rows = load_csv(path)
+
+        # ── Merge two extra weekly estimates from sibling datasets ──────────
+        # Sexual violence: estimated_weekly from the rape-counts dataset.
+        sv_weekly: dict[str, int] = {}
+        for rr in load_csv(DATA_DIR / "rape-counts-reported-vs-estimated-2025.csv"):
+            iso = (rr.get("iso_code") or "").upper()
+            ew = safe_int(rr.get("estimated_weekly"))
+            if iso and ew:
+                sv_weekly[iso] = ew
+        # Girls "not born": missing-girls method from sex ratio at birth.
+        # missing per 100 girls born = max(0, srb/1.05 - 100); applied to weekly births.
+        srb_map: dict[str, float] = {}
+        for sr in load_csv(DATA_DIR / "sex-ratio-at-birth-2025.csv"):
+            iso = (sr.get("iso_code") or "").upper()
+            srb = safe_float(sr.get("srb_boys_per_100_girls"))
+            if iso and srb:
+                srb_map[iso] = srb
+
+        def _not_born(iso: str, born_week) -> int:
+            srb = srb_map.get(iso)
+            if not srb or not born_week:
+                return 0
+            missing_per_100 = max(0.0, srb / 1.05 - 100.0)
+            return int(round(born_week * missing_per_100 / 100.0))
+
         return [{
             "country":                          r.get("country",""),
             "iso_code":                         r.get("iso_code",""),
@@ -451,6 +476,9 @@ def get_vital_stats(iso_code: str = None) -> list[dict]:
             "girls_drop_out_school_per_week_est":   safe_int(r.get("girls_drop_out_school_per_week_est")),
             "girls_married_under18_per_week_est":   safe_int(r.get("girls_married_under18_per_week_est")),
             "women_killed_by_partner_per_week_est": safe_int(r.get("women_killed_by_partner_per_week_est")),
+            "women_facing_sexual_violence_per_week_est": sv_weekly.get((r.get("iso_code") or "").upper(), 0),
+            "girls_not_born_per_week_est":          _not_born((r.get("iso_code") or "").upper(),
+                                                               safe_int(r.get("girls_born_per_week_est"))),
         } for r in rows]
     all_rows = cached("vital_stats", _load)
     if iso_code:
