@@ -1,0 +1,22 @@
+country,iso_code,srb_boys_per_100_girls,source_note,year
+India,IND,108,"NFHS-5 era; historically higher in NW states (Punjab, Haryana >115)",2025
+China,CHN,111,"Declined from ~118 peak (2000s); one-child legacy",2025
+Vietnam,VNM,111,"Rising since 2000s; concentrated in Red River Delta",2025
+Azerbaijan,AZE,114,"Among the highest globally (post-Soviet Caucasus)",2025
+Armenia,ARM,110,"Post-Soviet Caucasus skew",2025
+Georgia,GEO,107,"Improved from ~111 in 2000s",2025
+Albania,ALB,109,"Highest in the Balkans",2025
+Montenegro,MNE,108,"Balkan skew",2025
+Pakistan,PAK,109,"Estimates vary; son preference documented",2025
+Taiwan,TWN,107,"Declined from higher 1990s levels",2025
+Nigeria,NGA,106,"Near-natural",2025
+Bangladesh,BGD,105,"Near-natural despite son preference",2025
+Iceland,ISL,105,"Natural ratio",2025
+Norway,NOR,105,"Natural ratio",2025
+Sweden,SWE,105,"Natural ratio",2025
+United States,USA,105,"Natural ratio",2025
+United Kingdom,GBR,105,"Natural ratio",2025
+Brazil,BRA,105,"Natural ratio",2025
+Mexico,MEX,105,"Natural ratio",2025
+Kenya,KEN,105,"Natural ratio",2025
+South Africa,ZAF,105,"Natural ratio",2025
