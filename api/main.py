@@ -44,7 +44,7 @@ from data_loader import (
     get_vital_stats, get_gpi, get_global_weekly_counters,
     get_history_gpi, get_history_usa_states,
     get_history_cities, get_history_svi,
-    get_wadi, get_ai_occupations
+    get_wadi, get_ai_occupations, get_indicator_provenance
 )
 
 logger = logging.getLogger(__name__)
@@ -334,6 +334,20 @@ def ai_occupations():
     """
     data = get_ai_occupations()
     if not data: raise HTTPException(503, "Occupation data unavailable")
+    return data
+
+# ── Methodology / data provenance ────────────────────────────────────────────
+
+@app.get("/v1/methodology", tags=["Info"],
+         summary="Per-indicator data provenance (source + collection year) for every index")
+def methodology():
+    """
+    Returns, for each index, every indicator's data source, the year the
+    underlying data represents, and whether it is verified / modeled / derived.
+    Powers the "As of" dates shown in the frontend methodology panels.
+    """
+    data = get_indicator_provenance()
+    if not data: raise HTTPException(503, "Provenance data unavailable")
     return data
 
 # ── Women's Vital Statistics ─────────────────────────────────────────────────

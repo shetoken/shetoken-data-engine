@@ -620,6 +620,21 @@ def get_ai_occupations() -> dict:
     return cached("ai_occupations", _load)
 
 
+def get_indicator_provenance() -> dict:
+    """
+    Per-indicator data provenance for every index: source, data year, and
+    verified/modeled/derived status. Powers the "As of" dates in the frontend
+    methodology panels. Returns {} if the file is absent.
+    """
+    def _load():
+        import json as _json
+        path = DATA_DIR / "indicator-provenance-2025.json"
+        if not path.exists(): return {}
+        with open(path, "r", encoding="utf-8") as f:
+            return _json.load(f)
+    return cached("indicator_provenance", _load)
+
+
 def get_compliance(iso_code: str = None) -> list[dict]:
     def _load():
         path = DATA_DIR / "corporate-compliance-countries-2025.csv"
