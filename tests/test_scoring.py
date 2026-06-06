@@ -67,8 +67,23 @@ def test_v3_is_shadow_and_skips_provisional():
     r = score(WEST_BENGAL, V3)
     # only the 5 LIVE pillars carry weights today; the 4 provisional ones are excluded
     assert r["coverage"]["weighted"] == 5, r
-    # with only live pillars, v3 currently matches v2
-    assert r["score"] == 39.1, r
+    # v3 REWEIGHTS the 5 live pillars (heavier Economic + Crime penalty, lighter
+    # Empowerment + Education), so it diverges from v2's 39.1:
+    #   52*0.20 + 67*0.15 + 52*0.25 + 71*0.15 - 42*0.25 = 33.6
+    assert abs(r["raw"] - 33.6) < 1e-9, r
+    assert r["score"] == 33.6, r
+
+
+def test_v3_reweight_is_stricter_than_v2():
+    # The shadow reweight is a stricter lens: West Bengal falls vs the official v2.
+    v2r = score(WEST_BENGAL, V2)
+    v3r = score(WEST_BENGAL, V3)
+    assert v3r["score"] < v2r["score"], (v3r, v2r)
+
+
+def test_v3_weights_sum_to_one_including_penalty():
+    total = sum(abs(p["weight"]) for p in V3["pillars"].values() if p.get("weight") is not None)
+    assert abs(total - 1.0) < 1e-9, total
 
 
 def test_v3_records_insufficient_coverage_never_imputes():

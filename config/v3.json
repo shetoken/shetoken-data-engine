@@ -2,8 +2,8 @@
   "version": "v3",
   "status": "shadow",
   "frozen": false,
-  "name": "SHE Score (v3) — nine-pillar expansion framework (SHADOW)",
-  "description": "Shadow-only. The five LIVE v2 pillars plus four provisional pillars in validation. Provisional weights are NOT final and MUST NOT affect published scores or $SHE supply mechanics. v3 scores are computed only where indicator data exists; missing data is recorded as insufficient with a coverage count, never imputed.",
+  "name": "SHE Score (v3) — reweighted five-pillar + expansion framework (SHADOW)",
+  "description": "Shadow-only. v3 REWEIGHTS the five LIVE pillars relative to v2 — heavier Economic Inclusion (0.20->0.25) and Safety/Crime penalty (0.20->0.25), lighter Empowerment (0.25->0.20) and Education (0.20->0.15); Health is unchanged. It is a stricter lens, so most scores fall a few points versus v2. The reweighting uses ONLY existing pillar data; nothing is imputed. Four further candidate pillars remain provisional (weight null) and in validation — they MUST NOT affect published scores or $SHE supply mechanics. v3 scores are computed only where indicator data exists; missing data is recorded as insufficient coverage, never imputed.",
   "aggregation": "weighted_sum",
   "rounding": { "decimals": 1, "mode": "half_up" },
   "normalization": { "default": { "min": 0, "max": 100 } },
@@ -17,11 +17,11 @@
     "trafficking_rate"
   ],
   "pillars": {
-    "empowerment":          { "weight": 0.25, "label": "Empowerment", "live": true },
-    "education_literacy":   { "weight": 0.20, "label": "Education & Literacy", "live": true },
-    "economic_inclusion":   { "weight": 0.20, "label": "Economic Inclusion", "live": true },
+    "empowerment":          { "weight": 0.20, "label": "Empowerment", "live": true },
+    "education_literacy":   { "weight": 0.15, "label": "Education & Literacy", "live": true },
+    "economic_inclusion":   { "weight": 0.25, "label": "Economic Inclusion", "live": true },
     "health_survival":      { "weight": 0.15, "label": "Health & Survival", "live": true },
-    "safety_crime_penalty": { "weight": -0.20, "label": "Safety (Crime Penalty)", "penalty": true, "live": true },
+    "safety_crime_penalty": { "weight": -0.25, "label": "Safety (Crime Penalty)", "penalty": true, "live": true },
 
     "bodily_autonomy":      { "weight": null, "provisional": true, "label": "Bodily Autonomy",
                               "candidate_indicators": ["period_poverty", "child_marriage", "fgm", "reproductive_rights"],
