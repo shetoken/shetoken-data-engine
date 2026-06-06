@@ -330,3 +330,44 @@ Every push        → API auto-deploys to Railway
 ```
 
 You only touch the repo when you want to add features.
+
+---
+
+## Versioned scoring (Track B): v2 official · v3 shadow
+
+The score is now **config-driven**. Pillar definitions, weights, inverted-
+indicator flags, normalization bounds and the aggregation formula live in
+`config/*.json` — nothing about a methodology version is hardcoded in logic.
+
+| Config | Status | Use |
+|---|---|---|
+| `config/v2.json` | `official`, `frozen: true` | The published five-pillar SHE Score. Regression-locked. |
+| `config/v3.json` | `shadow` | Nine-pillar expansion; provisional pillars in validation. **Never** affects published scores or $SHE supply. |
+
+**Engine:** `scoring/engine.py` (`load_config`, `score`, `supply_change`).
+
+**Regression lock (must stay green):** `tests/test_scoring.py` asserts the
+West Bengal worked example = **39.1** (39.05 pre-round) and the Kanyashree
+scenario = **40.9 / +1.8 pts / 18,000,000-unit mint**. Runs in CI on every push
+(`.github/workflows/test-scoring.yml`):
+
+```bash
+pip install pytest && pytest tests/test_scoring.py -v
+```
+
+**Recompute any published score byte-for-byte** from a frozen config + an
+archived pillar-scores input (Track B5):
+
+```bash
+python scoring/recompute.py --config v2 --inputs config/worked-example-west-bengal.json --baseline 39.05
+# -> score 39.1 (raw 39.05); delta + supply change if --baseline given
+```
+
+**Versioned API (Track B6):**
+- `GET /api/v2/scores` (alias `GET /api/scores`) — official v2 scores. The dashboard consumes only this.
+- `GET /api/v2/scores/{iso}` — one country, v2.
+- `GET /api/v3-preview/scores` — **shadow only**; every response carries `version:"v3"`, `status:"shadow"`, and per-pillar coverage counts (e.g. `bodily_autonomy: "0/83"`). Exposed nowhere else.
+
+> Note: `api/data/generate_baseline.py` still emits the legacy 8-pillar score.
+> Switching it to consume `config/v2.json` (the published five-pillar formula)
+> is the planned follow-up; the regression tests above guard that migration.

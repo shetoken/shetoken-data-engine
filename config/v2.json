@@ -1,0 +1,73 @@
+{
+  "version": "v2",
+  "status": "official",
+  "frozen": true,
+  "name": "SHE Score (v2) — published five-pillar methodology",
+  "description": "The published, official SHE Score. Five LIVE pillars, weighted sum, one-decimal score rounded half-up. This config is frozen: it must reproduce published scores byte-for-byte (regression-locked to the West Bengal worked example = 39.1).",
+  "aggregation": "weighted_sum",
+  "rounding": { "decimals": 1, "mode": "half_up" },
+  "normalization": { "default": { "min": 0, "max": 100 } },
+  "inverted_indicators": [
+    "maternal_mortality",
+    "adolescent_birth_rate",
+    "gender_pay_gap",
+    "rape_rate",
+    "dv_rate",
+    "femicide_rate",
+    "trafficking_rate"
+  ],
+  "pillars": {
+    "empowerment": {
+      "weight": 0.25,
+      "label": "Empowerment",
+      "sub_indicators": {
+        "parliamentary_seats": 0.30,
+        "ministerial_roles": 0.20,
+        "legal_rights": 0.25,
+        "freedom_of_movement": 0.15,
+        "senior_management": 0.10
+      }
+    },
+    "education_literacy": {
+      "weight": 0.20,
+      "label": "Education & Literacy",
+      "sub_indicators": {
+        "adult_literacy": 0.30,
+        "secondary_enrollment": 0.30,
+        "stem_participation": 0.20,
+        "completion_rate": 0.20
+      }
+    },
+    "economic_inclusion": {
+      "weight": 0.20,
+      "label": "Economic Inclusion",
+      "sub_indicators": {
+        "gender_pay_gap": 0.30,
+        "formal_employment": 0.25,
+        "banking_access": 0.25,
+        "property_rights": 0.20
+      }
+    },
+    "health_survival": {
+      "weight": 0.15,
+      "label": "Health & Survival",
+      "sub_indicators": {
+        "maternal_mortality": 0.35,
+        "life_expectancy": 0.25,
+        "anaemia": 0.20,
+        "adolescent_birth_rate": 0.20
+      }
+    },
+    "safety_crime_penalty": {
+      "weight": -0.20,
+      "label": "Safety (Crime Penalty)",
+      "penalty": true,
+      "sub_indicators": {
+        "rape_rate": 0.35,
+        "femicide_rate": 0.30,
+        "dv_rate": 0.20,
+        "trafficking_rate": 0.15
+      }
+    }
+  }
+}

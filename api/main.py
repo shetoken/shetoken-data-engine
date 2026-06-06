@@ -88,6 +88,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# ── Versioned scores API (Track B6): /api/v2/scores (official) +
+#    /api/scores (alias) + /api/v3-preview/scores (shadow only) ───────────────
+from scores_versioned import router as scores_router  # noqa: E402
+app.include_router(scores_router)
+
 
 # ── Root ──────────────────────────────────────────────────────────────────────
 

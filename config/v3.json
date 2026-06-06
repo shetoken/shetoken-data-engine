@@ -1,0 +1,43 @@
+{
+  "version": "v3",
+  "status": "shadow",
+  "frozen": false,
+  "name": "SHE Score (v3) — nine-pillar expansion framework (SHADOW)",
+  "description": "Shadow-only. The five LIVE v2 pillars plus four provisional pillars in validation. Provisional weights are NOT final and MUST NOT affect published scores or $SHE supply mechanics. v3 scores are computed only where indicator data exists; missing data is recorded as insufficient with a coverage count, never imputed.",
+  "aggregation": "weighted_sum",
+  "rounding": { "decimals": 1, "mode": "half_up" },
+  "normalization": { "default": { "min": 0, "max": 100 } },
+  "inverted_indicators": [
+    "maternal_mortality",
+    "adolescent_birth_rate",
+    "gender_pay_gap",
+    "rape_rate",
+    "dv_rate",
+    "femicide_rate",
+    "trafficking_rate"
+  ],
+  "pillars": {
+    "empowerment":          { "weight": 0.25, "label": "Empowerment", "live": true },
+    "education_literacy":   { "weight": 0.20, "label": "Education & Literacy", "live": true },
+    "economic_inclusion":   { "weight": 0.20, "label": "Economic Inclusion", "live": true },
+    "health_survival":      { "weight": 0.15, "label": "Health & Survival", "live": true },
+    "safety_crime_penalty": { "weight": -0.20, "label": "Safety (Crime Penalty)", "penalty": true, "live": true },
+
+    "bodily_autonomy":      { "weight": null, "provisional": true, "label": "Bodily Autonomy",
+                              "candidate_indicators": ["period_poverty", "child_marriage", "fgm", "reproductive_rights"],
+                              "candidate_source": "UNICEF/WHO JMP menstrual-health module",
+                              "blocking_gap": "No institutional 105-country dataset for period poverty." },
+    "dignity_welfare":      { "weight": null, "provisional": true, "label": "Dignity & Welfare",
+                              "candidate_indicators": ["widow_rights", "caregiver_burden", "food_insecurity", "mental_health"],
+                              "candidate_source": "OECD time-use; FAO FIES food-insecurity scale",
+                              "blocking_gap": "No >=80%-coverage institutional dataset for unpaid-care burden." },
+    "digital_social":       { "weight": null, "provisional": true, "label": "Digital & Social",
+                              "candidate_indicators": ["online_harassment", "internet_gender_gap", "mobile_gender_gap"],
+                              "candidate_source": "ITU; GSMA Mobile Gender Gap",
+                              "blocking_gap": "Online-harassment prevalence lacks comparable cross-country institutional data." },
+    "safety_justice_expanded": { "weight": null, "provisional": true, "label": "Safety & Justice (expanded)",
+                              "candidate_indicators": ["police_responsiveness", "legal_aid_access", "honour_based_violence"],
+                              "candidate_source": "World Justice Project; UNODC",
+                              "blocking_gap": "No >=80%-coverage institutional dataset for police responsiveness to GBV." }
+  }
+}
