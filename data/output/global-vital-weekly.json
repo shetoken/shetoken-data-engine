@@ -1,7 +1,7 @@
 {
   "description": "Global weekly estimates for women's key life statistics",
   "data_note": "Weekly estimates computed from annual rates. Not real-time.",
-  "week_of": "2026-W22",
+  "week_of": "2026-W26",
   "global_weekly_estimates": {
     "girls_born": 1392308,
     "maternal_deaths": 5519,
