@@ -5,11 +5,11 @@
   "total_portfolio_bn": 10.28,
   "weighted_yield_pct": 6.94,
   "nav": {
-    "nav_per_token": 105.441,
+    "nav_per_token": 106.0565,
     "base_nav": 100.0,
-    "accrued_interest": 5.441,
+    "accrued_interest": 6.0565,
     "annualised_yield_pct": 7.25,
-    "as_of": "2026-10-01T10:34:03.532979+00:00",
+    "as_of": "2026-11-01T10:54:29.978102+00:00",
     "next_rebalance": "Quarterly — aligned with WEI signal updates"
   },
   "rebalancing": {
